@@ -114,6 +114,8 @@ struct BoxPokemon
     u8 markings;
     u16 checksum;
     u16 unknown;
+    u32 status;
+    u16 hp;
 
     union
     {

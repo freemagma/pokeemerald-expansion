@@ -1465,6 +1465,7 @@ static void CopyMonToSummaryStruct(struct Pokemon *mon)
     {
         struct BoxPokemon *boxMon = sMonSummaryScreen->monList.boxMons;
         BoxMonToMon(&boxMon[sMonSummaryScreen->curMonIndex], mon);
+        SetMonData(mon, MON_DATA_HP, &boxMon[sMonSummaryScreen->curMonIndex].hp);
     }
 }
 

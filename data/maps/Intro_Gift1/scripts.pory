@@ -17,8 +17,6 @@ mapscripts Intro_Gift1_MapScripts {
             msgbox(format("The room behind you collapsed! \p"
                           "...\p"
                           "There seem to be some Pokéballs out in the open."))
-            giveitem(ITEM_RARE_CANDY, 3)
-            giveitem(ITEM_POTION, 1)
             setvar(VAR_TEMP_0, 1)
             release
         }

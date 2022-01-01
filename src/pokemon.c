@@ -3854,7 +3854,7 @@ void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest)
 {
     u32 value = 0;
     dest->box = *src;
-    SetMonData(dest, MON_DATA_STATUS, &value);
+    SetMonData(dest, MON_DATA_STATUS, &src->status);
     SetMonData(dest, MON_DATA_HP, &value);
     SetMonData(dest, MON_DATA_MAX_HP, &value);
     value = MAIL_NONE;
@@ -4729,12 +4729,14 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     {
     case MON_DATA_STATUS:
         SET32(mon->status);
+        SET32(mon->box.status);
         break;
     case MON_DATA_LEVEL:
         SET8(mon->level);
         break;
     case MON_DATA_HP:
         SET16(mon->hp);
+        SET16(mon->box.hp);
         break;
     case MON_DATA_MAX_HP:
         SET16(mon->maxHP);

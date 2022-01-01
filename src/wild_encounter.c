@@ -1032,10 +1032,11 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 
 bool8 TryDoDoubleWildBattle(void)
 {
-    // always!
+    if (GetSafariZoneFlag() || GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS)
+        return FALSE;
+
+    // always force if possible
     return TRUE;
-    /* if (GetSafariZoneFlag() || GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS) */
-    /*     return FALSE; */
     /* else if (B_FLAG_FORCE_DOUBLE_WILD != 0 && FlagGet(B_FLAG_FORCE_DOUBLE_WILD)) */
     /*     return TRUE; */
     /* #if B_DOUBLE_WILD_CHANCE != 0 */

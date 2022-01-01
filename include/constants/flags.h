@@ -92,11 +92,12 @@
 
 // My Flags
 #define FLAG_DISABLE_BAG 0x50
+#define FLAG_POKEMONPCMENU 0x52
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50 // reused
 #define FLAG_SET_WALL_CLOCK                      0x51
-#define FLAG_RESCUED_BIRCH                       0x52
+#define FLAG_RESCUED_BIRCH                       0x52 // reused
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
 #define FLAG_UNUSED_0x054                    0x54  // Unused Flag

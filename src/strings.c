@@ -4,6 +4,9 @@
 #include "item_menu.h"
 
 ALIGNED(4)
+// My Strings
+const u8 gText_MenuPC[] = _("PC");
+
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");
 const u8 gText_ExpandedPlaceholder_Kun[] = _("");
 const u8 gText_ExpandedPlaceholder_Chan[] = _("");
