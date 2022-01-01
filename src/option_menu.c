@@ -474,11 +474,11 @@ static void BattleScene_DrawChoices(u8 selection)
 
 static u8 BattleStyle_ProcessInput(u8 selection)
 {
-    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
-    {
-        selection ^= 1;
-        sArrowPressed = TRUE;
-    }
+    /* if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT)) */
+    /* { */
+    /*     selection ^= 1; */
+    /*     sArrowPressed = TRUE; */
+    /* } */
 
     return selection;
 }
