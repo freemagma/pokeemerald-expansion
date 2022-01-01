@@ -1,8 +1,8 @@
 {
-  "id": "MAP_ENTRANCE",
-  "name": "Entrance",
-  "layout": "LAYOUT_ENTRANCE",
-  "music": "MUS_PETALBURG_WOODS",
+  "id": "MAP_INTRO_GIFT1",
+  "name": "Intro_Gift1",
+  "layout": "LAYOUT_INTRO_GIFT1",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,49 +17,56 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 7,
-      "y": 6,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "StarterBall1",
-      "flag": "FLAG_ITEM_STARTER_1"
+      "script": "Intro_Gift1_GiftBall1",
+      "flag": "FLAG_ITEM_INTRO_GIFT1_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 8,
-      "y": 6,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "StarterBall2",
-      "flag": "FLAG_ITEM_STARTER_2"
+      "script": "Intro_Gift1_GiftBall2",
+      "flag": "FLAG_ITEM_INTRO_GIFT1_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 9,
-      "y": 6,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "StarterBall3",
-      "flag": "FLAG_ITEM_STARTER_3"
+      "script": "Intro_Gift1_GiftBall3",
+      "flag": "FLAG_ITEM_INTRO_GIFT1_3"
     }
   ],
   "warp_events": [
     {
       "x": 8,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ENTRANCE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
       "y": 2,
-      "elevation": 3,
-      "dest_map": "MAP_INTRO_GIFT1",
+      "elevation": 0,
+      "dest_map": "MAP_INTRO_ENCOUNTER1",
       "dest_warp_id": 0
     }
   ],
@@ -67,6 +74,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Intro_Gift1_SignDirections"
+    }
   ]
 }

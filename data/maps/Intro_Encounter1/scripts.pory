@@ -1,7 +1,4 @@
 mapscripts Intro_Encounter1_MapScripts {
-    MAP_SCRIPT_ON_RETURN_TO_FIELD {
-        setvar(VAR_ENCOUNTERS_LEFT, 0)
-    }
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_ENCOUNTERS_LEFT, 1)
@@ -9,24 +6,27 @@ mapscripts Intro_Encounter1_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {
             lock
-            applymovement(OBJ_EVENT_ID_PLAYER, UpOne)
+            applymovement(OBJ_EVENT_ID_PLAYER, Intro_Encounter1_UpOne)
             waitmovement(0)
-            msgbox(format("The room behind you collapsed!\p...\pThere seem to be a couple Pokémon \nhiding in the grass."))
+            msgbox(format("The room behind you collapsed!\p"
+                          "...\p"
+                          "There seem to be a couple Pokémon hiding in the grass."))
             setvar(VAR_TEMP_0, 1)
             release
         }
     ]
 }
 
-script SignDirections {
+script Intro_Encounter1_SignDirections {
     lockall
-    msgbox(format("In encounter rooms, you will have the opportunity to catch a Pokémon."
-                  "Your encounter will be a double battle containing two wild Pokémon"
-                  "you haven't caught yet. But be careful, since you"
+    msgbox(format("In encounter rooms, you will have the opportunity to catch a Pokémon.\p"
+                  "Your encounter will contain two wild Pokémon"
+                  "you haven't caught yet, and will be a double battle if possible.\p"
+                  "But be careful; you"
                   "can't try again if you fail!"))
     releaseall
 }
 
-movement UpOne {
+movement Intro_Encounter1_UpOne {
     walk_up
 }

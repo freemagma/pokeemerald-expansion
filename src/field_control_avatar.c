@@ -668,6 +668,8 @@ void RestartWildEncounterImmunitySteps(void)
 
 static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 {
+    u16 temp;
+
     if (sWildEncounterImmunitySteps < 4)
     {
         sWildEncounterImmunitySteps++;
@@ -677,6 +679,10 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 
     if (StandardWildEncounter(metatileBehavior, sPreviousPlayerMetatileBehavior) == TRUE)
     {
+        // decrement number of encounters left in area
+        temp = VarGet(VAR_ENCOUNTERS_LEFT);
+        if (temp > 0)
+            VarSet(VAR_ENCOUNTERS_LEFT, temp - 1);
         sWildEncounterImmunitySteps = 0;
         sPreviousPlayerMetatileBehavior = metatileBehavior;
         return TRUE;

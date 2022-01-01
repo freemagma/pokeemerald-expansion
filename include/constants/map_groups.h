@@ -8,6 +8,7 @@
 // gMapGroup_RogueIntro
 #define MAP_ENTRANCE         (0 | (0 << 8))
 #define MAP_INTRO_ENCOUNTER1 (1 | (0 << 8))
+#define MAP_INTRO_GIFT1      (2 | (0 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (1 << 8))
