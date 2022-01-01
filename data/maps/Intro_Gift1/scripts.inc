@@ -17,6 +17,8 @@ Intro_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 	applymovement OBJ_EVENT_ID_PLAYER, Intro_Gift1_UpOne
 	waitmovement 0
 	msgbox Intro_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0
+	giveitem ITEM_RARE_CANDY, 3
+	giveitem ITEM_POTION, 1
 	setvar VAR_TEMP_0, 1
 	release
 	return
