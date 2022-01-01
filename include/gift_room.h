@@ -1,0 +1,5 @@
+#ifndef GUARD_GIFT_ROOM_H
+#define GUARD_GIFT_ROOM_H
+
+
+#endif // GUARD_GIFT_ROOM_H

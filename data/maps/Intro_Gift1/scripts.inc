@@ -5,7 +5,8 @@ Intro_Gift1_MapScripts::
 
 Intro_Gift1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
-	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_A, 0
+	callnative GetGiftMonIntro
 	return
 
 Intro_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
@@ -23,9 +24,10 @@ Intro_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 
 
 Intro_Gift1_GiftBall1::
-	showmonpic SPECIES_MAKUHITA, 10, 3
-	compare VAR_TEMP_1, 1
+	showmonpic VAR_0x8001, 10, 3
+	compare VAR_TEMP_A, 1
 	goto_if_eq Intro_Gift1_GiftBall1_2
+	bufferspeciesname STR_VAR_1, VAR_0x8001
 	msgbox Intro_Gift1_GiftBall1_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall1_5
@@ -39,14 +41,13 @@ Intro_Gift1_GiftBall1_2:
 	goto Intro_Gift1_GiftBall1_1
 
 Intro_Gift1_GiftBall1_5:
-	bufferspeciesname STR_VAR_1, SPECIES_MAKUHITA
-	givemon SPECIES_MAKUHITA, 5, ITEM_NONE
+	givemon VAR_0x8001, 5, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall1_8
 Intro_Gift1_GiftBall1_7:
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_A, 1
 	goto Intro_Gift1_GiftBall1_1
 
 Intro_Gift1_GiftBall1_8:
@@ -56,10 +57,11 @@ Intro_Gift1_GiftBall1_8:
 
 
 Intro_Gift1_GiftBall2::
-	showmonpic SPECIES_STUNKY, 10, 3
-	compare VAR_TEMP_1, 1
+	showmonpic VAR_0x8002, 10, 3
+	compare VAR_TEMP_A, 1
 	goto_if_eq Intro_Gift1_GiftBall2_2
-	msgbox Intro_Gift1_GiftBall2_Text_0, MSGBOX_YESNO
+	bufferspeciesname STR_VAR_1, VAR_0x8002
+	msgbox Intro_Gift1_GiftBall1_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall2_5
 Intro_Gift1_GiftBall2_1:
@@ -72,14 +74,13 @@ Intro_Gift1_GiftBall2_2:
 	goto Intro_Gift1_GiftBall2_1
 
 Intro_Gift1_GiftBall2_5:
-	bufferspeciesname STR_VAR_1, SPECIES_STUNKY
-	givemon SPECIES_STUNKY, 5, ITEM_NONE
+	givemon VAR_0x8002, 5, ITEM_NONE
 	removeobject 2
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall2_8
 Intro_Gift1_GiftBall2_7:
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_A, 1
 	goto Intro_Gift1_GiftBall2_1
 
 Intro_Gift1_GiftBall2_8:
@@ -89,10 +90,11 @@ Intro_Gift1_GiftBall2_8:
 
 
 Intro_Gift1_GiftBall3::
-	showmonpic SPECIES_ELECTRIKE, 10, 3
-	compare VAR_TEMP_1, 1
+	showmonpic VAR_0x8003, 10, 3
+	compare VAR_TEMP_A, 1
 	goto_if_eq Intro_Gift1_GiftBall3_2
-	msgbox Intro_Gift1_GiftBall3_Text_0, MSGBOX_YESNO
+	bufferspeciesname STR_VAR_1, VAR_0x8003
+	msgbox Intro_Gift1_GiftBall1_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall3_5
 Intro_Gift1_GiftBall3_1:
@@ -105,14 +107,13 @@ Intro_Gift1_GiftBall3_2:
 	goto Intro_Gift1_GiftBall3_1
 
 Intro_Gift1_GiftBall3_5:
-	bufferspeciesname STR_VAR_1, SPECIES_ELECTRIKE
-	givemon SPECIES_ELECTRIKE, 5, ITEM_NONE
+	givemon VAR_0x8003, 5, ITEM_NONE
 	removeobject 3
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Intro_Gift1_GiftBall3_8
 Intro_Gift1_GiftBall3_7:
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_A, 1
 	goto Intro_Gift1_GiftBall3_1
 
 Intro_Gift1_GiftBall3_8:
@@ -143,13 +144,7 @@ Intro_Gift1_GiftBall1_Text_0:
 	.string "Pokémon.$"
 
 Intro_Gift1_GiftBall1_Text_1:
-	.string "Will you take Makuhita?$"
-
-Intro_Gift1_GiftBall2_Text_0:
-	.string "Will you take Stunky?$"
-
-Intro_Gift1_GiftBall3_Text_0:
-	.string "Will you take Electrike?$"
+	.string "Will you take {STR_VAR_1}?$"
 
 Intro_Gift1_SignDirections_Text_0:
 	.string "In gift rooms, you will be given some\n"

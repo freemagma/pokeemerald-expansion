@@ -411,9 +411,9 @@ static void CreateWildMon(u16 species, u8 level)
 }
 
 EWRAM_DATA static u16 sLastSelectedWildSpecies = 0;
-static bool8 IsValidWildMonSpecies(u16 species) {
-    s8 seenSpecies = GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
-    if (seenSpecies) {
+bool8 IsUncaughtSpecies(u16 species) {
+    s8 caughtSpecies = GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
+    if (caughtSpecies) {
         return FALSE;
     }
     return TRUE;
@@ -435,7 +435,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
         // only allow non-duplicate encounters
         for (i = 0; i < 12; i++) {
             species = wildMonInfo->wildPokemon[i].species;
-            if (IsValidWildMonSpecies(species)) {
+            if (IsUncaughtSpecies(species)) {
                 anyValid = TRUE;
                 if (species != sLastSelectedWildSpecies)
                     nonRepeatValid = TRUE;
@@ -462,7 +462,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
                 wildMonIndex = ChooseWildMonIndex_Land();
 
             species = wildMonInfo->wildPokemon[wildMonIndex].species;
-        } while (!IsValidWildMonSpecies(species)
+        } while (!IsUncaughtSpecies(species)
                  || (species == sLastSelectedWildSpecies && nonRepeatValid));
         break;
     case WILD_AREA_WATER:

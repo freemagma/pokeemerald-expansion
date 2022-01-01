@@ -88,14 +88,14 @@
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_UNUSED_0x04F    0x4F // USED
 
 // My Flags
-#define FLAG_DISABLE_BAG 0x50
+#define FLAG_DISABLE_BAG 0x4F
 #define FLAG_POKEMONPCMENU 0x52
 
 // Scripts
-#define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50 // reused
+#define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
 #define FLAG_SET_WALL_CLOCK                      0x51
 #define FLAG_RESCUED_BIRCH                       0x52 // reused
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
@@ -1052,17 +1052,14 @@
 #define FLAG_ITEM_STARTER_1 0x3E8
 #define FLAG_ITEM_STARTER_2 0x3E9
 #define FLAG_ITEM_STARTER_3 0x3EA
-#define FLAG_ITEM_INTRO_GIFT1_1 0x3EB
-#define FLAG_ITEM_INTRO_GIFT1_2 0x3EC
-#define FLAG_ITEM_INTRO_GIFT1_3 0x3ED
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8 // reused
 #define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9 // reused
 #define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA // reused
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB // reused
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC // reused
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED // reused
+#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
+#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
+#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
 #define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
 #define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0

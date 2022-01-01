@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Intro_Gift1_GiftBall1",
-      "flag": "FLAG_ITEM_INTRO_GIFT1_1"
+      "flag": "FLAG_TEMP_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Intro_Gift1_GiftBall2",
-      "flag": "FLAG_ITEM_INTRO_GIFT1_2"
+      "flag": "FLAG_TEMP_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Intro_Gift1_GiftBall3",
-      "flag": "FLAG_ITEM_INTRO_GIFT1_3"
+      "flag": "FLAG_TEMP_3"
     }
   ],
   "warp_events": [
