@@ -1044,6 +1044,11 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
+// My Item Ball Flags
+#define FLAG_ITEM_STARTER_1 0x3E8
+#define FLAG_ITEM_STARTER_2 0x3E9
+#define FLAG_ITEM_STARTER_3 0x3EA
+
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
 #define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9

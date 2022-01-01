@@ -1,0 +1,13 @@
+mapscripts Intro_Encounter1_MapScripts {
+    MAP_SCRIPT_ON_RETURN_TO_FIELD {
+        setvar(VAR_ENCOUNTER_FLAG, 1)
+    }
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_ENCOUNTER_FLAG, 0)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE {
+        lockall
+        msgbox(format("The room behind you collapsed!\p...\pThere seems to be one Pokémon hiding in the grass."))
+        releaseall
+    }
+}

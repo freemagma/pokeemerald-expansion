@@ -657,18 +657,24 @@ u8 BattleSetup_GetTerrainId(void)
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
-    if (MetatileBehavior_IsTallGrass(tileBehavior))
-        return BATTLE_TERRAIN_GRASS;
-    if (MetatileBehavior_IsLongGrass(tileBehavior))
-        return BATTLE_TERRAIN_LONG_GRASS;
-    if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
-        return BATTLE_TERRAIN_SAND;
+    /* if (MetatileBehavior_IsTallGrass(tileBehavior)) */
+    /*     return BATTLE_TERRAIN_GRASS; */
+    /* if (MetatileBehavior_IsLongGrass(tileBehavior)) */
+    /*     return BATTLE_TERRAIN_LONG_GRASS; */
+    /* if (MetatileBehavior_IsSandOrDeepSand(tileBehavior)) */
+    /*     return BATTLE_TERRAIN_SAND; */
 
     switch (gMapHeader.mapType)
     {
     case MAP_TYPE_TOWN:
     case MAP_TYPE_CITY:
     case MAP_TYPE_ROUTE:
+        if (MetatileBehavior_IsTallGrass(tileBehavior))
+            return BATTLE_TERRAIN_GRASS;
+        if (MetatileBehavior_IsLongGrass(tileBehavior))
+            return BATTLE_TERRAIN_LONG_GRASS;
+        if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
+            return BATTLE_TERRAIN_SAND;
         break;
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))

@@ -1,0 +1,84 @@
+mapscripts Entrance_MapScripts {}
+
+const BALL_1_ID = 1
+const BALL_2_ID = 2
+const BALL_3_ID = 3
+
+const INTRO_PRE_STARTER = 0
+const INTRO_POST_STARTER = 1
+
+script StarterBall1 {
+    showmonpic(SPECIES_BULBASAUR, 10, 3)
+    if (var(VAR_INTRO_STATE) != INTRO_PRE_STARTER) {
+       msgbox(format("It would be greedy to take another Pokémon."))
+    } else {
+        msgbox(format("Will you take Bulbasaur?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+           bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
+           givemon(SPECIES_BULBASAUR, 5, ITEM_NONE)
+           removeobject(BALL_1_ID)
+           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+           if (var(VAR_RESULT) == 1) {
+              call(Common_EventScript_GetGiftMonPartySlot)
+              call(Common_EventScript_NameReceivedPartyMon)
+           }
+           setvar(VAR_STARTER_MON, 0)
+           setvar(VAR_INTRO_STATE, INTRO_POST_STARTER)
+           setflag(FLAG_SYS_POKEMON_GET)
+        }
+    }
+    hidemonpic
+    releaseall
+    end
+}
+
+
+script StarterBall2 {
+    showmonpic(SPECIES_CHIMCHAR, 10, 3)
+    if (var(VAR_INTRO_STATE) != INTRO_PRE_STARTER) {
+       msgbox(format("It would be greedy to take another Pokémon."))
+    } else {
+        msgbox(format("Will you take Chimchar?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+           bufferspeciesname(STR_VAR_1, SPECIES_CHIMCHAR)
+           givemon(SPECIES_CHIMCHAR, 5, ITEM_NONE)
+           removeobject(BALL_2_ID)
+           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+           if (var(VAR_RESULT) == 1) {
+              call(Common_EventScript_GetGiftMonPartySlot)
+              call(Common_EventScript_NameReceivedPartyMon)
+           }
+           setvar(VAR_STARTER_MON, 1)
+           setvar(VAR_INTRO_STATE, INTRO_POST_STARTER)
+           setflag(FLAG_SYS_POKEMON_GET)
+        }
+    }
+    hidemonpic
+    releaseall
+    end
+}
+
+script StarterBall3 {
+    showmonpic(SPECIES_FROAKIE, 10, 3)
+    if (var(VAR_INTRO_STATE) != INTRO_PRE_STARTER) {
+       msgbox(format("It would be greedy to take another Pokémon."))
+    } else {
+        msgbox(format("Will you take Froakie?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+           bufferspeciesname(STR_VAR_1, SPECIES_FROAKIE)
+           givemon(SPECIES_FROAKIE, 5, ITEM_NONE)
+           removeobject(BALL_3_ID)
+           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+           if (var(VAR_RESULT) == 1) {
+              call(Common_EventScript_GetGiftMonPartySlot)
+              call(Common_EventScript_NameReceivedPartyMon)
+           }
+           setvar(VAR_STARTER_MON, 2)
+           setvar(VAR_INTRO_STATE, INTRO_POST_STARTER)
+           setflag(FLAG_SYS_POKEMON_GET)
+        }
+    }
+    hidemonpic
+    releaseall
+    end
+}
