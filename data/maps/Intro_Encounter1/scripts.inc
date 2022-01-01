@@ -5,12 +5,12 @@ Intro_Encounter1_MapScripts::
 	.byte 0
 
 Intro_Encounter1_MapScripts_MAP_SCRIPT_ON_RETURN_TO_FIELD:
-	setvar VAR_ENCOUNTER_FLAG, 1
+	setvar VAR_ENCOUNTERS_LEFT, 0
 	return
 
 Intro_Encounter1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
-	setvar VAR_ENCOUNTER_FLAG, 0
+	setvar VAR_ENCOUNTERS_LEFT, 1
 	return
 
 Intro_Encounter1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
@@ -27,6 +27,13 @@ Intro_Encounter1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 	return
 
 
+SignDirections::
+	lockall
+	msgbox SignDirections_Text_0
+	releaseall
+	return
+
+
 UpOne:
 	walk_up
 	step_end
@@ -34,5 +41,13 @@ UpOne:
 Intro_Encounter1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "The room behind you collapsed!\p"
 	.string "...\p"
-	.string "There seems to be one Pokémon hiding in\n"
-	.string "the grass.$"
+	.string "There seem to be a couple Pokémon\n"
+	.string "hiding in the grass.$"
+
+SignDirections_Text_0:
+	.string "In encounter rooms, you will have the\n"
+	.string "opportunity to catch a Pokémon. Your\l"
+	.string "encounter will be a double battle\l"
+	.string "containing two wild Pokémon you\l"
+	.string "haven't caught yet. But be careful,\l"
+	.string "since you can't try again if you fail!$"

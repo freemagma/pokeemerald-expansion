@@ -47,7 +47,7 @@
 
 // my general purpose vars
 #define VAR_INTRO_STATE 0x4020
-#define VAR_ENCOUNTER_FLAG 0x4024
+#define VAR_ENCOUNTERS_LEFT 0x4024
 
 // general purpose vars
 #define VAR_RECYCLE_GOODS                    0x4020 // reused

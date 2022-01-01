@@ -14,6 +14,7 @@
 #include "tv.h"
 #include "link.h"
 #include "script.h"
+#include "pokedex.h"
 #include "battle_debug.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -409,28 +410,60 @@ static void CreateWildMon(u16 species, u8 level)
     CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
 }
 
+EWRAM_DATA static u16 sLastSelectedWildSpecies = 0;
+static bool8 IsValidWildMonSpecies(u16 species) {
+    s8 seenSpecies = GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
+    if (seenSpecies) {
+        return FALSE;
+    }
+    return TRUE;
+}
+
 static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 area, u8 flags)
 {
     u8 wildMonIndex = 0;
     u8 level;
+    bool8 anyValid = FALSE;
+    bool8 nonRepeatValid = FALSE;
+    u8 i;
+    u16 species;
+    bool8 success = FALSE;
 
     switch (area)
     {
     case WILD_AREA_LAND:
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_STEEL, ABILITY_MAGNET_PULL, &wildMonIndex))
-            break;
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_STATIC, &wildMonIndex))
-            break;
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_LIGHTNING_ROD, &wildMonIndex))
-            break;
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_FIRE, ABILITY_FLASH_FIRE, &wildMonIndex))
-            break;
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_GRASS, ABILITY_HARVEST, &wildMonIndex))
-            break;
-        if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_WATER, ABILITY_STORM_DRAIN, &wildMonIndex))
-            break;
+        // only allow non-duplicate encounters
+        for (i = 0; i < 12; i++) {
+            species = wildMonInfo->wildPokemon[i].species;
+            if (IsValidWildMonSpecies(species)) {
+                anyValid = TRUE;
+                if (species != sLastSelectedWildSpecies)
+                    nonRepeatValid = TRUE;
+            }
+        }
+        if (!anyValid) {
+            return FALSE;
+        }
+        do {
+            success = FALSE;
+            if (!success)
+                success = TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_STEEL, ABILITY_MAGNET_PULL, &wildMonIndex);
+            if (!success)
+                TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_STATIC, &wildMonIndex);
+            if (!success)
+                TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_LIGHTNING_ROD, &wildMonIndex);
+            if (!success)
+                TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_FIRE, ABILITY_FLASH_FIRE, &wildMonIndex);
+            if (!success)
+                TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_GRASS, ABILITY_HARVEST, &wildMonIndex);
+            if (!success)
+                TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_WATER, ABILITY_STORM_DRAIN, &wildMonIndex);
+            if (!success)
+                wildMonIndex = ChooseWildMonIndex_Land();
 
-        wildMonIndex = ChooseWildMonIndex_Land();
+            species = wildMonInfo->wildPokemon[wildMonIndex].species;
+        } while (!IsValidWildMonSpecies(species)
+                 || (species == sLastSelectedWildSpecies && nonRepeatValid));
         break;
     case WILD_AREA_WATER:
         if (TryGetAbilityInfluencedWildMonIndex(wildMonInfo->wildPokemon, TYPE_STEEL, ABILITY_MAGNET_PULL, &wildMonIndex))
@@ -459,7 +492,9 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
         return FALSE;
 
-    CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    species = wildMonInfo->wildPokemon[wildMonIndex].species;
+    CreateWildMon(species, level);
+    sLastSelectedWildSpecies = species;
     return TRUE;
 }
 
@@ -567,7 +602,7 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
     u16 headerId;
     struct Roamer *roamer;
 
-    if (sWildEncountersDisabled == TRUE || VarGet(VAR_ENCOUNTER_FLAG) == 1)
+    if (sWildEncountersDisabled == TRUE || VarGet(VAR_ENCOUNTERS_LEFT) == 0)
         return FALSE;
 
     headerId = GetCurrentMapWildMonHeaderId();
@@ -632,6 +667,7 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
                 }
 
                 // try a regular wild land encounter
+                sLastSelectedWildSpecies = 0; // effectively NULL
                 if (TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
                 {
                     if (TryDoDoubleWildBattle())
@@ -996,13 +1032,15 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 
 bool8 TryDoDoubleWildBattle(void)
 {
-    if (GetSafariZoneFlag() || GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS)
-        return FALSE;
-    else if (B_FLAG_FORCE_DOUBLE_WILD != 0 && FlagGet(B_FLAG_FORCE_DOUBLE_WILD))
-        return TRUE;
-    #if B_DOUBLE_WILD_CHANCE != 0
-    else if ((Random() % 100) + 1 < B_DOUBLE_WILD_CHANCE)
-        return TRUE;
-    #endif
-    return FALSE;
+    // always!
+    return TRUE;
+    /* if (GetSafariZoneFlag() || GetMonsStateToDoubles() != PLAYER_HAS_TWO_USABLE_MONS) */
+    /*     return FALSE; */
+    /* else if (B_FLAG_FORCE_DOUBLE_WILD != 0 && FlagGet(B_FLAG_FORCE_DOUBLE_WILD)) */
+    /*     return TRUE; */
+    /* #if B_DOUBLE_WILD_CHANCE != 0 */
+    /* else if ((Random() % 100) + 1 < B_DOUBLE_WILD_CHANCE) */
+    /*     return TRUE; */
+    /* #endif */
+    /* return FALSE; */
 }
