@@ -3,11 +3,21 @@ mapscripts Intro_Encounter1_MapScripts {
         setvar(VAR_ENCOUNTER_FLAG, 1)
     }
     MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
         setvar(VAR_ENCOUNTER_FLAG, 0)
     }
-    MAP_SCRIPT_ON_FRAME_TABLE {
-        lockall
-        msgbox(format("The room behind you collapsed!\p...\pThere seems to be one Pokémon hiding in the grass."))
-        releaseall
-    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, UpOne)
+            waitmovement(0)
+            msgbox(format("The room behind you collapsed!\p...\pThere seems to be one Pokémon hiding in\n the grass."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+movement UpOne {
+    walk_up
 }

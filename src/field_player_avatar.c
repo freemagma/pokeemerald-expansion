@@ -1431,6 +1431,9 @@ static void HideShowWarpArrow(struct ObjectEvent *objectEvent)
 
     for (x = 0, direction = DIR_SOUTH; x < 4; x++, direction++)
     {
+        // dont show south warp arrow
+        if (direction == DIR_SOUTH)
+            continue;
         if (sArrowWarpMetatileBehaviorChecks2[x](metatileBehavior) && direction == objectEvent->movementDirection)
         {
             // Show warp arrow if applicable
