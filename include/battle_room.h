@@ -1,0 +1,5 @@
+#ifndef GUARD_BATTLE_ROOM_H
+#define GUARD_BATTLE_ROOM_H
+
+
+#endif // GUARD_BATTLE_ROOM_H

@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Intro_Gift1/border.bin",
       "blockdata_filepath": "data/layouts/Intro_Gift1/map.bin"
+    },
+    {
+      "id": "LAYOUT_INTRO_BATTLE1",
+      "name": "Intro_Battle1_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Intro_Battle1/border.bin",
+      "blockdata_filepath": "data/layouts/Intro_Battle1/map.bin"
     }
   ]
 }

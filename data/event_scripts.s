@@ -1063,3 +1063,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Intro_Encounter1/scripts.inc"
 
 	.include "data/maps/Intro_Gift1/scripts.inc"
+
+	.include "data/maps/Intro_Battle1/scripts.inc"

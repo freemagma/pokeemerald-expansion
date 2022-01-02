@@ -47,6 +47,7 @@
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
 
+
 enum {
     TRANSITION_TYPE_NORMAL,
     TRANSITION_TYPE_CAVE,
@@ -56,6 +57,7 @@ enum {
 
 enum {
     TRAINER_PARAM_LOAD_VAL_8BIT,
+    TRAINER_PARAM_LOAD_VAR_VAL_16BIT,
     TRAINER_PARAM_LOAD_VAL_16BIT,
     TRAINER_PARAM_LOAD_VAL_32BIT,
     TRAINER_PARAM_CLEAR_VAL_8BIT,
@@ -159,7 +161,7 @@ static const u8 sBattleTransitionTable_BattleDome[] =
 static const struct TrainerBattleParameter sOrdinaryBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_A, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -172,7 +174,7 @@ static const struct TrainerBattleParameter sOrdinaryBattleParams[] =
 static const struct TrainerBattleParameter sContinueScriptBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_A, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -185,7 +187,7 @@ static const struct TrainerBattleParameter sContinueScriptBattleParams[] =
 static const struct TrainerBattleParameter sDoubleBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_A, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -198,7 +200,7 @@ static const struct TrainerBattleParameter sDoubleBattleParams[] =
 static const struct TrainerBattleParameter sOrdinaryNoIntroBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_A, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_CLEAR_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -211,7 +213,7 @@ static const struct TrainerBattleParameter sOrdinaryNoIntroBattleParams[] =
 static const struct TrainerBattleParameter sContinueScriptDoubleBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_A, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerAIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -224,7 +226,7 @@ static const struct TrainerBattleParameter sContinueScriptDoubleBattleParams[] =
 static const struct TrainerBattleParameter sTrainerBOrdinaryBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_B,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_B, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerBIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerBDefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -237,7 +239,7 @@ static const struct TrainerBattleParameter sTrainerBOrdinaryBattleParams[] =
 static const struct TrainerBattleParameter sTrainerBContinueScriptBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
-    {&gTrainerBattleOpponent_B,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&gTrainerBattleOpponent_B, TRAINER_PARAM_LOAD_VAR_VAL_16BIT},
     {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
     {&sTrainerBIntroSpeech,         TRAINER_PARAM_LOAD_VAL_32BIT},
     {&sTrainerBDefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
@@ -1057,6 +1059,10 @@ static void TrainerBattleLoadArgs(const struct TrainerBattleParameter *specs, co
             SetU8(specs->varPtr, TrainerBattleLoadArg8(data));
             data += 1;
             break;
+        case TRAINER_PARAM_LOAD_VAR_VAL_16BIT:
+            SetU16(specs->varPtr, VarGet(TrainerBattleLoadArg16(data)));
+            data += 2;
+            break;
         case TRAINER_PARAM_LOAD_VAL_16BIT:
             SetU16(specs->varPtr, TrainerBattleLoadArg16(data));
             data += 2;
@@ -1206,7 +1212,7 @@ void SetUpTwoTrainersBattle(void)
 
 bool32 GetTrainerFlagFromScriptPointer(const u8 *data)
 {
-    u32 flag = TrainerBattleLoadArg16(data + 2);
+    u32 flag = VarGet(TrainerBattleLoadArg16(data + 2));
     return FlagGet(TRAINER_FLAGS_START + flag);
 }
 
@@ -1315,6 +1321,8 @@ void BattleSetup_StartTrainerBattle(void)
 
     ScriptContext1_Stop();
 }
+
+
 
 static void CB2_EndTrainerBattle(void)
 {

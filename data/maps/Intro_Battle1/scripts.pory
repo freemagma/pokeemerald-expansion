@@ -1,0 +1,33 @@
+const VAR_TRAINER = VAR_TEMP_A
+
+mapscripts Intro_Battle1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        callnative(GenerateBattleIntro)
+        copyvar(VAR_TRAINER, VAR_0x8000)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Intro_Gift1_UpOne)
+            waitmovement(0)
+            msgbox(format("The room behind you collapsed! \p"
+                          "...\p"
+                          "There seems to be a trainer in this room."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+script Intro_Battle1_Trainer {
+    trainerbattle_single(VAR_TRAINER, "HELLO", "DEFEAT")
+    msgbox("POST BATTLE", MSGBOX_AUTOCLOSE)
+}
+
+script Intro_Battle1_SignDirections {
+    lockall
+    msgbox(format("In battle rooms, you will have to face an opposing trainer.\p"
+                  "You'll recieve some rewards after you win!"))
+    releaseall
+}

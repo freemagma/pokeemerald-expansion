@@ -19,16 +19,14 @@ EWRAM_DATA static u16 sPermutation[MAX_PERMUTATION] = {0};
 
 #define PX(arr, ix) (arr[sPermutation[ix]])
 
-static void ShufflePermutation(u16 count)
-{
+static void ShufflePermutation(u16 count) {
     u16 i;
 
     for (i = 0; i < count; i++)
         sPermutation[i] = i;
 
 
-    for (i = (count - 1); i > 0; i--)
-    {
+    for (i = (count - 1); i > 0; i--) {
         u16 j = Random() % (i + 1);
         u16 arr = sPermutation[j];
         sPermutation[j] = sPermutation[i];

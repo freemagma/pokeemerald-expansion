@@ -40,7 +40,8 @@
   "gMapGroup_RogueIntro": [
     "Entrance",
     "Intro_Encounter1",
-    "Intro_Gift1"
+    "Intro_Gift1",
+    "Intro_Battle1"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
