@@ -1,4 +1,4 @@
-Entrance_MapScripts::
+DungeonTutorial_Entrance_MapScripts::
 	.byte 0
 
 

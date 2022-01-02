@@ -1,4 +1,4 @@
-mapscripts Intro_Encounter1_MapScripts {
+mapscripts DungeonTutorial_Act1_Encounter1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_ENCOUNTERS_LEFT, 1)

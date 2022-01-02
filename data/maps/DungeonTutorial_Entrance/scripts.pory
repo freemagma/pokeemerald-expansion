@@ -1,4 +1,4 @@
-mapscripts Entrance_MapScripts {}
+mapscripts DungeonTutorial_Entrance_MapScripts {}
 
 const BALL_1_ID = 1
 const BALL_2_ID = 2

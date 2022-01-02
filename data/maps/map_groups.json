@@ -4,9 +4,9 @@
     "gMapGroup_DungeonTutorial"
   ],
   "gMapGroup_DungeonTutorial": [
-    "Entrance",
-    "Intro_Encounter1",
-    "Intro_Gift1",
-    "Intro_Battle1"
+    "DungeonTutorial_Entrance",
+    "DungeonTutorial_Act1_Gift1",
+    "DungeonTutorial_Act1_Encounter1",
+    "DungeonTutorial_Act1_Battle1"
   ]
 }

@@ -1,6 +1,6 @@
 const VAR_TRAINER = VAR_TEMP_A
 
-mapscripts Intro_Battle1_MapScripts {
+mapscripts DungeonTutorial_Act1_Battle1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         callnative(GenerateBattleIntro)
@@ -20,12 +20,12 @@ mapscripts Intro_Battle1_MapScripts {
     ]
 }
 
-script Intro_Battle1_Trainer {
+script DungeonTutorial_Act1_Battle1_Trainer {
     trainerbattle_single(VAR_TRAINER, "HELLO", "DEFEAT")
     msgbox("POST BATTLE", MSGBOX_AUTOCLOSE)
 }
 
-script Intro_Battle1_SignDirections {
+script DungeonTutorial_Act1_Battle1_SignDirections {
     lockall
     msgbox(format("In battle rooms, you will have to face an opposing trainer.\p"
                   "You'll recieve some rewards after you win!"))

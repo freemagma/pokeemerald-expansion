@@ -127,7 +127,11 @@ static void ClearFrontierRecord(void)
 
 static void WarpToStart(void)
 {
-    SetWarpDestination(MAP_GROUP(ENTRANCE), MAP_NUM(ENTRANCE), WARP_ID_NONE, -1, -1);
+    SetWarpDestination(
+        MAP_GROUP(DUNGEON_TUTORIAL_ENTRANCE),
+        MAP_NUM(DUNGEON_TUTORIAL_ENTRANCE),
+        WARP_ID_NONE, -1, -1
+    );
     WarpIntoMap();
 }
 

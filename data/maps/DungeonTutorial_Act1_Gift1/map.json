@@ -1,7 +1,7 @@
 {
-  "id": "MAP_INTRO_GIFT1",
-  "name": "Intro_Gift1",
-  "layout": "LAYOUT_INTRO_GIFT1",
+  "id": "MAP_DUNGEON_TUTORIAL_ACT1_GIFT1",
+  "name": "DungeonTutorial_Act1_Gift1",
+  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_GIFT1",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_TUTORIAL",
   "requires_flash": false,
@@ -59,14 +59,14 @@
       "x": 8,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ENTRANCE",
       "dest_warp_id": 0
     },
     {
       "x": 8,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_INTRO_BATTLE1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
       "dest_warp_id": 0
     }
   ],

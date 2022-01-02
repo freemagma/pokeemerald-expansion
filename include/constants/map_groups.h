@@ -6,10 +6,10 @@
 //
 
 // gMapGroup_DungeonTutorial
-#define MAP_ENTRANCE         (0 | (0 << 8))
-#define MAP_INTRO_ENCOUNTER1 (1 | (0 << 8))
-#define MAP_INTRO_GIFT1      (2 | (0 << 8))
-#define MAP_INTRO_BATTLE1    (3 | (0 << 8))
+#define MAP_DUNGEON_TUTORIAL_ENTRANCE        (0 | (0 << 8))
+#define MAP_DUNGEON_TUTORIAL_ACT1_GIFT1      (1 | (0 << 8))
+#define MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1 (2 | (0 << 8))
+#define MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1    (3 | (0 << 8))
 
 #define MAP_GROUPS_COUNT 1
 

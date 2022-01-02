@@ -1,7 +1,7 @@
 {
-  "id": "MAP_INTRO_BATTLE1",
-  "name": "Intro_Battle1",
-  "layout": "LAYOUT_INTRO_BATTLE1",
+  "id": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+  "name": "DungeonTutorial_Act1_Battle1",
+  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_BATTLE1",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_TUTORIAL",
   "requires_flash": false,
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Intro_Battle1_Trainer",
+      "script": "DungeonTutorial_Act1_Battle1_Trainer",
       "flag": "0"
     }
   ],
@@ -33,14 +33,14 @@
       "x": 8,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_INTRO_GIFT1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_GIFT1",
       "dest_warp_id": 1
     },
     {
       "x": 8,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_INTRO_ENCOUNTER1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
       "dest_warp_id": 0
     }
   ],
@@ -54,7 +54,7 @@
       "y": 10,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Intro_Battle1_SignDirections"
+      "script": "DungeonTutorial_Act1_Battle1_SignDirections"
     }
   ]
 }

@@ -8,7 +8,7 @@ const VAR_SPEC_2 = VAR_0x8002
 const VAR_SPEC_3 = VAR_0x8003
 const LEVEL = 5
 
-mapscripts Intro_Gift1_MapScripts {
+mapscripts DungeonTutorial_Act1_Gift1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_GIFT_TAKEN, 0)

@@ -4412,44 +4412,44 @@
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
     },
     {
-      "id": "LAYOUT_ENTRANCE",
-      "name": "Entrance_Layout",
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ENTRANCE",
+      "name": "DungeonTutorial_Entrance_Layout",
       "width": 17,
       "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/Entrance/map.bin"
+      "border_filepath": "data/layouts/DungeonTutorial_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Entrance/map.bin"
     },
     {
-      "id": "LAYOUT_INTRO_ENCOUNTER1",
-      "name": "Intro_Encounter1_Layout",
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
+      "name": "DungeonTutorial_Act1_Encounter1_Layout",
       "width": 17,
       "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Intro_Encounter1/border.bin",
-      "blockdata_filepath": "data/layouts/Intro_Encounter1/map.bin"
+      "border_filepath": "data/layouts/DungeonTutorial_Act1_Encounter1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_Encounter1/map.bin"
     },
     {
-      "id": "LAYOUT_INTRO_GIFT1",
-      "name": "Intro_Gift1_Layout",
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ACT1_GIFT1",
+      "name": "DungeonTutorial_Act1_Gift1_Layout",
       "width": 17,
       "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Intro_Gift1/border.bin",
-      "blockdata_filepath": "data/layouts/Intro_Gift1/map.bin"
+      "border_filepath": "data/layouts/DungeonTutorial_Act1_Gift1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_Gift1/map.bin"
     },
     {
-      "id": "LAYOUT_INTRO_BATTLE1",
-      "name": "Intro_Battle1_Layout",
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+      "name": "DungeonTutorial_Act1_Battle1_Layout",
       "width": 17,
       "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Intro_Battle1/border.bin",
-      "blockdata_filepath": "data/layouts/Intro_Battle1/map.bin"
+      "border_filepath": "data/layouts/DungeonTutorial_Act1_Battle1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_Battle1/map.bin"
     }
   ]
 }
