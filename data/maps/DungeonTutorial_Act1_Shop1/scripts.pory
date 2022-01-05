@@ -1,0 +1,34 @@
+mapscripts DungeonTutorial_Act1_Shop1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Intro_Gift1_UpOne)
+            waitmovement(0)
+            msgbox(format("The room behind you collapsed! \p"
+                          "...\p"
+                          "A merchant seems to have taken up shop here."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+
+script DTutorial_A1_Shop1_Sign {
+    lockall
+    msgbox(format("In shop rooms, there will be a merchant selling a random assortment of items."))
+    releaseall
+}
+
+script DTutorial_A1_Shop1_Merchant {
+    lock
+    faceplayer
+    message(format("Welcome to my humble store. I hope my wares can be of use."))
+    waitmessage
+    randomshop(0)
+    msgbox(format("Just let me know if you need anything else."))
+    release
+}

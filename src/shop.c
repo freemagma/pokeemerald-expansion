@@ -283,11 +283,11 @@ static u8 CreateShopMenu(u8 martType)
     if (martType == MART_TYPE_NORMAL)
     {
         struct WindowTemplate winTemplate;
-        winTemplate = sShopMenuWindowTemplates[0];
-        winTemplate.width = GetMaxWidthInMenuTable(sShopMenuActions_BuySellQuit, ARRAY_COUNT(sShopMenuActions_BuySellQuit));
+        winTemplate = sShopMenuWindowTemplates[1];
+        winTemplate.width = GetMaxWidthInMenuTable(sShopMenuActions_BuyQuit, ARRAY_COUNT(sShopMenuActions_BuyQuit));
         sMartInfo.windowId = AddWindow(&winTemplate);
-        sMartInfo.menuActions = sShopMenuActions_BuySellQuit;
-        numMenuItems = ARRAY_COUNT(sShopMenuActions_BuySellQuit);
+        sMartInfo.menuActions = sShopMenuActions_BuyQuit;
+        numMenuItems = ARRAY_COUNT(sShopMenuActions_BuyQuit);
     }
     else
     {

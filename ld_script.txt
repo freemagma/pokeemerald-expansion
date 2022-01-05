@@ -334,6 +334,7 @@ SECTIONS {
         src/international_string_util.o(.text);
         src/gift_room.o(.text);
         src/battle_room.o(.text);
+        src/shop_room.o(.text);
     } =0
 
     script_data :
@@ -698,6 +699,7 @@ SECTIONS {
         data/sound_data.o(.rodata);
         src/gift_room.o(.rodata);
         src/battle_room.o(.rodata);
+        src/shop_room.o(.rodata);
     } =0
 
     song_data :

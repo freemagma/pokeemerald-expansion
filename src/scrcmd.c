@@ -40,6 +40,7 @@
 #include "script_movement.h"
 #include "script_pokemon_util.h"
 #include "shop.h"
+#include "shop_room.h"
 #include "slot_machine.h"
 #include "sound.h"
 #include "string_util.h"
@@ -1914,6 +1915,14 @@ bool8 ScrCmd_pokemart(struct ScriptContext *ctx)
     const void *ptr = (void *)ScriptReadWord(ctx);
 
     CreatePokemartMenu(ptr);
+    ScriptContext1_Stop();
+    return TRUE;
+}
+
+bool8 ScrCmd_randomshop(struct ScriptContext *ctx)
+{
+    u8 itempoolnum = ScriptReadByte(ctx);
+    CreateRandomShopMenu(itempoolnum);
     ScriptContext1_Stop();
     return TRUE;
 }

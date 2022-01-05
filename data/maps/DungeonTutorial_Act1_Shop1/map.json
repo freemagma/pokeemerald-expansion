@@ -1,7 +1,7 @@
 {
-  "id": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
-  "name": "DungeonTutorial_Act1_Encounter1",
-  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
+  "id": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1",
+  "name": "DungeonTutorial_Act1_Shop1",
+  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_SHOP1",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_TUTORIAL",
   "requires_flash": false,
@@ -14,7 +14,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 8,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DTutorial_A1_Shop1_Merchant",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
@@ -28,7 +40,7 @@
       "x": 8,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
       "dest_warp_id": 0
     }
   ],
@@ -42,7 +54,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Intro_Encounter1_SignDirections"
+      "script": "DTutorial_A1_Shop1_Sign"
     }
   ]
 }
