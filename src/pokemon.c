@@ -6819,104 +6819,107 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
 
 void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
 {
-    u8 evs[NUM_STATS];
-    u16 evIncrease = 0;
-    u16 totalEVs = 0;
-    u16 heldItem;
-    u8 holdEffect;
-    int i, multiplier;
-    u8 stat;
-    u8 bonus;
+    /* u8 evs[NUM_STATS]; */
+    /* u16 evIncrease = 0; */
+    /* u16 totalEVs = 0; */
+    /* u16 heldItem; */
+    /* u8 holdEffect; */
+    /* int i, multiplier; */
+    /* u8 stat; */
+    /* u8 bonus; */
 
-    heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
-    if (heldItem == ITEM_ENIGMA_BERRY)
-    {
-        if (gMain.inBattle)
-            holdEffect = gEnigmaBerries[0].holdEffect;
-        else
-            holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
-    }
-    else
-    {
-        holdEffect = ItemId_GetHoldEffect(heldItem);
-    }
+    // turn off EV yield from battle
+    return;
 
-    stat = ItemId_GetSecondaryId(heldItem);
-    bonus = ItemId_GetHoldEffectParam(heldItem);
+    /* heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0); */
+    /* if (heldItem == ITEM_ENIGMA_BERRY) */
+    /* { */
+    /*     if (gMain.inBattle) */
+    /*         holdEffect = gEnigmaBerries[0].holdEffect; */
+    /*     else */
+    /*         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect; */
+    /* } */
+    /* else */
+    /* { */
+    /*     holdEffect = ItemId_GetHoldEffect(heldItem); */
+    /* } */
 
-    for (i = 0; i < NUM_STATS; i++)
-    {
-        evs[i] = GetMonData(mon, MON_DATA_HP_EV + i, 0);
-        totalEVs += evs[i];
-    }
+    /* stat = ItemId_GetSecondaryId(heldItem); */
+    /* bonus = ItemId_GetHoldEffectParam(heldItem); */
 
-    for (i = 0; i < NUM_STATS; i++)
-    {
-        if (totalEVs >= MAX_TOTAL_EVS)
-            break;
+    /* for (i = 0; i < NUM_STATS; i++) */
+    /* { */
+    /*     evs[i] = GetMonData(mon, MON_DATA_HP_EV + i, 0); */
+    /*     totalEVs += evs[i]; */
+    /* } */
 
-        if (CheckPartyHasHadPokerus(mon, 0))
-            multiplier = 2;
-        else
-            multiplier = 1;
+    /* for (i = 0; i < NUM_STATS; i++) */
+    /* { */
+    /*     if (totalEVs >= MAX_TOTAL_EVS) */
+    /*         break; */
 
-        switch (i)
-        {
-        case STAT_HP:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_HP + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier;
-            break;
-        case STAT_ATK:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_Attack + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier;
-            break;
-        case STAT_DEF:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_Defense + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier;
-            break;
-        case STAT_SPEED:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_Speed + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier;
-            break;
-        case STAT_SPATK:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_SpAttack + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier;
-            break;
-        case STAT_SPDEF:
-            if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF)
-                evIncrease = (gBaseStats[defeatedSpecies].evYield_SpDefense + bonus) * multiplier;
-            else
-                evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier;
-            break;
-        }
+    /*     if (CheckPartyHasHadPokerus(mon, 0)) */
+    /*         multiplier = 2; */
+    /*     else */
+    /*         multiplier = 1; */
 
-        if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
-            evIncrease *= 2;
+    /*     switch (i) */
+    /*     { */
+    /*     case STAT_HP: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_HP + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier; */
+    /*         break; */
+    /*     case STAT_ATK: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_Attack + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier; */
+    /*         break; */
+    /*     case STAT_DEF: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_Defense + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier; */
+    /*         break; */
+    /*     case STAT_SPEED: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_Speed + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier; */
+    /*         break; */
+    /*     case STAT_SPATK: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_SpAttack + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier; */
+    /*         break; */
+    /*     case STAT_SPDEF: */
+    /*         if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF) */
+    /*             evIncrease = (gBaseStats[defeatedSpecies].evYield_SpDefense + bonus) * multiplier; */
+    /*         else */
+    /*             evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier; */
+    /*         break; */
+    /*     } */
 
-        if (totalEVs + (s16)evIncrease > MAX_TOTAL_EVS)
-            evIncrease = ((s16)evIncrease + MAX_TOTAL_EVS) - (totalEVs + evIncrease);
+    /*     if (holdEffect == HOLD_EFFECT_MACHO_BRACE) */
+    /*         evIncrease *= 2; */
 
-        if (evs[i] + (s16)evIncrease > MAX_PER_STAT_EVS)
-        {
-            int val1 = (s16)evIncrease + MAX_PER_STAT_EVS;
-            int val2 = evs[i] + evIncrease;
-            evIncrease = val1 - val2;
-        }
+    /*     if (totalEVs + (s16)evIncrease > MAX_TOTAL_EVS) */
+    /*         evIncrease = ((s16)evIncrease + MAX_TOTAL_EVS) - (totalEVs + evIncrease); */
 
-        evs[i] += evIncrease;
-        totalEVs += evIncrease;
-        SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
-    }
+    /*     if (evs[i] + (s16)evIncrease > MAX_PER_STAT_EVS) */
+    /*     { */
+    /*         int val1 = (s16)evIncrease + MAX_PER_STAT_EVS; */
+    /*         int val2 = evs[i] + evIncrease; */
+    /*         evIncrease = val1 - val2; */
+    /*     } */
+
+    /*     evs[i] += evIncrease; */
+    /*     totalEVs += evIncrease; */
+    /*     SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]); */
+    /* } */
 }
 
 u16 GetMonEVCount(struct Pokemon *mon)
