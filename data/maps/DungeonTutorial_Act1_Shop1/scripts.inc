@@ -4,6 +4,7 @@ DungeonTutorial_Act1_Shop1_MapScripts::
 	.byte 0
 
 DungeonTutorial_Act1_Shop1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	genrandomshop 0
 	setvar VAR_TEMP_0, 0
 	return
 
@@ -44,7 +45,7 @@ DTutorial_A1_Shop1_RandomMerchant::
 	faceplayer
 	message DTutorial_A1_Shop1_RandomMerchant_Text_0
 	waitmessage
-	randomshop 0
+	randomshop
 	msgbox DTutorial_A1_Shop1_RandomMerchant_Text_1
 	release
 	return

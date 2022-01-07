@@ -1919,10 +1919,16 @@ bool8 ScrCmd_pokemart(struct ScriptContext *ctx)
     return TRUE;
 }
 
-bool8 ScrCmd_randomshop(struct ScriptContext *ctx)
+bool8 ScrCmd_genrandomshop(struct ScriptContext *ctx)
 {
     u8 itempoolnum = ScriptReadByte(ctx);
-    CreateRandomShopMenu(itempoolnum);
+    GenerateRandomShop(itempoolnum);
+    return FALSE;
+}
+
+bool8 ScrCmd_randomshop(struct ScriptContext *ctx)
+{
+    CreateRandomShopMenu();
     ScriptContext1_Stop();
     return TRUE;
 }

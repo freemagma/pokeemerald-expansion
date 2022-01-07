@@ -1109,13 +1109,17 @@
 	.4byte \products
 	.endm
 
-    .macro randomshop itempoolnum:req
+    .macro genrandomshop itempoolnum:req
     .byte 0xe3
     .byte \itempoolnum
     .endm
 
-    .macro fixedshop itempoolnum:req
+    .macro randomshop
     .byte 0xe4
+    .endm
+
+    .macro fixedshop itempoolnum:req
+    .byte 0xe5
     .byte \itempoolnum
     .endm
 
