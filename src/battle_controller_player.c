@@ -1510,9 +1510,14 @@ static void DestroyExpTaskAndCompleteOnInactiveTextPrinter(u8 taskId)
 {
     u8 monIndex;
     u8 battlerId;
+    u8 level;
 
     monIndex = gTasks[taskId].tExpTask_monId;
-    GetMonData(&gPlayerParty[monIndex], MON_DATA_LEVEL);  // Unused return value.
+    level = GetMonData(&gPlayerParty[monIndex], MON_DATA_LEVEL);  // Unused return value.
+    // update level scale
+    if (VarGet(VAR_LEVEL_SCALE) < level) {
+        VarSet(VAR_LEVEL_SCALE, level);
+    }
     battlerId = gTasks[taskId].tExpTask_battler;
     gBattlerControllerFuncs[battlerId] = CompleteOnInactiveTextPrinter;
     DestroyTask(taskId);

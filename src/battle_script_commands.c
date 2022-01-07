@@ -3875,14 +3875,17 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
 
-                if (holdEffect == HOLD_EFFECT_EXP_SHARE)
-                    viaExpShare++;
+                /* if (holdEffect == HOLD_EFFECT_EXP_SHARE) */
+                /*     viaExpShare++; */
             }
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
                 calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
             #else
                 calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
             #endif
+
+            // EXP MULTIPLIER
+            calculatedExp *= 4;
 
             #if B_SPLIT_EXP < GEN_6
                 if (viaExpShare) // at least one mon is getting exp via exp share
@@ -3924,7 +3927,8 @@ static void Cmd_getexp(void)
             else
                 holdEffect = ItemId_GetHoldEffect(item);
 
-            if (holdEffect != HOLD_EFFECT_EXP_SHARE && !(gBattleStruct->sentInPokes & 1))
+            // always exp share
+            if (FALSE && !(gBattleStruct->sentInPokes & 1))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
@@ -3961,7 +3965,7 @@ static void Cmd_getexp(void)
                         gBattleMoveDamage = 0;
 
                     // only give exp share bonus in later gens if the mon wasn't sent out
-                    if ((holdEffect == HOLD_EFFECT_EXP_SHARE) && ((gBattleMoveDamage == 0) || (B_SPLIT_EXP < GEN_6)))
+                    if (TRUE && ((gBattleMoveDamage == 0) || (B_SPLIT_EXP < GEN_6)))
                         gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
@@ -6623,9 +6627,11 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
 
 static void Cmd_getmoneyreward(void)
 {
-    u32 moneyReward = GetTrainerMoneyToGive(gTrainerBattleOpponent_A);
-    if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-        moneyReward += GetTrainerMoneyToGive(gTrainerBattleOpponent_B);
+    /* u32 moneyReward = GetTrainerMoneyToGive(gTrainerBattleOpponent_A); */
+    /* if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS) */
+    /*     moneyReward += GetTrainerMoneyToGive(gTrainerBattleOpponent_B); */
+
+    u32 moneyReward = VarGet(VAR_TRAINER_MONEY_REWARD);
 
     AddMoney(&gSaveBlock1Ptr->money, moneyReward);
     PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 5, moneyReward);

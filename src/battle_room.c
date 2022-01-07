@@ -33,21 +33,25 @@ static void ShufflePermutation(u16 count) {
 struct Opponent {
     u16 trainerId;
     u16 gfxId;
+    u32 money;
 };
 
 #define INTRO_BATTLE_OPPONENTS_COUNT 3
 const static struct Opponent sIntroBattleOpponents[INTRO_BATTLE_OPPONENTS_COUNT] = {
 {
 .trainerId = TRAINER_CALVIN_1,
-.gfxId = OBJ_EVENT_GFX_YOUNGSTER
+.gfxId = OBJ_EVENT_GFX_YOUNGSTER,
+.money = 200
 },
 {
 .trainerId = TRAINER_RICK,
-.gfxId = OBJ_EVENT_GFX_BUG_CATCHER
+.gfxId = OBJ_EVENT_GFX_BUG_CATCHER,
+.money = 200
 },
 {
 .trainerId = TRAINER_ALLEN,
-.gfxId = OBJ_EVENT_GFX_CAMPER
+.gfxId = OBJ_EVENT_GFX_CAMPER,
+.money = 200
 },
 };
 
@@ -58,6 +62,8 @@ static void GenerateBattle(const struct Opponent oppList[], u16 count) {
     for (; HasTrainerBeenFought(PX(oppList, ix).trainerId) && ix != count - 1; ix++);
     VarSet(VAR_0x8000, PX(oppList, ix).trainerId);
     VarSet(VAR_OBJ_GFX_ID_0, PX(oppList, ix).gfxId);
+    VarSet(VAR_TRAINER_LEVEL_DIFF, 2);
+    VarSet(VAR_TRAINER_MONEY_REWARD, PX(oppList, ix).money);
 }
 
 void GenerateBattleIntro(void) {

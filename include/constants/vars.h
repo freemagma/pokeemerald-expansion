@@ -48,6 +48,9 @@
 // my general purpose vars
 #define VAR_INTRO_STATE 0x4020
 #define VAR_ENCOUNTERS_LEFT 0x4024
+#define VAR_LEVEL_SCALE 0x4025
+#define VAR_TRAINER_LEVEL_DIFF 0x4026
+#define VAR_TRAINER_MONEY_REWARD 0x4027
 
 // general purpose vars
 #define VAR_RECYCLE_GOODS                    0x4020 // reused
@@ -55,9 +58,9 @@
 #define VAR_ICE_STEP_COUNT                   0x4022
 #define VAR_STARTER_MON                      0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
 #define VAR_MIRAGE_RND_H                     0x4024 // reused
-#define VAR_MIRAGE_RND_L                     0x4025
-#define VAR_SECRET_BASE_MAP                  0x4026
-#define VAR_CYCLING_ROAD_RECORD_COLLISIONS   0x4027
+#define VAR_MIRAGE_RND_L                     0x4025 // reused
+#define VAR_SECRET_BASE_MAP                  0x4026 // reused
+#define VAR_CYCLING_ROAD_RECORD_COLLISIONS   0x4027 // reused
 #define VAR_CYCLING_ROAD_RECORD_TIME_L       0x4028
 #define VAR_CYCLING_ROAD_RECORD_TIME_H       0x4029
 #define VAR_FRIENDSHIP_STEP_COUNTER          0x402A

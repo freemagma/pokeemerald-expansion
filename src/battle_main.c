@@ -1824,6 +1824,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u32 personalityValue;
     u8 fixedIV;
     u8 level;
+    u8 maxLevel = 0;
     s32 i, j;
     u16 ev;
     u8 monsCount;
@@ -1851,6 +1852,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         else
         {
             monsCount = gTrainers[trainerNum].partySize;
+        }
+
+        for (i = 0; i < monsCount; i++) {
+            const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
+            if (partyData[i].lvl > maxLevel)
+                maxLevel = partyData[i].lvl;
         }
 
         for (i = 0; i < monsCount; i++)
@@ -1890,11 +1897,15 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             else if (partyData[i].gender == TRAINER_MON_FEMALE)
                 gender = MON_FEMALE;
 
+            level = (VarGet(VAR_LEVEL_SCALE) + partyData[i].lvl) - maxLevel - VarGet(VAR_TRAINER_LEVEL_DIFF);
+            if (level == 0)
+                level = 1;
+
             if (partyData[i].nature > 0)
-                CreateMonWithGenderNatureLetter(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, gender, partyData[i].nature, 0, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
+                CreateMonWithGenderNatureLetter(&party[i], partyData[i].species, level, fixedIV, gender, partyData[i].nature, 0, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
             else
             {
-                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
+                CreateMon(&party[i], partyData[i].species, level, fixedIV, TRUE, personalityValue, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
             }
 
             if (partyData[i].friendship > 0)
