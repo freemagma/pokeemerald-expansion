@@ -20,11 +20,17 @@ enum
     LAYER_TYPE
 };
 
+struct ItemPrice
+{
+    u16 itemId;
+    u16 price;
+};
+
 struct MartInfo
 {
     /*0x0*/ void (*callback)(void);
     /*0x4*/ const struct MenuAction *menuActions;
-    /*0x8*/ const u16 *itemList;
+    /*0x8*/ const struct ItemPrice *itemList;
     /*0xC*/ u16 itemCount;
     /*0xE*/ u8 windowId;
     /*0xF*/ u8 martType;
@@ -44,13 +50,7 @@ struct ShopData
     /*0x2010*/ s16 viewportObjects[OBJECT_EVENTS_COUNT][5];
 };
 
-struct ItemPrice
-{
-    u16 itemId;
-    u16 price;
-}
-
-void CreatePokemartMenu(const u16 *);
+void CreatePokemartMenu(const struct ItemPrice *);
 void CreateDecorationShop1Menu(const u16 *);
 void CreateDecorationShop2Menu(const u16 *);
 void CB2_ExitSellMenu(void);

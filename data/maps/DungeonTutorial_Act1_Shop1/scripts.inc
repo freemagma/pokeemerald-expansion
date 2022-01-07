@@ -53,8 +53,8 @@ DTutorial_A1_Shop1_RandomMerchant::
 DungeonTutorial_Act1_Shop1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "The room behind you collapsed!\p"
 	.string "...\p"
-	.string "A merchant seems to have taken up shop\n"
-	.string "here.$"
+	.string "Two merchants seem to have taken up\n"
+	.string "shop here.$"
 
 DTutorial_A1_Shop1_Sign_Text_0:
 	.string "In shop rooms, there will be merchants\n"

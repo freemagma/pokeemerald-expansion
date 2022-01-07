@@ -5,13 +5,10 @@
 
 #include "shop_room.h"
 
-static const u16 sItems[] = {
-    ITEM_POKE_BALL,
-    ITEM_POTION,
-    ITEM_SITRUS_BERRY,
-    ITEM_LUM_BERRY,
-    ITEM_RARE_CANDY,
-    ITEM_NONE
+static const struct ItemPrice sItems[] = {
+{.itemId = ITEM_POKE_BALL, .price = 69},
+{.itemId = ITEM_HALF_POTION, .price = 200},
+{0}
 };
 
 void CreateFixedShopMenu(u8 itempoolnum) {
