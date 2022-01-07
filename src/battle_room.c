@@ -57,13 +57,20 @@ const static struct Opponent sIntroBattleOpponents[INTRO_BATTLE_OPPONENTS_COUNT]
 
 static void GenerateBattle(const struct Opponent oppList[], u16 count) {
     u16 ix = 0;
+    struct Opponent opp;
 
     ShufflePermutation(count);
     for (; HasTrainerBeenFought(PX(oppList, ix).trainerId) && ix != count - 1; ix++);
-    VarSet(VAR_0x8000, PX(oppList, ix).trainerId);
-    VarSet(VAR_OBJ_GFX_ID_0, PX(oppList, ix).gfxId);
+
+    opp = PX(oppList, ix);
+    if (HasTrainerBeenFought(opp.trainerId)) {
+        ClearTrainerFlag(opp.trainerId);
+    }
+
+    VarSet(VAR_0x8000, opp.trainerId);
+    VarSet(VAR_OBJ_GFX_ID_0, opp.gfxId);
     VarSet(VAR_TRAINER_LEVEL_DIFF, 2);
-    VarSet(VAR_TRAINER_MONEY_REWARD, PX(oppList, ix).money);
+    VarSet(VAR_TRAINER_MONEY_REWARD, opp.money);
 }
 
 void GenerateBattleIntro(void) {

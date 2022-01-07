@@ -151,3 +151,4 @@
 	.include "src/gift_room.o"
 	.include "src/battle_room.o"
 	.include "src/shop_room.o"
+	.include "src/routing.o"

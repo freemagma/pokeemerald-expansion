@@ -28,6 +28,7 @@
 #include "trainer_see.h"
 #include "trainer_hill.h"
 #include "wild_encounter.h"
+#include "routing.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/field_poison.h"
@@ -815,6 +816,10 @@ static void SetupWarp(struct MapHeader *unused, s8 warpEventId, struct MapPositi
         {
             warpEvent = &gMapHeader.events->warps[warpEventId];
         }
+    }
+    else if (IsCurrentlyRouting())
+    {
+        warpEvent = SetWarpDestinationRouting(warpEventId);
     }
     else
     {

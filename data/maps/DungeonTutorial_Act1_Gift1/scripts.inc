@@ -41,7 +41,7 @@ Intro_Gift1_GiftBall1_2:
 	goto Intro_Gift1_GiftBall1_1
 
 Intro_Gift1_GiftBall1_5:
-	givemon VAR_0x8001, 5, ITEM_NONE
+	givemon VAR_0x8001, 0, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
@@ -74,7 +74,7 @@ Intro_Gift1_GiftBall2_2:
 	goto Intro_Gift1_GiftBall2_1
 
 Intro_Gift1_GiftBall2_5:
-	givemon VAR_0x8002, 5, ITEM_NONE
+	givemon VAR_0x8002, 0, ITEM_NONE
 	removeobject 2
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
@@ -107,7 +107,7 @@ Intro_Gift1_GiftBall3_2:
 	goto Intro_Gift1_GiftBall3_1
 
 Intro_Gift1_GiftBall3_5:
-	givemon VAR_0x8003, 5, ITEM_NONE
+	givemon VAR_0x8003, 0, ITEM_NONE
 	removeobject 3
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1

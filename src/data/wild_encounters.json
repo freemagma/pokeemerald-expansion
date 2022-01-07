@@ -853,6 +853,36 @@
         {
           "map": "MAP_ROUTE111",
           "base_label": "gRoute111",
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 30,
             "mons": [
@@ -935,36 +965,6 @@
                 "min_level": 20,
                 "max_level": 30,
                 "species": "SPECIES_GOLDEEN"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 10,
-                "max_level": 15,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
               }
             ]
           },
@@ -1175,6 +1175,36 @@
         {
           "map": "MAP_ROUTE114",
           "base_label": "gRoute114",
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 30,
             "mons": [
@@ -1257,36 +1287,6 @@
                 "min_level": 20,
                 "max_level": 30,
                 "species": "SPECIES_GOLDEEN"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 10,
-                "max_level": 15,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
               }
             ]
           },
@@ -11501,62 +11501,131 @@
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_RATTATA"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_SENTRET"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_ZIGZAGOON"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_BIDOOF"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_PATRAT"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_BUNNELBY"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_YUNGOOS"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_SKWOVET"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_CHIMCHAR"
+                "species": "SPECIES_ROOKIDEE"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_DIGLETT_ALOLAN"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_TAILLOW"
               },
               {
                 "min_level": 1,
                 "max_level": 1,
-                "species": "SPECIES_MAWILE"
+                "species": "SPECIES_FLETCHLING"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
+          "base_label": "gDungeonTutorial_Act1_Encounter1_Fork",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_PATRAT"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_BUNNELBY"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_SKWOVET"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_ROOKIDEE"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 1,
+                "max_level": 1,
+                "species": "SPECIES_FLETCHLING"
               }
             ]
           }

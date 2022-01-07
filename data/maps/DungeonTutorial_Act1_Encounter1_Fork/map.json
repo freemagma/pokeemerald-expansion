@@ -1,7 +1,7 @@
 {
-  "id": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
-  "name": "DungeonTutorial_Act1_Battle1",
-  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+  "id": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
+  "name": "DungeonTutorial_Act1_Encounter1_Fork",
+  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_TUTORIAL",
   "requires_flash": false,
@@ -14,34 +14,29 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 10,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "DungeonTutorial_Act1_Battle1_Trainer",
-      "flag": "0"
-    }
+
   ],
   "warp_events": [
     {
       "x": 8,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
       "dest_warp_id": 0
     },
     {
-      "x": 8,
+      "x": 5,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
       "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [
@@ -52,9 +47,9 @@
       "type": "sign",
       "x": 8,
       "y": 10,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "DungeonTutorial_Act1_Battle1_SignDirections"
+      "script": "Intro_Encounter1_SignDirections"
     }
   ]
 }

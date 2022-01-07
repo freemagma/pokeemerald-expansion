@@ -12,10 +12,11 @@
 static const struct ItemPrice sItemPriceNone = {0};
 
 static const struct ItemPrice sBasicItems[] = {
-{.itemId = ITEM_POKE_BALL, .price = 50},
-{.itemId = ITEM_HALF_POTION, .price = 200},
-{.itemId = ITEM_SITRUS_BERRY, .price = 200},
-{.itemId = ITEM_LUM_BERRY, .price = 150},
+{.itemId = ITEM_POKE_BALL, .price = 25},
+{.itemId = ITEM_HALF_POTION, .price = 100},
+{.itemId = ITEM_FULL_HEAL, .price = 75},
+{.itemId = ITEM_SITRUS_BERRY, .price = 150},
+{.itemId = ITEM_LUM_BERRY, .price = 125},
 {.itemId = ITEM_RARE_CANDY, .price = 10},
 {0}
 };

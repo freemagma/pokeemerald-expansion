@@ -59,15 +59,15 @@
       "x": 8,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ENTRANCE",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_GIFT1",
       "dest_warp_id": 0
     },
     {
       "x": 8,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1",
-      "dest_warp_id": 0
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_GIFT1",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

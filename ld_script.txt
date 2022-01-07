@@ -333,6 +333,7 @@ SECTIONS {
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
         src/gift_room.o(.text);
+        src/routing.o(.text);
         src/battle_room.o(.text);
         src/shop_room.o(.text);
     } =0
@@ -698,6 +699,7 @@ SECTIONS {
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
         src/gift_room.o(.rodata);
+        src/routing.o(.rodata);
         src/battle_room.o(.rodata);
         src/shop_room.o(.rodata);
     } =0

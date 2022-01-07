@@ -261,10 +261,14 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
     return wildMonIndex;
 }
 
+#define WILD_SCALE_RATIO 2 / 3
+#define WILD_SCALE_DELTA 7
+
 static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
 {
     u8 min;
     u8 max;
+    u8 scaleTo;
     u8 range;
     u8 rand;
 
@@ -281,6 +285,18 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
     }
     range = max - min + 1;
     rand = Random() % range;
+
+    scaleTo = VarGet(VAR_LEVEL_SCALE) * WILD_SCALE_RATIO;
+    if (VarGet(VAR_LEVEL_SCALE) > WILD_SCALE_DELTA)
+        scaleTo = min(scaleTo, VarGet(VAR_LEVEL_SCALE) - WILD_SCALE_DELTA);
+    else
+        scaleTo = 1;
+
+    if (max >= min + scaleTo)
+        min = 1;
+    else
+        min = scaleTo - (max - min);
+
 
     // check ability for max level mon
     if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))

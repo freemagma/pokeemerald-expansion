@@ -1,7 +1,7 @@
 {
-  "id": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1",
-  "name": "DungeonTutorial_Act1_Shop1",
-  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_SHOP1",
+  "id": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK",
+  "name": "DungeonTutorial_Act1_Shop1_Fork",
+  "layout": "LAYOUT_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_TUTORIAL",
   "requires_flash": false,
@@ -46,15 +46,22 @@
       "x": 8,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK",
       "dest_warp_id": 0
     },
     {
-      "x": 8,
+      "x": 5,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1",
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK",
       "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [

@@ -1067,3 +1067,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DungeonTutorial_Act1_Battle1/scripts.inc"
 
 	.include "data/maps/DungeonTutorial_Act1_Shop1/scripts.inc"
+
+	.include "data/maps/DungeonTutorial_Act1_Shop1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonTutorial_Act1_Battle1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonTutorial_Act1_Encounter1_Fork/scripts.inc"
