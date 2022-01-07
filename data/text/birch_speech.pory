@@ -1,3 +1,4 @@
+raw `
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of POKéMON!\p"
@@ -42,16 +43,13 @@ gText_Birch_WhatsYourName::
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
-gText_Birch_YourePlayer::
-	.string "Well, {PLAYER}{KUN}, you're about to enter\n"
-	.string "a world full of dangerous dungeons.\p"
-	.string "To complete them, you will need to\n"
-	.string "challenge yourself to the limits of\l"
-	.string "your Pokémon skills.\p"
-	.string "$"
+`
 
-gText_Birch_AreYouReady::
-	.string "So, are you ready? Your very own\n"
-	.string "adventure is about to unfold. Good\l"
-	.string "luck!\p"
-	.string "$"
+text gText_Birch_YourePlayer {
+     format("Well, {PLAYER}{KUN}, you're about to enter a world full of dangerous dungeons.\p"
+            "To complete them, you will need to challenge yourself to the limits of your Pokémon skills.\p")
+}
+
+text gText_Birch_AreYouReady {
+     format("So, are you ready? Your very own adventure is about to unfold. Good luck!\p")
+}
