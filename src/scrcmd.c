@@ -1927,6 +1927,14 @@ bool8 ScrCmd_randomshop(struct ScriptContext *ctx)
     return TRUE;
 }
 
+bool8 ScrCmd_fixedshop(struct ScriptContext *ctx)
+{
+    u8 itempoolnum = ScriptReadByte(ctx);
+    CreateFixedShopMenu(itempoolnum);
+    ScriptContext1_Stop();
+    return TRUE;
+}
+
 bool8 ScrCmd_pokemartdecoration(struct ScriptContext *ctx)
 {
     const void *ptr = (void *)ScriptReadWord(ctx);

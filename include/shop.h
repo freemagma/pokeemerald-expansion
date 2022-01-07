@@ -44,6 +44,12 @@ struct ShopData
     /*0x2010*/ s16 viewportObjects[OBJECT_EVENTS_COUNT][5];
 };
 
+struct ItemPrice
+{
+    u16 itemId;
+    u16 price;
+}
+
 void CreatePokemartMenu(const u16 *);
 void CreateDecorationShop1Menu(const u16 *);
 void CreateDecorationShop2Menu(const u16 *);

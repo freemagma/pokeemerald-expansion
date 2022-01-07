@@ -42,6 +42,7 @@
 #define ITEM_POTION 28
 #define ITEM_SUPER_POTION 29
 #define ITEM_HYPER_POTION 30
+#define ITEM_HALF_POTION 30 // replaces hyper potion
 #define ITEM_MAX_POTION 31
 #define ITEM_FULL_RESTORE 32
 #define ITEM_REVIVE 33

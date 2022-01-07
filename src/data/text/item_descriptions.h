@@ -146,10 +146,10 @@ static const u8 sSuperPotionDesc[] = _(
     "a Pokémon by\n"
     "60 points.");
 
-static const u8 sHyperPotionDesc[] = _(
+static const u8 sHalfPotionDesc[] = _(
     "Restores the HP of\n"
     "a Pokémon by\n"
-    "120 points.");
+    "half its Max HP.");
 
 static const u8 sMaxPotionDesc[] = _(
     "Fully restores the\n"
@@ -2457,8 +2457,8 @@ static const u8 sLumBerryDesc[] = _(
 
 static const u8 sSitrusBerryDesc[] = _(
     "A hold item that\n"
-    "restores 30 HP in\n"
-    "battle.");
+    "restores 1/4th\n"
+    "Max HP in battle.");
 
 static const u8 sFigyBerryDesc[] = _(
     "A hold item that\n"

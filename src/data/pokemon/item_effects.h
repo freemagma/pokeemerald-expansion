@@ -34,13 +34,9 @@ const u8 gItemEffect_MaxPotion[7] = {
     [6] = ITEM6_HEAL_HP_FULL,
 };
 
-const u8 gItemEffect_HyperPotion[7] = {
+const u8 gItemEffect_HalfPotion[7] = {
     [4] = ITEM4_HEAL_HP,
-#if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 120, // Amount of HP to recover
-#else
-    [6] = 200, // Amount of HP to recover
-#endif
+    [6] = ITEM6_HEAL_HP_HALF
 };
 
 const u8 gItemEffect_SuperPotion[7] = {
@@ -500,7 +496,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_PARALYZE_HEAL - ITEM_POTION]  = gItemEffect_ParalyzeHeal,
     [ITEM_FULL_RESTORE - ITEM_POTION]   = gItemEffect_FullRestore,
     [ITEM_MAX_POTION - ITEM_POTION]     = gItemEffect_MaxPotion,
-    [ITEM_HYPER_POTION - ITEM_POTION]   = gItemEffect_HyperPotion,
+    [ITEM_HALF_POTION - ITEM_POTION]   = gItemEffect_HalfPotion,
     [ITEM_SUPER_POTION - ITEM_POTION]   = gItemEffect_SuperPotion,
     [ITEM_FULL_HEAL - ITEM_POTION]      = gItemEffect_FullHeal,
     [ITEM_REVIVE - ITEM_POTION]         = gItemEffect_Revive,

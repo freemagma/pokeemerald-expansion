@@ -14,6 +14,10 @@ static const u16 sItems[] = {
     ITEM_NONE
 };
 
+void CreateFixedShopMenu(u8 itempoolnum) {
+    CreatePokemartMenu(sItems);
+}
+
 void CreateRandomShopMenu(u8 itempoolnum) {
     CreatePokemartMenu(sItems);
 }

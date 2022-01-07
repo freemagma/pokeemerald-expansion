@@ -174,7 +174,7 @@ void NewGameInitData(void)
     ResetGabbyAndTy();
     ClearSecretBases();
     ClearBerryTrees();
-    SetMoney(&gSaveBlock1Ptr->money, 3000);
+    SetMoney(&gSaveBlock1Ptr->money, 500);
     SetCoins(0);
     ResetLinkContestBoolean();
     ResetGameStats();
@@ -214,7 +214,7 @@ void NewGameInitData(void)
 
 static void NewGameInitBagItems() {
     AddBagItem(ITEM_POKE_BALL, 20);
-    AddBagItem(ITEM_POTION, 3);
+    AddBagItem(ITEM_HALF_POTION, 3);
     AddBagItem(ITEM_RARE_CANDY, 3);
     FlagSet(FLAG_SYS_B_DASH);
 }

@@ -1114,6 +1114,11 @@
     .byte \itempoolnum
     .endm
 
+    .macro fixedshop itempoolnum:req
+    .byte 0xe4
+    .byte \itempoolnum
+    .endm
+
 	@ Opens the Pokemart system and treats the list of items as decorations.
 	@ Products should be a list of .2byte decoration values preceded by an .align 2
 	.macro pokemartdecoration products:req

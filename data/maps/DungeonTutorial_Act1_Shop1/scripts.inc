@@ -28,13 +28,24 @@ DTutorial_A1_Shop1_Sign::
 	return
 
 
-DTutorial_A1_Shop1_Merchant::
+DTutorial_A1_Shop1_FixedMerchant::
 	lock
 	faceplayer
-	message DTutorial_A1_Shop1_Merchant_Text_0
+	message DTutorial_A1_Shop1_FixedMerchant_Text_0
+	waitmessage
+	fixedshop 0
+	msgbox DTutorial_A1_Shop1_FixedMerchant_Text_1
+	release
+	return
+
+
+DTutorial_A1_Shop1_RandomMerchant::
+	lock
+	faceplayer
+	message DTutorial_A1_Shop1_RandomMerchant_Text_0
 	waitmessage
 	randomshop 0
-	msgbox DTutorial_A1_Shop1_Merchant_Text_1
+	msgbox DTutorial_A1_Shop1_RandomMerchant_Text_1
 	release
 	return
 
@@ -46,13 +57,24 @@ DungeonTutorial_Act1_Shop1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "here.$"
 
 DTutorial_A1_Shop1_Sign_Text_0:
-	.string "In shop rooms, there will be a merchant\n"
-	.string "selling a random assortment of items.$"
+	.string "In shop rooms, there will be merchants\n"
+	.string "selling an assortment of items.\p"
+	.string "One merchant will always sell the same\n"
+	.string "basic items, while another will have a\l"
+	.string "random selection of stronger ones.$"
 
-DTutorial_A1_Shop1_Merchant_Text_0:
+DTutorial_A1_Shop1_FixedMerchant_Text_0:
 	.string "Welcome to my humble store. I hope my\n"
 	.string "wares can be of use.$"
 
-DTutorial_A1_Shop1_Merchant_Text_1:
+DTutorial_A1_Shop1_FixedMerchant_Text_1:
 	.string "Just let me know if you need anything\n"
 	.string "else.$"
+
+DTutorial_A1_Shop1_RandomMerchant_Text_0:
+	.string "Let me know if one of my knick-knacks\n"
+	.string "catches your eye.$"
+
+DTutorial_A1_Shop1_RandomMerchant_Text_1:
+	.string "I'll be here if you decide you want\n"
+	.string "something more.$"
