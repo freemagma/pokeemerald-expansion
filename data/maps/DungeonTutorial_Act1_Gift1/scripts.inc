@@ -15,7 +15,7 @@ DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Intro_Gift1_UpOne
+	applymovement OBJ_EVENT_ID_PLAYER, Common_UpOne
 	waitmovement 0
 	msgbox DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0
 	setvar VAR_TEMP_0, 1
@@ -122,16 +122,12 @@ Intro_Gift1_GiftBall3_8:
 	goto Intro_Gift1_GiftBall3_7
 
 
-Intro_Gift1_SignDirections::
-	lockall
-	msgbox Intro_Gift1_SignDirections_Text_0
-	releaseall
+DTutorial_A1_Gift1_SignDirections::
+	lock
+	msgbox DTutorial_A1_Gift1_SignDirections_Text_0, MSGBOX_SIGN
+	release
 	return
 
-
-Intro_Gift1_UpOne:
-	walk_up
-	step_end
 
 DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "The room behind you collapsed!\p"
@@ -146,7 +142,7 @@ Intro_Gift1_GiftBall1_Text_0:
 Intro_Gift1_GiftBall1_Text_1:
 	.string "Will you take {STR_VAR_1}?$"
 
-Intro_Gift1_SignDirections_Text_0:
+DTutorial_A1_Gift1_SignDirections_Text_0:
 	.string "In gift rooms, you will be given some\n"
 	.string "free Pokémon to choose from.\p"
 	.string "It's that simple!$"

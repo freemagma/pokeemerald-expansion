@@ -1,0 +1,10 @@
+movement Common_UpOne {
+    walk_up
+}
+
+script Common_RoutingSign {
+    lock
+    callnative(BufferRouteText)
+    msgbox(format("{LEFT_ARROW} {STR_VAR_1} Room\n{RIGHT_ARROW} {STR_VAR_2} Room"), MSGBOX_SIGN)
+    release
+}

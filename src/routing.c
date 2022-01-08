@@ -2,11 +2,14 @@
 #include "random.h"
 #include "pokemon.h"
 #include "overworld.h"
+#include "strings.h"
+#include "string_util.h"
 
 #include "routing.h"
 
 struct RouteNode {
     u8 options[2];
+    const u8 *strings[2];
 };
 
 #define MAX_ROUTE_LENGTH 20
@@ -18,8 +21,10 @@ static const struct RouteNode sDTutorialA1Route[10] = {
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1, 0}},
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1_FORK, MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK}},
+{.options = {MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK, 0},
+ .strings = {gText_BattleRoom, gText_EncounterRoom}},
+{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1_FORK, MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK},
+ .strings = {gText_BattleRoom, gText_EncounterRoom}},
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1}},
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
 {.options = {MAP_DUNGEON_TUTORIAL_ACT1_SHOP1, 0}},
@@ -53,4 +58,10 @@ const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
     header = Overworld_GetMapHeaderByGroupAndId(map >> 8, map & 0xFF);
 
     return &header->events->warps[0];
+}
+
+void BufferRouteText(void)
+{
+    StringCopy(gStringVar1, sRoute[sRouteIndex].strings[0]);
+    StringCopy(gStringVar2, sRoute[sRouteIndex].strings[1]);
 }

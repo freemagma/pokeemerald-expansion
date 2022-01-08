@@ -14,7 +14,7 @@ DungeonTutorial_Act1_Encounter1_Fork_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 DungeonTutorial_Act1_Encounter1_Fork_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Intro_Encounter1_UpOne
+	applymovement OBJ_EVENT_ID_PLAYER, Common_UpOne
 	waitmovement 0
 	msgbox DungeonTutorial_Act1_Encounter1_Fork_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0
 	setvar VAR_TEMP_0, 1

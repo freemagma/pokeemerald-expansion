@@ -3,6 +3,11 @@
 
 // My Strings
 extern const u8 gText_MenuPC[];
+extern const u8 gText_EncounterRoom[];
+extern const u8 gText_GiftRoom[];
+extern const u8 gText_BattleRoom[];
+extern const u8 gText_EliteBattleRoom[];
+extern const u8 gText_ShopRoom[];
 
 // Placeholders
 extern const u8 gText_ExpandedPlaceholder_Empty[];

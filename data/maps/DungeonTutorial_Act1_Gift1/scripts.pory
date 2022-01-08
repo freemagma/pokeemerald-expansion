@@ -17,7 +17,7 @@ mapscripts DungeonTutorial_Act1_Gift1_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {
             lock
-            applymovement(OBJ_EVENT_ID_PLAYER, Intro_Gift1_UpOne)
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpOne)
             waitmovement(0)
             msgbox(format("The room behind you collapsed! \p"
                           "...\p"
@@ -100,13 +100,9 @@ script Intro_Gift1_GiftBall3 {
 
 
 
-script Intro_Gift1_SignDirections {
-    lockall
+script DTutorial_A1_Gift1_SignDirections {
+    lock
     msgbox(format("In gift rooms, you will be given some free Pokémon to choose from.\p"
-                  "It's that simple!"))
-    releaseall
-}
-
-movement Intro_Gift1_UpOne {
-    walk_up
+                  "It's that simple!"), MSGBOX_SIGN)
+    release
 }

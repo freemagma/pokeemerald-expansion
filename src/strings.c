@@ -6,6 +6,11 @@
 ALIGNED(4)
 // My Strings
 const u8 gText_MenuPC[] = _("PC");
+const u8 gText_EncounterRoom[] = _("Encounter");
+const u8 gText_GiftRoom[] = _("Gift");
+const u8 gText_BattleRoom[] = _("Battle");
+const u8 gText_EliteBattleRoom[] = _("Elite Battle");
+const u8 gText_ShopRoom[] = _("Shop");
 
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");
 const u8 gText_ExpandedPlaceholder_Kun[] = _("");
