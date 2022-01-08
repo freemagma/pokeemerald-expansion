@@ -7,12 +7,6 @@
 
 #include "gift_room.h"
 
-#define GIFT_MON_INTRO_COUNT 6
-
-
-const static u16 sGiftMonIntro[GIFT_MON_INTRO_COUNT] = {
-    SPECIES_MAKUHITA, SPECIES_ELECTRIKE, SPECIES_STUNKY,
-    SPECIES_RALTS,    SPECIES_GLAMEOW,   SPECIES_SHUPPET};
 
 #define MAX_PERMUTATION 10
 EWRAM_DATA static u16 sPermutation[MAX_PERMUTATION] = {0};
@@ -65,6 +59,11 @@ static void GetGiftMon(const u16 specList[], u16 count) {
     }
 }
 
-void GetGiftMonIntro(void) {
-    GetGiftMon(sGiftMonIntro, GIFT_MON_INTRO_COUNT);
+
+const static u16 sDTutorial_GiftMons[] = {
+    SPECIES_MAKUHITA, SPECIES_ELECTRIKE, SPECIES_STUNKY,
+    SPECIES_RALTS,    SPECIES_GLAMEOW,   SPECIES_SHUPPET};
+
+void DungeonTutorial_GetGiftMon(void) {
+    GetGiftMon(sDTutorial_GiftMons, ARRAY_COUNT(sDTutorial_GiftMons));
 }

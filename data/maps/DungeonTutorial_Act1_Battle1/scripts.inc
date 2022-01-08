@@ -5,7 +5,7 @@ DungeonTutorial_Act1_Battle1_MapScripts::
 
 DungeonTutorial_Act1_Battle1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
-	callnative GenerateBattleIntro
+	callnative DungeonTutorial_GenerateBattle
 	copyvar VAR_TEMP_A, VAR_0x8000
 	return
 
@@ -30,9 +30,9 @@ DungeonTutorial_Act1_Battle1_Trainer::
 
 
 DungeonTutorial_Act1_Battle1_SignDirections::
-	lockall
-	msgbox DungeonTutorial_Act1_Battle1_SignDirections_Text_0
-	releaseall
+	lock
+	msgbox DungeonTutorial_Act1_Battle1_SignDirections_Text_0, MSGBOX_SIGN
+	release
 	return
 
 
@@ -43,16 +43,15 @@ DungeonTutorial_Act1_Battle1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "room.$"
 
 DungeonTutorial_Act1_Battle1_Trainer_Text_0:
-	.string "HELLO$"
+	.string "I challenge you to a battle!$"
 
 DungeonTutorial_Act1_Battle1_Trainer_Text_1:
-	.string "DEFEAT$"
+	.string "Guess I need to get stronger.$"
 
 DungeonTutorial_Act1_Battle1_Trainer_Text_2:
-	.string "POST BATTLE$"
+	.string "...$"
 
 DungeonTutorial_Act1_Battle1_SignDirections_Text_0:
 	.string "In battle rooms, you will have to face\n"
 	.string "an opposing trainer.\p"
-	.string "You'll recieve some rewards after you\n"
-	.string "win!$"
+	.string "You'll recieve some money after you win!$"

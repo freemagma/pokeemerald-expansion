@@ -7,54 +7,68 @@
 
 #include "routing.h"
 
-struct RouteNode {
-    u8 options[2];
-    const u8 *strings[2];
-};
+static u16 ForkMap(u16);
+static void ForkMapsInRoute(void);
+static void ClearRoute(void);
 
-#define MAX_ROUTE_LENGTH 20
+#define MAX_ROUTE_LENGTH 30
 static EWRAM_DATA u16 sRouteIndex = 0;
-static EWRAM_DATA struct RouteNode sRoute[MAX_ROUTE_LENGTH] = {0};
+static EWRAM_DATA u8 sRouteParam = 0;
+static EWRAM_DATA struct RouteOption sRoute[MAX_ROUTE_LENGTH][2] = {0};
 
-static const struct RouteNode sDTutorialA1Route[10] = {
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_GIFT1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_SHOP1_FORK, 0},
- .strings = {gText_BattleRoom, gText_EncounterRoom}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1_FORK, MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1_FORK},
- .strings = {gText_BattleRoom, gText_EncounterRoom}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_BATTLE1, 0}},
-{.options = {MAP_DUNGEON_TUTORIAL_ACT1_SHOP1, 0}},
-{0}
-};
+static const struct RouteOption routeNone = {0};
 
-void GenerateRoute(void)
+void DungeonTutorial_GenerateRoute(void)
 {
-    u16 i;
-    for (i = 0; i < ARRAY_COUNT(sDTutorialA1Route); i++) {
-        sRoute[i] = sDTutorialA1Route[i];
-    }
-    sRouteIndex = 0;
+    const struct RouteOption battle = {.map = DTA1(BATTLE1), .string = gText_BattleRoom};
+    const struct RouteOption eliteBattle = {.map = DTA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
+    const struct RouteOption gift = {.map = DTA1(GIFT1), .string = gText_GiftRoom};
+    const struct RouteOption encounter = {.map = DTA1(ENCOUNTER1), .string = gText_EncounterRoom};
+    const struct RouteOption shop = {.map = DTA1(SHOP1), .string = gText_ShopRoom};
+
+    u16 i = 0;
+    u16 temp;
+
+    ClearRoute();
+
+    sRoute[i++][0] = gift;
+    sRoute[i++][0] = encounter;
+    sRoute[i++][0] = battle;
+    sRoute[i++][0] = shop;
+
+    sRoute[i][0] = battle; sRoute[i][0].param = 1;
+    sRoute[i++][1] = encounter;
+    sRoute[i][0] = battle; sRoute[i][0].param = 1;
+    sRoute[i++][1] = encounter;
+    sRoute[i++][0] = eliteBattle;
+
+    sRoute[i++][0] = shop;
+
+    ForkMapsInRoute();
 }
 
 bool8 IsCurrentlyRouting(void)
 {
-    return sRoute[sRouteIndex].options[0] != 0;
+    return sRoute[sRouteIndex][0].map != 0;
+}
+
+u8 GetRouteParam(void) {
+    return sRouteParam;
 }
 
 const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
 {
-    u8 map;
+    u16 map;
     const struct MapHeader *header;
     u8 warpOptionIndex = warpEventId;
 
     if (warpOptionIndex > 0)
         warpOptionIndex--;
 
-    map = sRoute[sRouteIndex++].options[warpOptionIndex];
+    map = sRoute[sRouteIndex][warpOptionIndex].map;
+    sRouteParam = sRoute[sRouteIndex][warpOptionIndex].param;
+    sRouteIndex++;
+
     header = Overworld_GetMapHeaderByGroupAndId(map >> 8, map & 0xFF);
 
     return &header->events->warps[0];
@@ -62,6 +76,40 @@ const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
 
 void BufferRouteText(void)
 {
-    StringCopy(gStringVar1, sRoute[sRouteIndex].strings[0]);
-    StringCopy(gStringVar2, sRoute[sRouteIndex].strings[1]);
+    StringCopy(gStringVar1, sRoute[sRouteIndex][0].string);
+    StringCopy(gStringVar2, sRoute[sRouteIndex][1].string);
+}
+
+static void ClearRoute(void) {
+    u16 i;
+    for (i = 0; i < MAX_ROUTE_LENGTH; i++) {
+        sRoute[i][0] = routeNone;
+        sRoute[i][1] = routeNone;
+    }
+    sRouteIndex = 0;
+    sRouteParam = 0;
+}
+
+static void ForkMapsInRoute(void) {
+    u16 i;
+    for (i = 0; sRoute[i][0].map; i++) {
+        if (sRoute[i + 1][1].map) {
+            sRoute[i][0].map = ForkMap(sRoute[i][0].map);
+            if (sRoute[i][1].map)
+                sRoute[i][1].map = ForkMap(sRoute[i][1].map);
+        }
+    }
+}
+
+static u16 ForkMap(u16 map) {
+    switch (map) {
+        case DTA1(ENCOUNTER1):
+            return DTA1(ENCOUNTER1_FORK);
+        case DTA1(BATTLE1):
+            return DTA1(BATTLE1_FORK);
+        case DTA1(SHOP1):
+            return DTA1(SHOP1_FORK);
+        default:
+            return MAP_NONE;
+    }
 }

@@ -5,7 +5,7 @@ DungeonTutorial_Act1_Battle1_Fork_MapScripts::
 
 DungeonTutorial_Act1_Battle1_Fork_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
-	callnative GenerateBattleIntro
+	callnative DungeonTutorial_GenerateBattle
 	copyvar VAR_TEMP_A, VAR_0x8000
 	return
 

@@ -3430,17 +3430,17 @@ static const struct TrainerMon sParty_Wattson1[] = {
     {
     .iv = 220,
     .lvl = 22,
-    .species = SPECIES_MAGNETON,
+    .species = SPECIES_MAGNEMITE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SUPERSONIC, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
-    },
-    {
-    .iv = 250,
-    .lvl = 24,
-    .species = SPECIES_MANECTRIC,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_HOWL}
     }
+    /* { */
+    /* .iv = 250, */
+    /* .lvl = 24, */
+    /* .species = SPECIES_MANECTRIC, */
+    /* .heldItem = ITEM_SITRUS_BERRY, */
+    /* .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_HOWL} */
+    /* } */
 };
 
 static const struct TrainerMon sParty_Flannery1[] = {

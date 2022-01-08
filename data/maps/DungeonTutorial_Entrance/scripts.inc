@@ -3,7 +3,7 @@ DungeonTutorial_Entrance_MapScripts::
 	.byte 0
 
 DungeonTutorial_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	callnative GenerateRoute
+	callnative DungeonTutorial_GenerateRoute
 	setvar VAR_LEVEL_SCALE, 10
 	return
 

@@ -6,7 +6,7 @@ DungeonTutorial_Act1_Gift1_MapScripts::
 DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_A, 0
-	callnative GetGiftMonIntro
+	callnative DungeonTutorial_GetGiftMon
 	return
 
 DungeonTutorial_Act1_Gift1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

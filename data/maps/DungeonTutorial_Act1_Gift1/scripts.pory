@@ -12,7 +12,7 @@ mapscripts DungeonTutorial_Act1_Gift1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_GIFT_TAKEN, 0)
-        callnative(GetGiftMonIntro)
+        callnative(DungeonTutorial_GetGiftMon)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {

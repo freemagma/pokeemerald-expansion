@@ -1,0 +1,35 @@
+const VAR_TRAINER = VAR_TEMP_A
+
+mapscripts DungeonTutorial_Act1_EliteBattle1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        callnative(DungeonTutorial_GenerateEliteBattle)
+        copyvar(VAR_TRAINER, VAR_0x8000)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpOne)
+            waitmovement(0)
+            msgbox(format("The room behind you collapsed! \p"
+                          "...\p"
+                          "There seems to be a powerful trainer in this room."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+script DungeonTutorial_Act1_EliteBattle1_Trainer {
+    trainerbattle_single(VAR_TRAINER,
+        "Nobody's gotten past me yet, and you won't be the first.",
+        "How the hell are you so strong?")
+    msgbox("...", MSGBOX_AUTOCLOSE)
+}
+
+script DungeonTutorial_Act1_EliteBattle1_SignDirections {
+    lock
+    msgbox(format("In Elite battle rooms, you'll face a tough opponent.\p"
+                  "If you win, you'll recieve a special reward."), MSGBOX_SIGN)
+    release
+}

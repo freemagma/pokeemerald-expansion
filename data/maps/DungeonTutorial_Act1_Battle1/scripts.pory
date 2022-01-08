@@ -3,7 +3,7 @@ const VAR_TRAINER = VAR_TEMP_A
 mapscripts DungeonTutorial_Act1_Battle1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
-        callnative(GenerateBattleIntro)
+        callnative(DungeonTutorial_GenerateBattle)
         copyvar(VAR_TRAINER, VAR_0x8000)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -21,13 +21,13 @@ mapscripts DungeonTutorial_Act1_Battle1_MapScripts {
 }
 
 script DungeonTutorial_Act1_Battle1_Trainer {
-    trainerbattle_single(VAR_TRAINER, "HELLO", "DEFEAT")
-    msgbox("POST BATTLE", MSGBOX_AUTOCLOSE)
+    trainerbattle_single(VAR_TRAINER, "I challenge you to a battle!", "Guess I need to get stronger.")
+    msgbox("...", MSGBOX_AUTOCLOSE)
 }
 
 script DungeonTutorial_Act1_Battle1_SignDirections {
-    lockall
+    lock
     msgbox(format("In battle rooms, you will have to face an opposing trainer.\p"
-                  "You'll recieve some rewards after you win!"))
-    releaseall
+                  "You'll recieve some money after you win!"), MSGBOX_SIGN)
+    release
 }

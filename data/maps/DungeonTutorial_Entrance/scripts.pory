@@ -2,7 +2,7 @@ const LEVEL = 10
 
 mapscripts DungeonTutorial_Entrance_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        callnative(GenerateRoute)
+        callnative(DungeonTutorial_GenerateRoute)
         setvar(VAR_LEVEL_SCALE, LEVEL)
     }
 }

@@ -4490,6 +4490,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DungeonTutorial_Act1_Encounter1_Fork/border.bin",
       "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_Encounter1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ACT1_ELITE_BATTLE1",
+      "name": "DungeonTutorial_Act1_EliteBattle1_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DungeonTutorial_Act1_EliteBattle1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_EliteBattle1/map.bin"
     }
   ]
 }
