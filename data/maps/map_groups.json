@@ -1,7 +1,11 @@
 {
   "layouts_table_label": "gMapLayouts",
   "group_order": [
+    "gMapGroup_Lobby",
     "gMapGroup_DungeonTutorial"
+  ],
+  "gMapGroup_Lobby": [
+    "Lobby_LevelSelect"
   ],
   "gMapGroup_DungeonTutorial": [
     "DungeonTutorial_Entrance",
