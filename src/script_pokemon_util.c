@@ -58,6 +58,25 @@ void HealPlayerParty(void)
     }
 }
 
+void HealPlayerPartyPP(void)
+{
+    u8 i, j;
+    u8 ppBonuses;
+    u8 arg[4];
+
+    for(i = 0; i < gPlayerPartyCount; i++)
+    {
+        // restore PP.
+        ppBonuses = GetMonData(&gPlayerParty[i], MON_DATA_PP_BONUSES);
+        for(j = 0; j < MAX_MON_MOVES; j++)
+        {
+            arg[0] = CalculatePPWithBonus(GetMonData(&gPlayerParty[i], MON_DATA_MOVE1 + j), ppBonuses, j);
+            SetMonData(&gPlayerParty[i], MON_DATA_PP1 + j, arg);
+        }
+    }
+}
+
+
 u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 unused3)
 {
     u16 nationalDexNum;

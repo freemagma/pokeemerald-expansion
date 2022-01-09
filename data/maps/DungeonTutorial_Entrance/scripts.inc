@@ -4,7 +4,7 @@ DungeonTutorial_Entrance_MapScripts::
 
 DungeonTutorial_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	callnative DungeonTutorial_GenerateRoute
-	setvar VAR_LEVEL_SCALE, 10
+	setvar VAR_LEVEL_SCALE, 12
 	return
 
 
@@ -26,7 +26,7 @@ StarterBall_2:
 
 StarterBall_5:
 	bufferspeciesname STR_VAR_1, SPECIES_DIGLETT
-	givemon SPECIES_DIGLETT, 10, ITEM_NONE
+	givemon SPECIES_DIGLETT, 12, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1

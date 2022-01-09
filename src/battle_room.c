@@ -57,23 +57,43 @@ static void GenerateBattle(const struct Opponent oppList[], u16 count, u16 level
 
 const static struct Opponent sDTutorial_Opponents0[] = {
 {
-.trainerId = TRAINER_CALVIN_1,
+.trainerId = TRAINER_TU_DWAYNE,
+.gfxId = OBJ_EVENT_GFX_HIKER,
+.money = 250
+},
+{
+.trainerId = TRAINER_TU_BRUCE,
 .gfxId = OBJ_EVENT_GFX_YOUNGSTER,
-.money = 300
-}
+.money = 250
+},
 };
 
 const static struct Opponent sDTutorial_Opponents1[] = {
 {
-.trainerId = TRAINER_RICK,
-.gfxId = OBJ_EVENT_GFX_BUG_CATCHER,
+.trainerId = TRAINER_TU_DARIEN,
+.gfxId = OBJ_EVENT_GFX_CAMPER,
 .money = 300
 },
 {
-.trainerId = TRAINER_ALLEN,
-.gfxId = OBJ_EVENT_GFX_CAMPER,
+.trainerId = TRAINER_TU_SELINA,
+.gfxId = OBJ_EVENT_GFX_WOMAN_2,
 .money = 300
-}
+},
+{
+.trainerId = TRAINER_TU_KATRINA,
+.gfxId = OBJ_EVENT_GFX_GIRL_3,
+.money = 300
+},
+{
+.trainerId = TRAINER_TU_LEAH,
+.gfxId = OBJ_EVENT_GFX_HEX_MANIAC,
+.money = 300
+},
+{
+.trainerId = TRAINER_TU_FREDDY,
+.gfxId = OBJ_EVENT_GFX_HIKER,
+.money = 300
+},
 };
 
 const static struct Opponent sDTutorial_EliteOpponents0[] = {
@@ -93,15 +113,15 @@ const static struct Opponent sDTutorial_EliteOpponents0[] = {
 void DungeonTutorial_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(sDTutorial_Opponents0, ARRAY_COUNT(sDTutorial_Opponents0), 3);
+            GenerateBattle(sDTutorial_Opponents0, ARRAY_COUNT(sDTutorial_Opponents0), 4);
             break;
         case 1:
         default:
-            GenerateBattle(sDTutorial_Opponents1, ARRAY_COUNT(sDTutorial_Opponents1), 2);
+            GenerateBattle(sDTutorial_Opponents1, ARRAY_COUNT(sDTutorial_Opponents1), 3);
             break;
     }
 }
 
 void DungeonTutorial_GenerateEliteBattle(void) {
-    GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 0);
+    GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 2);
 }

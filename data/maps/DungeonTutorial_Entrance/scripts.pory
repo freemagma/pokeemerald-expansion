@@ -1,4 +1,4 @@
-const LEVEL = 10
+const LEVEL = 12
 
 mapscripts DungeonTutorial_Entrance_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {

@@ -628,6 +628,7 @@ static void CB2_EndWildBattle(void)
     }
     else
     {
+        HealPlayerPartyPP();
         SetMainCallback2(CB2_ReturnToField);
         gFieldCallback = FieldCB_ReturnToFieldNoScriptCheckMusic;
     }
@@ -647,6 +648,7 @@ static void CB2_EndScriptedWildBattle(void)
     }
     else
     {
+        HealPlayerPartyPP();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     }
 }
@@ -1339,6 +1341,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else
     {
+        HealPlayerPartyPP();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         if (!InBattlePyramid() && !InTrainerHillChallenge())
         {
@@ -1360,6 +1363,7 @@ static void CB2_EndRematchBattle(void)
     }
     else
     {
+        HealPlayerPartyPP();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         RegisterTrainerInMatchCall();
         SetBattledTrainersFlags();

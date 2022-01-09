@@ -3885,7 +3885,7 @@ static void Cmd_getexp(void)
             #endif
 
             // EXP MULTIPLIER
-            calculatedExp *= 4;
+            calculatedExp *= 5;
 
             #if B_SPLIT_EXP < GEN_6
                 if (viaExpShare) // at least one mon is getting exp via exp share

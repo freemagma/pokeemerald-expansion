@@ -2,6 +2,24 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #define TRAINER_NONE                          0
+
+// DTutorial O1
+#define TRAINER_TU_DWAYNE 1
+#define TRAINER_TU_BRUCE 2
+// DTutorial O2
+#define TRAINER_TU_DARIEN 3
+#define TRAINER_TU_SELINA 4
+#define TRAINER_TU_KATRINA 5
+#define TRAINER_TU_LEAH 6
+#define TRAINER_TU_FREDDY 7
+// DTutorial E
+#define TRAINER_A 8
+#define TRAINER_B 9
+// DTutorial B
+#define TRAINER_C 10
+//
+
+
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
 #define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
