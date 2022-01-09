@@ -22,6 +22,7 @@ void DungeonTutorial_GenerateRoute(void)
 {
     const struct RouteOption battle = {.map = DTA1(BATTLE1), .string = gText_BattleRoom};
     const struct RouteOption eliteBattle = {.map = DTA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
+    const struct RouteOption boss = {.map = DTA1(BOSS), .string = NULL};
     const struct RouteOption gift = {.map = DTA1(GIFT1), .string = gText_GiftRoom};
     const struct RouteOption encounter = {.map = DTA1(ENCOUNTER1), .string = gText_EncounterRoom};
     const struct RouteOption shop = {.map = DTA1(SHOP1), .string = gText_ShopRoom};
@@ -40,9 +41,14 @@ void DungeonTutorial_GenerateRoute(void)
     sRoute[i++][1] = encounter;
     sRoute[i][0] = battle; sRoute[i][0].param = 1;
     sRoute[i++][1] = encounter;
+
+    sRoute[i][0] = gift; sRoute[i++][1] = shop;
+
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
     sRoute[i++][0] = eliteBattle;
 
     sRoute[i++][0] = shop;
+    sRoute[i++][0] = boss;
 
     ForkMapsInRoute();
 }

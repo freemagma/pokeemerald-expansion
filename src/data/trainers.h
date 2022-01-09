@@ -103,43 +103,45 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tu_Freddy},
     },
 
-    [TRAINER_GRUNT_SEAFLOOR_CAVERN_3] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntSeafloorCavern3),
-        .party = {.TrainerMon = sParty_GruntSeafloorCavern3},
-    },
-
-    [TRAINER_GABRIELLE_1] =
+    // DTutorial E
+    [TRAINER_TU_ROSEMARY] =
     {
         .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_POKEMON_BREEDER_F,
-        .trainerName = _("GABRIELLE"),
+        .trainerName = _("Rosemary"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Gabrielle1),
-        .party = {.TrainerMon = sParty_Gabrielle1},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Tu_Rosemary),
+        .party = {.TrainerMon = sParty_Tu_Rosemary},
     },
 
-    [TRAINER_GRUNT_PETALBURG_WOODS] =
+    [TRAINER_TU_EVERETT] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerName = _("Everett"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntPetalburgWoods),
-        .party = {.TrainerMon = sParty_GruntPetalburgWoods},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Tu_Everett),
+        .party = {.TrainerMon = sParty_Tu_Everett},
+    },
+
+    // DTutorial B
+    [TRAINER_TU_MAGNOLIA] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LEADER_FLANNERY,
+        .trainerName = _("Magnolia"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Tu_Magnolia),
+        .party = {.TrainerMon = sParty_Tu_Magnolia},
     },
 
     [TRAINER_MARCEL] =

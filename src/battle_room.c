@@ -39,6 +39,7 @@ struct Opponent {
 
 static void GenerateBattle(const struct Opponent oppList[], u16 count, u16 levelDiff) {
     u16 ix = 0;
+    u16 money;
     struct Opponent opp;
 
     ShufflePermutation(count);
@@ -52,19 +53,21 @@ static void GenerateBattle(const struct Opponent oppList[], u16 count, u16 level
     VarSet(VAR_0x8000, opp.trainerId);
     VarSet(VAR_OBJ_GFX_ID_0, opp.gfxId);
     VarSet(VAR_TRAINER_LEVEL_DIFF, levelDiff);
-    VarSet(VAR_TRAINER_MONEY_REWARD, opp.money);
+
+    money = (opp.money * (90 + (Random() % 21))) / 100;
+    VarSet(VAR_TRAINER_MONEY_REWARD, money);
 }
 
 const static struct Opponent sDTutorial_Opponents0[] = {
 {
 .trainerId = TRAINER_TU_DWAYNE,
 .gfxId = OBJ_EVENT_GFX_HIKER,
-.money = 250
+.money = 300
 },
 {
 .trainerId = TRAINER_TU_BRUCE,
 .gfxId = OBJ_EVENT_GFX_YOUNGSTER,
-.money = 250
+.money = 300
 },
 };
 
@@ -72,41 +75,49 @@ const static struct Opponent sDTutorial_Opponents1[] = {
 {
 .trainerId = TRAINER_TU_DARIEN,
 .gfxId = OBJ_EVENT_GFX_CAMPER,
-.money = 300
+.money = 400
 },
 {
 .trainerId = TRAINER_TU_SELINA,
 .gfxId = OBJ_EVENT_GFX_WOMAN_2,
-.money = 300
+.money = 400
 },
 {
 .trainerId = TRAINER_TU_KATRINA,
 .gfxId = OBJ_EVENT_GFX_GIRL_3,
-.money = 300
+.money = 400
 },
 {
 .trainerId = TRAINER_TU_LEAH,
 .gfxId = OBJ_EVENT_GFX_HEX_MANIAC,
-.money = 300
+.money = 400
 },
 {
 .trainerId = TRAINER_TU_FREDDY,
 .gfxId = OBJ_EVENT_GFX_HIKER,
-.money = 300
+.money = 400
 },
 };
 
 const static struct Opponent sDTutorial_EliteOpponents0[] = {
 {
-.trainerId = TRAINER_ROXANNE_1,
-.gfxId = OBJ_EVENT_GFX_ROXANNE,
-.money = 500
+.trainerId = TRAINER_TU_ROSEMARY,
+.gfxId = OBJ_EVENT_GFX_WOMAN_2,
+.money = 700
 },
 {
-.trainerId = TRAINER_WATTSON_1,
-.gfxId = OBJ_EVENT_GFX_WATTSON,
-.money = 500
+.trainerId = TRAINER_TU_EVERETT,
+.gfxId = OBJ_EVENT_GFX_MAN_5,
+.money = 700
 }
+};
+
+const static struct Opponent sDTutorial_Bosses[] = {
+{
+.trainerId = TRAINER_TU_MAGNOLIA,
+.gfxId = OBJ_EVENT_GFX_FLANNERY,
+.money = 1000,
+},
 };
 
 
@@ -124,4 +135,8 @@ void DungeonTutorial_GenerateBattle(void) {
 
 void DungeonTutorial_GenerateEliteBattle(void) {
     GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 2);
+}
+
+void DungeonTutorial_GenerateBossBattle(void) {
+    GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
 }

@@ -43,7 +43,8 @@ DungeonTutorial_Act1_EliteBattle1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:
 	.string "this room.$"
 
 DungeonTutorial_Act1_EliteBattle1_Trainer_Text_0:
-	.string "Nobody's gotten past me yet, and you won't be the first.$"
+	.string "Nobody's gotten past me yet, and you\n"
+	.string "won't be the first.$"
 
 DungeonTutorial_Act1_EliteBattle1_Trainer_Text_1:
 	.string "How the hell are you so strong?$"

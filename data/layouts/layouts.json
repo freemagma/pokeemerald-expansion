@@ -4500,6 +4500,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DungeonTutorial_Act1_EliteBattle1/border.bin",
       "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_EliteBattle1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_TUTORIAL_ACT1_BOSS",
+      "name": "DungeonTutorial_Act1_Boss_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DungeonTutorial_Act1_Boss/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonTutorial_Act1_Boss/map.bin"
     }
   ]
 }

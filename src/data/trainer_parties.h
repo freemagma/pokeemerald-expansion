@@ -28,7 +28,7 @@ static const struct TrainerMon sParty_Tu_Darien[] = {
     .lvl = 8,
     .species = SPECIES_ROCKRUFF,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_ROCK_THROW, MOVE_ROAR, MOVE_NONE},
+    .moves = {MOVE_SAND_ATTACK, MOVE_TACKLE, MOVE_ROAR, MOVE_NONE},
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1,
     },
@@ -38,7 +38,7 @@ static const struct TrainerMon sParty_Tu_Darien[] = {
     .species = SPECIES_SWOOBAT,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_ENDEAVOR, MOVE_GUST, MOVE_ATTRACT, MOVE_NONE},
-    .nature = NATURE_MODEST,
+    .nature = NATURE_HASTY,
     .ability = ABILITY_SLOT_1,
     },
 };
@@ -99,7 +99,7 @@ static const struct TrainerMon sParty_Tu_Leah[] = {
     .iv = 31,
     .lvl = 10,
     .species = SPECIES_SABLEYE,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_DISABLE, MOVE_WILL_O_WISP, MOVE_SHADOW_SNEAK, MOVE_NONE},
     .nature = NATURE_SERIOUS,
     .ability = ABILITY_HIDDEN,
@@ -127,53 +127,76 @@ static const struct TrainerMon sParty_Tu_Freddy[] = {
     },
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMon sParty_Tu_Rosemary[] = {
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_ZUBAT,
-    }
-};
-
-static const struct TrainerMon sParty_Gabrielle1[] = {
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SKITTY,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZIGZAGOON,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_LOTAD,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SEEDOT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_TAILLOW,
-    }
-};
-
-static const struct TrainerMon sParty_GruntPetalburgWoods[] = {
-    {
-    .iv = 0,
+    .iv = 31,
     .lvl = 9,
-    .species = SPECIES_POOCHYENA,
-    }
+    .species = SPECIES_MUNCHLAX,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_BITE, MOVE_TACKLE, MOVE_SWALLOW, MOVE_STOCKPILE},
+    .nature = NATURE_RELAXED,
+    .ability = ABILITY_SLOT_2,
+    },
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ALOMOMOLA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SWAGGER, MOVE_RAIN_DANCE, MOVE_AQUA_JET, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_2,
+    },
+};
+
+static const struct TrainerMon sParty_Tu_Everett[] = {
+    {
+    .iv = 31,
+    .lvl = 9,
+    .species = SPECIES_MAGNEMITE,
+    .heldItem = ITEM_AIR_BALLOON,
+    .moves = {MOVE_THUNDER_WAVE, MOVE_TACKLE, MOVE_THUNDER_SHOCK, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_2,
+    },
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_BAYLEEF,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_POISON_POWDER, MOVE_SYNTHESIS, MOVE_RAZOR_LEAF, MOVE_NONE},
+    .nature = NATURE_NAIVE,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
+static const struct TrainerMon sParty_Tu_Magnolia[] = {
+    {
+    .iv = 31,
+    .lvl = 8,
+    .species = SPECIES_DEINO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WORK_UP, MOVE_DRAGON_BREATH, MOVE_BITE, MOVE_ROAR},
+    .nature = NATURE_HASTY,
+    .ability = ABILITY_SLOT_1,
+    },
+    {
+    .iv = 31,
+    .lvl = 9,
+    .species = SPECIES_DRILBUR,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_METAL_CLAW, MOVE_MAGNITUDE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_LONELY,
+    .ability = ABILITY_HIDDEN,
+    },
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_SALAZZLE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_INCINERATE, MOVE_TOXIC, MOVE_VENOSHOCK, MOVE_NONE},
+    .nature = NATURE_HARDY,
+    .ability = ABILITY_SLOT_1,
+    },
 };
 
 static const struct TrainerMon sParty_Marcel[] = {

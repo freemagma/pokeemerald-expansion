@@ -13,10 +13,10 @@
 #define TRAINER_TU_LEAH 6
 #define TRAINER_TU_FREDDY 7
 // DTutorial E
-#define TRAINER_A 8
-#define TRAINER_B 9
+#define TRAINER_TU_ROSEMARY 8
+#define TRAINER_TU_EVERETT 9
 // DTutorial B
-#define TRAINER_C 10
+#define TRAINER_TU_MAGNOLIA 10
 //
 
 

@@ -22,8 +22,8 @@ mapscripts DungeonTutorial_Act1_EliteBattle1_MapScripts {
 
 script DungeonTutorial_Act1_EliteBattle1_Trainer {
     trainerbattle_single(VAR_TRAINER,
-        "Nobody's gotten past me yet, and you won't be the first.",
-        "How the hell are you so strong?")
+        format("Nobody's gotten past me yet, and you won't be the first."),
+        format("How the hell are you so strong?"))
     msgbox("...", MSGBOX_AUTOCLOSE)
 }
 

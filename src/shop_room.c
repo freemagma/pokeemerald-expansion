@@ -13,7 +13,7 @@ static const struct ItemPrice sItemPriceNone = {0};
 
 static const struct ItemPrice sBasicItems[] = {
 {.itemId = ITEM_POKE_BALL, .price = 20},
-{.itemId = ITEM_HALF_POTION, .price = 50},
+{.itemId = ITEM_MAX_POTION, .price = 50},
 {.itemId = ITEM_FULL_HEAL, .price = 50},
 {.itemId = ITEM_SITRUS_BERRY, .price = 100},
 {.itemId = ITEM_LUM_BERRY, .price = 100},
@@ -22,23 +22,23 @@ static const struct ItemPrice sBasicItems[] = {
 };
 
 static const struct ItemPrice sDTutorialA1ItemPool[] = {
-{.itemId = ITEM_TM09_BULLET_SEED, .price = 500},
-{.itemId = ITEM_TM03_WATER_PULSE, .price = 500},
+{.itemId = ITEM_TM09_BULLET_SEED, .price = 400},
+{.itemId = ITEM_TM03_WATER_PULSE, .price = 400},
 {.itemId = ITEM_TM28_DIG, .price = 500},
-{.itemId = ITEM_TM35_FLAMETHROWER, .price = 900},
-{.itemId = ITEM_TM13_ICE_BEAM, .price = 900},
-{.itemId = ITEM_TM24_THUNDERBOLT, .price = 900},
+{.itemId = ITEM_TM35_FLAMETHROWER, .price = 800},
+{.itemId = ITEM_TM13_ICE_BEAM, .price = 800},
+{.itemId = ITEM_TM24_THUNDERBOLT, .price = 800},
+{.itemId = ITEM_TM31_BRICK_BREAK, .price = 600},
 {.itemId = ITEM_PROTEIN, .price = 100},
 {.itemId = ITEM_CALCIUM, .price = 100},
 {.itemId = ITEM_CARBOS, .price = 100},
 {.itemId = ITEM_ZINC, .price = 100},
 {.itemId = ITEM_HP_UP, .price = 100},
 {.itemId = ITEM_IRON, .price = 100},
-{.itemId = ITEM_REVIVE, .price = 1500},
-{.itemId = ITEM_LEFTOVERS, .price = 700},
-{.itemId = ITEM_EXPERT_BELT, .price = 350},
+{.itemId = ITEM_LEFTOVERS, .price = 600},
+{.itemId = ITEM_EXPERT_BELT, .price = 300},
 {.itemId = ITEM_SOFT_SAND, .price = 200},
-{.itemId = ITEM_BRIGHT_POWDER, .price = 250},
+{.itemId = ITEM_BRIGHT_POWDER, .price = 200},
 {.itemId = ITEM_KINGS_ROCK, .price = 200},
 {0}
 };
