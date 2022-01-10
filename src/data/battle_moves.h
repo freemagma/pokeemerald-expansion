@@ -7529,7 +7529,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SMACK_DOWN] =
     {
         .effect = EFFECT_SMACK_DOWN,
-        .power = 50,
+        .power = 60,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 15,
