@@ -9,7 +9,6 @@
 
 static u16 ForkMap(u16);
 static void ForkMapsInRoute(void);
-static void ClearRoute(void);
 
 #define MAX_ROUTE_LENGTH 30
 static EWRAM_DATA u16 sRouteIndex = 0;
@@ -39,10 +38,10 @@ void DungeonTutorial_GenerateRoute(void)
 
     sRoute[i][0] = battle; sRoute[i][0].param = 1;
     sRoute[i++][1] = encounter;
-    sRoute[i][0] = battle; sRoute[i][0].param = 1;
-    sRoute[i++][1] = encounter;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
 
-    sRoute[i][0] = gift; sRoute[i++][1] = shop;
+    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
 
     sRoute[i][0] = battle; sRoute[i++][0].param = 1;
     sRoute[i++][0] = eliteBattle;
@@ -53,9 +52,9 @@ void DungeonTutorial_GenerateRoute(void)
     ForkMapsInRoute();
 }
 
-bool8 IsCurrentlyRouting(void)
+bool8 IsRoutedWarp(u8 warpEventId)
 {
-    return sRoute[sRouteIndex][0].map != 0;
+    return sRoute[sRouteIndex][0].map != 0 && warpEventId != 0;
 }
 
 u8 GetRouteParam(void) {
@@ -66,10 +65,9 @@ const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
 {
     u16 map;
     const struct MapHeader *header;
-    u8 warpOptionIndex = warpEventId;
+    u8 warpOptionIndex;
 
-    if (warpOptionIndex > 0)
-        warpOptionIndex--;
+    warpOptionIndex = warpEventId - 1;
 
     map = sRoute[sRouteIndex][warpOptionIndex].map;
     sRouteParam = sRoute[sRouteIndex][warpOptionIndex].param;
@@ -86,7 +84,7 @@ void BufferRouteText(void)
     StringCopy(gStringVar2, sRoute[sRouteIndex][1].string);
 }
 
-static void ClearRoute(void) {
+void ClearRoute(void) {
     u16 i;
     for (i = 0; i < MAX_ROUTE_LENGTH; i++) {
         sRoute[i][0] = routeNone;

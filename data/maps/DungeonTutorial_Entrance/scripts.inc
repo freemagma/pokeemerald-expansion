@@ -4,47 +4,41 @@ DungeonTutorial_Entrance_MapScripts::
 
 DungeonTutorial_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	callnative DungeonTutorial_GenerateRoute
+	additem ITEM_MAX_POTION, 3
+	additem ITEM_RARE_CANDY, 5
+	additem ITEM_FULL_HEAL, 2
+	additem ITEM_POKE_BALL, 20
+	addmoney 500
 	setvar VAR_LEVEL_SCALE, 12
 	return
 
 
 StarterBall::
 	showmonpic SPECIES_DIGLETT, 10, 3
-	compare VAR_INTRO_STATE, 0
-	goto_if_ne StarterBall_2
-	msgbox StarterBall_Text_1, MSGBOX_YESNO
+	msgbox StarterBall_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq StarterBall_5
+	goto_if_eq StarterBall_2
 StarterBall_1:
 	hidemonpic
 	releaseall
 	end
 
 StarterBall_2:
-	msgbox StarterBall_Text_0
-	goto StarterBall_1
-
-StarterBall_5:
 	bufferspeciesname STR_VAR_1, SPECIES_DIGLETT
 	givemon SPECIES_DIGLETT, 12, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq StarterBall_8
-StarterBall_7:
-	setvar VAR_INTRO_STATE, 1
+	goto_if_eq StarterBall_5
+StarterBall_4:
 	setflag FLAG_SYS_POKEMON_GET
 	goto StarterBall_1
 
-StarterBall_8:
+StarterBall_5:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto StarterBall_7
+	goto StarterBall_4
 
 
 StarterBall_Text_0:
-	.string "It would be greedy to take another\n"
-	.string "Pokémon.$"
-
-StarterBall_Text_1:
 	.string "Will you take Diglet?$"

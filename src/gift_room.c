@@ -61,8 +61,8 @@ static void GetGiftMon(const u16 specList[], u16 count) {
 
 
 const static u16 sDTutorial_GiftMons[] = {
-    SPECIES_MAKUHITA, SPECIES_ELECTRIKE, SPECIES_STUNKY,
-    SPECIES_RALTS,    SPECIES_GLAMEOW,   SPECIES_SHUPPET};
+    SPECIES_MAKUHITA, SPECIES_ELECTRIKE, SPECIES_GLAMEOW,
+    SPECIES_RALTS,    SPECIES_KABUTO,   SPECIES_SHUPPET};
 
 void DungeonTutorial_GetGiftMon(void) {
     GetGiftMon(sDTutorial_GiftMons, ARRAY_COUNT(sDTutorial_GiftMons));

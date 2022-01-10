@@ -100,7 +100,7 @@ static const struct TrainerMon sParty_Tu_Leah[] = {
     .lvl = 10,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_DISABLE, MOVE_WILL_O_WISP, MOVE_SHADOW_SNEAK, MOVE_NONE},
+    .moves = {MOVE_DISABLE, MOVE_WILL_O_WISP, MOVE_SHADOW_SNEAK, MOVE_MEAN_LOOK},
     .nature = NATURE_SERIOUS,
     .ability = ABILITY_HIDDEN,
     },
@@ -127,10 +127,22 @@ static const struct TrainerMon sParty_Tu_Freddy[] = {
     },
 };
 
+static const struct TrainerMon sParty_Tu_Emily[] = {
+    {
+    .iv = 31,
+    .lvl = 8,
+    .species = SPECIES_SLIGGOO,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DRAGON_BREATH, MOVE_ACID_SPRAY, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_QUIRKY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
 static const struct TrainerMon sParty_Tu_Rosemary[] = {
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_MUNCHLAX,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_BITE, MOVE_TACKLE, MOVE_SWALLOW, MOVE_STOCKPILE},
@@ -140,18 +152,18 @@ static const struct TrainerMon sParty_Tu_Rosemary[] = {
     {
     .iv = 31,
     .lvl = 10,
-    .species = SPECIES_ALOMOMOLA,
+    .species = SPECIES_WAILMER,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SWAGGER, MOVE_RAIN_DANCE, MOVE_AQUA_JET, MOVE_NONE},
+    .moves = {MOVE_HEAVY_SLAM, MOVE_RAIN_DANCE, MOVE_WATER_GUN, MOVE_NONE},
     .nature = NATURE_SERIOUS,
-    .ability = ABILITY_SLOT_2,
+    .ability = ABILITY_HIDDEN,
     },
 };
 
 static const struct TrainerMon sParty_Tu_Everett[] = {
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_MAGNEMITE,
     .heldItem = ITEM_AIR_BALLOON,
     .moves = {MOVE_THUNDER_WAVE, MOVE_TACKLE, MOVE_THUNDER_SHOCK, MOVE_NONE},

@@ -817,7 +817,7 @@ static void SetupWarp(struct MapHeader *unused, s8 warpEventId, struct MapPositi
             warpEvent = &gMapHeader.events->warps[warpEventId];
         }
     }
-    else if (IsCurrentlyRouting())
+    else if (IsRoutedWarp(warpEventId))
     {
         warpEvent = SetWarpDestinationRouting(warpEventId);
     }

@@ -1,1 +1,18 @@
-mapscripts Lobby_LevelSelect_MapScripts {}
+mapscripts Lobby_LevelSelect_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        callnative(LobbyResetState)
+    }
+}
+
+script Lobby_Computer1 {
+    lock
+    msgbox(format("1. Diglett Dungeon (Tutorial)\n1/5 Difficulty"))
+    release
+}
+
+
+script Lobby_Computer2 {
+    lock
+    msgbox(format("2. Dungeon In Progress..."))
+    release
+}

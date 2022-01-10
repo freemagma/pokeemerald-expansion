@@ -97,6 +97,12 @@ const static struct Opponent sDTutorial_Opponents1[] = {
 .gfxId = OBJ_EVENT_GFX_HIKER,
 .money = 400
 },
+{
+.trainerId = TRAINER_TU_EMILY,
+.gfxId = OBJ_EVENT_GFX_WOMAN_4,
+.money = 400
+},
+
 };
 
 const static struct Opponent sDTutorial_EliteOpponents0[] = {

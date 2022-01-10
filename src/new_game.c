@@ -44,6 +44,7 @@
 #include "berry_powder.h"
 #include "mystery_gift.h"
 #include "union_room_chat.h"
+#include "routing.h"
 #include "constants/items.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
@@ -51,7 +52,6 @@ extern const u8 EventScript_ResetAllMapFlags[];
 static void ClearFrontierRecord(void);
 static void WarpToStart(void);
 static void ResetMiniGamesRecords(void);
-static void NewGameInitBagItems(void);
 
 EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
 EWRAM_DATA bool8 gEnableContestDebugging = FALSE;
@@ -128,9 +128,9 @@ static void ClearFrontierRecord(void)
 static void WarpToStart(void)
 {
     SetWarpDestination(
-        MAP_GROUP(DUNGEON_TUTORIAL_ENTRANCE),
-        MAP_NUM(DUNGEON_TUTORIAL_ENTRANCE),
-        WARP_ID_NONE, -1, -1
+        MAP_GROUP(LOBBY_LEVEL_SELECT),
+        MAP_NUM(LOBBY_LEVEL_SELECT),
+        WARP_ID_NONE, 3, 19
     );
     WarpIntoMap();
 }
@@ -149,6 +149,39 @@ void ResetMenuAndMonGlobals(void)
     ZeroEnemyPartyMons();
     ResetBagScrollPositions();
     ResetPokeblockScrollPositions();
+}
+
+void LobbyResetState(void)
+{
+    // my things
+    ZeroPlayerPartyMons();
+    ZeroEnemyPartyMons();
+    ResetPokedex();
+    ClearFrontierRecord();
+    gSaveBlock2Ptr->specialSaveWarpFlags = 0;
+    ClearPokedexFlags();
+    InitEventData();
+    SetMoney(&gSaveBlock1Ptr->money, 0);
+    SetCoins(0);
+    gPlayerPartyCount = 0;
+    ZeroPlayerPartyMons();
+    ResetPokemonStorageSystem();
+    gSaveBlock1Ptr->registeredItem = 0;
+    ClearBag();
+    FlagSet(FLAG_SYS_B_DASH);
+    ClearRoute();
+
+    // base game things
+    ResetInitialPlayerAvatarState();
+    FlagClear(FLAG_SYS_CYCLING_ROAD);
+    FlagClear(FLAG_SYS_CRUISE_MODE);
+    FlagClear(FLAG_SYS_SAFARI_MODE);
+    FlagClear(FLAG_SYS_USE_STRENGTH);
+    FlagClear(FLAG_SYS_USE_FLASH);
+    FlagClear(FLAG_DISABLE_BAG);
+    #if VAR_TERRAIN != 0
+        VarSet(VAR_TERRAIN, 0);
+    #endif
 }
 
 void NewGameInitData(void)
@@ -174,7 +207,7 @@ void NewGameInitData(void)
     ResetGabbyAndTy();
     ClearSecretBases();
     ClearBerryTrees();
-    SetMoney(&gSaveBlock1Ptr->money, 500);
+    SetMoney(&gSaveBlock1Ptr->money, 0);
     SetCoins(0);
     ResetLinkContestBoolean();
     ResetGameStats();
@@ -189,8 +222,8 @@ void NewGameInitData(void)
     ClearRoamerLocationData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
-    NewGameInitBagItems();
-    NewGameInitPCItems();
+    FlagSet(FLAG_SYS_B_DASH);
+    ClearRoute();
     ClearPokeblocks();
     ClearDecorationInventories();
     InitEasyChatPhrases();
@@ -210,13 +243,6 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
-}
-
-static void NewGameInitBagItems() {
-    AddBagItem(ITEM_POKE_BALL, 20);
-    AddBagItem(ITEM_HALF_POTION, 3);
-    AddBagItem(ITEM_RARE_CANDY, 3);
-    FlagSet(FLAG_SYS_B_DASH);
 }
 
 static void ResetMiniGamesRecords(void)

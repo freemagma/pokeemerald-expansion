@@ -3,34 +3,30 @@ const LEVEL = 12
 mapscripts DungeonTutorial_Entrance_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         callnative(DungeonTutorial_GenerateRoute)
+        additem(ITEM_MAX_POTION, 3)
+        additem(ITEM_RARE_CANDY, 5)
+        additem(ITEM_FULL_HEAL, 2)
+        additem(ITEM_POKE_BALL, 20)
+        addmoney(500)
         setvar(VAR_LEVEL_SCALE, LEVEL)
     }
 }
 
 const BALL_1_ID = 1
 
-const INTRO_PRE_STARTER = 0
-const INTRO_POST_STARTER = 1
-
-
 script StarterBall {
     showmonpic(SPECIES_DIGLETT, 10, 3)
-    if (var(VAR_INTRO_STATE) != INTRO_PRE_STARTER) {
-       msgbox(format("It would be greedy to take another Pokémon."))
-    } else {
-        msgbox(format("Will you take Diglet?"), MSGBOX_YESNO)
+    msgbox(format("Will you take Diglet?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        bufferspeciesname(STR_VAR_1, SPECIES_DIGLETT)
+        givemon(SPECIES_DIGLETT, LEVEL, ITEM_NONE)
+        removeobject(BALL_1_ID)
+        msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {
-           bufferspeciesname(STR_VAR_1, SPECIES_DIGLETT)
-           givemon(SPECIES_DIGLETT, LEVEL, ITEM_NONE)
-           removeobject(BALL_1_ID)
-           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
-           if (var(VAR_RESULT) == 1) {
-              call(Common_EventScript_GetGiftMonPartySlot)
-              call(Common_EventScript_NameReceivedPartyMon)
-           }
-           setvar(VAR_INTRO_STATE, INTRO_POST_STARTER)
-           setflag(FLAG_SYS_POKEMON_GET)
+            call(Common_EventScript_GetGiftMonPartySlot)
+            call(Common_EventScript_NameReceivedPartyMon)
         }
+        setflag(FLAG_SYS_POKEMON_GET)
     }
     hidemonpic
     releaseall

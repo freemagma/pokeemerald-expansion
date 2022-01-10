@@ -10,8 +10,9 @@ struct RouteOption {
 };
 
 void DungeonTutorial_GenerateRoute(void);
-bool8 IsCurrentlyRouting(void);
+bool8 IsRoutedWarp(u8);
 u8 GetRouteParam(void);
+void ClearRoute(void);
 const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId);
 
 #endif // GUARD_ROUTING_H

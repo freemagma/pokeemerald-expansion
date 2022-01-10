@@ -103,6 +103,19 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tu_Freddy},
     },
 
+    [TRAINER_TU_EMILY] =
+    {
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerName = _("Emily"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Tu_Emily),
+        .party = {.TrainerMon = sParty_Tu_Emily},
+    },
+
     // DTutorial E
     [TRAINER_TU_ROSEMARY] =
     {
@@ -144,18 +157,6 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tu_Magnolia},
     },
 
-    [TRAINER_MARCEL] =
-    {
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("MARCEL"),
-        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Marcel),
-        .party = {.TrainerMon = sParty_Marcel},
-    },
 
     [TRAINER_ALBERTO] =
     {
