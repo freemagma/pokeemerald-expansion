@@ -1,14 +1,10 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
-// gMapGroup_Lobby
+// Map Group 0
 #define MAP_LOBBY_LEVEL_SELECT (0 | (0 << 8))
 
-// gMapGroup_DungeonTutorial
+// Map Group 1
 #define MAP_DUNGEON_TUTORIAL_ENTRANCE             (0 | (1 << 8))
 #define MAP_DUNGEON_TUTORIAL_ACT1_GIFT1           (1 | (1 << 8))
 #define MAP_DUNGEON_TUTORIAL_ACT1_ENCOUNTER1      (2 | (1 << 8))
