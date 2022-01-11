@@ -1,0 +1,37 @@
+Rattata
+-------
+Rattata
+30/56/35/25/35/72
+Abilities: Guts, None, Hustle
+
+Rattata Alolan
+30/56/35/25/35/72
+Abilities: Gluttony, Hustle, Thick Fat
+
+
+Raticate
+--------
+Raticate
+55/81/60/50/70/97
+Abilities: Guts, None, Hustle
+
+Raticate Alolan
+75/71/70/40/80/77
+Abilities: Gluttony, Hustle, Thick Fat
+
+
+Calyrex
+-------
+Calyrex
+100/80/80/80/80/80
+Abilities: Unnerve, None
+
+Calyrex Ice Rider
+100/165/150/85/130/50
+Abilities: As One Ice Rider, None
+
+Calyrex Shadow Rider
+100/85/80/165/100/150
+Abilities: As One Shadow Rider, None
+
+
