@@ -37,9 +37,9 @@ def print_pokedata(data, f):
 
 
 def print_learnset(learnset, f):
-    for lvl in sorted(learnset.keys()):
-        lvltxt = " " + lvl if int(lvl) < 10 else lvl
-        move = format_words(learnset[lvl], remove="MOVE_")
+    for lvl in sorted(map(int, learnset.keys())):
+        lvltxt = " " + str(lvl) if lvl < 10 else str(lvl)
+        move = format_words(learnset[str(lvl)], remove="MOVE_")
         print(f"{lvltxt}. {move}", file=f)
 
 
@@ -138,12 +138,17 @@ def get_modified_species(j, jc):
             if set(learnset.keys()) | {0} != set(c_learnset.keys()) | {0}:
                 modified.add(spec)
                 continue
-            if j["pokedata"][spec] != jc["pokedata"][spec]:
-                modified.add(spec)
-                continue
             if j["evo_methods"].get(spec) != jc["evo_methods"].get(spec):
                 modified.add(spec)
                 continue
+            data = j["pokedata"][spec]
+            c_data = jc["pokedata"][spec]
+            for key in set(data.keys()) | set(c_data.keys()):
+                if key in ("item1", "item2"):
+                    continue
+                if data.get(key) != c_data.get(key):
+                    modified.add(spec)
+                    break
     return modified
 
 

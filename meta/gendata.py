@@ -3,6 +3,27 @@ import re
 import json
 import sys
 
+def parse_movedata():
+    lines = []
+    with open("src/data/battle_moves.h") as f:
+        lines = [l.strip() for l in f.readlines()]
+
+    move_key = None
+    movedata = defaultdict(lambda: dict())
+    for line in lines:
+        if line.startswith("[MOVE_"):
+            move_key = re.search(r"\[(.*)\]", line).group(1)
+            continue
+        if move_key is None:
+            continue
+        if line and line[0] == ".":
+            m = re.search(r"\.(\S*)\s*=\s*(.*\w)", line)
+            key, value = m.group(1), m.group(2)
+            if key not in movedata[move_key]:
+                movedata[move_key][key] = value
+
+    return movedata
+
 
 def parse_pokedata():
     lines = []
@@ -114,11 +135,13 @@ def main():
         return
     filename = f"meta/data/{sys.argv[1]}.json"
 
+    movedata = parse_movedata()
     pokedata = parse_pokedata()
     pokedex = parse_names()
     learnsets = parse_level_up()
     evo_methods = parse_evolution()
     d = {
+        "movedata": movedata,
         "pokedata": pokedata,
         "pokedex": pokedex,
         "learnsets": learnsets,
