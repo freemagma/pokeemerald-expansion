@@ -127,9 +127,6 @@ def print_learnset(learnset, f):
 
 
 def print_evolution(evo_methods, f):
-    if len(evo_methods) == 0:
-        return
-
     sentences = []
     for evo_type, evo_arg, into_spec in evo_methods:
         format_spec = format_words(into_spec, remove="SPECIES_")
@@ -185,10 +182,23 @@ def print_evolution(evo_methods, f):
             )
         elif evo_type == "EVO_MOVE_TYPE":
             format_type = format_words(evo_arg, remove="TYPE_")
-            sentences.append(f"into {format_spec} while knowing a {format_type}-type move")
+            sentences.append(
+                f"into {format_spec} while knowing a {format_type}-type move"
+            )
         else:
-            print(evo_type)
+            # EVO_MOVE
+            # EVO_SPECIFIC_MON_IN_PARTY
+            # EVO_MEGA_EVOLUTION
+            # EVO_BEAUTY
+            # EVO_SPECIFIC_MAP
+            # EVO_MAPSEC
+            # EVO_PRIMAL_REVERSION
+            # EVO_MOVE_MEGA_EVOLUTION
+            # EVO_TRADE_SPECIFIC_MON
             sentences.append(f"into {format_spec}")
+
+    if len(sentences) == 0:
+        return
     if len(sentences) == 1:
         print(f"_Evolves_: {sentences[0]}", file=f)
     else:
