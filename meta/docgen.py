@@ -71,10 +71,15 @@ def parse_level_up():
 
     return learnsets
 
+def format_words(words, remove=""):
+    words = words.replace(remove, "").replace("_", " ").strip()
+    words = " ".join(s.capitalize() for s in words.split())
+    return words
+
 
 def print_pokedata(data, f):
     print(
-        "{}/{}/{}/{}/{}/{}".format(
+        "_Stats_: {}/{}/{}/{}/{}/{}".format(
             data["baseHP"],
             data["baseAttack"],
             data["baseDefense"],
@@ -88,34 +93,34 @@ def print_pokedata(data, f):
         data["abilities"][1:-1].replace("ABILITY", "").replace("_", " ").split(",")
     )
     print(
-        "Abilities: "
+        "_Abilities_: "
         + ", ".join(
             " ".join(s.capitalize() for s in a.strip().split()) for a in abilities
         ),
         file=f,
     )
 
-
-def format_species(species):
-    species = species.replace("SPECIES", "").replace("_", " ").strip()
-    species = " ".join(s.capitalize() for s in species.split())
-    return species
-
+def print_learnset(learnset, f):
+    for lvl in sorted(learnset.keys()):
+        lvltxt = " " + str(lvl) if lvl < 10 else str(lvl)
+        move = format_words(learnset[lvl], remove="MOVE_")
+        print(f"{lvltxt}. {move}", file=f)
 
 def main():
     pokedata = parse_pokedata()
     species_name, name_species = parse_names()
     learnsets = parse_level_up()
 
-    with open("meta/docs/pokemon_data.txt", "w") as f:
+    with open("meta/docs/pokemon_data.md", "w") as f:
         for name in ("Rattata", "Raticate", "Calyrex"):
-            print(f"{name}", file=f)
-            print("{}".format("-" * len(name)), file=f)
-            for species in name_species[name]:
+            print(f"## {name}", file=f)
+            for e, species in enumerate(name_species[name]):
                 if len(name_species[name]) > 1:
-                    print(format_species(species), file=f)
+                    print("**{}**".format(format_words(species, remove="SPECIES_")), file=f)
                 print_pokedata(pokedata[species], f)
-                if len(name_species[name]) > 1:
+                print(file=f)
+                print_learnset(learnsets[species], f)
+                if e != len(name_species[name]) - 1:
                     print(file=f)
             print(file=f)
 
