@@ -152,6 +152,31 @@ def get_modified_species(j, jc):
     return modified
 
 
+def print_move_changes(movedata, c_movedata, f):
+    for move in movedata:
+        if move not in c_movedata:
+            # TODO add this case if necessary
+            continue
+        format_move = format_words(move, remove="MOVE_")
+        data = movedata[move]
+        c_data = c_movedata[move]
+        lines = []
+        if data["type"] != c_data["type"]:
+            format_type = format_words(data["type"], remove="TYPE_")
+            lines.append(f"{format_type} type")
+        if data["power"] != c_data["power"]:
+            diff = int(data["power"]) - int(c_data["power"])
+            lines.append(f"{data['power']} Power ({diff:+})")
+        if data["accuracy"] != c_data["accuracy"]:
+            diff = int(data["accuracy"]) - int(c_data["accuracy"])
+            lines.append(f"{data['accuracy']} Accuracy ({diff:+}%)")
+        if lines:
+            print(f"## {format_move}", file=f)
+            for line in lines:
+                print(line, file=f)
+            print(file=f)
+
+
 def main():
     if len(sys.argv) == 1:
         print("filename required")
@@ -167,6 +192,8 @@ def main():
         with open(file_compare) as f:
             j_compare = json.load(f)
         species_modified = get_modified_species(j, j_compare)
+        with open("meta/docs/move_changes.md") as f:
+            print_move_changes(j["movedata"], j_compare["movedata"], f)
 
     pokedata = j["pokedata"]
     pokedex = j["pokedex"]
