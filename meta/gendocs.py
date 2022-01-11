@@ -12,9 +12,9 @@ def print_pokedata(data, f):
     type1 = format_words(data["type1"], remove="TYPE_")
     type2 = format_words(data["type2"], remove="TYPE_")
     typetext = f"{type1}/{type2}" if type1 != type2 else f"{type1}"
-    print(f"_Type_: {typetext}", file=f)
+    print(f"__Type__: {typetext} \\", file=f)
     print(
-        "_Stats_: {}/{}/{}/{}/{}/{}".format(
+        "__Stats__: {}/{}/{}/{}/{}/{} \\".format(
             data["baseHP"],
             data["baseAttack"],
             data["baseDefense"],
@@ -28,10 +28,10 @@ def print_pokedata(data, f):
         data["abilities"][1:-1].replace("ABILITY", "").replace("_", " ").split(",")
     )
     print(
-        "_Abilities_: "
+        "__Abilities__: "
         + ", ".join(
             " ".join(s.capitalize() for s in a.strip().split()) for a in abilities
-        ),
+        ) + " \\",
         file=f,
     )
 
@@ -119,9 +119,9 @@ def print_evolution(evo_methods, f):
     if len(sentences) == 0:
         return
     if len(sentences) == 1:
-        print(f"_Evolves_: {sentences[0]}", file=f)
+        print(f"__Evolves__: {sentences[0]}", file=f)
     else:
-        print("_Evolves_:", file=f)
+        print("__Evolves__:", file=f)
         for sentence in sentences:
             print(" - " + sentence, file=f)
 
@@ -149,6 +149,7 @@ def get_modified_species(j, jc):
                 if data.get(key) != c_data.get(key):
                     modified.add(spec)
                     break
+    modified.add("SPECIES_EEVEE")
     return modified
 
 
