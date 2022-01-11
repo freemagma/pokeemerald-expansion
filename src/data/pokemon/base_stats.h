@@ -18753,12 +18753,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_PANCHAM] =
     {
-        .baseHP        = 67,
+        .baseHP        = 77,
         .baseAttack    = 82,
-        .baseDefense   = 62,
+        .baseDefense   = 82,
         .baseSpeed     = 43,
         .baseSpAttack  = 46,
-        .baseSpDefense = 48,
+        .baseSpDefense = 78,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_FIGHTING,
         .catchRate = 220,
@@ -18781,11 +18781,11 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_PANGORO] =
     {
-        .baseHP        = 95,
+        .baseHP        = 105,
         .baseAttack    = 124,
-        .baseDefense   = 78,
+        .baseDefense   = 98,
         .baseSpeed     = 58,
-        .baseSpAttack  = 69,
+        .baseSpAttack  = 99,
         .baseSpDefense = 71,
         .type1 = TYPE_FIGHTING,
         .type2 = TYPE_DARK,
