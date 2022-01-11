@@ -1,92 +1,5 @@
-from collections import namedtuple, defaultdict
-import re
-
-
-def parse_pokedata():
-    lines = []
-    with open("src/data/pokemon/base_stats.h") as f:
-        lines = [l.strip() for l in f.readlines()]
-
-    poke_key = None
-    pokedata = defaultdict(lambda: dict())
-    for line in lines:
-        if "SPECIES" in line:
-            poke_key = re.search(r"\[(.*)\]", line).group(1)
-            continue
-        if poke_key is None:
-            continue
-        if line and line[0] == ".":
-            m = re.search(r"\.(\S*)\s*=\s*(.*),", line)
-            key, value = m.group(1), m.group(2)
-            if key not in pokedata[poke_key]:
-                pokedata[poke_key][key] = value
-
-    return pokedata
-
-
-def parse_names():
-    lines = []
-    with open("src/data/text/species_names.h") as f:
-        lines = [l.strip() for l in f.readlines()]
-
-    species_name = dict()
-    name_species = defaultdict(lambda: list())
-    for line in lines:
-        if "SPECIES" in line and "SPECIES_NONE" not in line:
-            m = re.search(r"\[(.*)\]\s*=\s*_\(\"(.*)\"\),", line)
-            key, value = m.group(1), m.group(2)
-            species_name[key] = value
-            name_species[value].append(key)
-
-    return species_name, name_species
-
-
-def parse_level_up():
-    lines = []
-    with open("src/data/pokemon/level_up_learnsets.h") as f:
-        lines = [l.strip() for l in f.readlines()]
-
-    poke_key = None
-    raw_learnsets = defaultdict(lambda: dict())
-    for line in lines:
-        if "LevelUpMove" in line:
-            poke_key = re.search(r"LevelUpMove\s*(\S*)\[", line).group(1)
-            continue
-        if poke_key is None:
-            continue
-        if "LEVEL_UP_MOVE" in line:
-            m = re.search(r"LEVEL_UP_MOVE\s*\(\s*(\S*),\s*(\S*)\s*\),", line)
-            level, move = int(m.group(1)), m.group(2)
-            raw_learnsets[poke_key][level] = move
-
-    with open("src/data/pokemon/level_up_learnset_pointers.h") as f:
-        lines = [l.strip() for l in f.readlines()]
-
-    learnsets = dict()
-    for line in lines:
-        if line.startswith("[SPECIES"):
-            m = re.search(r"\[(.*)\]\s*=\s*(\S*),", line)
-            key, value = m.group(1), m.group(2)
-            learnsets[key] = raw_learnsets[value]
-
-    return learnsets
-
-
-def parse_evolution():
-    lines = []
-    with open("src/data/pokemon/evolution.h") as f:
-        lines = [l.strip() for l in f.readlines()]
-
-    poke_key = None
-    evo_methods = defaultdict(lambda: list())
-    for line in lines:
-        if line.startswith("[SPECIES"):
-            poke_key = re.search(r"^\[(.*)\]", line).group(1)
-        if "EVO_" in line:
-            m = re.search(r"\{(EVO_\S*),\s*(\S*)\s*,\s*(\S*\w)\}", line)
-            evo_methods[poke_key].append((m.group(1), m.group(2), m.group(3)))
-
-    return evo_methods
+import json
+import sys
 
 
 def format_words(words, remove=""):
@@ -96,6 +9,10 @@ def format_words(words, remove=""):
 
 
 def print_pokedata(data, f):
+    type1 = format_words(data["type1"], remove="TYPE_")
+    type2 = format_words(data["type2"], remove="TYPE_")
+    typetext = f"{type1}/{type2}" if type1 != type2 else f"{type1}"
+    print(f"_Type_: {typetext}", file=f)
     print(
         "_Stats_: {}/{}/{}/{}/{}/{}".format(
             data["baseHP"],
@@ -121,7 +38,7 @@ def print_pokedata(data, f):
 
 def print_learnset(learnset, f):
     for lvl in sorted(learnset.keys()):
-        lvltxt = " " + str(lvl) if lvl < 10 else str(lvl)
+        lvltxt = " " + lvl if int(lvl) < 10 else lvl
         move = format_words(learnset[lvl], remove="MOVE_")
         print(f"{lvltxt}. {move}", file=f)
 
@@ -180,6 +97,9 @@ def print_evolution(evo_methods, f):
             sentences.append(
                 f"into {format_spec} when traded while holding {format_item}"
             )
+        elif evo_type == "EVO_TRADE_SPECIFIC_MON":
+            format_spec2 = format_words(evo_arg, remove="SPECIES_")
+            sentences.append(f"into {format_spec} when traded for a {format_spec2}")
         elif evo_type == "EVO_MOVE_TYPE":
             format_type = format_words(evo_arg, remove="TYPE_")
             sentences.append(
@@ -187,18 +107,14 @@ def print_evolution(evo_methods, f):
             )
         elif evo_type == "EVO_MOVE":
             format_move = format_words(evo_arg, remove="MOVE_")
-            sentences.append(f"into {format_spec} when traded")
-        else:
-            # EVO_MOVE
-            # EVO_SPECIFIC_MON_IN_PARTY
-            # EVO_MEGA_EVOLUTION
-            # EVO_BEAUTY
-            # EVO_SPECIFIC_MAP
-            # EVO_MAPSEC
-            # EVO_PRIMAL_REVERSION
-            # EVO_MOVE_MEGA_EVOLUTION
-            # EVO_TRADE_SPECIFIC_MON
-            sentences.append(f"into {format_spec}")
+            sentences.append(f"into {format_spec} while knowing {format_move}")
+        elif evo_type == "EVO_SPECIFIC_MON_IN_PARTY":
+            format_spec2 = format_words(evo_arg, remove="SPECIES_")
+            sentences.append(
+                f"into {format_spec} when a {format_spec2} is in the party"
+            )
+        elif evo_type == "EVO_BEAUTY":
+            sentences.append(f"into {format_spec} with high beauty")
 
     if len(sentences) == 0:
         return
@@ -210,26 +126,59 @@ def print_evolution(evo_methods, f):
             print(" - " + sentence, file=f)
 
 
+def get_modified_species(j, jc):
+    return {"SPECIES_RATTATA"}
+
+
 def main():
-    pokedata = parse_pokedata()
-    species_name, name_species = parse_names()
-    learnsets = parse_level_up()
-    evo_methods = parse_evolution()
+    if len(sys.argv) == 1:
+        print("filename required")
+        return
+
+    filename = f"meta/data/{sys.argv[1]}.json"
+    with open(filename) as f:
+        j = json.load(f)
+
+    species_modified = None
+    if len(sys.argv) > 2:
+        file_compare = f"meta/data/{sys.argv[2]}.json"
+        j_compare = None
+        # with open(file_compare) as f:
+        #     j_compare = json.load(f)
+        species_modified = get_modified_species(j, j_compare)
+
+    pokedata = j["pokedata"]
+    pokedex = j["pokedex"]
+    learnsets = j["learnsets"]
+    evo_methods = j["evo_methods"]
 
     with open("meta/docs/pokemon_data.md", "w") as f:
-        for name in sorted(name_species.keys()):
+        for name, species in pokedex:
+            if species_modified and not any(
+                spec in species_modified for spec in species
+            ):
+                continue
             print(f"## {name}", file=f)
-            for e, species in enumerate(name_species[name]):
-                if len(name_species[name]) > 1:
+            past_learnsets = []
+            actual_species = (
+                species
+                if not species_modified
+                else [spec for spec in species if spec in species_modified]
+            )
+            for e, spec in enumerate(actual_species):
+                if e != 0:
                     print(
-                        "**{}**".format(format_words(species, remove="SPECIES_")),
+                        "**{}**".format(format_words(spec, remove="SPECIES_")),
                         file=f,
                     )
-                print_pokedata(pokedata[species], f)
-                print_evolution(evo_methods[species], f)
+                print_pokedata(pokedata[spec], f)
+                if spec in evo_methods:
+                    print_evolution(evo_methods[spec], f)
                 print(file=f)
-                print_learnset(learnsets[species], f)
-                if e != len(name_species[name]) - 1:
+                if learnsets[spec] not in past_learnsets:
+                    print_learnset(learnsets[spec], f)
+                    past_learnsets.append(learnsets[spec])
+                if e != len(species) - 1:
                     print(file=f)
             print(file=f)
 
