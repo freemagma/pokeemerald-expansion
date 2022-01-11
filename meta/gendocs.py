@@ -31,8 +31,8 @@ def print_pokedata(data, f):
         "__Abilities__: "
         + ", ".join(
             " ".join(s.capitalize() for s in a.strip().split()) for a in abilities
-        ) + " \\",
-        file=f,
+        ),
+        file=f, end=" ",
     )
 
 
@@ -117,10 +117,12 @@ def print_evolution(evo_methods, f):
             sentences.append(f"into {format_spec} with high beauty")
 
     if len(sentences) == 0:
-        return
-    if len(sentences) == 1:
+        print(file=f)
+    elif len(sentences) == 1:
+        print("\\", file=f)
         print(f"__Evolves__: {sentences[0]}", file=f)
     else:
+        print("\\", file=f)
         print("__Evolves__:", file=f)
         for sentence in sentences:
             print(" - " + sentence, file=f)
@@ -150,6 +152,7 @@ def get_modified_species(j, jc):
                     modified.add(spec)
                     break
     modified.add("SPECIES_EEVEE")
+    modified.add("SPECIES_RATTATA_ALOLAN")
     return modified
 
 
@@ -217,12 +220,14 @@ def main():
             for e, spec in enumerate(actual_species):
                 if e != 0:
                     print(
-                        "**{}**".format(format_words(spec, remove="SPECIES_")),
+                        "### {}".format(format_words(spec, remove="SPECIES_")),
                         file=f,
                     )
                 print_pokedata(pokedata[spec], f)
                 if spec in evo_methods:
                     print_evolution(evo_methods[spec], f)
+                else:
+                    print(file=f)
                 print(file=f)
                 if learnsets[spec] not in past_learnsets:
                     print_learnset(learnsets[spec], f)

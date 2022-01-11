@@ -13,11 +13,29 @@ __Evolves__: into Raticate at level 20
 25. Sucker Punch
 31. Facade
 
+### Rattata Alolan
+__Type__: Dark/Normal \
+__Stats__: 30/56/35/25/35/72 \
+__Abilities__: Gluttony, Hustle, Thick Fat \
+__Evolves__: into Raticate Alolan at level 20 at night
+
+ 1. Tail Whip
+ 4. Quick Attack
+ 7. Focus Energy
+10. Bite
+13. Pursuit
+16. Hyper Fang
+19. Assurance
+22. Crunch
+25. Sucker Punch
+28. Super Fang
+31. Double Edge
+34. Endeavor
 
 ## Raticate
 __Type__: Normal \
 __Stats__: 55/81/60/50/70/97 \
-__Abilities__: Guts, None, Hustle \
+__Abilities__: Guts, None, Hustle 
 
  1. Pursuit
  5. Quick Attack
@@ -53,7 +71,7 @@ __Evolves__: into Dugtrio at level 23
 ## Dugtrio
 __Type__: Ground \
 __Stats__: 35/100/50/100/70/125 \
-__Abilities__: Sand Force, Arena Trap, Sand Veil \
+__Abilities__: Sand Force, Arena Trap, Sand Veil 
 
  1. Sand Attack
  4. Astonish
@@ -110,7 +128,7 @@ __Evolves__: into Golem at level 42
 ## Golem
 __Type__: Rock/Ground \
 __Stats__: 80/120/130/55/65/45 \
-__Abilities__: Rock Head, Sturdy, Sand Veil \
+__Abilities__: Rock Head, Sturdy, Sand Veil 
 
  1. Tackle
  4. Rock Throw
@@ -147,7 +165,7 @@ __Evolves__: into Rapidash at level 26
 ## Rapidash
 __Type__: Fire \
 __Stats__: 65/100/70/80/80/105 \
-__Abilities__: Run Away, Flash Fire, Flame Body \
+__Abilities__: Run Away, Flash Fire, Flame Body 
 
  1. Quick Attack
  5. Ember
@@ -182,7 +200,7 @@ __Evolves__: into Muk at level 38
 ## Muk
 __Type__: Poison \
 __Stats__: 105/105/75/65/100/50 \
-__Abilities__: Stench, Poison Touch, Corrosion \
+__Abilities__: Stench, Poison Touch, Corrosion 
 
  0. Venom Drench
  1. Poison Gas
@@ -243,7 +261,7 @@ __Evolves__: into Starmie via Water Stone
 ## Starmie
 __Type__: Water/Psychic \
 __Stats__: 60/75/85/100/85/115 \
-__Abilities__: Illuminate, Natural Cure, Analytic \
+__Abilities__: Illuminate, Natural Cure, Analytic 
 
  1. Rapid Spin
  4. Water Gun
@@ -307,7 +325,7 @@ __Evolves__: into Kabutops at level 34
 ## Kabutops
 __Type__: Rock/Water \
 __Stats__: 60/115/105/90/70/80 \
-__Abilities__: Swift Swim, Battle Armor, Weak Armor \
+__Abilities__: Swift Swim, Battle Armor, Weak Armor 
 
  0. Slash
  1. Scratch
@@ -369,7 +387,7 @@ __Evolves__:
 ## Gardevoir
 __Type__: Psychic/Fairy \
 __Stats__: 68/65/65/125/115/80 \
-__Abilities__: Synchronize, Trace, Telepathy \
+__Abilities__: Synchronize, Trace, Telepathy 
 
  1. Teleport
  4. Confusion
@@ -386,10 +404,10 @@ __Abilities__: Synchronize, Trace, Telepathy \
 57. Shadow Sneak
 62. Moonblast
 
-**Gardevoir Mega**
+### Gardevoir Mega
 __Type__: Psychic/Fairy \
 __Stats__: 68/85/65/165/135/100 \
-__Abilities__: Pixilate, Pixilate \
+__Abilities__: Pixilate, Pixilate 
 
 
 ## Makuhita
@@ -417,7 +435,7 @@ __Evolves__: into Hariyama at level 24
 ## Hariyama
 __Type__: Fighting \
 __Stats__: 144/120/60/40/60/50 \
-__Abilities__: Thick Fat, Guts, Sheer Force \
+__Abilities__: Thick Fat, Guts, Sheer Force 
 
  1. Tackle
  4. Sand Attack
@@ -480,7 +498,7 @@ __Evolves__: into Aggron at level 42
 ## Aggron
 __Type__: Steel/Rock \
 __Stats__: 70/110/180/60/60/50 \
-__Abilities__: Rock Head, Heavy Metal \
+__Abilities__: Rock Head, Heavy Metal 
 
  1. Tackle
  4. Mud Slap
@@ -498,10 +516,10 @@ __Abilities__: Rock Head, Heavy Metal \
 61. Head Smash
 71. Earthquake
 
-**Aggron Mega**
+### Aggron Mega
 __Type__: Steel \
 __Stats__: 70/140/230/60/80/50 \
-__Abilities__: Filter, Filter \
+__Abilities__: Filter, Filter 
 
 
 ## Electrike
@@ -525,7 +543,7 @@ __Evolves__: into Manectric at level 25
 ## Manectric
 __Type__: Electric \
 __Stats__: 70/75/60/105/60/105 \
-__Abilities__: Intimidate, Lightning Rod, None \
+__Abilities__: Intimidate, Lightning Rod, None 
 
  1. Thunder Wave
 10. Quick Attack
@@ -540,10 +558,10 @@ __Abilities__: Intimidate, Lightning Rod, None \
 50. Thunder
 55. Overheat
 
-**Manectric Mega**
+### Manectric Mega
 __Type__: Electric \
 __Stats__: 70/75/80/135/80/135 \
-__Abilities__: Intimidate, Intimidate \
+__Abilities__: Intimidate, Intimidate 
 
 
 ## Shuppet
@@ -568,7 +586,7 @@ __Evolves__: into Banette at level 35
 ## Banette
 __Type__: Ghost \
 __Stats__: 64/115/65/83/63/65 \
-__Abilities__: Shadow Shield, None \
+__Abilities__: Shadow Shield, None 
 
  1. Feint Attack
  6. Night Shade
@@ -584,10 +602,10 @@ __Abilities__: Shadow Shield, None \
 49. Phantom Force
 57. Gunk Shot
 
-**Banette Mega**
+### Banette Mega
 __Type__: Ghost \
 __Stats__: 64/165/75/93/83/75 \
-__Abilities__: Prankster, Prankster \
+__Abilities__: Prankster, Prankster 
 
 
 ## Starly
@@ -625,7 +643,7 @@ __Evolves__: into Staraptor at level 34
 ## Staraptor
 __Type__: Normal/Flying \
 __Stats__: 85/120/70/50/60/100 \
-__Abilities__: Intimidate, None, Reckless \
+__Abilities__: Intimidate, None, Reckless 
 
  0. Close Combat
  1. Tackle
@@ -660,7 +678,7 @@ __Evolves__: into Purugly at level 27
 ## Purugly
 __Type__: Normal \
 __Stats__: 71/82/64/64/59/112 \
-__Abilities__: Thick Fat, Defiant, None \
+__Abilities__: Thick Fat, Defiant, None 
 
  1. Fake Out
  5. Scratch
@@ -677,7 +695,7 @@ __Abilities__: Thick Fat, Defiant, None \
 ## Tangrowth
 __Type__: Grass \
 __Stats__: 100/100/125/110/50/50 \
-__Abilities__: Chlorophyll, Regenerator \
+__Abilities__: Chlorophyll, Regenerator 
 
  1. Constrict
  4. Absorb
@@ -718,7 +736,7 @@ __Evolves__: into Musharna via Moon Stone
 ## Musharna
 __Type__: Psychic \
 __Stats__: 116/55/85/107/95/29 \
-__Abilities__: Synchronize, Telepathy \
+__Abilities__: Synchronize, Telepathy 
 
  1. Psywave
  5. Lucky Chant
@@ -773,7 +791,7 @@ __Evolves__: into Talonflame at level 30
 ## Talonflame
 __Type__: Fire/Flying \
 __Stats__: 78/81/71/74/69/126 \
-__Abilities__: Flame Body, Gale Wings \
+__Abilities__: Flame Body, Gale Wings 
 
  1. Tackle
  5. Quick Attack
@@ -813,7 +831,7 @@ __Evolves__: into Pangoro at level 32
 ## Pangoro
 __Type__: Fighting/Dark \
 __Stats__: 95/124/88/69/71/58 \
-__Abilities__: Iron Fist, Mold Breaker, Scrappy \
+__Abilities__: Iron Fist, Mold Breaker, Scrappy 
 
  0. Bullet Punch
  1. Tackle
@@ -848,7 +866,7 @@ __Evolves__: into Ribombee at level 22
 ## Ribombee
 __Type__: Bug/Fairy \
 __Stats__: 60/55/60/95/70/124 \
-__Abilities__: Shield Dust, Sweet Veil \
+__Abilities__: Shield Dust, Sweet Veil 
 
  0. Pollen Puff
  1. Fairy Wind
