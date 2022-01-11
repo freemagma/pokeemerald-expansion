@@ -152,8 +152,6 @@ def get_modified_species(j, jc):
                 if data.get(key) != c_data.get(key):
                     modified.add(spec)
                     break
-    modified.add("SPECIES_EEVEE")
-    modified.add("SPECIES_RATTATA_ALOLAN")
     return modified
 
 

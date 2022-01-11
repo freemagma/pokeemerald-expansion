@@ -13,24 +13,6 @@ __Evolves__: into Raticate at level 20
 25. Sucker Punch
 31. Facade
 
-### Rattata Alolan
-__Type__: Dark/Normal \
-__Stats__: 30/56/35/25/35/72 \
-__Abilities__: Gluttony, Hustle, Thick Fat \
-__Evolves__: into Raticate Alolan at level 20 at night
-
- 1. Tail Whip
- 4. Quick Attack
- 7. Focus Energy
-10. Bite
-13. Pursuit
-16. Hyper Fang
-19. Assurance
-22. Crunch
-25. Sucker Punch
-28. Super Fang
-31. Double Edge
-34. Endeavor
 
 ## Raticate
 __Type__: Normal \
@@ -277,33 +259,6 @@ __Abilities__: Illuminate, Natural Cure, Analytic
 45. Psyshock
 51. Hydro Pump
 60. Psychic
-
-## Eevee
-__Type__: Normal \
-__Stats__: 55/55/50/45/65/55 \
-__Abilities__: Run Away, Adapt, Anticipation \
-__Evolves__: \
-    into Jolteon via Thunder Stone \
-    into Vaporeon via Water Stone \
-    into Flareon via Fire Stone \
-    into Espeon with high friendship during the day \
-    into Umbreon with high friendship at night \
-    into Leafeon via Leaf Stone \
-    into Glaceon via Ice Stone \
-    into Sylveon while knowing a Fairy-type move
-
- 1. Tail Whip
- 5. Sand Attack
- 9. Baby Doll Eyes
-13. Quick Attack
-17. Swift
-20. Refresh
-25. Take Down
-29. Charm
-33. Baton Pass
-37. Double Edge
-41. Last Resort
-45. Trump Card
 
 ## Kabuto
 __Type__: Rock/Water \
