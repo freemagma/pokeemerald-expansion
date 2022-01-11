@@ -7,7 +7,7 @@
 #include "shop_room.h"
 
 #define MAX_SHOP_SIZE 12
-#define DEFAULT_SHOP_SIZE 5
+#define DEFAULT_SHOP_SIZE 7
 
 static const struct ItemPrice sItemPriceNone = {0};
 
@@ -40,6 +40,9 @@ static const struct ItemPrice sDTutorialA1ItemPool[] = {
 {.itemId = ITEM_SOFT_SAND, .price = 200},
 {.itemId = ITEM_BRIGHT_POWDER, .price = 200},
 {.itemId = ITEM_KINGS_ROCK, .price = 200},
+{.itemId = ITEM_WATER_STONE, .price = 900},
+{.itemId = ITEM_MOON_STONE, .price = 900},
+{.itemId = ITEM_REVIVE, .price = 2500},
 {0}
 };
 

@@ -145,4 +145,5 @@ void DungeonTutorial_GenerateEliteBattle(void) {
 
 void DungeonTutorial_GenerateBossBattle(void) {
     GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
+    VarSet(VAR_EXP_MULTIPLIER, 0);
 }

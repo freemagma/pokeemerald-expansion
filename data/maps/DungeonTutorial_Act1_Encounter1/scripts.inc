@@ -6,6 +6,7 @@ DungeonTutorial_Act1_Encounter1_MapScripts::
 DungeonTutorial_Act1_Encounter1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_ENCOUNTERS_LEFT, 1
+	clearflag FLAG_DISABLE_BAG
 	return
 
 DungeonTutorial_Act1_Encounter1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

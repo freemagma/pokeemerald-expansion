@@ -190,7 +190,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 80,
+        .power = 130,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,

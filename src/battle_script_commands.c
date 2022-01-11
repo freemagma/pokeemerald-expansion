@@ -3885,32 +3885,11 @@ static void Cmd_getexp(void)
             #endif
 
             // EXP MULTIPLIER
-            calculatedExp *= 5;
+            calculatedExp *= VarGet(VAR_EXP_MULTIPLIER);
 
-            #if B_SPLIT_EXP < GEN_6
-                if (viaExpShare) // at least one mon is getting exp via exp share
-                {
-                    *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
-                    if (*exp == 0)
-                        *exp = 1;
-
-                    gExpShareExp = calculatedExp / 2 / viaExpShare;
-                    if (gExpShareExp == 0)
-                        gExpShareExp = 1;
-                }
-                else
-                {
-                    *exp = SAFE_DIV(calculatedExp, viaSentIn);
-                    if (*exp == 0)
-                        *exp = 1;
-                    gExpShareExp = 0;
-                }
-            #else
-                *exp = calculatedExp;
-                gExpShareExp = calculatedExp / 2;
-                if (gExpShareExp == 0)
-                    gExpShareExp = 1;
-            #endif
+            // All mons get full EXP!
+            *exp = calculatedExp;
+            gExpShareExp = calculatedExp;
 
             gBattleScripting.getexpState++;
             gBattleStruct->expGetterMonId = 0;

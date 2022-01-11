@@ -5,6 +5,7 @@ mapscripts DungeonTutorial_Act1_Boss_MapScripts {
         setvar(VAR_TEMP_0, 0)
         callnative(DungeonTutorial_GenerateBossBattle)
         copyvar(VAR_TRAINER, VAR_0x8000)
+        setflag(FLAG_DISABLE_BAG)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {
