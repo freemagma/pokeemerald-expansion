@@ -192,7 +192,7 @@ def main():
         with open(file_compare) as f:
             j_compare = json.load(f)
         species_modified = get_modified_species(j, j_compare)
-        with open("meta/docs/move_changes.md") as f:
+        with open("meta/docs/move_changes.md", "w") as f:
             print_move_changes(j["movedata"], j_compare["movedata"], f)
 
     pokedata = j["pokedata"]
