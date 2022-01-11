@@ -127,7 +127,24 @@ def print_evolution(evo_methods, f):
 
 
 def get_modified_species(j, jc):
-    return {"SPECIES_RATTATA"}
+    modified = set()
+    for name, species in j["pokedex"]:
+        for spec in species:
+            if spec not in jc["learnsets"]:
+                modified.add(spec)
+                continue
+            learnset = j["learnsets"][spec]
+            c_learnset = jc["learnsets"][spec]
+            if set(learnset.keys()) | {0} != set(c_learnset.keys()) | {0}:
+                modified.add(spec)
+                continue
+            if j["pokedata"][spec] != jc["pokedata"][spec]:
+                modified.add(spec)
+                continue
+            if j["evo_methods"].get(spec) != jc["evo_methods"].get(spec):
+                modified.add(spec)
+                continue
+    return modified
 
 
 def main():
@@ -142,9 +159,8 @@ def main():
     species_modified = None
     if len(sys.argv) > 2:
         file_compare = f"meta/data/{sys.argv[2]}.json"
-        j_compare = None
-        # with open(file_compare) as f:
-        #     j_compare = json.load(f)
+        with open(file_compare) as f:
+            j_compare = json.load(f)
         species_modified = get_modified_species(j, j_compare)
 
     pokedata = j["pokedata"]
@@ -154,7 +170,7 @@ def main():
 
     with open("meta/docs/pokemon_data.md", "w") as f:
         for name, species in pokedex:
-            if species_modified and not any(
+            if species_modified is not None and not any(
                 spec in species_modified for spec in species
             ):
                 continue
@@ -162,7 +178,7 @@ def main():
             past_learnsets = []
             actual_species = (
                 species
-                if not species_modified
+                if species_modified is None
                 else [spec for spec in species if spec in species_modified]
             )
             for e, spec in enumerate(actual_species):
