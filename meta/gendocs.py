@@ -185,6 +185,9 @@ def print_evolution(evo_methods, f):
             sentences.append(
                 f"into {format_spec} while knowing a {format_type}-type move"
             )
+        elif evo_type == "EVO_MOVE":
+            format_move = format_words(evo_arg, remove="MOVE_")
+            sentences.append(f"into {format_spec} when traded")
         else:
             # EVO_MOVE
             # EVO_SPECIFIC_MON_IN_PARTY
