@@ -3903,19 +3903,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FUTURE_SIGHT] =
     {
-        #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 120,
-            .accuracy = 100,
-            .pp = 10,
-        #elif B_UPDATED_MOVE_DATA == GEN_5
-            .power = 100,
-            .accuracy = 100,
-            .pp = 10,
-        #else
-            .power = 80,
-            .accuracy = 90,
-            .pp = 15,
-        #endif
+        .power = 150,
+        .accuracy = 100,
+        .pp = 10,
         .effect = EFFECT_FUTURE_SIGHT,
         .type = TYPE_PSYCHIC,
         .secondaryEffectChance = 0,
