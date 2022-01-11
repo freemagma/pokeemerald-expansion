@@ -1,8 +1,8 @@
 ## Rattata
-__Type__: Normal \
-__Stats__: 30/56/35/25/35/72 \
-__Abilities__: Guts, None, Hustle \
-__Evolves__: into Raticate at level 20
+_Type_: Normal \
+_Stats_: 30/56/35/25/35/72 \
+_Abilities_: Guts, None, Hustle \
+_Evolves_: into Raticate at level 20
 
  1. Pursuit
  5. Quick Attack
@@ -14,10 +14,10 @@ __Evolves__: into Raticate at level 20
 31. Facade
 
 ### Rattata Alolan
-__Type__: Dark/Normal \
-__Stats__: 30/56/35/25/35/72 \
-__Abilities__: Gluttony, Hustle, Thick Fat \
-__Evolves__: into Raticate Alolan at level 20 at night
+_Type_: Dark/Normal \
+_Stats_: 30/56/35/25/35/72 \
+_Abilities_: Gluttony, Hustle, Thick Fat \
+_Evolves_: into Raticate Alolan at level 20 at night
 
  1. Tail Whip
  4. Quick Attack
@@ -33,9 +33,9 @@ __Evolves__: into Raticate Alolan at level 20 at night
 34. Endeavor
 
 ## Raticate
-__Type__: Normal \
-__Stats__: 55/81/60/50/70/97 \
-__Abilities__: Guts, None, Hustle 
+_Type_: Normal \
+_Stats_: 55/81/60/50/70/97 \
+_Abilities_: Guts, None, Hustle 
 
  1. Pursuit
  5. Quick Attack
@@ -49,10 +49,10 @@ __Abilities__: Guts, None, Hustle
 
 
 ## Diglett
-__Type__: Ground \
-__Stats__: 10/55/25/55/45/100 \
-__Abilities__: Sand Force, Arena Trap, Sand Veil \
-__Evolves__: into Dugtrio at level 23
+_Type_: Ground \
+_Stats_: 10/55/25/55/45/100 \
+_Abilities_: Sand Force, Arena Trap, Sand Veil \
+_Evolves_: into Dugtrio at level 23
 
  1. Sand Attack
  4. Astonish
@@ -69,9 +69,9 @@ __Evolves__: into Dugtrio at level 23
 
 
 ## Dugtrio
-__Type__: Ground \
-__Stats__: 35/100/50/100/70/125 \
-__Abilities__: Sand Force, Arena Trap, Sand Veil 
+_Type_: Ground \
+_Stats_: 35/100/50/100/70/125 \
+_Abilities_: Sand Force, Arena Trap, Sand Veil 
 
  1. Sand Attack
  4. Astonish
@@ -88,10 +88,10 @@ __Abilities__: Sand Force, Arena Trap, Sand Veil
 
 
 ## Geodude
-__Type__: Rock/Ground \
-__Stats__: 40/80/100/30/30/20 \
-__Abilities__: Rock Head, Sturdy, Sand Veil \
-__Evolves__: into Graveler at level 25
+_Type_: Rock/Ground \
+_Stats_: 40/80/100/30/30/20 \
+_Abilities_: Rock Head, Sturdy, Sand Veil \
+_Evolves_: into Graveler at level 25
 
  1. Tackle
  4. Rock Throw
@@ -107,10 +107,10 @@ __Evolves__: into Graveler at level 25
 
 
 ## Graveler
-__Type__: Rock/Ground \
-__Stats__: 55/95/115/45/45/35 \
-__Abilities__: Rock Head, Sturdy, Sand Veil \
-__Evolves__: into Golem at level 42
+_Type_: Rock/Ground \
+_Stats_: 55/95/115/45/45/35 \
+_Abilities_: Rock Head, Sturdy, Sand Veil \
+_Evolves_: into Golem at level 42
 
  1. Meteor Mash
  4. Rock Throw
@@ -126,9 +126,9 @@ __Evolves__: into Golem at level 42
 
 
 ## Golem
-__Type__: Rock/Ground \
-__Stats__: 80/120/130/55/65/45 \
-__Abilities__: Rock Head, Sturdy, Sand Veil 
+_Type_: Rock/Ground \
+_Stats_: 80/120/130/55/65/45 \
+_Abilities_: Rock Head, Sturdy, Sand Veil 
 
  1. Tackle
  4. Rock Throw
@@ -146,10 +146,10 @@ __Abilities__: Rock Head, Sturdy, Sand Veil
 
 
 ## Ponyta
-__Type__: Fire \
-__Stats__: 50/85/55/65/65/90 \
-__Abilities__: Run Away, Flash Fire, Flame Body \
-__Evolves__: into Rapidash at level 26
+_Type_: Fire \
+_Stats_: 50/85/55/65/65/90 \
+_Abilities_: Run Away, Flash Fire, Flame Body \
+_Evolves_: into Rapidash at level 26
 
  1. Quick Attack
  5. Ember
@@ -163,9 +163,9 @@ __Evolves__: into Rapidash at level 26
 
 
 ## Rapidash
-__Type__: Fire \
-__Stats__: 65/100/70/80/80/105 \
-__Abilities__: Run Away, Flash Fire, Flame Body 
+_Type_: Fire \
+_Stats_: 65/100/70/80/80/105 \
+_Abilities_: Run Away, Flash Fire, Flame Body 
 
  1. Quick Attack
  5. Ember
@@ -180,10 +180,10 @@ __Abilities__: Run Away, Flash Fire, Flame Body
 
 
 ## Grimer
-__Type__: Poison \
-__Stats__: 80/80/50/40/50/25 \
-__Abilities__: Stench, Poison Touch, Corrosion \
-__Evolves__: into Muk at level 38
+_Type_: Poison \
+_Stats_: 80/80/50/40/50/25 \
+_Abilities_: Stench, Poison Touch, Corrosion \
+_Evolves_: into Muk at level 38
 
  1. Poison Gas
  4. Acid
@@ -198,9 +198,9 @@ __Evolves__: into Muk at level 38
 
 
 ## Muk
-__Type__: Poison \
-__Stats__: 105/105/75/65/100/50 \
-__Abilities__: Stench, Poison Touch, Corrosion 
+_Type_: Poison \
+_Stats_: 105/105/75/65/100/50 \
+_Abilities_: Stench, Poison Touch, Corrosion 
 
  0. Venom Drench
  1. Poison Gas
@@ -218,10 +218,10 @@ __Abilities__: Stench, Poison Touch, Corrosion
 
 
 ## Tangela
-__Type__: Grass \
-__Stats__: 65/55/115/100/40/60 \
-__Abilities__: Chlorophyll, Regenerator \
-__Evolves__: into Tangrowth at level 35
+_Type_: Grass \
+_Stats_: 65/55/115/100/40/60 \
+_Abilities_: Chlorophyll, Regenerator \
+_Evolves_: into Tangrowth at level 35
 
  1. Constrict
  4. Absorb
@@ -238,10 +238,10 @@ __Evolves__: into Tangrowth at level 35
 50. Power Whip
 
 ## Staryu
-__Type__: Water \
-__Stats__: 30/45/55/70/55/85 \
-__Abilities__: Illuminate, Natural Cure, Analytic \
-__Evolves__: into Starmie via Water Stone
+_Type_: Water \
+_Stats_: 30/45/55/70/55/85 \
+_Abilities_: Illuminate, Natural Cure, Analytic \
+_Evolves_: into Starmie via Water Stone
 
  1. Rapid Spin
  4. Water Gun
@@ -259,9 +259,9 @@ __Evolves__: into Starmie via Water Stone
 60. Psychic
 
 ## Starmie
-__Type__: Water/Psychic \
-__Stats__: 60/75/85/100/85/115 \
-__Abilities__: Illuminate, Natural Cure, Analytic 
+_Type_: Water/Psychic \
+_Stats_: 60/75/85/100/85/115 \
+_Abilities_: Illuminate, Natural Cure, Analytic 
 
  1. Rapid Spin
  4. Water Gun
@@ -279,18 +279,18 @@ __Abilities__: Illuminate, Natural Cure, Analytic
 60. Psychic
 
 ## Eevee
-__Type__: Normal \
-__Stats__: 55/55/50/45/65/55 \
-__Abilities__: Run Away, Adapt, Anticipation \
-__Evolves__:
- - into Jolteon via Thunder Stone
- - into Vaporeon via Water Stone
- - into Flareon via Fire Stone
- - into Espeon with high friendship during the day
- - into Umbreon with high friendship at night
- - into Leafeon via Leaf Stone
- - into Glaceon via Ice Stone
- - into Sylveon while knowing a Fairy-type move
+_Type_: Normal \
+_Stats_: 55/55/50/45/65/55 \
+_Abilities_: Run Away, Adapt, Anticipation \
+_Evolves_: \
+	into Jolteon via Thunder Stone \
+	into Vaporeon via Water Stone \
+	into Flareon via Fire Stone \
+	into Espeon with high friendship during the day \
+	into Umbreon with high friendship at night \
+	into Leafeon via Leaf Stone \
+	into Glaceon via Ice Stone \
+	into Sylveon while knowing a Fairy-type move
 
  1. Tail Whip
  5. Sand Attack
@@ -306,10 +306,10 @@ __Evolves__:
 45. Trump Card
 
 ## Kabuto
-__Type__: Rock/Water \
-__Stats__: 30/80/90/70/45/55 \
-__Abilities__: Swift Swim, Battle Armor, Weak Armor \
-__Evolves__: into Kabutops at level 34
+_Type_: Rock/Water \
+_Stats_: 30/80/90/70/45/55 \
+_Abilities_: Swift Swim, Battle Armor, Weak Armor \
+_Evolves_: into Kabutops at level 34
 
  1. Scratch
  6. Absorb
@@ -323,9 +323,9 @@ __Evolves__: into Kabutops at level 34
 63. Rock Slide
 
 ## Kabutops
-__Type__: Rock/Water \
-__Stats__: 60/115/105/90/70/80 \
-__Abilities__: Swift Swim, Battle Armor, Weak Armor 
+_Type_: Rock/Water \
+_Stats_: 60/115/105/90/70/80 \
+_Abilities_: Swift Swim, Battle Armor, Weak Armor 
 
  0. Slash
  1. Scratch
@@ -341,10 +341,10 @@ __Abilities__: Swift Swim, Battle Armor, Weak Armor
 72. Night Slash
 
 ## Ralts
-__Type__: Psychic/Fairy \
-__Stats__: 28/25/25/45/35/40 \
-__Abilities__: Synchronize, Trace, Telepathy \
-__Evolves__: into Kirlia at level 20
+_Type_: Psychic/Fairy \
+_Stats_: 28/25/25/45/35/40 \
+_Abilities_: Synchronize, Trace, Telepathy \
+_Evolves_: into Kirlia at level 20
 
  1. Teleport
  4. Confusion
@@ -362,12 +362,12 @@ __Evolves__: into Kirlia at level 20
 62. Moonblast
 
 ## Kirlia
-__Type__: Psychic/Fairy \
-__Stats__: 38/35/35/65/55/50 \
-__Abilities__: Synchronize, Trace, Telepathy \
-__Evolves__:
- - into Gardevoir at level 30
- - into Gallade via Dawn Stone if male
+_Type_: Psychic/Fairy \
+_Stats_: 38/35/35/65/55/50 \
+_Abilities_: Synchronize, Trace, Telepathy \
+_Evolves_: \
+	into Gardevoir at level 30 \
+	into Gallade via Dawn Stone if male
 
  1. Teleport
  4. Confusion
@@ -385,9 +385,9 @@ __Evolves__:
 62. Moonblast
 
 ## Gardevoir
-__Type__: Psychic/Fairy \
-__Stats__: 68/65/65/125/115/80 \
-__Abilities__: Synchronize, Trace, Telepathy 
+_Type_: Psychic/Fairy \
+_Stats_: 68/65/65/125/115/80 \
+_Abilities_: Synchronize, Trace, Telepathy 
 
  1. Teleport
  4. Confusion
@@ -405,16 +405,16 @@ __Abilities__: Synchronize, Trace, Telepathy
 62. Moonblast
 
 ### Gardevoir Mega
-__Type__: Psychic/Fairy \
-__Stats__: 68/85/65/165/135/100 \
-__Abilities__: Pixilate, Pixilate 
+_Type_: Psychic/Fairy \
+_Stats_: 68/85/65/165/135/100 \
+_Abilities_: Pixilate, Pixilate 
 
 
 ## Makuhita
-__Type__: Fighting \
-__Stats__: 72/60/30/20/30/25 \
-__Abilities__: Thick Fat, Guts, Sheer Force \
-__Evolves__: into Hariyama at level 24
+_Type_: Fighting \
+_Stats_: 72/60/30/20/30/25 \
+_Abilities_: Thick Fat, Guts, Sheer Force \
+_Evolves_: into Hariyama at level 24
 
  1. Tackle
  4. Sand Attack
@@ -433,9 +433,9 @@ __Evolves__: into Hariyama at level 24
 54. Heavy Slam
 
 ## Hariyama
-__Type__: Fighting \
-__Stats__: 144/120/60/40/60/50 \
-__Abilities__: Thick Fat, Guts, Sheer Force 
+_Type_: Fighting \
+_Stats_: 144/120/60/40/60/50 \
+_Abilities_: Thick Fat, Guts, Sheer Force 
 
  1. Tackle
  4. Sand Attack
@@ -454,10 +454,10 @@ __Abilities__: Thick Fat, Guts, Sheer Force
 54. Heavy Slam
 
 ## Aron
-__Type__: Steel/Rock \
-__Stats__: 50/70/100/40/40/30 \
-__Abilities__: Rock Head, Heavy Metal \
-__Evolves__: into Lairon at level 32
+_Type_: Steel/Rock \
+_Stats_: 50/70/100/40/40/30 \
+_Abilities_: Rock Head, Heavy Metal \
+_Evolves_: into Lairon at level 32
 
  1. Tackle
  4. Mud Slap
@@ -474,10 +474,10 @@ __Evolves__: into Lairon at level 32
 55. Metal Burst
 
 ## Lairon
-__Type__: Steel/Rock \
-__Stats__: 60/90/140/50/50/40 \
-__Abilities__: Rock Head, Heavy Metal \
-__Evolves__: into Aggron at level 42
+_Type_: Steel/Rock \
+_Stats_: 60/90/140/50/50/40 \
+_Abilities_: Rock Head, Heavy Metal \
+_Evolves_: into Aggron at level 42
 
  1. Tackle
  4. Mud Slap
@@ -496,9 +496,9 @@ __Evolves__: into Aggron at level 42
 71. Earthquake
 
 ## Aggron
-__Type__: Steel/Rock \
-__Stats__: 70/110/180/60/60/50 \
-__Abilities__: Rock Head, Heavy Metal 
+_Type_: Steel/Rock \
+_Stats_: 70/110/180/60/60/50 \
+_Abilities_: Rock Head, Heavy Metal 
 
  1. Tackle
  4. Mud Slap
@@ -517,16 +517,16 @@ __Abilities__: Rock Head, Heavy Metal
 71. Earthquake
 
 ### Aggron Mega
-__Type__: Steel \
-__Stats__: 70/140/230/60/80/50 \
-__Abilities__: Filter, Filter 
+_Type_: Steel \
+_Stats_: 70/140/230/60/80/50 \
+_Abilities_: Filter, Filter 
 
 
 ## Electrike
-__Type__: Electric \
-__Stats__: 40/45/40/65/40/65 \
-__Abilities__: Lightning Rod, None, None \
-__Evolves__: into Manectric at level 25
+_Type_: Electric \
+_Stats_: 40/45/40/65/40/65 \
+_Abilities_: Lightning Rod, None, None \
+_Evolves_: into Manectric at level 25
 
  1. Thunder Wave
 10. Quick Attack
@@ -541,9 +541,9 @@ __Evolves__: into Manectric at level 25
 50. Thunder
 
 ## Manectric
-__Type__: Electric \
-__Stats__: 70/75/60/105/60/105 \
-__Abilities__: Intimidate, Lightning Rod, None 
+_Type_: Electric \
+_Stats_: 70/75/60/105/60/105 \
+_Abilities_: Intimidate, Lightning Rod, None 
 
  1. Thunder Wave
 10. Quick Attack
@@ -559,16 +559,16 @@ __Abilities__: Intimidate, Lightning Rod, None
 55. Overheat
 
 ### Manectric Mega
-__Type__: Electric \
-__Stats__: 70/75/80/135/80/135 \
-__Abilities__: Intimidate, Intimidate 
+_Type_: Electric \
+_Stats_: 70/75/80/135/80/135 \
+_Abilities_: Intimidate, Intimidate 
 
 
 ## Shuppet
-__Type__: Ghost \
-__Stats__: 44/75/35/63/33/45 \
-__Abilities__: Shadow Shield, None \
-__Evolves__: into Banette at level 35
+_Type_: Ghost \
+_Stats_: 44/75/35/63/33/45 \
+_Abilities_: Shadow Shield, None \
+_Evolves_: into Banette at level 35
 
  1. Feint Attack
  6. Night Shade
@@ -584,9 +584,9 @@ __Evolves__: into Banette at level 35
 49. Phantom Force
 
 ## Banette
-__Type__: Ghost \
-__Stats__: 64/115/65/83/63/65 \
-__Abilities__: Shadow Shield, None 
+_Type_: Ghost \
+_Stats_: 64/115/65/83/63/65 \
+_Abilities_: Shadow Shield, None 
 
  1. Feint Attack
  6. Night Shade
@@ -603,16 +603,16 @@ __Abilities__: Shadow Shield, None
 57. Gunk Shot
 
 ### Banette Mega
-__Type__: Ghost \
-__Stats__: 64/165/75/93/83/75 \
-__Abilities__: Prankster, Prankster 
+_Type_: Ghost \
+_Stats_: 64/165/75/93/83/75 \
+_Abilities_: Prankster, Prankster 
 
 
 ## Starly
-__Type__: Normal/Flying \
-__Stats__: 40/55/30/30/30/60 \
-__Abilities__: Keen Eye, None, Reckless \
-__Evolves__: into Staravia at level 14
+_Type_: Normal/Flying \
+_Stats_: 40/55/30/30/30/60 \
+_Abilities_: Keen Eye, None, Reckless \
+_Evolves_: into Staravia at level 14
 
  1. Tackle
  5. Wing Attack
@@ -625,10 +625,10 @@ __Evolves__: into Staravia at level 14
 54. Final Gambit
 
 ## Staravia
-__Type__: Normal/Flying \
-__Stats__: 55/75/50/40/40/80 \
-__Abilities__: Intimidate, None, Reckless \
-__Evolves__: into Staraptor at level 34
+_Type_: Normal/Flying \
+_Stats_: 55/75/50/40/40/80 \
+_Abilities_: Intimidate, None, Reckless \
+_Evolves_: into Staraptor at level 34
 
  1. Tackle
  5. Wing Attack
@@ -641,9 +641,9 @@ __Evolves__: into Staraptor at level 34
 54. Final Gambit
 
 ## Staraptor
-__Type__: Normal/Flying \
-__Stats__: 85/120/70/50/60/100 \
-__Abilities__: Intimidate, None, Reckless 
+_Type_: Normal/Flying \
+_Stats_: 85/120/70/50/60/100 \
+_Abilities_: Intimidate, None, Reckless 
 
  0. Close Combat
  1. Tackle
@@ -658,10 +658,10 @@ __Abilities__: Intimidate, None, Reckless
 54. Final Gambit
 
 ## Glameow
-__Type__: Normal \
-__Stats__: 49/55/42/42/37/85 \
-__Abilities__: Limber, Own Tempo, None \
-__Evolves__: into Purugly at level 27
+_Type_: Normal \
+_Stats_: 49/55/42/42/37/85 \
+_Abilities_: Limber, Own Tempo, None \
+_Evolves_: into Purugly at level 27
 
  1. Fake Out
  5. Scratch
@@ -676,9 +676,9 @@ __Evolves__: into Purugly at level 27
 45. Play Rough
 
 ## Purugly
-__Type__: Normal \
-__Stats__: 71/82/64/64/59/112 \
-__Abilities__: Thick Fat, Defiant, None 
+_Type_: Normal \
+_Stats_: 71/82/64/64/59/112 \
+_Abilities_: Thick Fat, Defiant, None 
 
  1. Fake Out
  5. Scratch
@@ -693,9 +693,9 @@ __Abilities__: Thick Fat, Defiant, None
 45. Play Rough
 
 ## Tangrowth
-__Type__: Grass \
-__Stats__: 100/100/125/110/50/50 \
-__Abilities__: Chlorophyll, Regenerator 
+_Type_: Grass \
+_Stats_: 100/100/125/110/50/50 \
+_Abilities_: Chlorophyll, Regenerator 
 
  1. Constrict
  4. Absorb
@@ -713,10 +713,10 @@ __Abilities__: Chlorophyll, Regenerator
 56. Sludge Bomb
 
 ## Munna
-__Type__: Psychic \
-__Stats__: 76/25/45/67/55/24 \
-__Abilities__: Synchronize, Telepathy \
-__Evolves__: into Musharna via Moon Stone
+_Type_: Psychic \
+_Stats_: 76/25/45/67/55/24 \
+_Abilities_: Synchronize, Telepathy \
+_Evolves_: into Musharna via Moon Stone
 
  1. Psywave
  5. Lucky Chant
@@ -734,9 +734,9 @@ __Evolves__: into Musharna via Moon Stone
 51. Moonblast
 
 ## Musharna
-__Type__: Psychic \
-__Stats__: 116/55/85/107/95/29 \
-__Abilities__: Synchronize, Telepathy 
+_Type_: Psychic \
+_Stats_: 116/55/85/107/95/29 \
+_Abilities_: Synchronize, Telepathy 
 
  1. Psywave
  5. Lucky Chant
@@ -754,10 +754,10 @@ __Abilities__: Synchronize, Telepathy
 51. Moonblast
 
 ## Fletchling
-__Type__: Normal/Flying \
-__Stats__: 45/50/43/40/38/62 \
-__Abilities__: Big Pecks, Gale Wings \
-__Evolves__: into Fletchinder at level 17
+_Type_: Normal/Flying \
+_Stats_: 45/50/43/40/38/62 \
+_Abilities_: Big Pecks, Gale Wings \
+_Evolves_: into Fletchinder at level 17
 
  1. Tackle
  5. Quick Attack
@@ -771,10 +771,10 @@ __Evolves__: into Fletchinder at level 17
 43. Steel Wing
 
 ## Flechinder
-__Type__: Fire/Flying \
-__Stats__: 62/73/55/56/52/84 \
-__Abilities__: Flame Body, Gale Wings \
-__Evolves__: into Talonflame at level 30
+_Type_: Fire/Flying \
+_Stats_: 62/73/55/56/52/84 \
+_Abilities_: Flame Body, Gale Wings \
+_Evolves_: into Talonflame at level 30
 
  0. Ember
  1. Tackle
@@ -789,9 +789,9 @@ __Evolves__: into Talonflame at level 30
 43. Steel Wing
 
 ## Talonflame
-__Type__: Fire/Flying \
-__Stats__: 78/81/71/74/69/126 \
-__Abilities__: Flame Body, Gale Wings 
+_Type_: Fire/Flying \
+_Stats_: 78/81/71/74/69/126 \
+_Abilities_: Flame Body, Gale Wings 
 
  1. Tackle
  5. Quick Attack
@@ -808,10 +808,10 @@ __Abilities__: Flame Body, Gale Wings
 65. Flame Charge
 
 ## Pancham
-__Type__: Fighting \
-__Stats__: 67/82/62/46/68/43 \
-__Abilities__: Iron Fist, Mold Breaker, Scrappy \
-__Evolves__: into Pangoro at level 32
+_Type_: Fighting \
+_Stats_: 67/82/62/46/68/43 \
+_Abilities_: Iron Fist, Mold Breaker, Scrappy \
+_Evolves_: into Pangoro at level 32
 
  1. Tackle
  6. Arm Thrust
@@ -829,9 +829,9 @@ __Evolves__: into Pangoro at level 32
 70. Hammer Arm
 
 ## Pangoro
-__Type__: Fighting/Dark \
-__Stats__: 95/124/88/69/71/58 \
-__Abilities__: Iron Fist, Mold Breaker, Scrappy 
+_Type_: Fighting/Dark \
+_Stats_: 95/124/88/69/71/58 \
+_Abilities_: Iron Fist, Mold Breaker, Scrappy 
 
  0. Bullet Punch
  1. Tackle
@@ -850,10 +850,10 @@ __Abilities__: Iron Fist, Mold Breaker, Scrappy
 70. Hammer Arm
 
 ## Cutiefly
-__Type__: Bug/Fairy \
-__Stats__: 40/45/40/55/40/84 \
-__Abilities__: Shield Dust, Sweet Veil \
-__Evolves__: into Ribombee at level 22
+_Type_: Bug/Fairy \
+_Stats_: 40/45/40/55/40/84 \
+_Abilities_: Shield Dust, Sweet Veil \
+_Evolves_: into Ribombee at level 22
 
  1. Fairy Wind
  6. Stun Spore
@@ -864,9 +864,9 @@ __Evolves__: into Ribombee at level 22
 31. Dazzling Gleam
 
 ## Ribombee
-__Type__: Bug/Fairy \
-__Stats__: 60/55/60/95/70/124 \
-__Abilities__: Shield Dust, Sweet Veil 
+_Type_: Bug/Fairy \
+_Stats_: 60/55/60/95/70/124 \
+_Abilities_: Shield Dust, Sweet Veil 
 
  0. Pollen Puff
  1. Fairy Wind

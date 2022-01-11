@@ -12,9 +12,9 @@ def print_pokedata(data, f):
     type1 = format_words(data["type1"], remove="TYPE_")
     type2 = format_words(data["type2"], remove="TYPE_")
     typetext = f"{type1}/{type2}" if type1 != type2 else f"{type1}"
-    print(f"__Type__: {typetext} \\", file=f)
+    print(f"_Type_: {typetext} \\", file=f)
     print(
-        "__Stats__: {}/{}/{}/{}/{}/{} \\".format(
+        "_Stats_: {}/{}/{}/{}/{}/{} \\".format(
             data["baseHP"],
             data["baseAttack"],
             data["baseDefense"],
@@ -28,7 +28,7 @@ def print_pokedata(data, f):
         data["abilities"][1:-1].replace("ABILITY", "").replace("_", " ").split(",")
     )
     print(
-        "__Abilities__: "
+        "_Abilities_: "
         + ", ".join(
             " ".join(s.capitalize() for s in a.strip().split()) for a in abilities
         ),
@@ -120,12 +120,13 @@ def print_evolution(evo_methods, f):
         print(file=f)
     elif len(sentences) == 1:
         print("\\", file=f)
-        print(f"__Evolves__: {sentences[0]}", file=f)
+        print(f"_Evolves_: {sentences[0]}", file=f)
     else:
         print("\\", file=f)
-        print("__Evolves__:", file=f)
-        for sentence in sentences:
-            print(" - " + sentence, file=f)
+        print("_Evolves_: \\", file=f)
+        for sentence in sentences[:-1]:
+            print(f"\t{sentence} \\", file=f)
+        print(f"\t{sentences[-1]}", file=f)
 
 
 def get_modified_species(j, jc):
