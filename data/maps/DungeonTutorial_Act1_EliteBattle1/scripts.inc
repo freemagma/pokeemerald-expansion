@@ -56,5 +56,5 @@ DungeonTutorial_Act1_EliteBattle1_Trainer_Text_2:
 DungeonTutorial_Act1_EliteBattle1_SignDirections_Text_0:
 	.string "In Elite battle rooms, you'll face a\n"
 	.string "tough opponent.\p"
-	.string "If you win, you'll recieve a special\n"
-	.string "reward.$"
+	.string "If you win, you'll receive a greater\n"
+	.string "prize than usual.$"

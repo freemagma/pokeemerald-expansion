@@ -31,6 +31,6 @@ script DungeonTutorial_Act1_EliteBattle1_Trainer {
 script DungeonTutorial_Act1_EliteBattle1_SignDirections {
     lock
     msgbox(format("In Elite battle rooms, you'll face a tough opponent.\p"
-                  "If you win, you'll recieve a special reward."), MSGBOX_SIGN)
+                  "If you win, you'll receive a greater prize than usual."), MSGBOX_SIGN)
     release
 }
