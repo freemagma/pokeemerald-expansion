@@ -2,7 +2,8 @@
   "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_Lobby",
-    "gMapGroup_DungeonTutorial"
+    "gMapGroup_DungeonTutorial",
+    "gMapGroup_DungeonEden"
   ],
   "gMapGroup_Lobby": [
     "Lobby_LevelSelect"
@@ -18,5 +19,8 @@
     "DungeonTutorial_Act1_Encounter1_Fork",
     "DungeonTutorial_Act1_EliteBattle1",
     "DungeonTutorial_Act1_Boss"
+  ],
+  "gMapGroup_DungeonEden": [
+
   ]
 }

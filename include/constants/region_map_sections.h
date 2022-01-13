@@ -5,5 +5,6 @@
 
 #define MAPSEC_LOBBY              0x00
 #define MAPSEC_DUNGEON_TUTORIAL   0x01
+#define MAPSEC_DUNGEON_EDEN       0x02
 
 #endif //GUARD_REGIONMAPSEC_H
