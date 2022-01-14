@@ -21,6 +21,8 @@
     "DungeonTutorial_Act1_Boss"
   ],
   "gMapGroup_DungeonEden": [
-
+    "DungeonEden_Act1_Entrance",
+    "DungeonEden_Act1_Gift1",
+    "DungeonEden_Act1_Encounter1"
   ]
 }

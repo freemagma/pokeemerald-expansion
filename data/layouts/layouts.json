@@ -4520,6 +4520,36 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Lobby_LevelSelect/border.bin",
       "blockdata_filepath": "data/layouts/Lobby_LevelSelect/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_ENTRANCE",
+      "name": "DungeonEden_Act1_Entrance_Layout",
+      "width": 17,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_GIFT1",
+      "name": "DungeonEden_Act1_Gift1_Layout",
+      "width": 39,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Gift1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Gift1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_ENCOUNTER1",
+      "name": "DungeonEden_Act1_Encounter1_Layout",
+      "width": 17,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Encounter1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Encounter1/map.bin"
     }
   ]
 }

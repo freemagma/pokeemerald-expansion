@@ -1080,3 +1080,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DungeonTutorial_Act1_Boss/scripts.inc"
 
 	.include "data/maps/Lobby_LevelSelect/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Entrance/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Gift1/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Encounter1/scripts.inc"
