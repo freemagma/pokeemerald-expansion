@@ -1094,3 +1094,13 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DungeonEden_Act1_EliteBattle1/scripts.inc"
 
 	.include "data/maps/DungeonEden_Act1_Boss/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Gift1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Encounter1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Battle1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_Shop1_Fork/scripts.inc"
+
+	.include "data/maps/DungeonEden_Act1_EliteBattle1_Fork/scripts.inc"

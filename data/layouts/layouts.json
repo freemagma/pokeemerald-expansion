@@ -4590,6 +4590,56 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/DungeonEden_Act1_Boss/border.bin",
       "blockdata_filepath": "data/layouts/DungeonEden_Act1_Boss/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_GIFT1_FORK",
+      "name": "DungeonEden_Act1_Gift1_Fork_Layout",
+      "width": 39,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Gift1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Gift1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_ENCOUNTER1_FORK",
+      "name": "DungeonEden_Act1_Encounter1_Fork_Layout",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Encounter1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Encounter1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_BATTLE1_FORK",
+      "name": "DungeonEden_Act1_Battle1_Fork_Layout",
+      "width": 39,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Battle1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Battle1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_SHOP1_FORK",
+      "name": "DungeonEden_Act1_Shop1_Fork_Layout",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_Shop1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_Shop1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT1_ELITE_BATTLE1_FORK",
+      "name": "DungeonEden_Act1_EliteBattle1_Fork_Layout",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act1_EliteBattle1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act1_EliteBattle1_Fork/map.bin"
     }
   ]
 }
