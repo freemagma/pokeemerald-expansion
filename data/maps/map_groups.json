@@ -23,6 +23,10 @@
   "gMapGroup_DungeonEden": [
     "DungeonEden_Act1_Entrance",
     "DungeonEden_Act1_Gift1",
-    "DungeonEden_Act1_Encounter1"
+    "DungeonEden_Act1_Encounter1",
+    "DungeonEden_Act1_Battle1",
+    "DungeonEden_Act1_Shop1",
+    "DungeonEden_Act1_EliteBattle1",
+    "DungeonEden_Act1_Boss"
   ]
 }

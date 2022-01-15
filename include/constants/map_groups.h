@@ -17,9 +17,13 @@
 #define MAP_DUNGEON_TUTORIAL_ACT1_BOSS            (9 | (1 << 8))
 
 // Map Group 2
-#define MAP_DUNGEON_EDEN_ACT1_ENTRANCE   (0 | (2 << 8))
-#define MAP_DUNGEON_EDEN_ACT1_GIFT1      (1 | (2 << 8))
-#define MAP_DUNGEON_EDEN_ACT1_ENCOUNTER1 (2 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_ENTRANCE      (0 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_GIFT1         (1 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_ENCOUNTER1    (2 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_BATTLE1       (3 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_SHOP1         (4 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_ELITE_BATTLE1 (5 | (2 << 8))
+#define MAP_DUNGEON_EDEN_ACT1_BOSS          (6 | (2 << 8))
 
 #define MAP_GROUPS_COUNT 3
 

@@ -1,7 +1,7 @@
 {
-  "id": "MAP_DUNGEON_EDEN_ACT1_ENCOUNTER1",
-  "name": "DungeonEden_Act1_Encounter1",
-  "layout": "LAYOUT_DUNGEON_EDEN_ACT1_ENCOUNTER1",
+  "id": "MAP_DUNGEON_EDEN_ACT1_ELITE_BATTLE1",
+  "name": "DungeonEden_Act1_EliteBattle1",
+  "layout": "LAYOUT_DUNGEON_EDEN_ACT1_ELITE_BATTLE1",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_DUNGEON_EDEN",
   "requires_flash": false,
@@ -14,21 +14,33 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 8,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "NULL",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
       "x": 8,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_EDEN_ACT1_ENCOUNTER1",
+      "dest_map": "MAP_DUNGEON_EDEN_ACT1_ELITE_BATTLE1",
       "dest_warp_id": 0
     },
     {
       "x": 8,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_EDEN_ACT1_ENCOUNTER1",
+      "dest_map": "MAP_DUNGEON_EDEN_ACT1_ELITE_BATTLE1",
       "dest_warp_id": 1
     }
   ],
