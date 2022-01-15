@@ -17,40 +17,6 @@ static EWRAM_DATA struct RouteOption sRoute[MAX_ROUTE_LENGTH][2] = {0};
 
 static const struct RouteOption routeNone = {0};
 
-void DungeonTutorial_GenerateRoute(void)
-{
-    const struct RouteOption battle = {.map = DTA1(BATTLE1), .string = gText_BattleRoom};
-    const struct RouteOption eliteBattle = {.map = DTA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
-    const struct RouteOption boss = {.map = DTA1(BOSS), .string = NULL};
-    const struct RouteOption gift = {.map = DTA1(GIFT1), .string = gText_GiftRoom};
-    const struct RouteOption encounter = {.map = DTA1(ENCOUNTER1), .string = gText_EncounterRoom};
-    const struct RouteOption shop = {.map = DTA1(SHOP1), .string = gText_ShopRoom};
-
-    u16 i = 0;
-    u16 temp;
-
-    ClearRoute();
-
-    sRoute[i++][0] = gift;
-    sRoute[i++][0] = encounter;
-    sRoute[i++][0] = battle;
-    sRoute[i++][0] = shop;
-
-    sRoute[i][0] = battle; sRoute[i][0].param = 1;
-    sRoute[i++][1] = encounter;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-
-    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
-
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i++][0] = eliteBattle;
-
-    sRoute[i++][0] = shop;
-    sRoute[i++][0] = boss;
-
-    ForkMapsInRoute();
-}
 
 bool8 IsRoutedWarp(u8 warpEventId)
 {
@@ -107,13 +73,92 @@ static void ForkMapsInRoute(void) {
 
 static u16 ForkMap(u16 map) {
     switch (map) {
-        case DTA1(ENCOUNTER1):
-            return DTA1(ENCOUNTER1_FORK);
-        case DTA1(BATTLE1):
-            return DTA1(BATTLE1_FORK);
-        case DTA1(SHOP1):
-            return DTA1(SHOP1_FORK);
+        case DTUA1(ENCOUNTER1):
+            return DTUA1(ENCOUNTER1_FORK);
+        case DTUA1(BATTLE1):
+            return DTUA1(BATTLE1_FORK);
+        case DTUA1(SHOP1):
+            return DTUA1(SHOP1_FORK);
+        case DEDA1(ENCOUNTER1):
+            return DEDA1(ENCOUNTER1_FORK);
+        case DEDA1(BATTLE1):
+            return DEDA1(BATTLE1_FORK);
+        case DEDA1(SHOP1):
+            return DEDA1(SHOP1_FORK);
+        case DEDA1(GIFT1):
+            return DEDA1(GIFT1_FORK);
+        case DEDA1(ELITE_BATTLE1):
+            return DEDA1(ELITE_BATTLE1_FORK);
         default:
             return MAP_NONE;
     }
+}
+
+void DungeonTutorial_GenerateRoute(void)
+{
+    const struct RouteOption battle = {.map = DTUA1(BATTLE1), .string = gText_BattleRoom};
+    const struct RouteOption eliteBattle = {.map = DTUA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
+    const struct RouteOption boss = {.map = DTUA1(BOSS), .string = NULL};
+    const struct RouteOption gift = {.map = DTUA1(GIFT1), .string = gText_GiftRoom};
+    const struct RouteOption encounter = {.map = DTUA1(ENCOUNTER1), .string = gText_EncounterRoom};
+    const struct RouteOption shop = {.map = DTUA1(SHOP1), .string = gText_ShopRoom};
+
+    u16 i = 0;
+    u16 temp;
+
+    ClearRoute();
+
+    sRoute[i++][0] = gift;
+    sRoute[i++][0] = encounter;
+    sRoute[i++][0] = battle;
+    sRoute[i++][0] = shop;
+
+    sRoute[i][0] = battle; sRoute[i][0].param = 1;
+    sRoute[i++][1] = encounter;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+
+    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
+
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    sRoute[i++][0] = eliteBattle;
+
+    sRoute[i++][0] = shop;
+    sRoute[i++][0] = boss;
+
+    ForkMapsInRoute();
+}
+
+void DungeonEden_GenerateRoute(void) {
+    const struct RouteOption battle = {.map = DEDA1(BATTLE1), .string = gText_BattleRoom};
+    const struct RouteOption eliteBattle = {.map = DEDA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
+    const struct RouteOption boss = {.map = DEDA1(BOSS), .string = NULL};
+    const struct RouteOption gift = {.map = DEDA1(GIFT1), .string = gText_GiftRoom};
+    const struct RouteOption encounter = {.map = DEDA1(ENCOUNTER1), .string = gText_EncounterRoom};
+    const struct RouteOption shop = {.map = DEDA1(SHOP1), .string = gText_ShopRoom};
+
+    u16 i = 0;
+    u16 temp;
+
+    ClearRoute();
+
+    sRoute[i++][0] = gift;
+    sRoute[i++][0] = encounter;
+    sRoute[i++][0] = battle;
+    sRoute[i++][0] = shop;
+
+    sRoute[i][0] = battle; sRoute[i][0].param = 1;
+    sRoute[i++][1] = encounter;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+
+    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
+
+    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    sRoute[i++][0] = eliteBattle;
+
+    sRoute[i++][0] = shop;
+    sRoute[i++][0] = boss;
+
+    ForkMapsInRoute();
 }

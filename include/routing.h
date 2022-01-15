@@ -1,7 +1,8 @@
 #ifndef GUARD_ROUTING_H
 #define GUARD_ROUTING_H
 
-#define DTA1(mapend) (MAP_DUNGEON_TUTORIAL_ACT1_##mapend)
+#define DTUA1(mapend) (MAP_DUNGEON_TUTORIAL_ACT1_##mapend)
+#define DEDA1(mapend) (MAP_DUNGEON_EDEN_ACT1_##mapend)
 
 struct RouteOption {
     u16 map;

@@ -147,3 +147,24 @@ void DungeonTutorial_GenerateBossBattle(void) {
     GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
     VarSet(VAR_EXP_MULTIPLIER, 0);
 }
+
+void DungeonEden_GenerateBattle(void) {
+    switch (GetRouteParam()) {
+        case 0:
+            GenerateBattle(sDTutorial_Opponents0, ARRAY_COUNT(sDTutorial_Opponents0), 4);
+            break;
+        case 1:
+        default:
+            GenerateBattle(sDTutorial_Opponents1, ARRAY_COUNT(sDTutorial_Opponents1), 3);
+            break;
+    }
+}
+
+void DungeonEden_GenerateEliteBattle(void) {
+    GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 2);
+}
+
+void DungeonEden_GenerateBossBattle(void) {
+    GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
+    VarSet(VAR_EXP_MULTIPLIER, 0);
+}

@@ -1,1 +1,27 @@
-mapscripts DungeonEden_Act1_Battle1_MapScripts {}
+const VAR_TRAINER = VAR_TEMP_A
+
+mapscripts DungeonEden_Act1_Battle1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        callnative(DungeonEden_GenerateBattle)
+        copyvar(VAR_TRAINER, VAR_0x8000)
+        setflag(FLAG_DISABLE_BAG)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpOne)
+            waitmovement(0)
+            msgbox(format("The forest is too thick to turn back \p"
+                          "...\p"
+                          "There seems to be a trainer waiting on the bridge."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+script Eden_A1_Battle1_Trainer {
+    trainerbattle_single(VAR_TRAINER, "I challenge you to a battle!", "Guess I need to get stronger.")
+    msgbox("...", MSGBOX_AUTOCLOSE)
+}

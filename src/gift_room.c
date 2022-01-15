@@ -67,3 +67,7 @@ const static u16 sDTutorial_GiftMons[] = {
 void DungeonTutorial_GetGiftMon(void) {
     GetGiftMon(sDTutorial_GiftMons, ARRAY_COUNT(sDTutorial_GiftMons));
 }
+
+void DungeonEden_GetGiftMon(void) {
+    GetGiftMon(sDTutorial_GiftMons, ARRAY_COUNT(sDTutorial_GiftMons));
+}

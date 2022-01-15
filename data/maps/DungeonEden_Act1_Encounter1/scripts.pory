@@ -1,1 +1,19 @@
-mapscripts DungeonEden_Act1_Encounter1_MapScripts {}
+mapscripts DungeonEden_Act1_Encounter1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        setvar(VAR_ENCOUNTERS_LEFT, 1)
+        clearflag(FLAG_DISABLE_BAG)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpOne)
+            waitmovement(0)
+            msgbox(format("The forest is too thick to turn back. \p"
+                          "...\p"
+                          "There seem to be a couple Pokémon hiding in the grass."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
