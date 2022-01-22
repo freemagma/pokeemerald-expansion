@@ -20,7 +20,7 @@ script Eden_StarterBall {
     msgbox(format("Will you take Applin?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
         bufferspeciesname(STR_VAR_1, SPECIES_APPLIN)
-        givemon(SPECIES_APPLIN, LEVEL, ITEM_NONE)
+        givemon(SPECIES_ARCEUS, 100, ITEM_NONE)
         removeobject(BALL_1_ID)
         msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {

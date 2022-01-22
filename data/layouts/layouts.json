@@ -4585,7 +4585,7 @@
       "id": "LAYOUT_DUNGEON_EDEN_ACT1_BOSS",
       "name": "DungeonEden_Act1_Boss_Layout",
       "width": 39,
-      "height": 19,
+      "height": 21,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/DungeonEden_Act1_Boss/border.bin",

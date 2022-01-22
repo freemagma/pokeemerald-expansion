@@ -104,7 +104,6 @@ void DungeonTutorial_GenerateRoute(void)
     const struct RouteOption shop = {.map = DTUA1(SHOP1), .string = gText_ShopRoom};
 
     u16 i = 0;
-    u16 temp;
 
     ClearRoute();
 
@@ -138,24 +137,54 @@ void DungeonEden_GenerateRoute(void) {
     const struct RouteOption shop = {.map = DEDA1(SHOP1), .string = gText_ShopRoom};
 
     u16 i = 0;
-    u16 temp;
+    u16 j = 0;
+    u16 groupedFloors;
+    u16 specialFloor;
 
     ClearRoute();
 
     sRoute[i++][0] = gift;
-    sRoute[i++][0] = encounter;
-    sRoute[i++][0] = battle;
+
+    groupedFloors = 3;
+    specialFloor = 1 + Random() % (groupedFloors - 1);
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            sRoute[i][0] = encounter;
+            sRoute[i][1] = battle;
+            sRoute[i][1].param = 0;
+        } else {
+            sRoute[i][0] = battle;
+            sRoute[i][0].param = 0;
+        }
+    }
+
     sRoute[i++][0] = shop;
 
-    sRoute[i][0] = battle; sRoute[i][0].param = 1;
-    sRoute[i++][1] = encounter;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    groupedFloors = 3 + (Random() % 2);
+    specialFloor = Random() % (groupedFloors - 1);
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            sRoute[i][0] = encounter;
+            sRoute[i][1] = eliteBattle;
+        } else {
+            sRoute[i][0] = battle;
+            sRoute[i][0].param = 1;
+        }
+    }
 
-    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
+    sRoute[i][0] = encounter;
+    sRoute[i++][1] = shop;
 
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i++][0] = eliteBattle;
+    groupedFloors = 7 - groupedFloors;
+    specialFloor = Random() % groupedFloors;
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            sRoute[i][0] = eliteBattle;
+        } else {
+            sRoute[i][0] = battle;
+            sRoute[i][0].param = 1;
+        }
+    }
 
     sRoute[i++][0] = shop;
     sRoute[i++][0] = boss;
