@@ -211,6 +211,62 @@ static const struct TrainerMon sParty_Tu_Magnolia[] = {
     },
 };
 
+static const struct TrainerMon sParty_Ed_Edwin[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_SAND_TOMB, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+static const struct TrainerMon sParty_Ed_Fernando[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_SAND_TOMB, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+static const struct TrainerMon sParty_Ed_Elise[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_SAND_TOMB, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+static const struct TrainerMon sParty_Ed_Francesco[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_SAND_TOMB, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+static const struct TrainerMon sParty_Ed_Amy[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_MUDKIP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_SAND_TOMB, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
 static const struct TrainerMon sParty_Marcel[] = {
     {
     .iv = 100,

@@ -157,70 +157,70 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tu_Magnolia},
     },
 
-
-    [TRAINER_ALBERTO] =
+    // DEden A1 O1
+    [TRAINER_ED_EDWIN] =
     {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_BIRD_KEEPER,
-        .trainerName = _("ALBERTO"),
+        .trainerName = _("Edwin"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Alberto),
-        .party = {.TrainerMon = sParty_Alberto},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Ed_Edwin),
+        .party = {.TrainerMon = sParty_Ed_Edwin},
     },
 
-    [TRAINER_ED] =
+    [TRAINER_ED_FERNANDO] =
     {
-        .trainerClass = TRAINER_CLASS_COLLECTOR,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
-        .trainerName = _("ED"),
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Fernando"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Ed),
-        .party = {.TrainerMon = sParty_Ed},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Ed_Fernando),
+        .party = {.TrainerMon = sParty_Ed_Fernando},
     },
 
-    [TRAINER_GRUNT_SEAFLOOR_CAVERN_4] =
+    [TRAINER_ED_ELISE] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_TUBER_F,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_TUBER_F,
+        .trainerName = _("Elise"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntSeafloorCavern4),
-        .party = {.TrainerMon = sParty_GruntSeafloorCavern4},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Ed_Elise),
+        .party = {.TrainerMon = sParty_Ed_Elise},
     },
 
-    [TRAINER_DECLAN] =
+    [TRAINER_ED_FRANCESCO] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .trainerClass = TRAINER_CLASS_TUBER_M,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_M,
-        .trainerName = _("DECLAN"),
+        .trainerPic = TRAINER_PIC_TUBER_M,
+        .trainerName = _("Francesco"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Declan),
-        .party = {.TrainerMon = sParty_Declan},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Ed_Francesco),
+        .party = {.TrainerMon = sParty_Ed_Francesco},
     },
 
-    [TRAINER_GRUNT_RUSTURF_TUNNEL] =
+    [TRAINER_ED_AMY] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_BATTLE_GIRL,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_BATTLE_GIRL,
+        .trainerName = _("Amy"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntRusturfTunnel),
-        .party = {.TrainerMon = sParty_GruntRusturfTunnel},
+        .aiFlags = AI_FLAGS_STRONG,
+        .partySize = ARRAY_COUNT(sParty_Ed_Amy),
+        .party = {.TrainerMon = sParty_Ed_Amy},
     },
 
     [TRAINER_GRUNT_WEATHER_INST_1] =

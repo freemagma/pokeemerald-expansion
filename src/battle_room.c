@@ -4,6 +4,8 @@
 #include "constants/vars.h"
 #include "constants/event_objects.h"
 #include "constants/opponents.h"
+#include "constants/trainers.h"
+#include "data.h"
 #include "event_data.h"
 #include "wild_encounter.h"
 #include "battle_setup.h"
@@ -13,8 +15,6 @@
 
 #define MAX_PERMUTATION 10
 EWRAM_DATA static u16 sPermutation[MAX_PERMUTATION] = {0};
-
-#define PX(arr, ix) (arr[sPermutation[ix]])
 
 static void ShufflePermutation(u16 count) {
     u16 i;
@@ -31,140 +31,86 @@ static void ShufflePermutation(u16 count) {
     }
 }
 
-struct Opponent {
-    u16 trainerId;
-    u16 gfxId;
-    u32 money;
-};
+static u16 GetGfxIdFromTrainerId(u16 trainerId) {
+    u16 i;
+    u16 trainerClass = gTrainers[trainerId].trainerClass;
+    u16 isFemale = gTrainers[trainerId].encounterMusic_gender & F_TRAINER_FEMALE;
 
-static void GenerateBattle(const struct Opponent oppList[], u16 count, u16 levelDiff) {
+    if (isFemale) {
+        for (i = 0; i < ARRAY_COUNT(BattleRoomFemaleTrainerClasses); i++) {
+            if (BattleRoomFemaleTrainerClasses[i] == trainerClass)
+                break;
+        } 
+        return BattleRoomFemaleGfxIds[i];
+    } else {
+        for (i = 0; i < ARRAY_COUNT(BattleRoomMaleTrainerClasses); i++) {
+            if (BattleRoomMaleTrainerClasses[i] == trainerClass)
+                break;
+        } 
+        return BattleRoomMaleGfxIds[i];
+    }
+}
+
+static void GenerateBattle(u16 trainerMin, u16 trainerMax, u32 baseMoney, u16 levelDiff) {
     u16 ix = 0;
+    u16 count = trainerMax - trainerMin + 1;
     u16 money;
-    struct Opponent opp;
+    u16 trainerId;
 
     ShufflePermutation(count);
-    for (; HasTrainerBeenFought(PX(oppList, ix).trainerId) && ix != count - 1; ix++);
+    for (; HasTrainerBeenFought(trainerMin + sPermutation[ix]) && ix != count - 1; ix++);
 
-    opp = PX(oppList, ix);
-    if (HasTrainerBeenFought(opp.trainerId)) {
-        ClearTrainerFlag(opp.trainerId);
+    trainerId = trainerMin + sPermutation[ix];
+    if (HasTrainerBeenFought(trainerId)) {
+        ClearTrainerFlag(trainerId);
     }
 
-    VarSet(VAR_0x8000, opp.trainerId);
-    VarSet(VAR_OBJ_GFX_ID_0, opp.gfxId);
+    VarSet(VAR_0x8000, trainerId);
+    VarSet(VAR_OBJ_GFX_ID_0, GetGfxIdFromTrainerId(trainerId));
     VarSet(VAR_TRAINER_LEVEL_DIFF, levelDiff);
 
-    money = (opp.money * (90 + (Random() % 21))) / 100;
+    money = (baseMoney * (90 + (Random() % 21))) / 100;
     VarSet(VAR_TRAINER_MONEY_REWARD, money);
 }
-
-const static struct Opponent sDTutorial_Opponents0[] = {
-{
-.trainerId = TRAINER_TU_DWAYNE,
-.gfxId = OBJ_EVENT_GFX_HIKER,
-.money = 300
-},
-{
-.trainerId = TRAINER_TU_BRUCE,
-.gfxId = OBJ_EVENT_GFX_YOUNGSTER,
-.money = 300
-},
-};
-
-const static struct Opponent sDTutorial_Opponents1[] = {
-{
-.trainerId = TRAINER_TU_DARIEN,
-.gfxId = OBJ_EVENT_GFX_CAMPER,
-.money = 400
-},
-{
-.trainerId = TRAINER_TU_SELINA,
-.gfxId = OBJ_EVENT_GFX_WOMAN_2,
-.money = 400
-},
-{
-.trainerId = TRAINER_TU_KATRINA,
-.gfxId = OBJ_EVENT_GFX_GIRL_3,
-.money = 400
-},
-{
-.trainerId = TRAINER_TU_LEAH,
-.gfxId = OBJ_EVENT_GFX_HEX_MANIAC,
-.money = 400
-},
-{
-.trainerId = TRAINER_TU_FREDDY,
-.gfxId = OBJ_EVENT_GFX_HIKER,
-.money = 400
-},
-{
-.trainerId = TRAINER_TU_EMILY,
-.gfxId = OBJ_EVENT_GFX_WOMAN_4,
-.money = 400
-},
-
-};
-
-const static struct Opponent sDTutorial_EliteOpponents0[] = {
-{
-.trainerId = TRAINER_TU_ROSEMARY,
-.gfxId = OBJ_EVENT_GFX_WOMAN_2,
-.money = 700
-},
-{
-.trainerId = TRAINER_TU_EVERETT,
-.gfxId = OBJ_EVENT_GFX_MAN_5,
-.money = 700
-}
-};
-
-const static struct Opponent sDTutorial_Bosses[] = {
-{
-.trainerId = TRAINER_TU_MAGNOLIA,
-.gfxId = OBJ_EVENT_GFX_FLANNERY,
-.money = 1000,
-},
-};
-
 
 void DungeonTutorial_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(sDTutorial_Opponents0, ARRAY_COUNT(sDTutorial_Opponents0), 4);
+            GenerateBattle(TRAINER_TU_DWAYNE, TRAINER_TU_BRUCE, 300, 4);
             break;
         case 1:
         default:
-            GenerateBattle(sDTutorial_Opponents1, ARRAY_COUNT(sDTutorial_Opponents1), 3);
+            GenerateBattle(TRAINER_TU_DARIEN, TRAINER_TU_EMILY, 400, 3);
             break;
     }
 }
 
 void DungeonTutorial_GenerateEliteBattle(void) {
-    GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 2);
+    GenerateBattle(TRAINER_TU_ROSEMARY, TRAINER_TU_EVERETT, 700, 2);
 }
 
 void DungeonTutorial_GenerateBossBattle(void) {
-    GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
+    GenerateBattle(TRAINER_TU_MAGNOLIA, TRAINER_TU_MAGNOLIA, 1000, 0);
     VarSet(VAR_EXP_MULTIPLIER, 0);
 }
 
 void DungeonEden_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(sDTutorial_Opponents0, ARRAY_COUNT(sDTutorial_Opponents0), 4);
+            GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 4);
             break;
         case 1:
         default:
-            GenerateBattle(sDTutorial_Opponents1, ARRAY_COUNT(sDTutorial_Opponents1), 3);
+            GenerateBattle(TRAINER_TU_DARIEN, TRAINER_TU_EMILY, 400, 3);
             break;
     }
 }
 
 void DungeonEden_GenerateEliteBattle(void) {
-    GenerateBattle(sDTutorial_EliteOpponents0, ARRAY_COUNT(sDTutorial_EliteOpponents0), 2);
+    GenerateBattle(TRAINER_TU_ROSEMARY, TRAINER_TU_EVERETT, 700, 2);
 }
 
 void DungeonEden_GenerateBossBattle(void) {
-    GenerateBattle(sDTutorial_Bosses, ARRAY_COUNT(sDTutorial_Bosses), 0);
+    GenerateBattle(TRAINER_TU_MAGNOLIA, TRAINER_TU_MAGNOLIA, 1000, 0);
     VarSet(VAR_EXP_MULTIPLIER, 0);
 }
