@@ -260,6 +260,25 @@ __Abilities__: Illuminate, Natural Cure, Analytic
 51. Hydro Pump
 60. Psychic
 
+## Mr. Mime
+__Type__: Psychic/Fairy \
+__Stats__: 40/45/65/100/120/90 \
+__Abilities__: Soundproof, Filter, Technician 
+
+ 1. Confusion
+ 4. Copycat
+11. Double Slap
+15. Mimic
+18. Encore
+22. Psybeam
+28. Safeguard
+32. Fake Out
+36. Psychic
+39. Dazzling Gleam
+43. Sucker Punch
+48. Reflect
+
+
 ## Kabuto
 __Type__: Rock/Water \
 __Stats__: 30/80/90/70/45/55 \
@@ -294,6 +313,113 @@ __Abilities__: Swift Swim, Battle Armor, Weak Armor
 59. Wring Out
 63. Rock Slide
 72. Night Slash
+
+## Togepi
+__Type__: Fairy \
+__Stats__: 35/20/65/40/65/20 \
+__Abilities__: Serene Grace, None, Super Luck \
+__Evolves__: into Togetic at level 18
+
+ 1. Endure
+ 7. Fairy Wind
+10. Swift
+14. Follow Me
+17. Ancient Power
+24. Tri Attack
+30. Double Edge
+35. Dazzling Gleam
+39. Body Slam
+
+## Togetic
+__Type__: Fairy/Flying \
+__Stats__: 55/40/85/80/105/40 \
+__Abilities__: Serene Grace, None, Super Luck \
+__Evolves__: into Togekiss via Shiny Stone
+
+ 0. Gust
+ 1. Endure
+ 7. Fairy Wind
+10. Swift
+14. Follow Me
+17. Ancient Power
+24. Tri Attack
+30. Fly
+35. Dazzling Gleam
+39. Air Slash
+
+## Marill
+__Type__: Water/Fairy \
+__Stats__: 70/20/50/20/50/40 \
+__Abilities__: Thick Fat, Huge Power, Sap Sipper \
+__Evolves__: into Azumarill at level 22
+
+ 1. Water Gun
+ 7. Bubble
+10. Rollout
+13. Bubble Beam
+20. Aqua Tail
+25. Play Rough
+31. Aqua Ring
+35. Aqua Jet
+39. Double Edge
+45. Superpower
+51. Hydro Pump
+55. Body Slam
+
+## Azumarill
+__Type__: Water/Fairy \
+__Stats__: 100/50/80/60/80/50 \
+__Abilities__: Thick Fat, Huge Power, Sap Sipper 
+
+ 1. Water Gun
+ 7. Bubble
+10. Rollout
+13. Bubble Beam
+20. Aqua Tail
+25. Play Rough
+31. Aqua Ring
+35. Aqua Jet
+39. Double Edge
+45. Superpower
+51. Hydro Pump
+55. Body Slam
+61. Iron Tail
+
+## Swinub
+__Type__: Ice/Ground \
+__Stats__: 50/50/40/30/30/50 \
+__Abilities__: Oblivious, Snow Cloak, Thick Fat \
+__Evolves__: into Piloswine at level 28
+
+ 1. Ice Shard
+ 5. Mud Slap
+10. Avalanche
+15. Mud Bomb
+17. Stomp
+24. Stomping Tantrum
+27. Icicle Crash
+33. Rock Slide
+35. High Horsepower
+40. Body Slam
+48. Blizzard
+
+## Piloswine
+__Type__: Ice/Ground \
+__Stats__: 100/100/80/60/60/50 \
+__Abilities__: Oblivious, Snow Cloak, Thick Fat \
+__Evolves__: into Mamoswine at level 45
+
+ 1. Ice Shard
+ 5. Mud Slap
+10. Avalanche
+15. Mud Bomb
+17. Stomp
+24. Stomping Tantrum
+27. Icicle Crash
+33. Rock Slide
+35. High Horsepower
+40. Body Slam
+48. Blizzard
 
 ## Ralts
 __Type__: Psychic/Fairy \
@@ -407,6 +533,25 @@ __Abilities__: Thick Fat, Guts, Sheer Force
 46. Close Combat
 50. Reversal
 54. Heavy Slam
+
+## Azurill
+__Type__: Normal/Fairy \
+__Stats__: 50/20/40/20/40/20 \
+__Abilities__: Thick Fat, Huge Power, Sap Sipper \
+__Evolves__: into Marill at level 14
+
+ 1. Water Gun
+ 7. Bubble
+10. Rollout
+13. Bubble Beam
+20. Aqua Tail
+25. Play Rough
+31. Aqua Ring
+35. Aqua Jet
+39. Double Edge
+45. Superpower
+51. Hydro Pump
+55. Body Slam
 
 ## Aron
 __Type__: Steel/Rock \
@@ -647,6 +792,94 @@ __Abilities__: Thick Fat, Defiant, None
 40. Body Slam
 45. Play Rough
 
+## Bronzor
+__Type__: Steel/Psychic \
+__Stats__: 57/24/86/24/86/23 \
+__Abilities__: Levitate, Heatproof, Heavy Metal \
+__Evolves__: into Bronzong at level 33
+
+ 1. Confusion
+ 9. Imprison
+11. Payback
+15. Psywave
+22. Gyro Ball
+28. Future Sight
+31. Zen Headbutt
+36. Heal Block
+42. Heavy Slam
+
+## Bronzong
+__Type__: Steel/Psychic \
+__Stats__: 67/89/116/79/116/33 \
+__Abilities__: Levitate, Heatproof, Heavy Metal 
+
+ 0. Block
+ 1. Confusion
+ 9. Imprison
+11. Payback
+15. Psywave
+22. Gyro Ball
+28. Future Sight
+31. Zen Headbutt
+36. Heal Block
+42. Heavy Slam
+60. Double Iron Bash
+
+## Mime Jr.
+__Type__: Psychic/Fairy \
+__Stats__: 20/25/45/70/90/60 \
+__Abilities__: Soundproof, Filter, Technician \
+__Evolves__: into Mr Mime while knowing Mimic
+
+ 1. Confusion
+ 4. Copycat
+11. Double Slap
+15. Mimic
+18. Encore
+22. Psybeam
+28. Safeguard
+32. Fake Out
+36. Psychic
+39. Dazzling Gleam
+43. Sucker Punch
+48. Reflect
+
+## Croagunk
+__Type__: Poison/Fighting \
+__Stats__: 48/61/40/61/40/50 \
+__Abilities__: Anticipation, Dry Skin, Poison Touch \
+__Evolves__: into Toxicroak at level 37
+
+ 1. Poison Sting
+ 7. Pursuit
+10. Feint Attack
+14. Revenge
+18. Sucker Punch
+23. Low Sweep
+28. Cross Poison
+32. Cross Chop
+40. Rock Climb
+45. Poison Jab
+49. Drain Punch
+
+## Toxicroak
+__Type__: Poison/Fighting \
+__Stats__: 83/106/65/86/65/85 \
+__Abilities__: Anticipation, Dry Skin, Poison Touch 
+
+ 1. Poison Sting
+ 7. Pursuit
+10. Feint Attack
+14. Revenge
+18. Sucker Punch
+23. Low Sweep
+28. Cross Poison
+32. Cross Chop
+40. Rock Climb
+45. Poison Jab
+49. Drain Punch
+53. Throat Chop
+
 ## Tangrowth
 __Type__: Grass \
 __Stats__: 100/100/125/110/50/50 \
@@ -666,6 +899,41 @@ __Abilities__: Chlorophyll, Regenerator
 46. Wring Out
 50. Power Whip
 56. Sludge Bomb
+
+## Togekiss
+__Type__: Fairy/Flying \
+__Stats__: 85/50/95/120/115/80 \
+__Abilities__: Serene Grace, None, Super Luck 
+
+ 0. Aura Sphere
+ 1. Endure
+ 7. Fairy Wind
+10. Swift
+14. Follow Me
+17. Ancient Power
+24. Tri Attack
+30. Fly
+35. Dazzling Gleam
+39. Air Slash
+45. Extreme Speed
+
+## Mamoswine
+__Type__: Ice/Ground \
+__Stats__: 110/130/80/70/60/80 \
+__Abilities__: Oblivious, Snow Cloak, Thick Fat 
+
+ 0. Ancient Power
+ 1. Ice Shard
+ 5. Mud Slap
+10. Avalanche
+15. Mud Bomb
+17. Stomp
+24. Stomping Tantrum
+27. Icicle Crash
+33. Rock Slide
+35. High Horsepower
+40. Body Slam
+48. Blizzard
 
 ## Munna
 __Type__: Psychic \
@@ -804,6 +1072,64 @@ __Abilities__: Iron Fist, Mold Breaker, Scrappy
 65. Taunt
 70. Hammer Arm
 
+## Spritzee
+__Type__: Fairy \
+__Stats__: 78/52/60/63/65/23 \
+__Abilities__: Healer, None, Aroma Veil \
+__Evolves__: into Aromatisse at level 25
+
+ 1. Fairy Wind
+ 6. Echoed Voice
+ 9. Disarming Voice
+13. Aromatherapy
+16. Round
+21. Wish
+27. Draining Kiss
+30. Psychic
+34. Energy Ball
+39. Moonblast
+44. Skill Swap
+50. Healing Wish
+
+## Aromatisse
+__Type__: Fairy \
+__Stats__: 101/72/72/99/89/29 \
+__Abilities__: Healer, None, Aroma Veil 
+
+ 1. Fairy Wind
+ 6. Echoed Voice
+ 9. Disarming Voice
+13. Aromatherapy
+16. Round
+21. Wish
+27. Draining Kiss
+30. Psychic
+34. Energy Ball
+39. Moonblast
+44. Skill Swap
+50. Healing Wish
+52. Misty Explosion
+
+## Dedenne
+__Type__: Electric/Fairy \
+__Stats__: 67/58/57/81/67/101 \
+__Abilities__: Cheek Pouch, None, None 
+
+ 1. Nuzzle
+ 7. Thunder Shock
+11. Charge
+15. Parabolic Charge
+17. Dig
+23. Volt Switch
+26. Charm
+28. Dazzling Gleam
+34. Charge Beam
+38. U Turn
+44. Thunder
+48. Super Fang
+50. Discharge
+55. Recycle
+
 ## Cutiefly
 __Type__: Bug/Fairy \
 __Stats__: 40/45/40/55/40/84 \
@@ -833,4 +1159,137 @@ __Abilities__: Shield Dust, Sweet Veil
 31. Dazzling Gleam
 36. Aromatherapy
 41. Moonblast
+
+## Applin
+__Type__: Grass/Dragon \
+__Stats__: 50/60/80/60/60/20 \
+__Abilities__: Ripen, None, None \
+__Evolves__: \
+    into Flapple via Shiny Stone \
+    into Appletun via Leaf Stone
+
+ 1. Twister
+ 5. Absorb
+ 7. Acid Spray
+12. Dragon Breath
+17. Mega Drain
+23. Scale Shot
+25. Protect
+28. Bullet Seed
+35. Dragon Pulse
+
+## Flapple
+__Type__: Grass/Dragon \
+__Stats__: 70/110/80/70/80/100 \
+__Abilities__: Skill Link, None, None 
+
+ 0. Grav Apple
+ 1. Twister
+ 5. Absorb
+ 7. Acid Spray
+12. Dragon Breath
+17. Mega Drain
+23. Scale Shot
+25. Protect
+28. Bullet Seed
+35. Dragon Pulse
+40. Acrobatics
+48. Dragon Dance
+
+## Appletun
+__Type__: Grass/Dragon \
+__Stats__: 110/80/100/80/100/40 \
+__Abilities__: Regenerator, None, None 
+
+ 0. Apple Acid
+ 1. Twister
+ 5. Absorb
+ 7. Acid Spray
+12. Dragon Breath
+17. Mega Drain
+23. Scale Shot
+25. Protect
+28. Bullet Seed
+35. Dragon Pulse
+40. Body Slam
+48. Dragon Rush
+55. Leech Seed
+
+## Milcery
+__Type__: Fairy \
+__Stats__: 68/40/60/65/72/40 \
+__Abilities__: Sweet Veil, None, Aroma Veil \
+__Evolves__: into Alcremie at level 32
+
+ 1. Baby Doll Eyes
+ 6. Draining Kiss
+12. Aromatherapy
+15. Attract
+20. Magical Leaf
+27. Dazzling Gleam
+35. Recover
+43. Mystical Fire
+
+## Alcremie
+__Type__: Fairy \
+__Stats__: 118/60/92/110/131/60 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+ 0. Decorate
+ 1. Baby Doll Eyes
+ 6. Draining Kiss
+12. Aromatherapy
+15. Attract
+20. Magical Leaf
+27. Dazzling Gleam
+35. Recover
+43. Mystical Fire
+
+### Alcremie Ruby Cream
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Matcha Cream
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Mint Cream
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Lemon Cream
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Salted Cream
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Ruby Swirl
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Caramel Swirl
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
+
+### Alcremie Rainbow Swirl
+__Type__: Fairy \
+__Stats__: 65/60/75/110/121/64 \
+__Abilities__: Sweet Veil, None, Aroma Veil 
+
 

@@ -144,6 +144,9 @@
 ## Cross Chop
 100 Accuracy (+20%)
 
+## Ancient Power
+70 Power (+10)
+
 ## Future Sight
 150 Power (+30)
 
@@ -174,6 +177,9 @@
 
 ## Rock Tomb
 100 Accuracy (+5%)
+
+## Silver Wind
+70 Power (+10)
 
 ## Sky Uppercut
 90 Power (+5)
@@ -277,6 +283,9 @@ Rock type
 
 ## Seed Flare
 100 Accuracy (+15%)
+
+## Ominous Wind
+70 Power (+10)
 
 ## Smack Down
 60 Power (+10)
