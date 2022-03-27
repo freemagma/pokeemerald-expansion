@@ -8,38 +8,42 @@ def format_words(words, remove=""):
     return words
 
 
-def print_pokedata(data, f):
+def print_pokedata(data, data_compare, f):
     type1 = format_words(data["type1"], remove="TYPE_")
     type2 = format_words(data["type2"], remove="TYPE_")
     typetext = f"{type1}/{type2}" if type1 != type2 else f"{type1}"
-    print(f"__Type__: {typetext} \\", file=f)
-    print(
-        "__Stats__: {}/{}/{}/{}/{}/{} \\".format(
-            data["baseHP"],
-            data["baseAttack"],
-            data["baseDefense"],
-            data["baseSpAttack"],
-            data["baseSpDefense"],
-            data["baseSpeed"],
-        ),
-        file=f,
-    )
+    print(f"_Type_: {typetext}", file=f)
+
+    stats = []
+    stats_compare = []
+    for stat in ("HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed"):
+        stat_key = f"base{stat}"
+        stats.append(data[stat_key])
+        stats_compare.append(data_compare[stat_key])
+    stats_output = f"_Stats_: {'/'.join(stats)}"
+    if stats != stats_compare:
+        diffs = [int(a) - int(b) for a, b in zip(stats, stats_compare)]
+        diff_strs = [f"+{d}" if d > 0 else str(d) for d in diffs]
+        stats_output += f" ({'/'.join(diff_strs)})"
+    print(stats_output, file=f)
+
     abilities = (
         data["abilities"][1:-1].replace("ABILITY", "").replace("_", " ").split(",")
     )
+    abilities = [" ".join(s.capitalize() for s in a.strip().split()) for a in abilities]
+    while abilities[-1] == "None":
+        abilities.pop()
+
     print(
-        "__Abilities__: "
-        + ", ".join(
-            " ".join(s.capitalize() for s in a.strip().split()) for a in abilities
-        ),
-        file=f, end=" ",
+        "_Abilities_: " + ", ".join(abilities),
+        file=f,
     )
 
 
 def print_learnset(learnset, f):
-    for lvl in sorted(map(int, learnset.keys())):
-        lvltxt = " " + str(lvl) if lvl < 10 else str(lvl)
-        move = format_words(learnset[str(lvl)], remove="MOVE_")
+    for lvl, move in learnset:
+        lvltxt = " " + lvl if int(lvl) < 10 else lvl
+        move = format_words(move, remove="MOVE_")
         print(f"{lvltxt}. {move}", file=f)
 
 
@@ -117,16 +121,13 @@ def print_evolution(evo_methods, f):
             sentences.append(f"into {format_spec} with high beauty")
 
     if len(sentences) == 0:
-        print(file=f)
-    elif len(sentences) == 1:
-        print("\\", file=f)
-        print(f"__Evolves__: {sentences[0]}", file=f)
+        return
+    if len(sentences) == 1:
+        print(f"_Evolves_: {sentences[0]}", file=f)
     else:
-        print("\\", file=f)
-        print("__Evolves__: \\", file=f)
-        for sentence in sentences[:-1]:
-            print(f"    {sentence} \\", file=f)
-        print(f"    {sentences[-1]}", file=f)
+        print("_Evolves_:", file=f)
+        for sentence in sentences:
+            print(" - " + sentence, file=f)
 
 
 def get_modified_species(j, jc):
@@ -138,7 +139,7 @@ def get_modified_species(j, jc):
                 continue
             learnset = j["learnsets"][spec]
             c_learnset = jc["learnsets"][spec]
-            if set(learnset.keys()) | {0} != set(c_learnset.keys()) | {0}:
+            if set(a for a, b in learnset) | {0} != set(a for a, b in c_learnset) | {0}:
                 modified.add(spec)
                 continue
             if j["evo_methods"].get(spec) != jc["evo_methods"].get(spec):
@@ -180,23 +181,35 @@ def print_move_changes(movedata, c_movedata, f):
             print(file=f)
 
 
+SPECIES_ALWAYS_OMIT = {
+    "SPECIES_ALCREMIE_CARAMEL_SWIRL",
+    "SPECIES_ALCREMIE_VANILLA_CREAM",
+    "SPECIES_ALCREMIE_LEMON_CREAM",
+    "SPECIES_ALCREMIE_MATCHA_CREAM",
+    "SPECIES_ALCREMIE_SALTED_CREAM",
+    "SPECIES_ALCREMIE_MINT_CREAM",
+    "SPECIES_ALCREMIE_RAINBOW_SWIRL",
+    "SPECIES_ALCREMIE_RUBY_SWIRL",
+    "SPECIES_ALCREMIE_RUBY_CREAM",
+}
+
+
 def main():
-    if len(sys.argv) == 1:
-        print("filename required")
+    if len(sys.argv) <= 2:
+        print("usage: python gendocs.py [data] [compare_data]")
         return
 
     filename = f"meta/data/{sys.argv[1]}.json"
     with open(filename) as f:
         j = json.load(f)
 
-    species_modified = None
-    if len(sys.argv) > 2:
-        file_compare = f"meta/data/{sys.argv[2]}.json"
-        with open(file_compare) as f:
-            j_compare = json.load(f)
-        species_modified = get_modified_species(j, j_compare)
-        with open("meta/docs/move_changes.md", "w") as f:
-            print_move_changes(j["movedata"], j_compare["movedata"], f)
+    file_compare = f"meta/data/{sys.argv[2]}.json"
+    with open(file_compare) as f:
+        j_compare = json.load(f)
+
+    species_modified = get_modified_species(j, j_compare)
+    with open("meta/docs/move_changes.md", "w") as f:
+        print_move_changes(j["movedata"], j_compare["movedata"], f)
 
     pokedata = j["pokedata"]
     pokedex = j["pokedex"]
@@ -205,28 +218,22 @@ def main():
 
     with open("meta/docs/pokemon_data.md", "w") as f:
         for name, species in pokedex:
-            if species_modified is not None and not any(
-                spec in species_modified for spec in species
-            ):
+            if not any(spec in species_modified for spec in species):
                 continue
             print(f"## {name}", file=f)
             past_learnsets = []
-            actual_species = (
-                species
-                if species_modified is None
-                else [spec for spec in species if spec in species_modified]
-            )
+            actual_species = [spec for spec in species if spec in species_modified]
             for e, spec in enumerate(actual_species):
+                if spec in SPECIES_ALWAYS_OMIT or spec.endswith("_MEGA"):
+                    continue
                 if e != 0:
                     print(
-                        "### {}".format(format_words(spec, remove="SPECIES_")),
+                        "**{}**".format(format_words(spec, remove="SPECIES_")),
                         file=f,
                     )
-                print_pokedata(pokedata[spec], f)
+                print_pokedata(pokedata[spec], j_compare["pokedata"][spec], f)
                 if spec in evo_methods:
                     print_evolution(evo_methods[spec], f)
-                else:
-                    print(file=f)
                 print(file=f)
                 if learnsets[spec] not in past_learnsets:
                     print_learnset(learnsets[spec], f)

@@ -87,7 +87,7 @@ def parse_level_up():
         lines = [l.strip() for l in f.readlines()]
 
     poke_key = None
-    raw_learnsets = defaultdict(lambda: dict())
+    raw_learnsets = defaultdict(lambda: list())
     for line in lines:
         if "LevelUpMove" in line:
             poke_key = re.search(r"LevelUpMove\s*(\S*)\[", line).group(1)
@@ -97,7 +97,7 @@ def parse_level_up():
         if "LEVEL_UP_MOVE" in line:
             m = re.search(r"LEVEL_UP_MOVE\s*\(\s*(\S*),\s*(\S*)\s*\),", line)
             level, move = m.group(1), m.group(2)
-            raw_learnsets[poke_key][level] = move
+            raw_learnsets[poke_key].append((level, move))
 
     with open("src/data/pokemon/level_up_learnset_pointers.h") as f:
         lines = [l.strip() for l in f.readlines()]

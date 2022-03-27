@@ -33019,12 +33019,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_RUBY_CREAM] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33047,12 +33047,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_MATCHA_CREAM] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33075,12 +33075,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_MINT_CREAM] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33103,12 +33103,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_LEMON_CREAM] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33131,12 +33131,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_SALTED_CREAM] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33159,12 +33159,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_RUBY_SWIRL] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33187,12 +33187,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_CARAMEL_SWIRL] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
@@ -33215,12 +33215,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ALCREMIE_RAINBOW_SWIRL] =
     {
-        .baseHP        = 65,
+        .baseHP        = 118,
         .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 64,
+        .baseDefense   = 92,
+        .baseSpeed     = 60,
         .baseSpAttack  = 110,
-        .baseSpDefense = 121,
+        .baseSpDefense = 131,
         .type1 = TYPE_FAIRY,
         .type2 = TYPE_FAIRY,
         .catchRate = 100,
