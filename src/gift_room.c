@@ -72,7 +72,7 @@ const static u16 sDEdenA1_GiftMons[] = {
     SPECIES_AZURILL, SPECIES_MIME_JR,
     SPECIES_SPRITZEE, SPECIES_DEDENNE,
     SPECIES_TOGEPI, SPECIES_MILCERY
-}
+};
 
 void DungeonEden_GetGiftMon(void) {
     GetGiftMon(sDTutorial_GiftMons, ARRAY_COUNT(sDTutorial_GiftMons));

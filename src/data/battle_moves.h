@@ -3877,7 +3877,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST,
         #endif
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 5,
@@ -5014,7 +5014,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SILVER_WIND] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 5,
@@ -7319,7 +7319,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_OMINOUS_WIND] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 5,
