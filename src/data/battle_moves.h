@@ -2019,13 +2019,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SKULL_BASH] =
     {
-        #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 130,
-            .pp = 10,
-        #else
-            .power = 100,
-            .pp = 15,
-        #endif
+        .power = 150,
+        .pp = 10,
         .effect = EFFECT_SKULL_BASH,
         .type = TYPE_NORMAL,
         .accuracy = 100,
