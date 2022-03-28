@@ -294,229 +294,188 @@ static const struct TrainerMon sParty_Ed_Amy[] = {
     },
 };
 
-static const struct TrainerMon sParty_Marcel[] = {
+static const struct TrainerMon sParty_Ed_Richard[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
-    }
 };
 
-static const struct TrainerMon sParty_Alberto[] = {
+static const struct TrainerMon sParty_Ed_Pat[] = {
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
-    }
 };
 
-static const struct TrainerMon sParty_Ed[] = {
+static const struct TrainerMon sParty_Ed_Cory[] = {
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
-    }
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern4[] = {
+static const struct TrainerMon sParty_Ed_Claude[] = {
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMon sParty_Declan[] = {
-    {
-    .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_GYARADOS,
-    }
-};
-
-static const struct TrainerMon sParty_GruntRusturfTunnel[] = {
-    {
-    .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_POOCHYENA,
-    }
-};
-
-static const struct TrainerMon sParty_GruntWeatherInst1[] = {
-    {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_ZUBAT,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
-    }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst2[] = {
+static const struct TrainerMon sParty_Ed_Donna[] = {
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
-    }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst3[] = {
+static const struct TrainerMon sParty_Ed_Julie[] = {
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
+};
+
+static const struct TrainerMon sParty_Ed_Ike[] = {
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
-    }
 };
 
-static const struct TrainerMon sParty_GruntMuseum1[] = {
+static const struct TrainerMon sParty_Ed_Melanie[] = {
     {
-    .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMon sParty_GruntMuseum2[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
-    }
 };
 
-static const struct TrainerMon sParty_GruntSpaceCenter1[] = {
+static const struct TrainerMon sParty_Ed_Herb[] = {
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
-    }
-};
-
-static const struct TrainerMon sParty_GruntMtPyre1[] = {
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
-    }
-};
-
-static const struct TrainerMon sParty_GruntMtPyre2[] = {
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMon sParty_GruntMtPyre3[] = {
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_POOCHYENA,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_CARVANHA,
-    }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst4[] = {
+// Eden A1 Elites
+static const struct TrainerMon sParty_Ed_Reginald[] = {
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMon sParty_GruntAquaHideout5[] = {
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMon sParty_GruntAquaHideout6[] = {
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
-    }
-};
-
-static const struct TrainerMon sParty_Fredrick[] = {
-    {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MAKUHITA,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MACHOKE,
-    }
 };
 
-static const struct TrainerMon sParty_Matt[] = {
+static const struct TrainerMon sParty_Ed_Horatio[] = {
     {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_MIGHTYENA,
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
     },
-    {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_GOLBAT,
-    }
 };
 
-static const struct TrainerMon sParty_Zander[] = {
+static const struct TrainerMon sParty_Ed_Glenda[] = {
     {
-    .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_HARIYAMA,
-    }
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
+    },
 };
 
+static const struct TrainerMon sParty_Ed_Kendal[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
+// Eden A1 Boss
+static const struct TrainerMon sParty_Ed_Adam1[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
+static const struct TrainerMon sParty_Ed_Adam2[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_ARON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+//
 static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
     {
     .iv = 50,

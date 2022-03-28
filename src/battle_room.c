@@ -101,16 +101,16 @@ void DungeonEden_GenerateBattle(void) {
             break;
         case 1:
         default:
-            GenerateBattle(TRAINER_TU_DARIEN, TRAINER_TU_EMILY, 400, 2);
+            GenerateBattle(TRAINER_ED_RICHARD, TRAINER_ED_HERB, 400, 2);
             break;
     }
 }
 
 void DungeonEden_GenerateEliteBattle(void) {
-    GenerateBattle(TRAINER_TU_ROSEMARY, TRAINER_TU_EVERETT, 700, 1);
+    GenerateBattle(TRAINER_ED_REGINALD, TRAINER_ED_KENDAL, 700, 1);
 }
 
 void DungeonEden_GenerateBossBattle(void) {
-    GenerateBattle(TRAINER_TU_MAGNOLIA, TRAINER_TU_MAGNOLIA, 1000, 0);
+    GenerateBattle(TRAINER_ED_ADAM_1, TRAINER_ED_ADAM_2, 1000, 0);
     VarSet(VAR_EXP_MULTIPLIER, 0);
 }

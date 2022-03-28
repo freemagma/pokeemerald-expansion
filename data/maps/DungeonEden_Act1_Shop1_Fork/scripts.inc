@@ -4,7 +4,7 @@ DungeonEden_Act1_Shop1_Fork_MapScripts::
 	.byte 0
 
 DungeonEden_Act1_Shop1_Fork_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	genrandomshop 0
+	genrandomshop 1
 	setvar VAR_TEMP_0, 0
 	return
 
