@@ -71,6 +71,9 @@
 ## Fire Blast
 120 Power (+10)
 
+## Skull Bash
+150 Power (+20)
+
 ## Barrage
 100 Accuracy (+15%)
 

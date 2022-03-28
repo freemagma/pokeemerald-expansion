@@ -10,6 +10,7 @@ mapscripts DungeonTutorial_Entrance_MapScripts {
         addmoney(500)
         setvar(VAR_LEVEL_SCALE, LEVEL)
         setvar(VAR_EXP_MULTIPLIER, 5)
+        setvar(VAR_GIFT_LEVEL_DIFF, 2)
     }
 }
 

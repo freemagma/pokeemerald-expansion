@@ -130,6 +130,9 @@ def print_evolution(evo_methods, f):
             print(" - " + sentence, file=f)
 
 
+DATA_KEYS_IGNORE = {"growthRate"}
+
+
 def get_modified_species(j, jc):
     modified = set()
     for name, species in j["pokedex"]:
@@ -148,6 +151,8 @@ def get_modified_species(j, jc):
             data = j["pokedata"][spec]
             c_data = jc["pokedata"][spec]
             for key in set(data.keys()) | set(c_data.keys()):
+                if key in DATA_KEYS_IGNORE:
+                    continue
                 if key in ("item1", "item2"):
                     continue
                 if data.get(key) != c_data.get(key):

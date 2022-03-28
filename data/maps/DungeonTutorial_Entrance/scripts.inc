@@ -11,6 +11,7 @@ DungeonTutorial_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	addmoney 500
 	setvar VAR_LEVEL_SCALE, 12
 	setvar VAR_EXP_MULTIPLIER, 5
+	setvar VAR_GIFT_LEVEL_DIFF, 2
 	return
 
 

@@ -4,13 +4,14 @@ DungeonEden_Act1_Entrance_MapScripts::
 
 DungeonEden_Act1_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	callnative DungeonEden_GenerateRoute
-	additem ITEM_MAX_POTION, 3
-	additem ITEM_RARE_CANDY, 5
+	additem ITEM_MAX_POTION, 5
+	additem ITEM_RARE_CANDY, 10
 	additem ITEM_FULL_HEAL, 2
 	additem ITEM_POKE_BALL, 20
 	addmoney 500
 	setvar VAR_LEVEL_SCALE, 5
-	setvar VAR_EXP_MULTIPLIER, 5
+	setvar VAR_EXP_MULTIPLIER, 3
+	setvar VAR_GIFT_LEVEL_DIFF, 0
 	return
 
 
@@ -26,7 +27,7 @@ Eden_StarterBall_1:
 
 Eden_StarterBall_2:
 	bufferspeciesname STR_VAR_1, SPECIES_APPLIN
-	givemon SPECIES_ARCEUS, 100, ITEM_NONE
+	givemon SPECIES_APPLIN, 5, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1

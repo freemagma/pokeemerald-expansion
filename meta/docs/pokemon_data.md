@@ -1,3 +1,69 @@
+## Squirtle
+_Type_: Water
+_Stats_: 44/48/65/50/64/43
+_Abilities_: Torrent, Shell Armor, Rain Dish
+_Evolves_: into Wartortle at level 16
+
+ 1. Tackle
+ 5. Water Gun
+12. Bite
+16. Water Pulse
+20. Rapid Spin
+22. Protect
+28. Aqua Tail
+31. Ice Punch
+34. Skull Bash
+37. Body Slam
+41. Muddy Water
+45. Dragon Tail
+50. Hydro Pump
+
+## Wartortle
+_Type_: Water
+_Stats_: 59/63/80/65/80/58
+_Abilities_: Torrent, Shell Armor, Rain Dish
+_Evolves_: into Blastoise at level 36
+
+ 1. Fake Out
+ 1. Zen Headbutt
+ 1. Tackle
+ 5. Water Gun
+12. Bite
+16. Water Pulse
+20. Rapid Spin
+22. Protect
+28. Aqua Tail
+31. Ice Punch
+34. Skull Bash
+37. Body Slam
+41. Muddy Water
+45. Dragon Tail
+50. Hydro Pump
+
+## Blastoise
+_Type_: Water
+_Stats_: 79/83/100/85/105/78
+_Abilities_: Torrent, Shell Armor, Rain Dish
+
+ 0. Flash Cannon
+ 1. Flash Cannon
+ 1. Fake Out
+ 1. Zen Headbutt
+ 1. Tackle
+ 5. Water Gun
+12. Bite
+16. Water Pulse
+20. Rapid Spin
+22. Protect
+28. Aqua Tail
+31. Ice Punch
+34. Skull Bash
+37. Body Slam
+41. Muddy Water
+45. Dragon Tail
+50. Hydro Pump
+
+
 ## Rattata
 _Type_: Normal
 _Stats_: 30/56/35/25/35/72
@@ -75,6 +141,69 @@ _Abilities_: Sand Force, Arena Trap, Sand Veil
 41. Tri Attack
 47. Earthquake
 
+
+## Bellsprout
+_Type_: Grass/Poison
+_Stats_: 50/75/35/70/30/40
+_Abilities_: Chlorophyll, None, Gluttony
+_Evolves_: into Weepinbell at level 21
+
+ 1. Vine Whip
+ 1. Wrap
+10. Acid
+15. Razor Leaf
+19. Ingrain
+24. Knock Off
+26. Poison Jab
+30. Slam
+34. Leaf Blade
+41. Power Whip
+46. Wring Out
+55. Solar Beam
+61. Synthesis
+
+## Weepinbell
+_Type_: Grass/Poison
+_Stats_: 65/90/50/85/45/55
+_Abilities_: Chlorophyll, None, Gluttony
+_Evolves_: into Victreebel via Leaf Stone
+
+ 1. Gunk Shot
+ 1. Weather Ball
+ 1. Vine Whip
+ 1. Wrap
+10. Acid
+15. Razor Leaf
+19. Ingrain
+24. Knock Off
+26. Poison Jab
+30. Slam
+34. Leaf Blade
+41. Power Whip
+46. Wring Out
+55. Solar Beam
+61. Synthesis
+
+## Victreebel
+_Type_: Grass/Poison
+_Stats_: 80/105/65/100/70/70
+_Abilities_: Chlorophyll, None, Gluttony
+
+ 1. Gunk Shot
+ 1. Weather Ball
+ 1. Vine Whip
+ 1. Wrap
+10. Acid
+15. Razor Leaf
+19. Ingrain
+24. Knock Off
+26. Poison Jab
+30. Slam
+34. Leaf Blade
+41. Power Whip
+46. Wring Out
+55. Solar Beam
+61. Synthesis
 
 ## Geodude
 _Type_: Rock/Ground
@@ -341,6 +470,47 @@ _Abilities_: Swift Swim, Battle Armor, Weak Armor
 63. Rock Slide
 72. Night Slash
 
+## Ledyba
+_Type_: Bug/Flying
+_Stats_: 40/60/30/50/80/55 (0/+40/0/+10/0/0)
+_Abilities_: Iron Fist, Technician
+_Evolves_: into Ledian at level 18
+
+ 1. Tackle
+ 1. Gust
+ 6. Struggle Bug
+ 9. Swift
+14. Mach Punch
+18. Silver Wind
+23. Comet Punch
+25. Aerial Ace
+30. Bug Bite
+36. Sky Uppercut
+40. Lunge
+44. Dual Wingbeat
+51. Encore
+
+## Ledian
+_Type_: Bug/Flying
+_Stats_: 60/95/50/50/110/85 (+5/+60/0/-5/0/0)
+_Abilities_: Iron Fist, Technician
+
+ 1. U Turn
+ 1. Bullet Punch
+ 1. Tackle
+ 1. Gust
+ 6. Struggle Bug
+ 9. Swift
+14. Mach Punch
+18. Silver Wind
+23. Comet Punch
+25. Aerial Ace
+30. Bug Bite
+36. Sky Uppercut
+40. Lunge
+44. Dual Wingbeat
+51. Encore
+
 ## Togepi
 _Type_: Fairy
 _Stats_: 35/20/65/40/65/20
@@ -382,7 +552,7 @@ _Evolves_: into Togekiss via Shiny Stone
 ## Marill
 _Type_: Water/Fairy
 _Stats_: 70/20/50/20/50/40
-_Abilities_: Thick Fat, Huge Power, Sap Sipper
+_Abilities_: Huge Power
 _Evolves_: into Azumarill at level 22
 
  1. Aqua Jet
@@ -403,7 +573,7 @@ _Evolves_: into Azumarill at level 22
 ## Azumarill
 _Type_: Water/Fairy
 _Stats_: 100/50/80/60/80/50
-_Abilities_: Thick Fat, Huge Power, Sap Sipper
+_Abilities_: Huge Power
 
  1. Iron Tail
  1. Aqua Jet
@@ -573,7 +743,7 @@ _Abilities_: Thick Fat, Guts, Sheer Force
 ## Azurill
 _Type_: Normal/Fairy
 _Stats_: 50/20/40/20/40/20
-_Abilities_: Thick Fat, Huge Power, Sap Sipper
+_Abilities_: Huge Power
 _Evolves_: into Marill at level 14
 
  1. Splash
@@ -591,6 +761,24 @@ _Evolves_: into Marill at level 14
 45. Superpower
 51. Hydro Pump
 55. Body Slam
+
+## Nosepass
+_Type_: Rock
+_Stats_: 30/45/135/45/90/30
+_Abilities_: Sturdy, Magnet Pull, Sand Force
+_Evolves_: into Probopass at level 31
+
+ 1. Tackle
+ 8. Rock Throw
+12. Spark
+19. Tri Attack
+22. Power Gem
+29. Earth Power
+35. Discharge
+40. Stone Edge
+43. Lock On
+43. Zap Cannon
+48. Body Press
 
 ## Aron
 _Type_: Steel/Rock
@@ -788,6 +976,47 @@ _Abilities_: Intimidate, None, Reckless
 41. Flying Press
 49. Brave Bird
 54. Final Gambit
+
+## Drifloon
+_Type_: Ghost/Flying
+_Stats_: 90/50/34/60/44/70
+_Abilities_: Flare Boost, Unburden
+_Evolves_: into Drifblim at level 28
+
+ 1. Constrict
+ 1. Minimize
+ 4. Astonish
+ 8. Gust
+13. Focus Energy
+16. Payback
+20. Ominous Wind
+25. Stockpile
+27. Hex
+32. Swallow
+32. Spit Up
+36. Shadow Ball
+40. Amnesia
+44. Baton Pass
+50. Explosion
+
+## Drifblim
+_Type_: Ghost/Flying
+_Stats_: 150/80/44/90/54/80
+_Abilities_: Flare Boost, Unburden
+
+ 1. Extrasensory
+ 1. Constrict
+ 1. Astonish
+ 8. Gust
+13. Payback
+20. Ominous Wind
+26. Baton Pass
+31. Air Slash
+40. Shadow Ball
+48. Acrobatics
+51. Amnesia
+59. Explosion
+67. Strength Sap
 
 ## Glameow
 _Type_: Normal
@@ -991,6 +1220,28 @@ _Abilities_: Oblivious, Snow Cloak, Thick Fat
 40. Body Slam
 48. Blizzard
 
+## Probopass
+_Type_: Rock/Steel
+_Stats_: 60/55/145/75/150/40
+_Abilities_: Sturdy, Magnet Pull, Sand Force
+
+ 0. Flash Cannon
+ 1. Flash Cannon
+ 1. Steel Beam
+ 1. Magnet Rise
+ 1. Magnet Bomb
+ 1. Tackle
+ 8. Rock Throw
+12. Spark
+19. Tri Attack
+22. Power Gem
+29. Earth Power
+35. Discharge
+40. Stone Edge
+43. Lock On
+43. Zap Cannon
+48. Body Press
+
 ## Munna
 _Type_: Psychic
 _Stats_: 76/25/45/67/55/24
@@ -1031,6 +1282,46 @@ _Abilities_: Synchronize, Telepathy
 41. Dream Eater
 43. Telekinesis
 51. Moonblast
+
+## Trubbish
+_Type_: Poison
+_Stats_: 50/50/62/40/62/65
+_Abilities_: Stench, Sticky Hold, Aftermath
+_Evolves_: into Garbodor at level 27
+
+ 1. Pound
+ 1. Acid Spray
+ 5. Recycle
+11. Stomp
+18. Clear Smog
+23. Retaliate
+29. Cross Poison
+33. Pain Split
+36. Body Slam
+40. Gunk Shot
+46. Toxic
+
+## Garbodor
+_Type_: Poison
+_Stats_: 80/95/82/60/82/75
+_Abilities_: Stench, Weak Armor, Aftermath
+
+ 1. Metal Claw
+ 1. Seed Bomb
+ 1. Stomping Tantrum
+ 1. Pound
+ 1. Acid Spray
+ 5. Recycle
+11. Stomp
+18. Clear Smog
+23. Retaliate
+29. Cross Poison
+33. Pain Split
+36. Body Slam
+40. Gunk Shot
+46. Toxic
+50. Seed Bomb
+59. Explosion
 
 ## Fletchling
 _Type_: Normal/Flying
@@ -1177,6 +1468,45 @@ _Abilities_: Healer, None, Aroma Veil
 50. Healing Wish
 52. Misty Explosion
 
+## Helioptile
+_Type_: Electric/Normal
+_Stats_: 44/38/33/61/43/70
+_Abilities_: Dry Skin, Volt Absorb, Solar Power
+_Evolves_: into Heliolisk via Sun Stone
+
+ 1. Pound
+ 6. Thunder Shock
+11. Quick Attack
+14. Mud Shot
+17. Weather Ball
+20. Parabolic Charge
+25. Razor Wind
+30. Bulldoze
+36. Volt Switch
+42. Dragon Pulse
+45. Electrify
+49. Thunderbolt
+
+## Heliolisk
+_Type_: Electric/Normal
+_Stats_: 62/55/52/109/94/109
+_Abilities_: Dry Skin, Volt Absorb, Solar Power
+
+ 1. Thunder
+ 1. Fire Blast
+ 1. Pound
+ 6. Thunder Shock
+11. Quick Attack
+14. Mud Shot
+17. Weather Ball
+20. Parabolic Charge
+25. Razor Wind
+30. Bulldoze
+36. Volt Switch
+42. Dragon Pulse
+45. Electrify
+49. Thunderbolt
+
 ## Dedenne
 _Type_: Electric/Fairy
 _Stats_: 67/58/57/81/67/101
@@ -1230,6 +1560,80 @@ _Abilities_: Shield Dust, Sweet Veil
 31. Dazzling Gleam
 36. Aromatherapy
 41. Moonblast
+
+## Wooloo
+_Type_: Normal
+_Stats_: 42/40/55/40/45/48
+_Abilities_: Fluffy, Run Away, Bulletproof
+_Evolves_: into Dubwool at level 24
+
+ 1. Tackle
+ 1. Defense Curl
+ 1. Rollout
+ 6. Horn Attack
+10. Double Kick
+13. Headbutt
+20. Take Down
+24. Body Press
+29. Double Edge
+33. Retaliate
+39. Mega Kick
+45. Cotton Guard
+
+## Dubwool
+_Type_: Normal
+_Stats_: 72/80/100/60/90/88
+_Abilities_: Fluffy, Steadfast, Bulletproof
+
+ 1. Wild Charge
+ 1. Bounce
+ 1. Tackle
+ 1. Defense Curl
+ 1. Rollout
+ 6. Horn Attack
+10. Double Kick
+13. Headbutt
+20. Take Down
+24. Body Press
+29. Double Edge
+33. Retaliate
+39. Mega Kick
+45. Cotton Guard
+
+## Chewtle
+_Type_: Water
+_Stats_: 50/64/50/38/38/44
+_Abilities_: Strong Jaw, Shell Armor, Swift Swim
+_Evolves_: into Drednaw at level 22
+
+ 1. Tackle
+ 1. Water Gun
+ 7. Bite
+14. Protect
+21. Headbutt
+28. Crunch
+35. Jaw Lock
+42. Liquidation
+49. Body Slam
+51. Head Smash
+
+## Drednaw
+_Type_: Water/Rock
+_Stats_: 90/115/90/48/68/74
+_Abilities_: Strong Jaw, Shell Armor, Swift Swim
+
+ 0. Rock Tomb
+ 1. Rock Tomb
+ 1. Tackle
+ 1. Water Gun
+ 7. Bite
+14. Protect
+21. Headbutt
+28. Crunch
+35. Jaw Lock
+42. Liquidation
+49. Body Slam
+51. Head Smash
 
 ## Applin
 _Type_: Grass/Dragon
@@ -1296,7 +1700,7 @@ _Abilities_: Regenerator
 
 ## Milcery
 _Type_: Fairy
-_Stats_: 68/40/60/65/72/40 (+23/0/+20/+15/+11/+6)
+_Stats_: 45/40/40/50/61/34
 _Abilities_: Sweet Veil, None, Aroma Veil
 _Evolves_: into Alcremie at level 32
 
@@ -1312,7 +1716,7 @@ _Evolves_: into Alcremie at level 32
 
 ## Alcremie
 _Type_: Fairy
-_Stats_: 118/60/92/110/131/60 (+53/0/+17/0/+10/-4)
+_Stats_: 65/60/75/110/121/64
 _Abilities_: Sweet Veil, None, Aroma Veil
 
  0. Decorate

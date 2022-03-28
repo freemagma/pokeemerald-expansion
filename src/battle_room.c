@@ -97,17 +97,17 @@ void DungeonTutorial_GenerateBossBattle(void) {
 void DungeonEden_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 4);
+            GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 2);
             break;
         case 1:
         default:
-            GenerateBattle(TRAINER_TU_DARIEN, TRAINER_TU_EMILY, 400, 3);
+            GenerateBattle(TRAINER_TU_DARIEN, TRAINER_TU_EMILY, 400, 2);
             break;
     }
 }
 
 void DungeonEden_GenerateEliteBattle(void) {
-    GenerateBattle(TRAINER_TU_ROSEMARY, TRAINER_TU_EVERETT, 700, 2);
+    GenerateBattle(TRAINER_TU_ROSEMARY, TRAINER_TU_EVERETT, 700, 1);
 }
 
 void DungeonEden_GenerateBossBattle(void) {
