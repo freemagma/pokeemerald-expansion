@@ -4310,8 +4310,8 @@ static const struct LevelUpMove sMagcargoLevelUpLearnset[] = {
 
 static const struct LevelUpMove sSwinubLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_ICE_SHARD),
-    LEVEL_UP_MOVE( 5, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 5, MOVE_ICE_SHARD),
     LEVEL_UP_MOVE(10, MOVE_AVALANCHE),
     LEVEL_UP_MOVE(15, MOVE_MUD_BOMB),
     LEVEL_UP_MOVE(17, MOVE_STOMP),
@@ -4327,8 +4327,8 @@ static const struct LevelUpMove sSwinubLevelUpLearnset[] = {
 static const struct LevelUpMove sPiloswineLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_IRON_HEAD),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_ICE_SHARD),
-    LEVEL_UP_MOVE( 5, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 5, MOVE_ICE_SHARD),
     LEVEL_UP_MOVE(10, MOVE_AVALANCHE),
     LEVEL_UP_MOVE(15, MOVE_MUD_BOMB),
     LEVEL_UP_MOVE(17, MOVE_STOMP),
@@ -9370,8 +9370,8 @@ static const struct LevelUpMove sMamoswineLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_STONE_EDGE),
     LEVEL_UP_MOVE( 1, MOVE_IRON_HEAD),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_ICE_SHARD),
-    LEVEL_UP_MOVE( 5, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE( 5, MOVE_ICE_SHARD),
     LEVEL_UP_MOVE(10, MOVE_AVALANCHE),
     LEVEL_UP_MOVE(15, MOVE_MUD_BOMB),
     LEVEL_UP_MOVE(17, MOVE_STOMP),

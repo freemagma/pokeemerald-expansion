@@ -166,15 +166,18 @@ void DungeonEden_GenerateRoute(void) {
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
             sRoute[i][0] = encounter;
-            sRoute[i][1] = eliteBattle;
+            sRoute[i][1] = battle;
+            sRoute[i][1].param = j == 0 ? 0 : 1;
         } else {
             sRoute[i][0] = battle;
-            sRoute[i][0].param = 1;
+            sRoute[i][0].param = j == 0 ? 0 : 1;
         }
     }
 
     sRoute[i][0] = encounter;
-    sRoute[i++][1] = shop;
+    sRoute[i++][1] = eliteBattle;
+
+    sRoute[i++][0] = shop;
 
     groupedFloors = 7 - groupedFloors;
     specialFloor = Random() % groupedFloors;
