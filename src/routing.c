@@ -144,6 +144,7 @@ void DungeonEden_GenerateRoute(void) {
     ClearRoute();
 
     sRoute[i++][0] = gift;
+    sRoute[i++][0] = encounter;
 
     groupedFloors = 3;
     specialFloor = 1 + Random() % (groupedFloors - 1);
@@ -161,7 +162,7 @@ void DungeonEden_GenerateRoute(void) {
     sRoute[i++][0] = shop;
 
     groupedFloors = 3 + (Random() % 2);
-    specialFloor = Random() % (groupedFloors - 1);
+    specialFloor = 1 + Random() % (groupedFloors - 1);
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
             sRoute[i][0] = encounter;

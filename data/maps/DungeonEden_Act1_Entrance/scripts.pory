@@ -1,4 +1,4 @@
-const LEVEL = 7
+const LEVEL = 5
 
 mapscripts DungeonEden_Act1_Entrance_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
@@ -9,7 +9,7 @@ mapscripts DungeonEden_Act1_Entrance_MapScripts {
         additem(ITEM_POKE_BALL, 20)
         addmoney(500)
         setvar(VAR_LEVEL_SCALE, LEVEL)
-        setvar(VAR_EXP_MULTIPLIER, 3)
+        setvar(VAR_EXP_MULTIPLIER, 2)
         setvar(VAR_GIFT_LEVEL_DIFF, 0)
     }
 }
