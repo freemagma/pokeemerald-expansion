@@ -10,7 +10,8 @@ DungeonTutorial_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	additem ITEM_POKE_BALL, 20
 	addmoney 500
 	setvar VAR_LEVEL_SCALE, 12
-	setvar VAR_EXP_MULTIPLIER, 5
+	setvar VAR_EXP_MULTIPLIER_NUMERATOR, 5
+	setvar VAR_EXP_MULTIPLIER_DENOMINATOR, 1
 	setvar VAR_GIFT_LEVEL_DIFF, 2
 	return
 

@@ -288,9 +288,7 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
 
     scaleTo = VarGet(VAR_LEVEL_SCALE) * WILD_SCALE_RATIO;
     if (VarGet(VAR_LEVEL_SCALE) > WILD_SCALE_DELTA)
-        scaleTo = min(scaleTo, VarGet(VAR_LEVEL_SCALE) - WILD_SCALE_DELTA);
-    else
-        scaleTo = 3;
+        scaleTo = max(scaleTo, VarGet(VAR_LEVEL_SCALE) - WILD_SCALE_DELTA);
 
     if (max >= min + scaleTo)
         min = 1;

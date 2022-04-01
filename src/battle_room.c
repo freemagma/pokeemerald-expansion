@@ -91,7 +91,7 @@ void DungeonTutorial_GenerateEliteBattle(void) {
 
 void DungeonTutorial_GenerateBossBattle(void) {
     GenerateBattle(TRAINER_TU_MAGNOLIA, TRAINER_TU_MAGNOLIA, 1000, 0);
-    VarSet(VAR_EXP_MULTIPLIER, 0);
+    VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
 }
 
 void DungeonEden_GenerateBattle(void) {
@@ -100,17 +100,20 @@ void DungeonEden_GenerateBattle(void) {
             GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 2);
             break;
         case 1:
+            GenerateBattle(TRAINER_ED_RICHARD, TRAINER_ED_DONNA, 400, 2);
+            break;
+        case 2:
         default:
-            GenerateBattle(TRAINER_ED_RICHARD, TRAINER_ED_HERB, 400, 2);
+            GenerateBattle(TRAINER_ED_JULIE, TRAINER_ED_REGINALD, 400, 1);
             break;
     }
 }
 
 void DungeonEden_GenerateEliteBattle(void) {
-    GenerateBattle(TRAINER_ED_REGINALD, TRAINER_ED_KENDAL, 700, 1);
+    GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 0);
 }
 
 void DungeonEden_GenerateBossBattle(void) {
     GenerateBattle(TRAINER_ED_ADAM_1, TRAINER_ED_ADAM_2, 1000, 0);
-    VarSet(VAR_EXP_MULTIPLIER, 0);
+    VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
 }

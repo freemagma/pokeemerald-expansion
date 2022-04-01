@@ -341,12 +341,11 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Ed_Herb},
     },
 
-    // Eden A1 Elites
     [TRAINER_ED_REGINALD] =
     {
-        .trainerClass = TRAINER_CLASS_GENTLEMAN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
-        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
         .trainerName = _("Reginald"),
         .items = {},
         .doubleBattle = FALSE,
@@ -355,11 +354,12 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Ed_Reginald},
     },
 
+    // Eden A1 Elites
     [TRAINER_ED_HORACIO] =
     {
-        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
         .trainerName = _("Horatio"),
         .items = {},
         .doubleBattle = FALSE,

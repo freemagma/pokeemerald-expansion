@@ -273,7 +273,7 @@ static const struct TrainerMon sParty_Ed_Francesco[] = {
     .lvl = 10,
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAME_CHARGE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .moves = {MOVE_FLAME_CHARGE, MOVE_IRON_HEAD, MOVE_NONE, MOVE_NONE},
     .nature = NATURE_QUIET,
     .ability = ABILITY_SLOT_1,
     },
@@ -281,7 +281,7 @@ static const struct TrainerMon sParty_Ed_Francesco[] = {
 static const struct TrainerMon sParty_Ed_Amy[] = {
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_ARON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_METAL_CLAW, MOVE_NONE, MOVE_NONE, MOVE_NONE},
@@ -377,9 +377,9 @@ static const struct TrainerMon sParty_Ed_Claude[] = {
     .iv = 31,
     .lvl = 10,
     .species = SPECIES_ONIX,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_STEALTH_ROCK, MOVE_SMACK_DOWN, MOVE_COIL, MOVE_NONE},
-    .nature = NATURE_SERIOUS,
+    .heldItem = ITEM_SOFT_SAND,
+    .moves = {MOVE_STEALTH_ROCK, MOVE_SMACK_DOWN, MOVE_BULLDOZE, MOVE_NONE},
+    .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_2
     },
     {
@@ -432,13 +432,14 @@ static const struct TrainerMon sParty_Ed_Donna[] = {
     },
 };
 
+// DEdenA1 O3 
 static const struct TrainerMon sParty_Ed_Julie[] = {
     {
     .iv = 31,
     .lvl = 10,
     .species = SPECIES_MORELULL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SPORE, MOVE_GIGA_DRAIN, MOVE_STRENGTH_SAP, MOVE_NONE},
+    .moves = {MOVE_SPORE, MOVE_GIGA_DRAIN, MOVE_STRENGTH_SAP, MOVE_DAZZLING_GLEAM},
     .nature = NATURE_MODEST,
     .ability = ABILITY_SLOT_2,
     },
@@ -454,7 +455,7 @@ static const struct TrainerMon sParty_Ed_Julie[] = {
     {
     .iv = 31,
     .lvl = 10,
-    .species = SPECIES_ELEKID,
+    .species = SPECIES_ELECTABUZZ,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDER_WAVE, MOVE_THUNDER_SHOCK, MOVE_SWIFT, MOVE_NONE},
     .nature = NATURE_TIMID,
@@ -463,7 +464,7 @@ static const struct TrainerMon sParty_Ed_Julie[] = {
     {
     .iv = 31,
     .lvl = 10,
-    .species = SPECIES_GASTLY,
+    .species = SPECIES_HAUNTER,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_HEX, MOVE_DARK_PULSE, MOVE_MEAN_LOOK, MOVE_NONE},
     .nature = NATURE_GENTLE,
@@ -483,19 +484,19 @@ static const struct TrainerMon sParty_Ed_Ike[] = {
     },
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_SUNFLORA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SOLAR_BEAM, MOVE_NONE, MOVE_EMBER, MOVE_SUNNY_DAY},
+    .moves = {MOVE_SOLAR_BEAM, MOVE_NONE, MOVE_WEATHER_BALL, MOVE_SUNNY_DAY},
     .nature = NATURE_SERIOUS,
     .ability = ABILITY_SLOT_1,
     },
     {
     .iv = 31,
-    .lvl = 9,
-    .species = SPECIES_CHARMANDER,
+    .lvl = 10,
+    .species = SPECIES_CHARMELEON,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_EMBER, MOVE_SUNNY_DAY, MOVE_DRAGON_BREATH, MOVE_NONE},
+    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_DRAGON_BREATH, MOVE_NONE},
     .nature = NATURE_TIMID,
     .ability = ABILITY_HIDDEN,
     },
@@ -513,7 +514,7 @@ static const struct TrainerMon sParty_Ed_Melanie[] = {
     },
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_LOUDRED,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_UPROAR, MOVE_NONE, MOVE_NONE, MOVE_NONE},
@@ -522,10 +523,10 @@ static const struct TrainerMon sParty_Ed_Melanie[] = {
     },
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_EXPLOUD,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FIRE_FANG, MOVE_THUNDER_FANG, MOVE_NONE, MOVE_NONE},
+    .moves = {MOVE_FIRE_FANG, MOVE_THUNDER_FANG, MOVE_ICE_FANG, MOVE_NONE},
     .nature = NATURE_ADAMANT,
     .ability = ABILITY_SLOT_1,
     },
@@ -536,8 +537,8 @@ static const struct TrainerMon sParty_Ed_Herb[] = {
     .iv = 31,
     .lvl = 10,
     .species = SPECIES_MAREANIE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SCALD, MOVE_BANEFUL_BUNKER, MOVE_PIN_MISSILE, MOVE_NONE},
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_SCALD, MOVE_BANEFUL_BUNKER, MOVE_SLUDGE_BOMB, MOVE_NONE},
     .nature = NATURE_DOCILE,
     .ability = ABILITY_HIDDEN,
     },
@@ -546,14 +547,44 @@ static const struct TrainerMon sParty_Ed_Herb[] = {
     .lvl = 10,
     .species = SPECIES_RABOOT,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_DOUBLE_KICK, MOVE_HEADBUTT, MOVE_U_TURN, MOVE_NONE},
+    .moves = {MOVE_DOUBLE_KICK, MOVE_HEADBUTT, MOVE_U_TURN, MOVE_FLAME_WHEEL},
     .nature = NATURE_JOLLY,
     .ability = ABILITY_HIDDEN,
     },
 };
 
-// Eden A1 Elites
 static const struct TrainerMon sParty_Ed_Reginald[] = {
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_TYRUNT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_DRAGON_TAIL, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_SERIOUS,
+    .ability = ABILITY_SLOT_2,
+    },
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_DRAKLOAK,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SHADOW_PUNCH, MOVE_DRAGON_DANCE, MOVE_BITE, MOVE_DRAGON_TAIL},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+    {
+    .iv = 31,
+    .lvl = 10,
+    .species = SPECIES_PAWNIARD,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SUCKER_PUNCH, MOVE_IRON_HEAD, MOVE_NONE, MOVE_NONE},
+    .nature = NATURE_JOLLY,
+    .ability = ABILITY_SLOT_1,
+    },
+};
+
+// Eden A1 Elites
+static const struct TrainerMon sParty_Ed_Horatio[] = {
     {
     .iv = 31,
     .lvl = 9,
@@ -579,36 +610,6 @@ static const struct TrainerMon sParty_Ed_Reginald[] = {
     .heldItem = ITEM_NONE,
     .moves = {MOVE_KNOCK_OFF, MOVE_SLUDGE_BOMB, MOVE_DIG, MOVE_SCREECH},
     .nature = NATURE_RELAXED,
-    .ability = ABILITY_SLOT_1,
-    },
-};
-
-static const struct TrainerMon sParty_Ed_Horatio[] = {
-    {
-    .iv = 31,
-    .lvl = 10,
-    .species = SPECIES_TYRUNT,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_DRAGON_TAIL, MOVE_NONE, MOVE_NONE},
-    .nature = NATURE_SERIOUS,
-    .ability = ABILITY_SLOT_2,
-    },
-    {
-    .iv = 31,
-    .lvl = 10,
-    .species = SPECIES_VIBRAVA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_BUG_BUZZ, MOVE_BULLDOZE, MOVE_U_TURN, MOVE_DRAGON_PULSE},
-    .nature = NATURE_SERIOUS,
-    .ability = ABILITY_SLOT_1,
-    },
-    {
-    .iv = 31,
-    .lvl = 10,
-    .species = SPECIES_DRAKLOAK,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SHADOW_PUNCH, MOVE_DRAGON_DANCE, MOVE_BITE, MOVE_DRAGON_TAIL},
-    .nature = NATURE_JOLLY,
     .ability = ABILITY_SLOT_1,
     },
 };
@@ -655,7 +656,7 @@ static const struct TrainerMon sParty_Ed_Glenda[] = {
 static const struct TrainerMon sParty_Ed_Kendal[] = {
     {
     .iv = 31,
-    .lvl = 8,
+    .lvl = 10,
     .species = SPECIES_YANMEGA,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PROTECT, MOVE_BATON_PASS, MOVE_ANCIENT_POWER, MOVE_GUST},
@@ -664,7 +665,7 @@ static const struct TrainerMon sParty_Ed_Kendal[] = {
     },
     {
     .iv = 31,
-    .lvl = 9,
+    .lvl = 10,
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_SLACK_OFF, MOVE_SLASH, MOVE_NIGHT_SLASH, MOVE_NONE},

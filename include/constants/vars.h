@@ -51,8 +51,9 @@
 #define VAR_LEVEL_SCALE 0x4025
 #define VAR_TRAINER_LEVEL_DIFF 0x4026
 #define VAR_TRAINER_MONEY_REWARD 0x4027
-#define VAR_EXP_MULTIPLIER 0x4028
-#define VAR_GIFT_LEVEL_DIFF 0x4029
+#define VAR_EXP_MULTIPLIER_NUMERATOR 0x4028
+#define VAR_EXP_MULTIPLIER_DENOMINATOR 0x4029
+#define VAR_GIFT_LEVEL_DIFF 0x402C
 
 // general purpose vars
 #define VAR_RECYCLE_GOODS                    0x4020 // reused
@@ -67,7 +68,7 @@
 #define VAR_CYCLING_ROAD_RECORD_TIME_H       0x4029 // reused
 #define VAR_FRIENDSHIP_STEP_COUNTER          0x402A
 #define VAR_POISON_STEP_COUNTER              0x402B
-#define VAR_RESET_RTC_ENABLE                 0x402C
+#define VAR_RESET_RTC_ENABLE                 0x402C // reused
 #define VAR_ENIGMA_BERRY_AVAILABLE           0x402D
 #define VAR_WONDER_NEWS_COUNTER              0x402E
 

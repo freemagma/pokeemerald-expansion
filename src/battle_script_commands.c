@@ -3885,7 +3885,8 @@ static void Cmd_getexp(void)
             #endif
 
             // EXP MULTIPLIER
-            calculatedExp *= VarGet(VAR_EXP_MULTIPLIER);
+            calculatedExp *= VarGet(VAR_EXP_MULTIPLIER_NUMERATOR);
+            calculatedExp /= VarGet(VAR_EXP_MULTIPLIER_DENOMINATOR);
 
             // All mons get full EXP!
             *exp = calculatedExp;
