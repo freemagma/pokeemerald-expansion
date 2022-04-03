@@ -3,6 +3,8 @@ import sys
 
 
 def format_words(words, remove=""):
+    if words is None:
+        return words
     words = words.replace(remove, "").replace("_", " ").strip()
     words = " ".join(s.capitalize() for s in words.split())
     return words
@@ -18,7 +20,7 @@ def print_pokedata(data, data_compare, f):
     stats_compare = []
     for stat in ("HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed"):
         stat_key = f"base{stat}"
-        stats.append(data[stat_key])
+        stats.append(str(data[stat_key]))
         stats_compare.append(data_compare[stat_key])
     stats_output = f"_Stats_: {'/'.join(stats)}"
     if stats != stats_compare:
@@ -27,22 +29,19 @@ def print_pokedata(data, data_compare, f):
         stats_output += f" ({'/'.join(diff_strs)})"
     print(stats_output, file=f)
 
-    abilities = (
-        data["abilities"][1:-1].replace("ABILITY", "").replace("_", " ").split(",")
-    )
-    abilities = [" ".join(s.capitalize() for s in a.strip().split()) for a in abilities]
-    while abilities[-1] == "None":
+    abilities = [format_words(a, remove="ABILITY") for a in data["abilities"]]
+    while abilities[-1] is None:
         abilities.pop()
 
     print(
-        "_Abilities_: " + ", ".join(abilities),
+        "_Abilities_: " + ", ".join(map(str, abilities)),
         file=f,
     )
 
 
 def print_learnset(learnset, f):
     for lvl, move in learnset:
-        lvltxt = " " + lvl if int(lvl) < 10 else lvl
+        lvltxt = " " + str(lvl) if lvl < 10 else str(lvl)
         move = format_words(move, remove="MOVE_")
         print(f"{lvltxt}. {move}", file=f)
 
