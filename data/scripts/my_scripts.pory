@@ -8,3 +8,10 @@ script Common_RoutingSign {
     msgbox(format("{LEFT_ARROW} {STR_VAR_1} Room\n{RIGHT_ARROW} {STR_VAR_2} Room"), MSGBOX_SIGN)
     release
 }
+
+script Common_TrainerNameSign {
+    lock
+    callnative(BufferTrainerName)
+    msgbox(format("{STR_VAR_1} {STR_VAR_2}"), MSGBOX_SIGN)
+    release
+}

@@ -9,12 +9,15 @@
 #include "event_data.h"
 #include "wild_encounter.h"
 #include "battle_setup.h"
+#include "string_util.h"
 #include "routing.h"
 
 #include "battle_room.h"
 
 #define MAX_PERMUTATION 10
 EWRAM_DATA static u16 sPermutation[MAX_PERMUTATION] = {0};
+
+static EWRAM_DATA u16 sCurrentTrainerId = 0;
 
 static void ShufflePermutation(u16 count) {
     u16 i;
@@ -29,6 +32,12 @@ static void ShufflePermutation(u16 count) {
         sPermutation[j] = sPermutation[i];
         sPermutation[i] = arr;
     }
+}
+
+void BufferTrainerName(void)
+{
+    StringCopy(gStringVar1, gTrainerClassNames[gTrainers[sCurrentTrainerId].trainerClass]);
+    StringCopy(gStringVar2, gTrainers[sCurrentTrainerId].trainerName);
 }
 
 static u16 GetGfxIdFromTrainerId(u16 trainerId) {
@@ -65,8 +74,9 @@ static void GenerateBattle(u16 trainerMin, u16 trainerMax, u32 baseMoney, u16 le
         ClearTrainerFlag(trainerId);
     }
 
-    VarSet(VAR_0x8000, trainerId);
-    VarSet(VAR_OBJ_GFX_ID_0, GetGfxIdFromTrainerId(trainerId));
+    sCurrentTrainerId = trainerId;
+    VarSet(VAR_0x8000, sCurrentTrainerId);
+    VarSet(VAR_OBJ_GFX_ID_0, GetGfxIdFromTrainerId(sCurrentTrainerId));
     VarSet(VAR_TRAINER_LEVEL_DIFF, levelDiff);
 
     money = (baseMoney * (90 + (Random() % 21))) / 100;
