@@ -46,10 +46,22 @@ def parse_trainerdata():
         class_name.replace("{PKMN}", "PKMN")
         class_to_name[class_key] = class_name
 
+    with open("src/battle_room.c") as f:
+        lines = [l.strip() for l in f.readlines()]
+
+    trainer_range_diffs = {}
+    for line in lines:
+        if not line.startswith("GenerateBattle"):
+            continue
+        m = re.search(r"GenerateBattle\((\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*\)", line)
+        start_trainer, level_diff = m.group(1), int(m.group(4))
+        trainer_range_diffs[start_trainer] = level_diff
+
     with open("src/data/trainers.h") as f:
         lines = [l.strip() for l in f.readlines()]
 
     trainer_key = None
+    level_diff = 0
     trainerdata = defaultdict(lambda: dict())
     for line in lines:
         if line.startswith("["):
@@ -59,8 +71,14 @@ def parse_trainerdata():
                 or trainer_key.startswith("TRAINER_ED_")
             ):
                 trainer_key = None
+                continue
+            if trainer_key in trainer_range_diffs:
+                level_diff = trainer_range_diffs[trainer_key]
+            trainerdata[trainer_key]["levelDiff"] = level_diff
+
         if trainer_key is None:
             continue
+
         if line.startswith(".trainerClass"):
             class_key = re.search(r"=\s*(.*),", line).group(1)
             trainerdata[trainer_key]["class"] = class_to_name[class_key]

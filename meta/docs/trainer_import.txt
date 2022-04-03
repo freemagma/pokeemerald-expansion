@@ -1,0 +1,521 @@
+Hiker Dwayne (Pikachu) @ None
+Level: 96
+Serious Nature
+Ability: Static
+- Tackle
+- Thunder Shock
+- Agility
+
+Youngster Bruce (Nidoran-M) @ None
+Level: 96
+Brave Nature
+Ability: Rivalry
+- Scratch
+- Poison Sting
+- Growl
+
+Camper Darien (Rockruff) @ None
+Level: 97
+Adamant Nature
+Ability: Keen Eye
+- Rock Throw
+- Tackle
+
+Camper Darien (Swoobat) @ None
+Level: 96
+Hasty Nature
+Ability: Unaware
+- Endeavor
+- Gust
+- Attract
+- Confusion
+
+Aroma Lady Selina (Sunkern) @ None
+Level: 95
+Quiet Nature
+Ability: Chlorophyll
+- Giga Drain
+- Growth
+
+Aroma Lady Selina (Roselia) @ None
+Level: 97
+Adamant Nature
+Ability: Natural Cure
+- Ingrain
+- Razor Leaf
+- Pin Missile
+
+Aroma Lady Selina (Clefairy) @ None
+Level: 95
+Bold Nature
+Ability: Magic Guard
+- Metronome
+- Moonlight
+
+Battle Girl Katrina (Crabrawler) @ None
+Level: 96
+Lax Nature
+Ability: Iron Fist
+- Bubble
+- Pursuit
+- Power-Up Punch
+
+Battle Girl Katrina (Ferroseed) @ Lum Berry
+Level: 97
+Hardy Nature
+Ability: Iron Barbs
+- Tackle
+- Harden
+
+Hex Maniac Leah (Sableye) @ Sitrus Berry
+Level: 97
+Serious Nature
+Ability: Prankster
+- Disable
+- Will-O-Wisp
+- Shadow Sneak
+- Scratch
+
+Hiker Freddy (Sandshrew) @ None
+Level: 95
+Impish Nature
+Ability: Sand Veil
+- Sand Attack
+- Tackle
+- Poison Sting
+
+Hiker Freddy (Corsola) @ Quick Claw
+Level: 97
+Timid Nature
+Ability: Natural Cure
+- Water Gun
+- Calm Mind
+
+Cooltrainer Emily (Sliggoo) @ Sitrus Berry
+Level: 97
+Careful Nature
+Ability: Sap Sipper
+- Dragon Breath
+- Acid Spray
+
+PKMN Breeder Rosemary (Munchlax) @ Sitrus Berry
+Level: 98
+Relaxed Nature
+Ability: Thick Fat
+- Crunch
+- Body Slam
+- Swallow
+- Stockpile
+
+PKMN Breeder Rosemary (Quagsire) @ None
+Level: 98
+Serious Nature
+Ability: Damp
+- Mud Bomb
+- Brine
+- Yawn
+- Recover
+
+Cooltrainer Everett (Bayleef) @ Sitrus Berry
+Level: 98
+Naive Nature
+Ability: Overgrow
+- Poison Powder
+- Synthesis
+- Magical Leaf
+- Ancientpower
+
+Cooltrainer Everett (Gligar) @ None
+Level: 98
+Serious Nature
+Ability: Sand Veil
+- Bulldoze
+- Rock Tomb
+- Wing Attack
+
+Leader Magnolia (Zweilous) @ None
+Level: 98
+Jolly Nature
+Ability: Hustle
+- Hone Claws
+- Dragon Tail
+- Crunch
+
+Leader Magnolia (Lombre) @ None
+Level: 99
+Mild Nature
+Ability: Own Tempo
+- Fake Out
+- Surf
+- Energy Ball
+
+Leader Magnolia (Salazzle) @ Sitrus Berry
+Level: 100
+Quirky Nature
+Ability: Corrosion
+- Flamethrower
+- Toxic
+- Venoshock
+
+Bird Keeper Edwin (Taillow) @ None
+Level: 97
+Serious Nature
+Ability: Guts
+- Aerial Ace
+- Tackle
+
+Bird Keeper Edwin (Mudkip) @ None
+Level: 98
+Jolly Nature
+Ability: Torrent
+- Aqua Tail
+- Bulldoze
+- Rock Throw
+
+Gentleman Fernando (Dragonair) @ Sitrus Berry
+Level: 98
+Sassy Nature
+Ability: Shed Skin
+- Dragon Tail
+- Thunderbolt
+- Aqua Tail
+
+Tuber Elise (Treecko) @ None
+Level: 98
+Adamant Nature
+Ability: Overgrow
+- Slam
+- Razor Leaf
+- Pursuit
+
+Tuber Elise (Minior) @ None
+Level: 98
+Serious Nature
+Ability: Shields Down
+- Rock Throw
+- Swift
+
+Tuber Francesco (Torkoal) @ None
+Level: 98
+Quiet Nature
+Ability: White Smoke
+- Flame Charge
+- Iron Head
+
+Battle Girl Amy (Aron) @ None
+Level: 98
+Serious Nature
+Ability: Rock Head
+- Metal Claw
+
+Battle Girl Amy (Lillipup) @ Choice Scarf
+Level: 98
+Serious Nature
+Ability: Vital Spirit
+- Retaliate
+
+Pokémaniac Richard (Doduo) @ None
+Level: 98
+Adamant Nature
+Ability: Run Away
+- Wing Attack
+- Double Slap
+- Assurance
+
+Pokémaniac Richard (Pikachu) @ Expert Belt
+Level: 98
+Modest Nature
+Ability: Static
+- Thunderbolt
+- Surf
+- Iron Tail
+
+Pokémaniac Richard (Palossand) @ None
+Level: 97
+Lax Nature
+Ability: Water Compaction
+- Mega Drain
+- Hex
+- Bulldoze
+
+Parasol Lady Pat (Golbat) @ Lum Berry
+Level: 98
+Sassy Nature
+Ability: Inner Focus
+- Poison Fang
+- Gust
+- Mega Drain
+
+Parasol Lady Pat (Sneasel) @ Choice Band
+Level: 98
+Serious Nature
+Ability: Inner Focus
+- Ice Shard
+- Pursuit
+
+Ruin Maniac Cory (Poliwhirl) @ Mystic Water
+Level: 98
+Timid Nature
+Ability: Water Absorb
+- Hypnosis
+- Water Pulse
+
+Ruin Maniac Cory (Galvantula) @ Lum Berry
+Level: 98
+Serious Nature
+Ability: Swarm
+- Shock Wave
+- Silver Wind
+
+Bug Catcher Claude (Onix) @ Soft Sand
+Level: 98
+Adamant Nature
+Ability: Sturdy
+- Stealth Rock
+- Smack Down
+- Bulldoze
+
+Bug Catcher Claude (Chansey) @ None
+Level: 98
+Serious Nature
+Ability: Natural Cure
+- Seismic Toss
+- Thunder Wave
+- Soft-Boiled
+
+Bug Catcher Claude (Whirlipede) @ None
+Level: 98
+Jolly Nature
+Ability: Speed Boost
+- Iron Defense
+- Poison Sting
+- Bug Bite
+
+Battle Girl Donna (Buizel) @ None
+Level: 98
+Jolly Nature
+Ability: Water Veil
+- Flip Turn
+
+Battle Girl Donna (Voltorb) @ None
+Level: 98
+Modest Nature
+Ability: Static
+- Volt Switch
+
+Battle Girl Donna (Yanma) @ None
+Level: 97
+Serious Nature
+Ability: Speed Boost
+- U-Turn
+
+Triathlete Julie (Morelull) @ Sitrus Berry
+Level: 99
+Modest Nature
+Ability: Effect Spore
+- Spore
+- Giga Drain
+- Strength Sap
+- Dazzling Gleam
+
+Triathlete Julie (Magcargo) @ None
+Level: 98
+Quiet Nature
+Ability: Flame Body
+- Will-O-Wisp
+- Ancientpower
+
+Triathlete Julie (Electabuzz) @ None
+Level: 99
+Timid Nature
+Ability: Static
+- Thunder Wave
+- Thunder Shock
+- Swift
+
+Triathlete Julie (Haunter) @ None
+Level: 99
+Gentle Nature
+Ability: Levitate
+- Hex
+- Dark Pulse
+- Mean Look
+
+Ninja Boy Ike (Vulpix) @ Heat Rock
+Level: 99
+Rash Nature
+Ability: Drought
+- Ember
+- Sunny Day
+- Quick Attack
+
+Ninja Boy Ike (Sunflora) @ None
+Level: 99
+Serious Nature
+Ability: Chlorophyll
+- Solar Beam
+- Weather Ball
+- Sunny Day
+
+Ninja Boy Ike (Charmeleon) @ None
+Level: 99
+Timid Nature
+Ability: Solar Power
+- Flamethrower
+- Sunny Day
+- Dragon Breath
+
+Aroma Lady Melanie (Whismur) @ Chesto Berry
+Level: 99
+Serious Nature
+Ability: Rattled
+- Echoed Voice
+- Astonish
+- Rest
+- Sleep Talk
+
+Aroma Lady Melanie (Loudred) @ None
+Level: 99
+Timid Nature
+Ability: Scrappy
+- Uproar
+
+Aroma Lady Melanie (Exploud) @ None
+Level: 99
+Adamant Nature
+Ability: Soundproof
+- Fire Fang
+- Thunder Fang
+- Ice Fang
+
+PKMN Breeder Herb (Mareanie) @ Eviolite
+Level: 99
+Docile Nature
+Ability: Regenerator
+- Scald
+- Baneful Bunker
+- Sludge Bomb
+
+PKMN Breeder Herb (Raboot) @ None
+Level: 99
+Jolly Nature
+Ability: Libero
+- Double Kick
+- Headbutt
+- U-Turn
+- Flame Wheel
+
+Dragon Tamer Reginald (Tyrunt) @ None
+Level: 99
+Serious Nature
+Ability: None
+- Rock Slide
+- Dragon Tail
+
+Dragon Tamer Reginald (Drakloak) @ None
+Level: 99
+Jolly Nature
+Ability: Clear Body
+- Shadow Punch
+- Dragon Dance
+- Bite
+- Dragon Tail
+
+Dragon Tamer Reginald (Pawniard) @ None
+Level: 99
+Jolly Nature
+Ability: Defiant
+- Sucker Punch
+- Iron Head
+
+Gentleman Horatio (Solrock) @ Lum Berry
+Level: 99
+Sassy Nature
+Ability: Levitate
+- Flare Blitz
+- Confusion
+- Rock Tomb
+
+Gentleman Horatio (Lunatone) @ None
+Level: 99
+Hasty Nature
+Ability: Levitate
+- Confusion
+- Moonlight
+- Rock Tomb
+
+Gentleman Horatio (Grimer-Alola) @ None
+Level: 100
+Relaxed Nature
+Ability: Poison Touch
+- Knock Off
+- Sludge Bomb
+- Dig
+- Screech
+
+Lass Glenda (Riolu) @ None
+Level: 100
+Jolly Nature
+Ability: Prankster
+- Low Sweep
+- Swords Dance
+- Quick Attack
+
+Lass Glenda (Inkay) @ Eviolite
+Level: 100
+Impish Nature
+Ability: Contrary
+- Night Slash
+- Psycho Cut
+
+Lass Glenda (Steenee) @ Sitrus Berry
+Level: 99
+Serious Nature
+Ability: Leaf Guard
+- Ice Punch
+- Razor Leaf
+- Draining Kiss
+
+Lass Glenda (Snubbull) @ Choice Band
+Level: 100
+Adamant Nature
+Ability: Intimidate
+- Play Rough
+
+Cooltrainer Kendal (Yanmega) @ None
+Level: 100
+Serious Nature
+Ability: Speed Boost
+- Protect
+- Baton Pass
+- Ancientpower
+- Gust
+
+Cooltrainer Kendal (Vigoroth) @ Lum Berry
+Level: 100
+Hasty Nature
+Ability: Vital Spirit
+- Slack Off
+- Slash
+- Night Slash
+
+Cooltrainer Kendal (Thwackey) @ Grassy Seed
+Level: 100
+Careful Nature
+Ability: Grassy Surge
+- Grassy Glide
+- Fake Out
+- Slam
+
+Aqua Admin Adam (Aron) @ None
+Level: 100
+Serious Nature
+Ability: Rock Head
+
+
+Aqua Admin Adam (Aron) @ None
+Level: 100
+Serious Nature
+Ability: Rock Head
+
+

@@ -1,5 +1,6 @@
 import json
 import sys
+from util import correct_words
 
 
 def format_words(words, remove=""):
@@ -7,6 +8,7 @@ def format_words(words, remove=""):
         return words
     words = words.replace(remove, "").replace("_", " ").strip()
     words = " ".join(s.capitalize() for s in words.split())
+    words = correct_words(words)
     return words
 
 
@@ -21,7 +23,7 @@ def print_pokedata(data, data_compare, f):
     for stat in ("HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed"):
         stat_key = f"base{stat}"
         stats.append(str(data[stat_key]))
-        stats_compare.append(data_compare[stat_key])
+        stats_compare.append(str(data_compare[stat_key]))
     stats_output = f"_Stats_: {'/'.join(stats)}"
     if stats != stats_compare:
         diffs = [int(a) - int(b) for a, b in zip(stats, stats_compare)]
@@ -185,6 +187,53 @@ def print_move_changes(movedata, c_movedata, f):
             print(file=f)
 
 
+def print_trainers(trainerdata, pokedata, f_summary, f_import):
+    
+    mon_count = 0
+    for trainer_key, data in trainerdata.items():
+        title = data["class"].replace("{PKMN}", "PKMN") + " " + data["name"]
+        max_level = max(mon["lvl"] for mon in data["party"])
+        print(f"## {title}", file=f_summary)
+        for mon in data["party"]:
+            mon_count += 1
+            mon_data = pokedata[mon["species"]]
+
+            level_diff = data["levelDiff"] + (max_level - mon["lvl"])
+            display_level = 100 - level_diff
+
+            species = format_words(mon["species"], remove="SPECIES")
+            item = format_words(mon["heldItem"], remove="ITEM")
+            moves = [format_words(move, remove="MOVE") for move in mon["moves"] if move]
+            nature = format_words(mon["nature"], remove="NATURE")
+
+            ability_index = {
+                "ABILITY_SLOT_1": 0,
+                "ABILITY_SLOT_2": 1,
+                "ABILITY_HIDDEN": 2,
+            }[mon["ability"]]
+            ability = format_words(
+                mon_data["abilities"][ability_index], remove="ABILITY"
+            )
+
+            # summary format
+            print(
+                f"+ *{species}* (-{level_diff}) @ {item}: [{ability}, {nature}]",
+                file=f_summary,
+            )
+            print(f"  - {', '.join(moves)}", file=f_summary)
+            # import format
+            print(f"{title} ({species}) @ {item}", file=f_import)
+            print(f"Level: {display_level}", file=f_import)
+            print(f"{nature} Nature", file=f_import)
+            print(f"Ability: {ability}", file=f_import)
+            print("\n".join(f"- {move}" for move in moves), file=f_import)
+            print(file=f_import)
+
+        print(file=f_summary)
+
+    print(f"{mon_count} Pokemon ready to import")
+
+
 SPECIES_ALWAYS_OMIT = {
     "SPECIES_ALCREMIE_CARAMEL_SWIRL",
     "SPECIES_ALCREMIE_VANILLA_CREAM",
@@ -214,6 +263,10 @@ def main():
     species_modified = get_modified_species(j, j_compare)
     with open("meta/docs/move_changes.md", "w") as f:
         print_move_changes(j["movedata"], j_compare["movedata"], f)
+
+    with open("meta/docs/trainer_summary.md", "w") as f_summary:
+        with open("meta/docs/trainer_import.txt", "w") as f_import:
+            print_trainers(j["trainerdata"], j["pokedata"], f_summary, f_import)
 
     pokedata = j["pokedata"]
     pokedex = j["pokedex"]
