@@ -1,5 +1,7 @@
 import json
 import sys
+from collections import defaultdict
+
 from util import correct_words
 
 
@@ -12,7 +14,7 @@ def format_words(words, remove=""):
     return words
 
 
-def print_pokedata(data, data_compare, f):
+def print_pokedata(species, data, data_compare, species_patch, f):
     type1 = format_words(data["type1"], remove="TYPE_")
     type2 = format_words(data["type2"], remove="TYPE_")
     typetext = f"{type1}/{type2}" if type1 != type2 else f"{type1}"
@@ -20,21 +22,30 @@ def print_pokedata(data, data_compare, f):
 
     stats = []
     stats_compare = []
-    for stat in ("HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed"):
-        stat_key = f"base{stat}"
+
+    data_key_prefixes = ("HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed")
+    patch_keys = ("hp", "at", "df", "sa", "sd", "sp")
+    for data_key_prefix in data_key_prefixes:
+        stat_key = f"base{data_key_prefix}"
         stats.append(str(data[stat_key]))
         stats_compare.append(str(data_compare[stat_key]))
+
     stats_output = f"_Stats_: {'/'.join(stats)}"
     if stats != stats_compare:
         diffs = [int(a) - int(b) for a, b in zip(stats, stats_compare)]
         diff_strs = [f"+{d}" if d > 0 else str(d) for d in diffs]
         stats_output += f" ({'/'.join(diff_strs)})"
+        # add to the species patch
+        species_patch[format_words(species, remove="SPECIES")]["bs"] = {
+            key: int(val)
+            for key, val, val_compare in zip(patch_keys, stats, stats_compare)
+            if val != val_compare
+        }
     print(stats_output, file=f)
 
     abilities = [format_words(a, remove="ABILITY") for a in data["abilities"]]
     while abilities[-1] is None:
         abilities.pop()
-
     print(
         "_Abilities_: " + ", ".join(map(str, abilities)),
         file=f,
@@ -162,7 +173,8 @@ def get_modified_species(j, jc):
     return modified
 
 
-def print_move_changes(movedata, c_movedata, f):
+def print_move_changes(movedata, c_movedata, f, f_patch):
+    patch = defaultdict(lambda: dict())
     for move in movedata:
         if move not in c_movedata:
             # TODO add this case if necessary
@@ -170,25 +182,34 @@ def print_move_changes(movedata, c_movedata, f):
         format_move = format_words(move, remove="MOVE_")
         data = movedata[move]
         c_data = c_movedata[move]
+
         lines = []
         if data["type"] != c_data["type"]:
             format_type = format_words(data["type"], remove="TYPE_")
+            patch[format_move]["type"] = format_type
             lines.append(f"{format_type} type")
         if data["power"] != c_data["power"]:
             diff = int(data["power"]) - int(c_data["power"])
+            patch[format_move]["bp"] = int(data["power"])
             lines.append(f"{data['power']} Power ({diff:+})")
         if data["accuracy"] != c_data["accuracy"]:
             diff = int(data["accuracy"]) - int(c_data["accuracy"])
             lines.append(f"{data['accuracy']} Accuracy ({diff:+}%)")
+
         if lines:
             print(f"## {format_move}", file=f)
             for line in lines:
                 print(line, file=f)
             print(file=f)
 
+    print(
+        f"export const ROGUE_PATCH = {json.dumps(patch)};",
+        file=f_patch,
+    )
 
-def print_trainers(trainerdata, pokedata, f_summary, f_import):
-    
+
+def print_trainers(trainerdata, pokedata, f_summary, f_import, f_sets):
+    sets = defaultdict(lambda: dict())
     mon_count = 0
     for trainer_key, data in trainerdata.items():
         title = data["class"].replace("{PKMN}", "PKMN") + " " + data["name"]
@@ -221,6 +242,7 @@ def print_trainers(trainerdata, pokedata, f_summary, f_import):
                 file=f_summary,
             )
             print(f"  - {', '.join(moves)}", file=f_summary)
+
             # import format
             print(f"{title} ({species}) @ {item}", file=f_import)
             print(f"Level: {display_level}", file=f_import)
@@ -229,7 +251,18 @@ def print_trainers(trainerdata, pokedata, f_summary, f_import):
             print("\n".join(f"- {move}" for move in moves), file=f_import)
             print(file=f_import)
 
+            # sets format
+            sets[species][title] = {
+                "level": display_level,
+                "ability": ability,
+                "moves": moves,
+                "item": item,
+                "nature": nature,
+            }
+
         print(file=f_summary)
+
+    print(f"var SETDEX_SS = {json.dumps(sets)}", file=f_sets)
 
     print(f"{mon_count} Pokemon ready to import")
 
@@ -260,19 +293,22 @@ def main():
     with open(file_compare) as f:
         j_compare = json.load(f)
 
-    species_modified = get_modified_species(j, j_compare)
-    with open("meta/docs/move_changes.md", "w") as f:
-        print_move_changes(j["movedata"], j_compare["movedata"], f)
-
-    with open("meta/docs/trainer_summary.md", "w") as f_summary:
-        with open("meta/docs/trainer_import.txt", "w") as f_import:
-            print_trainers(j["trainerdata"], j["pokedata"], f_summary, f_import)
-
     pokedata = j["pokedata"]
     pokedex = j["pokedex"]
     learnsets = j["learnsets"]
     evo_methods = j["evo_methods"]
 
+    species_modified = get_modified_species(j, j_compare)
+    with open("meta/docs/move_changes.md", "w") as f:
+        with open("meta/calc/moves_patch.ts", "w") as f_patch:
+            print_move_changes(j["movedata"], j_compare["movedata"], f, f_patch)
+
+    with open("meta/docs/trainer_summary.md", "w") as f_summary:
+        with open("meta/docs/trainer_import.txt", "w") as f_import:
+            with open("meta/calc/rogue_sets.js", "w") as f_sets:
+                print_trainers(j["trainerdata"], pokedata, f_summary, f_import, f_sets)
+
+    species_patch = defaultdict(lambda: dict())
     with open("meta/docs/pokemon_data.md", "w") as f:
         for name, species in pokedex:
             if not any(spec in species_modified for spec in species):
@@ -288,7 +324,9 @@ def main():
                         "**{}**".format(format_words(spec, remove="SPECIES_")),
                         file=f,
                     )
-                print_pokedata(pokedata[spec], j_compare["pokedata"][spec], f)
+                print_pokedata(
+                    spec, pokedata[spec], j_compare["pokedata"][spec], species_patch, f
+                )
                 if spec in evo_methods:
                     print_evolution(evo_methods[spec], f)
                 print(file=f)
@@ -298,6 +336,12 @@ def main():
                 if e != len(species) - 1:
                     print(file=f)
             print(file=f)
+
+    with open("meta/calc/species_patch.ts", "w") as f_patch:
+        print(
+            f"export const ROGUE_PATCH = {json.dumps(species_patch)};",
+            file=f_patch,
+        )
 
 
 if __name__ == "__main__":
