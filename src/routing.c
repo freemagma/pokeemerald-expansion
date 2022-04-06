@@ -7,24 +7,22 @@
 
 #include "routing.h"
 
+#define G_ROUTE gSaveBlock1Ptr->route
+#define G_ROUTE_IX gSaveBlock1Ptr->routeIndex
+#define G_ROUTE_PARAM gSaveBlock1Ptr->routeParam
+
 static u16 ForkMap(u16);
 static void ForkMapsInRoute(void);
 
-#define MAX_ROUTE_LENGTH 30
-static EWRAM_DATA u16 sRouteIndex = 0;
-static EWRAM_DATA u8 sRouteParam = 0;
-static EWRAM_DATA struct RouteOption sRoute[MAX_ROUTE_LENGTH][2] = {0};
-
 static const struct RouteOption routeNone = {0};
-
 
 bool8 IsRoutedWarp(u8 warpEventId)
 {
-    return sRoute[sRouteIndex][0].map != 0 && warpEventId != 0;
+    return G_ROUTE[G_ROUTE_IX][0].map != 0 && warpEventId != 0;
 }
 
 u8 GetRouteParam(void) {
-    return sRouteParam;
+    return G_ROUTE_PARAM;
 }
 
 const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
@@ -35,9 +33,9 @@ const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
 
     warpOptionIndex = warpEventId - 1;
 
-    map = sRoute[sRouteIndex][warpOptionIndex].map;
-    sRouteParam = sRoute[sRouteIndex][warpOptionIndex].param;
-    sRouteIndex++;
+    map = G_ROUTE[G_ROUTE_IX][warpOptionIndex].map;
+    G_ROUTE_PARAM = G_ROUTE[G_ROUTE_IX][warpOptionIndex].param;
+    G_ROUTE_IX++;
 
     header = Overworld_GetMapHeaderByGroupAndId(map >> 8, map & 0xFF);
 
@@ -46,27 +44,27 @@ const struct WarpEvent* SetWarpDestinationRouting(u8 warpEventId)
 
 void BufferRouteText(void)
 {
-    StringCopy(gStringVar1, sRoute[sRouteIndex][0].string);
-    StringCopy(gStringVar2, sRoute[sRouteIndex][1].string);
+    StringCopy(gStringVar1, G_ROUTE[G_ROUTE_IX][0].string);
+    StringCopy(gStringVar2, G_ROUTE[G_ROUTE_IX][1].string);
 }
 
 void ClearRoute(void) {
     u16 i;
     for (i = 0; i < MAX_ROUTE_LENGTH; i++) {
-        sRoute[i][0] = routeNone;
-        sRoute[i][1] = routeNone;
+        G_ROUTE[i][0] = routeNone;
+        G_ROUTE[i][1] = routeNone;
     }
-    sRouteIndex = 0;
-    sRouteParam = 0;
+    G_ROUTE_IX = 0;
+    G_ROUTE_PARAM = 0;
 }
 
 static void ForkMapsInRoute(void) {
     u16 i;
-    for (i = 0; sRoute[i][0].map; i++) {
-        if (sRoute[i + 1][1].map) {
-            sRoute[i][0].map = ForkMap(sRoute[i][0].map);
-            if (sRoute[i][1].map)
-                sRoute[i][1].map = ForkMap(sRoute[i][1].map);
+    for (i = 0; G_ROUTE[i][0].map; i++) {
+        if (G_ROUTE[i + 1][1].map) {
+            G_ROUTE[i][0].map = ForkMap(G_ROUTE[i][0].map);
+            if (G_ROUTE[i][1].map)
+                G_ROUTE[i][1].map = ForkMap(G_ROUTE[i][1].map);
         }
     }
 }
@@ -107,23 +105,23 @@ void DungeonTutorial_GenerateRoute(void)
 
     ClearRoute();
 
-    sRoute[i++][0] = gift;
-    sRoute[i++][0] = encounter;
-    sRoute[i++][0] = battle;
-    sRoute[i++][0] = shop;
+    G_ROUTE[i++][0] = gift;
+    G_ROUTE[i++][0] = encounter;
+    G_ROUTE[i++][0] = battle;
+    G_ROUTE[i++][0] = shop;
 
-    sRoute[i][0] = battle; sRoute[i][0].param = 1;
-    sRoute[i++][1] = encounter;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
+    G_ROUTE[i][0] = battle; G_ROUTE[i][0].param = 1;
+    G_ROUTE[i++][1] = encounter;
+    G_ROUTE[i][0] = battle; G_ROUTE[i++][0].param = 1;
+    G_ROUTE[i][0] = battle; G_ROUTE[i++][0].param = 1;
 
-    sRoute[i][0] = encounter; sRoute[i++][1] = shop;
+    G_ROUTE[i][0] = encounter; G_ROUTE[i++][1] = shop;
 
-    sRoute[i][0] = battle; sRoute[i++][0].param = 1;
-    sRoute[i++][0] = eliteBattle;
+    G_ROUTE[i][0] = battle; G_ROUTE[i++][0].param = 1;
+    G_ROUTE[i++][0] = eliteBattle;
 
-    sRoute[i++][0] = shop;
-    sRoute[i++][0] = boss;
+    G_ROUTE[i++][0] = shop;
+    G_ROUTE[i++][0] = boss;
 
     ForkMapsInRoute();
 }
@@ -143,55 +141,55 @@ void DungeonEden_GenerateRoute(void) {
 
     ClearRoute();
 
-    sRoute[i++][0] = gift;
-    sRoute[i++][0] = encounter;
+    G_ROUTE[i++][0] = gift;
+    G_ROUTE[i++][0] = encounter;
 
     groupedFloors = 3;
     specialFloor = 1 + Random() % (groupedFloors - 1);
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
-            sRoute[i][0] = encounter;
-            sRoute[i][1] = battle;
-            sRoute[i][1].param = 0;
+            G_ROUTE[i][0] = encounter;
+            G_ROUTE[i][1] = battle;
+            G_ROUTE[i][1].param = 0;
         } else {
-            sRoute[i][0] = battle;
-            sRoute[i][0].param = 0;
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 0;
         }
     }
 
-    sRoute[i++][0] = shop;
+    G_ROUTE[i++][0] = shop;
 
     groupedFloors = 3;
     specialFloor = Random() % groupedFloors;
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
-            sRoute[i][0] = encounter;
-            sRoute[i][1] = battle;
-            sRoute[i][1].param = 1;
+            G_ROUTE[i][0] = encounter;
+            G_ROUTE[i][1] = battle;
+            G_ROUTE[i][1].param = 1;
         } else {
-            sRoute[i][0] = battle;
-            sRoute[i][0].param = 1;
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 1;
         }
     }
 
-    sRoute[i][0] = encounter;
-    sRoute[i++][1] = eliteBattle;
+    G_ROUTE[i][0] = encounter;
+    G_ROUTE[i++][1] = eliteBattle;
 
-    sRoute[i++][0] = shop;
+    G_ROUTE[i++][0] = shop;
 
     groupedFloors = 4;
     specialFloor = Random() % groupedFloors;
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
-            sRoute[i][0] = eliteBattle;
+            G_ROUTE[i][0] = eliteBattle;
         } else {
-            sRoute[i][0] = battle;
-            sRoute[i][0].param = 2;
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 2;
         }
     }
 
-    sRoute[i++][0] = shop;
-    sRoute[i++][0] = boss;
+    G_ROUTE[i++][0] = shop;
+    G_ROUTE[i++][0] = boss;
 
     ForkMapsInRoute();
 }

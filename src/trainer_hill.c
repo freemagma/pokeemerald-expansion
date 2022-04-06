@@ -287,7 +287,6 @@ void ResetTrainerHillResults(void)
 
     gSaveBlock2Ptr->frontier.savedGame = 0;
     gSaveBlock2Ptr->frontier.unk_EF9 = 0;
-    gSaveBlock1Ptr->trainerHill.bestTime = 0;
     for (i = 0; i < 4; i++)
         SetTimerValue(&gSaveBlock1Ptr->trainerHillTimes[i], HILL_MAX_TIME);
 }
@@ -340,7 +339,6 @@ void InitTrainerHillBattleStruct(void)
         }
         sRoomTrainers->facilityClass[i] = sHillData->floors[sHillData->floorId].trainers[i].facilityClass;
     }
-    SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
     FreeDataStruct();
 }
 
@@ -356,7 +354,6 @@ static void SetUpDataStruct(void)
     {
         sHillData = AllocZeroed(sizeof(*sHillData));
         sHillData->floorId = gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F;
-        CpuCopy32(sDataPerTag[gSaveBlock1Ptr->trainerHill.tag], &sHillData->tag, sizeof(sHillData->tag) + 4 * sizeof(struct TrHillFloor));
         TrainerHillDummy();
     }
 }
@@ -397,119 +394,50 @@ void CopyTrainerHillTrainerText(u8 which, u16 trainerId)
 static void TrainerHillStartChallenge(void)
 {
     TrainerHillDummy();
-    if (!ReadTrainerHillAndValidate())
-        gSaveBlock1Ptr->trainerHill.field_3D6E_0f = 1;
-    else
-        gSaveBlock1Ptr->trainerHill.field_3D6E_0f = 0;
 
-    gSaveBlock1Ptr->trainerHill.unk_3D6C = 0;
-    SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
-    gSaveBlock1Ptr->trainerHill.timer = 0;
-    gSaveBlock1Ptr->trainerHill.spokeToOwner = 0;
-    gSaveBlock1Ptr->trainerHill.checkedFinalTime = 0;
-    gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge = 0;
-    gSaveBlock2Ptr->frontier.trainerFlags = 0;
     gBattleOutcome = 0;
-    gSaveBlock1Ptr->trainerHill.receivedPrize = 0;
 }
 
 static void GetOwnerState(void)
 {
     ClearTrainerHillVBlankCounter();
     gSpecialVar_Result = 0;
-    if (gSaveBlock1Ptr->trainerHill.spokeToOwner)
-        gSpecialVar_Result++;
-    if (gSaveBlock1Ptr->trainerHill.receivedPrize && gSaveBlock1Ptr->trainerHill.checkedFinalTime)
-        gSpecialVar_Result++;
-
-    gSaveBlock1Ptr->trainerHill.spokeToOwner = TRUE;
 }
 
 static void GiveChallengePrize(void)
 {
     u16 itemId = GetPrizeItemId();
 
-    if (sHillData->tag.numFloors != NUM_TRAINER_HILL_FLOORS || gSaveBlock1Ptr->trainerHill.receivedPrize)
-    {
-        gSpecialVar_Result = 2;
-    }
-    else if (AddBagItem(itemId, 1) == TRUE)
-    {
-        CopyItemName(itemId, gStringVar2);
-        gSaveBlock1Ptr->trainerHill.receivedPrize = TRUE;
-        gSaveBlock2Ptr->frontier.unk_EF9 = 0;
-        gSpecialVar_Result = 0;
-    }
-    else
-    {
-        gSpecialVar_Result = 1;
-    }
+    gSpecialVar_Result = 1;
 }
 
 // If bestTime > timer, the challenge was completed faster and its a new record
 // Otherwise the owner says it was a slow time and to complete it faster next time
 static void CheckFinalTime(void)
 {
-    if (gSaveBlock1Ptr->trainerHill.checkedFinalTime)
-    {
-        gSpecialVar_Result = 2;
-    }
-    else if (GetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime) > gSaveBlock1Ptr->trainerHill.timer)
-    {
-        SetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime, gSaveBlock1Ptr->trainerHill.timer);
-        gSaveBlock1Ptr->trainerHillTimes[gSaveBlock1Ptr->trainerHill.tag] = gSaveBlock1Ptr->trainerHill.bestTime;
-        gSpecialVar_Result = 0;
-    }
-    else
-    {
-        gSpecialVar_Result = 1;
-    }
-
-    gSaveBlock1Ptr->trainerHill.checkedFinalTime = TRUE;
+    gSpecialVar_Result = 1;
 }
 
 static void TrainerHillResumeTimer(void)
 {
-    if (!gSaveBlock1Ptr->trainerHill.spokeToOwner)
-    {
-        if (gSaveBlock1Ptr->trainerHill.timer >= HILL_MAX_TIME)
-            gSaveBlock1Ptr->trainerHill.timer = HILL_MAX_TIME;
-        else
-            SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
-    }
+
 }
 
 static void TrainerHillSetPlayerLost(void)
 {
-    gSaveBlock1Ptr->trainerHill.hasLost = TRUE;
+
 }
 
 static void TrainerHillGetChallengeStatus(void)
 {
-    if (gSaveBlock1Ptr->trainerHill.hasLost)
-    {
-        // The player lost their last match.
-        gSaveBlock1Ptr->trainerHill.hasLost = FALSE;
-        gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_LOST;
-    }
-    else if (gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge)
-    {
-        // Unreachable code. Something relating to eCards?
-        gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge = 0;
-        gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_ECARD_SCANNED;
-    }
-    else
-    {
-        // Continue playing.
-        gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_NORMAL;
-    }
+    gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_NORMAL;
 }
 
 static void BufferChallengeTime(void)
 {
     s32 total, minutes, secondsWhole, secondsFraction;
 
-    total = gSaveBlock1Ptr->trainerHill.timer;
+    total = 0;
     if (total >= HILL_MAX_TIME)
         total = HILL_MAX_TIME;
 
@@ -555,8 +483,6 @@ static void GetInEReaderMode(void)
 bool8 InTrainerHillChallenge(void)
 {
     if (VarGet(VAR_TRAINER_HILL_IS_ACTIVE) == 0)
-        return FALSE;
-    else if (gSaveBlock1Ptr->trainerHill.spokeToOwner)
         return FALSE;
     else if (GetCurrentTrainerHillMapId() != 0)
         return TRUE;
@@ -984,16 +910,12 @@ bool32 OnTrainerHillEReaderChallengeFloor(void)
 
 static void GetChallengeWon(void)
 {
-    if (gSaveBlock1Ptr->trainerHill.hasLost)
-        gSpecialVar_Result = FALSE;
-    else
-        gSpecialVar_Result = TRUE;
+    gSpecialVar_Result = TRUE;
 }
 
 static void TrainerHillSetTag(void)
 {
-    gSaveBlock1Ptr->trainerHill.tag = gSpecialVar_0x8005;
-    gSaveBlock1Ptr->trainerHill.bestTime = gSaveBlock1Ptr->trainerHillTimes[gSpecialVar_0x8005];
+
 }
 
 static u8 GetPrizeListId(bool8 maxTrainers)
@@ -1036,11 +958,8 @@ static u16 GetPrizeItemId(void)
     else
         i = GetPrizeListId(FALSE);
 
-    if (gSaveBlock1Ptr->trainerHill.tag == HILL_TAG_EXPERT)
-        i = (i + 1) % NUM_TRAINER_HILL_PRIZE_LISTS;
-
     prizeList = sPrizeListSets[prizeListSetId][i];
-    minutes = (signed)(gSaveBlock1Ptr->trainerHill.timer) / (60 * 60);
+    minutes = 0;
     if (minutes < 12)
         id = 0;
     else if (minutes < 13)
