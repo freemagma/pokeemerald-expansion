@@ -336,6 +336,8 @@ SECTIONS {
         src/routing.o(.text);
         src/battle_room.o(.text);
         src/shop_room.o(.text);
+        src/mgba.o(.text);
+        src/printf.o(.text);
     } =0
 
     script_data :
@@ -702,6 +704,7 @@ SECTIONS {
         src/routing.o(.rodata);
         src/battle_room.o(.rodata);
         src/shop_room.o(.rodata);
+        src/printf.o(.rodata);
     } =0
 
     song_data :

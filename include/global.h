@@ -72,7 +72,7 @@
 
 // Rounding value for Q4.12 fixed-point format
 #define Q_4_12_ROUND ((1) << (12 - 1))
-#define UQ_4_12_ROUND ((1) << (12 - 1))
+#define UQ_4_12_ROUND (((1) << (12 - 1)) - 1)
 
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #define max(a, b) ((a) >= (b) ? (a) : (b))

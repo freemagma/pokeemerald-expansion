@@ -8086,14 +8086,6 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (gBattleMoves[move].flags & FLAG_MEGA_LAUNCHER_BOOST)
            MulModifier(&modifier, UQ_4_12(1.5));
         break;
-    case ABILITY_WATER_BUBBLE:
-        if (moveType == TYPE_WATER)
-           MulModifier(&modifier, UQ_4_12(2.0));
-        break;
-    case ABILITY_STEELWORKER:
-        if (moveType == TYPE_STEEL)
-           MulModifier(&modifier, UQ_4_12(1.5));
-        break;
     case ABILITY_PIXILATE:
         if (moveType == TYPE_FAIRY && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));
@@ -8120,18 +8112,6 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         break;
     case ABILITY_STEELY_SPIRIT:
         if (moveType == TYPE_STEEL)
-            MulModifier(&modifier, UQ_4_12(1.5));
-        break;
-    case ABILITY_TRANSISTOR:
-        if (moveType == TYPE_ELECTRIC)
-            MulModifier(&modifier, UQ_4_12(1.5));
-        break;
-    case ABILITY_DRAGONS_MAW:
-        if (moveType == TYPE_DRAGON)
-            MulModifier(&modifier, UQ_4_12(1.5));
-        break;
-    case ABILITY_GORILLA_TACTICS:
-        if (IS_MOVE_PHYSICAL(move))
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
@@ -8170,27 +8150,9 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     switch (ability)
     {
     case ABILITY_HEATPROOF:
-    case ABILITY_WATER_BUBBLE:
-        if (moveType == TYPE_FIRE)
-        {
-            MulModifier(&modifier, UQ_4_12(0.5));
-            if (updateFlags)
-                RecordAbilityBattle(battlerDef, ability);
-        }
-        break;
     case ABILITY_DRY_SKIN:
         if (moveType == TYPE_FIRE)
             MulModifier(&modifier, UQ_4_12(1.25));
-        break;
-    case ABILITY_FLUFFY:
-        if (IsMoveMakingContact(move, battlerAtk))
-        {
-            MulModifier(&modifier, UQ_4_12(0.5));
-            if (updateFlags)
-                RecordAbilityBattle(battlerDef, ability);
-        }
-        if (moveType == TYPE_FIRE)
-            MulModifier(&modifier, UQ_4_12(2.0));
         break;
     }
 
@@ -8385,6 +8347,26 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     // attacker's abilities
     switch (GetBattlerAbility(battlerAtk))
     {
+    case ABILITY_TRANSISTOR:
+        if (moveType == TYPE_ELECTRIC)
+            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_DRAGONS_MAW:
+        if (moveType == TYPE_DRAGON)
+            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_STEELWORKER:
+        if (moveType == TYPE_STEEL)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_GORILLA_TACTICS:
+        if (IS_MOVE_PHYSICAL(move))
+            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_WATER_BUBBLE:
+        if (moveType == TYPE_WATER)
+           MulModifier(&modifier, UQ_4_12(2.0));
+        break;
     case ABILITY_HUGE_POWER:
     case ABILITY_PURE_POWER:
         if (IS_MOVE_PHYSICAL(move))
@@ -8436,8 +8418,9 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_HUSTLE:
+        // according to smogon, hustle is applied directly
         if (IS_MOVE_PHYSICAL(move))
-            MulModifier(&modifier, UQ_4_12(1.5));
+            atkStat = ApplyModifier(UQ_4_12(1.5), atkStat);
         break;
     case ABILITY_STAKEOUT:
         if (gDisableStructs[battlerDef].isFirstTurn == 2) // just switched in
@@ -8460,9 +8443,13 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
                 RecordAbilityBattle(battlerDef, ABILITY_THICK_FAT);
         }
         break;
-    case ABILITY_ICE_SCALES:
-        if (IS_MOVE_SPECIAL(move))
+    case ABILITY_WATER_BUBBLE:
+        if (moveType == TYPE_FIRE)
+        {
             MulModifier(&modifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ABILITY_WATER_BUBBLE);
+        }
         break;
     }
 
@@ -8608,10 +8595,6 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
         if (gBattleMons[battlerDef].species == SPECIES_CHERRIM && IsBattlerWeatherAffected(battlerDef, B_WEATHER_SUN) && !usesDefStat)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
-    case ABILITY_PUNK_ROCK:
-        if (gBattleMoves[move].flags & FLAG_SOUND)
-            MulModifier(&modifier, UQ_4_12(2.0));
-        break;
     }
 
     // ally's abilities
@@ -8656,8 +8639,9 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
     }
 
     // sandstorm sp.def boost for rock types
+    // applied directly according to smogon
     if (IS_BATTLER_OF_TYPE(battlerDef, TYPE_ROCK) && WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SANDSTORM && !usesDefStat)
-        MulModifier(&modifier, UQ_4_12(1.5));
+        defStat = ApplyModifier(UQ_4_12(1.5), defStat);
 
     // The defensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 5th badge and 7th badges.
     // Having the 5th badge boosts physical defense while having the 7th badge boosts special defense.
@@ -8669,7 +8653,7 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
     return ApplyModifier(modifier, defStat);
 }
 
-static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, u16 typeEffectivenessModifier, bool32 isCrit, bool32 updateFlags)
+static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, u16 typeEffectivenessModifier, bool32 isCrit, bool32 randomFactor, bool32 updateFlags)
 {
     u32 percentBoost;
     u32 abilityAtk = GetBattlerAbility(battlerAtk);
@@ -8680,19 +8664,7 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
 
     // check multiple targets in double battle
     if (GetMoveTargetCount(move, battlerAtk, battlerDef) >= 2)
-        MulModifier(&finalModifier, UQ_4_12(0.75));
-
-    // take type effectiveness
-    MulModifier(&finalModifier, typeEffectivenessModifier);
-
-    // check crit
-    if (isCrit)
-        dmg = ApplyModifier((B_CRIT_MULTIPLIER >= GEN_6 ? UQ_4_12(1.5) : UQ_4_12(2.0)), dmg);
-
-    // check burn
-    if (gBattleMons[battlerAtk].status1 & STATUS1_BURN && IS_MOVE_PHYSICAL(move)
-        && gBattleMoves[move].effect != EFFECT_FACADE && abilityAtk != ABILITY_GUTS)
-        dmg = ApplyModifier(UQ_4_12(0.5), dmg);
+        dmg = ApplyModifier(UQ_4_12(0.75), dmg);
 
     // check sunny/rain weather
     if (IsBattlerWeatherAffected(battlerAtk, B_WEATHER_RAIN))
@@ -8710,14 +8682,33 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
             dmg = ApplyModifier(UQ_4_12(0.5), dmg);
     }
 
+    // check crit
+    if (isCrit)
+        dmg = ApplyModifier((B_CRIT_MULTIPLIER >= GEN_6 ? UQ_4_12(1.5) : UQ_4_12(2.0)), dmg);
+
+    // Add a random factor.
+    if (randomFactor)
+    {
+        dmg *= 100 - (Random() % 16);
+        dmg /= 100;
+    }
+
     // check stab
     if (IS_BATTLER_OF_TYPE(battlerAtk, moveType) && move != MOVE_STRUGGLE)
     {
         if (abilityAtk == ABILITY_ADAPTABILITY)
-            MulModifier(&finalModifier, UQ_4_12(2.0));
+            dmg = ApplyModifier(UQ_4_12(2.0), dmg);
         else
-            MulModifier(&finalModifier, UQ_4_12(1.5));
+            dmg = ApplyModifier(UQ_4_12(1.5), dmg);
     }
+
+    // take type effectiveness
+    dmg = ApplyModifier(typeEffectivenessModifier, dmg);
+
+    // check burn
+    if (gBattleMons[battlerAtk].status1 & STATUS1_BURN && IS_MOVE_PHYSICAL(move)
+        && gBattleMoves[move].effect != EFFECT_FACADE && abilityAtk != ABILITY_GUTS)
+        dmg = ApplyModifier(UQ_4_12(0.5), dmg);
 
     // reflect, light screen, aurora veil
     if (((gSideStatuses[defSide] & SIDE_STATUS_REFLECT && IS_MOVE_PHYSICAL(move))
@@ -8756,6 +8747,24 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     case ABILITY_MULTISCALE:
     case ABILITY_SHADOW_SHIELD:
         if (BATTLER_MAX_HP(battlerDef))
+            MulModifier(&finalModifier, UQ_4_12(0.5));
+        break;
+    case ABILITY_FLUFFY:
+        if (IsMoveMakingContact(move, battlerAtk))
+        {
+            MulModifier(&finalModifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ABILITY_FLUFFY);
+        }
+        if (moveType == TYPE_FIRE)
+            MulModifier(&finalModifier, UQ_4_12(2.0));
+        break;
+    case ABILITY_PUNK_ROCK:
+        if (gBattleMoves[move].flags & FLAG_SOUND)
+            MulModifier(&finalModifier, UQ_4_12(0.5));
+        break;
+    case ABILITY_ICE_SCALES:
+        if (IS_MOVE_SPECIAL(move))
             MulModifier(&finalModifier, UQ_4_12(0.5));
         break;
     case ABILITY_FILTER:
@@ -8852,14 +8861,8 @@ s32 CalculateMoveDamage(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, s32
     dmg = (dmg / 50) + 2;
 
     // Calculate final modifiers.
-    dmg = CalcFinalDmg(dmg, move, battlerAtk, battlerDef, moveType, typeEffectivenessModifier, isCrit, updateFlags);
+    dmg = CalcFinalDmg(dmg, move, battlerAtk, battlerDef, moveType, typeEffectivenessModifier, isCrit, randomFactor, updateFlags);
 
-    // Add a random factor.
-    if (randomFactor)
-    {
-        dmg *= 100 - (Random() % 16);
-        dmg /= 100;
-    }
 
     if (dmg == 0)
         dmg = 1;
