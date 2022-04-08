@@ -26,7 +26,7 @@ DungeonTutorial_Act1_Boss_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 
 DungeonTutorial_Act1_Boss_Trainer::
 	trainerbattle_single VAR_TEMP_A, DungeonTutorial_Act1_Boss_Trainer_Text_0, DungeonTutorial_Act1_Boss_Trainer_Text_1
-	msgbox DungeonTutorial_Act1_Boss_Trainer_Text_2
+	msgbox DungeonTutorial_Act1_Boss_Trainer_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 

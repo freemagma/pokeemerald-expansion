@@ -26,7 +26,7 @@ DungeonEden_Act1_Boss_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 
 Eden_A1_Boss_Trainer::
 	trainerbattle_single VAR_TEMP_A, Eden_A1_Boss_Trainer_Text_0, Eden_A1_Boss_Trainer_Text_1
-	msgbox Eden_A1_Boss_Trainer_Text_2
+	msgbox Eden_A1_Boss_Trainer_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
