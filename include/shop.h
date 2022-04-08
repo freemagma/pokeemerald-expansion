@@ -1,6 +1,8 @@
 #ifndef GUARD_SHOP_H
 #define GUARD_SHOP_H
 
+#include "global.h"
+
 extern EWRAM_DATA struct ItemSlot gMartPurchaseHistory[3];
 
 enum
@@ -20,17 +22,11 @@ enum
     LAYER_TYPE
 };
 
-struct ItemPrice
-{
-    u16 itemId;
-    u16 price;
-};
-
 struct MartInfo
 {
     /*0x0*/ void (*callback)(void);
     /*0x4*/ const struct MenuAction *menuActions;
-    /*0x8*/ const struct ItemPrice *itemList;
+    /*0x8*/ struct ItemPrice itemList[MAX_SHOP_SIZE + 1];
     /*0xC*/ u16 itemCount;
     /*0xE*/ u8 windowId;
     /*0xF*/ u8 martType;

@@ -55,6 +55,7 @@
 #define SAVED_TRENDS_COUNT 5
 #define PYRAMID_BAG_ITEMS_COUNT 10
 #define MAX_ROUTE_LENGTH 30
+#define MAX_SHOP_SIZE 12
 
 // Number of facilities for Ranking Hall.
 // 7 facilities for single mode + tower double mode + tower multi mode.

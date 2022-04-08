@@ -316,15 +316,14 @@ static void SetShopMenuCallback(void (* callback)(void))
 static void SetShopItemsForSale(const struct ItemPrice *items)
 {
     u16 i = 0;
-
-    sMartInfo.itemList = items;
     sMartInfo.itemCount = 0;
 
-    while (sMartInfo.itemList[i].itemId)
-    {
+    while (items[i].itemId) {
+        sMartInfo.itemList[i] = items[i];
         sMartInfo.itemCount++;
         i++;
     }
+    sMartInfo.itemList[sMartInfo.itemCount] = items[sMartInfo.itemCount];
 }
 
 static void Task_ShopMenu(u8 taskId)

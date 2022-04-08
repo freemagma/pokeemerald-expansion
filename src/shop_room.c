@@ -6,7 +6,9 @@
 
 #include "shop_room.h"
 
-#define MAX_SHOP_SIZE 12
+
+#define G_RANDOM_SHOP gSaveBlock1Ptr->randomShopItems
+
 #define DEFAULT_SHOP_SIZE 7
 
 static const struct ItemPrice sItemPriceNone = {0};
@@ -65,8 +67,6 @@ static const struct ItemPrice sDEdenA1ItemPool[] = {
 {0}
 };
 
-EWRAM_DATA static struct ItemPrice sRandomShopItems[MAX_SHOP_SIZE + 1] = {0};
-
 
 EWRAM_DATA static u16 sPermutation[MAX_SHOP_SIZE] = {0};
 #define PX(arr, ix) (arr[sPermutation[ix]])
@@ -93,10 +93,10 @@ static void PopulateRandomShopItems(const struct ItemPrice *items, u16 count)
     }
 
     for (i = 0; i < count; i++) {
-        sRandomShopItems[i] = PX(items, i);
+        G_RANDOM_SHOP[i] = PX(items, i);
     }
 
-    sRandomShopItems[count] = sItemPriceNone;
+    G_RANDOM_SHOP[count] = sItemPriceNone;
 }
 
 
@@ -122,5 +122,5 @@ void GenerateRandomShop(u8 itempoolnum) {
 }
 
 void CreateRandomShopMenu() {
-    CreatePokemartMenu(sRandomShopItems);
+    CreatePokemartMenu(G_RANDOM_SHOP);
 }

@@ -800,6 +800,12 @@ struct RouteOption {
     u8 param;
 };
 
+struct ItemPrice
+{
+    u16 itemId;
+    u16 price;
+};
+
 struct TrainerNameRecord
 {
     u32 trainerId;
@@ -993,6 +999,7 @@ struct SaveBlock1
     /*0x3???*/ LilycoveLady lilycoveLady;
     /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
     /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
+               struct ItemPrice randomShopItems[MAX_SHOP_SIZE + 1];
     /*0x3???*/ struct RouteOption route[MAX_ROUTE_LENGTH][2];
                u8 routeParam;
                u16 routeIndex;
