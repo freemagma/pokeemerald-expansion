@@ -32,6 +32,7 @@ DungeonTutorial_Act1_EliteBattle1_Trainer::
 
 DungeonTutorial_Act1_EliteBattle1_SignDirections::
 	lock
+	callnative BufferTrainerName
 	msgbox DungeonTutorial_Act1_EliteBattle1_SignDirections_Text_0, MSGBOX_SIGN
 	release
 	return

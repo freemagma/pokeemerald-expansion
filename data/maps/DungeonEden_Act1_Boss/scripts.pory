@@ -25,5 +25,5 @@ script Eden_A1_Boss_Trainer {
     trainerbattle_single(VAR_TRAINER,
         format("..."),
         format("Hmph."))
-    msgbox("You may pass." MSGBOX_AUTOCLOSE)
+    msgbox("You may pass.", MSGBOX_AUTOCLOSE)
 }

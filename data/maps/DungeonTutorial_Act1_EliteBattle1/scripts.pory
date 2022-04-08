@@ -30,6 +30,7 @@ script DungeonTutorial_Act1_EliteBattle1_Trainer {
 
 script DungeonTutorial_Act1_EliteBattle1_SignDirections {
     lock
+    callnative(BufferTrainerName)
     msgbox(format("In Elite battle rooms, you'll face a tough opponent.\p"
                   "If you win, you'll receive a greater prize than usual.\p"
                   "{STR_VAR_1} {STR_VAR_2} will be your opponent in this room."), MSGBOX_SIGN)

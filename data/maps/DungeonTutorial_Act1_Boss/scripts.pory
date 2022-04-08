@@ -22,8 +22,6 @@ mapscripts DungeonTutorial_Act1_Boss_MapScripts {
 }
 
 script DungeonTutorial_Act1_Boss_Trainer {
-    trainerbattle_single(VAR_TRAINER,
-        format("..."),
-        format("Hmph."))
-    msgbox("You may pass." MSGBOX_AUTOCLOSE)
+    trainerbattle_single(VAR_TRAINER, "...", "Hmph.")
+    msgbox("You may pass.", MSGBOX_AUTOCLOSE)
 }

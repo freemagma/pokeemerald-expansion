@@ -43,6 +43,13 @@ static u16 GetGfxIdFromTrainerId(u16 trainerId) {
     u16 trainerClass = gTrainers[trainerId].trainerClass;
     u16 isFemale = gTrainers[trainerId].encounterMusic_gender & F_TRAINER_FEMALE;
 
+    // special cases
+    switch (trainerId) {
+        case TRAINER_TU_MAGNOLIA:
+           return OBJ_EVENT_GFX_FLANNERY;
+        default:
+    }
+
     if (isFemale) {
         for (i = 0; i < ARRAY_COUNT(BattleRoomFemaleTrainerClasses); i++) {
             if (BattleRoomFemaleTrainerClasses[i] == trainerClass)
