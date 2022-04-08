@@ -53,7 +53,9 @@ def parse_trainerdata():
     for line in lines:
         if not line.startswith("GenerateBattle"):
             continue
-        m = re.search(r"GenerateBattle\((\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*\)", line)
+        m = re.search(
+            r"GenerateBattle\((\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*,\s*(\S*)\s*\)", line
+        )
         start_trainer, level_diff = m.group(1), int(m.group(4))
         trainer_range_diffs[start_trainer] = level_diff
 
@@ -112,7 +114,17 @@ def parse_movedata():
             if key not in movedata[move_key]:
                 movedata[move_key][key] = value
 
-    return movedata
+    with open("include/constants/moves.h") as f:
+        lines = [l.strip() for l in f.readlines()]
+
+    num_to_move = {}
+    for line in lines:
+        if line.startswith("#define MOVE") and "MOVES_COUNT" not in line:
+            m = re.search(r"(MOVE_\S*)\s*(\S*)", line)
+            move, num = m.group(1), int(m.group(2))
+            num_to_move[num] = move
+
+    return movedata, num_to_move
 
 
 def parse_pokedata():
@@ -158,19 +170,24 @@ def parse_names():
         lines = [l.strip() for l in f.readlines()]
 
     pokedex = []
+    num_to_species = {}
     for line in lines:
         if (
             line.startswith("#define SPECIES")
             and "SPECIES_NONE" not in line
             and "SPECIES_EGG" not in line
-            and "FORMS_START" not in line
         ):
-            m = re.search(r"(SPECIES_\S*)\s*(\S*)", line)
-            spec, num = m.group(1), m.group(2)
+            if "FORMS_START" in line:
+                m = re.search(r"(SPECIES_\S*)\s*FORMS_START\s*\+\s*(\S*)", line)
+                spec, num = m.group(1), int(m.group(2)) + 898
+            else:
+                m = re.search(r"(SPECIES_\S*)\s*(\S*)", line)
+                spec, num = m.group(1), int(m.group(2))
+            num_to_species[num] = spec
             name = species_name[spec]
             pokedex.append((name, name_species[name]))
 
-    return pokedex
+    return pokedex, num_to_species
 
 
 def parse_level_up():
@@ -227,10 +244,10 @@ def main():
         return
     filename = f"meta/data/{sys.argv[1]}.json"
 
-    movedata = parse_movedata()
+    movedata, num_to_move = parse_movedata()
     pokedata = parse_pokedata()
     trainerdata = parse_trainerdata()
-    pokedex = parse_names()
+    pokedex, num_to_species = parse_names()
     learnsets = parse_level_up()
     evo_methods = parse_evolution()
     d = {
@@ -240,6 +257,8 @@ def main():
         "pokedex": pokedex,
         "learnsets": learnsets,
         "evo_methods": evo_methods,
+        "num_to_species": num_to_species,
+        "num_to_move": num_to_move,
     }
     with open(filename, "w") as f:
         json.dump(d, f)

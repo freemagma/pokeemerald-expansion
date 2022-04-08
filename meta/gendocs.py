@@ -262,9 +262,36 @@ def print_trainers(trainerdata, pokedata, f_summary, f_import, f_sets):
 
         print(file=f_summary)
 
-    print(f"var SETDEX_SS = {json.dumps(sets)}", file=f_sets)
+    print(f"var SETDEX_SS = {json.dumps(sets)};", file=f_sets)
 
     print(f"{mon_count} Pokemon ready to import")
+
+
+def print_lookups(num_to_species, num_to_move, pokedex, pokedata, f):
+    spec_to_name = {}
+    for name, species in pokedex:
+        for spec in species:
+            spec_to_name[spec] = name
+
+    spec_lookup = defaultdict(lambda: dict())
+    for key in num_to_species:
+        spec = num_to_species[key]
+        abilities = [
+            format_words(a, remove="ABILITY") for a in pokedata[spec]["abilities"]
+        ]
+
+        spec_lookup[key]["name"] = format_words(spec, remove="SPECIES")
+        spec_lookup[key]["basename"] = spec_to_name[spec]
+        spec_lookup[key]["abilities"] = abilities
+
+    move_lookup = {}
+    for key, move in num_to_move.items():
+        move_str = format_words(move, remove="MOVE")
+        move_str = None if move_str == "None" else move_str
+        move_lookup[key] = move_str
+
+    print(f"var SPECIES_LOOKUP = {json.dumps(spec_lookup)};", file=f)
+    print(f"var MOVE_LOOKUP = {json.dumps(move_lookup)};", file=f)
 
 
 SPECIES_ALWAYS_OMIT = {
@@ -297,6 +324,8 @@ def main():
     pokedex = j["pokedex"]
     learnsets = j["learnsets"]
     evo_methods = j["evo_methods"]
+    num_to_species = j["num_to_species"]
+    num_to_move = j["num_to_move"]
 
     species_modified = get_modified_species(j, j_compare)
     with open("meta/docs/move_changes.md", "w") as f:
@@ -307,6 +336,9 @@ def main():
         with open("meta/docs/trainer_import.txt", "w") as f_import:
             with open("meta/calc/rogue_sets.js", "w") as f_sets:
                 print_trainers(j["trainerdata"], pokedata, f_summary, f_import, f_sets)
+
+    with open("meta/calc/lookups.js", "w") as f:
+        print_lookups(num_to_species, num_to_move, pokedex, pokedata, f)
 
     species_patch = defaultdict(lambda: dict())
     with open("meta/docs/pokemon_data.md", "w") as f:

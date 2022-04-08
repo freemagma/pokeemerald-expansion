@@ -60,6 +60,7 @@ struct PokemonSubstruct3
  /* 0x05 */ u32 spAttackIV:5;
  /* 0x06 */ u32 spDefenseIV:5;
  /* 0x07 */ u32 isEgg:1;
+ /* 0x07 */ u32 unusedBuffer:1;
 
  /* 0x08 */ u32 coolRibbon:3;
  /* 0x08 */ u32 beautyRibbon:3;
@@ -67,6 +68,7 @@ struct PokemonSubstruct3
  /* 0x09 */ u32 smartRibbon:3;
  /* 0x09 */ u32 toughRibbon:3;
  /* 0x09 */ u32 championRibbon:1;
+
  /* 0x0A */ u32 winningRibbon:1;
  /* 0x0A */ u32 victoryRibbon:1;
  /* 0x0A */ u32 artistRibbon:1;
@@ -75,11 +77,12 @@ struct PokemonSubstruct3
  /* 0x0A */ u32 landRibbon:1; // never distributed
  /* 0x0A */ u32 skyRibbon:1; // never distributed
  /* 0x0A */ u32 countryRibbon:1; // distributed during Pokémon Festa '04 and '05 to tournament winners
+
+ /* 0x0B */ u32 abilityNum:2;
  /* 0x0B */ u32 nationalRibbon:1;
  /* 0x0B */ u32 earthRibbon:1;
  /* 0x0B */ u32 worldRibbon:1; // distributed during Pokémon Festa '04 and '05 to tournament winners
- /* 0x0B */ u32 unusedRibbons:2; // discarded in Gen 4
- /* 0x0B */ u32 abilityNum:2;
+ /* 0x0B */ u32 unusedRibbons:1; // discarded in Gen 4
  /* 0x0B */ u32 eventLegal:1; // controls Mew & Deoxys obedience; if set, Pokémon is a fateful encounter in Gen 4+; set for in-game event island legendaries, some distributed events, and Pokémon from XD: Gale of Darkness.
 }; /* size = 12 */
 
