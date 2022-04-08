@@ -700,7 +700,7 @@ static const struct TrainerMon sParty_Ed_Adam2[] = {
     {
     .iv = 31,
     .lvl = 10,
-    .species = SPECIES_RATATTA,
+    .species = SPECIES_RATTATA,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     .nature = NATURE_SERIOUS,
