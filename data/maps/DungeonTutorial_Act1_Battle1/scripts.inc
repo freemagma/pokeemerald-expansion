@@ -32,6 +32,7 @@ DungeonTutorial_Act1_Battle1_Trainer::
 
 DungeonTutorial_Act1_Battle1_SignDirections::
 	lock
+	callnative BufferTrainerName
 	msgbox DungeonTutorial_Act1_Battle1_SignDirections_Text_0, MSGBOX_SIGN
 	release
 	return
@@ -55,4 +56,6 @@ DungeonTutorial_Act1_Battle1_Trainer_Text_2:
 DungeonTutorial_Act1_Battle1_SignDirections_Text_0:
 	.string "In battle rooms, you will have to face\n"
 	.string "an opposing trainer.\p"
-	.string "You'll recieve some money after you win!$"
+	.string "You'll recieve some money after you win!\p"
+	.string "{STR_VAR_1} {STR_VAR_2} will be\n"
+	.string "your opponent in this room.$"

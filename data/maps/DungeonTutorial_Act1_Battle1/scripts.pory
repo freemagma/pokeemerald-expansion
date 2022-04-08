@@ -28,7 +28,9 @@ script DungeonTutorial_Act1_Battle1_Trainer {
 
 script DungeonTutorial_Act1_Battle1_SignDirections {
     lock
+    callnative(BufferTrainerName)
     msgbox(format("In battle rooms, you will have to face an opposing trainer.\p"
-                  "You'll recieve some money after you win!"), MSGBOX_SIGN)
+                  "You'll recieve some money after you win!\p"
+                  "{STR_VAR_1} {STR_VAR_2} will be your opponent in this room."), MSGBOX_SIGN)
     release
 }

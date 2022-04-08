@@ -57,4 +57,6 @@ DungeonTutorial_Act1_EliteBattle1_SignDirections_Text_0:
 	.string "In Elite battle rooms, you'll face a\n"
 	.string "tough opponent.\p"
 	.string "If you win, you'll receive a greater\n"
-	.string "prize than usual.$"
+	.string "prize than usual.\p"
+	.string "{STR_VAR_1} {STR_VAR_2} will be\n"
+	.string "your opponent in this room.$"
