@@ -8258,7 +8258,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_WILD_CHARGE] =
     {
         .effect = EFFECT_RECOIL_25,
-        .power = 90,
+        .power = 120,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 15,

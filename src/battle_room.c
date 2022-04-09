@@ -119,13 +119,13 @@ void DungeonEden_GenerateBattle(void) {
             break;
         case 2:
         default:
-            GenerateBattle(TRAINER_ED_JULIE, TRAINER_ED_REGINALD, 400, 1);
+            GenerateBattle(TRAINER_ED_JULIE, TRAINER_ED_REGINALD, 400, 2);
             break;
     }
 }
 
 void DungeonEden_GenerateEliteBattle(void) {
-    GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 0);
+    GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 1);
 }
 
 void DungeonEden_GenerateBossBattle(void) {

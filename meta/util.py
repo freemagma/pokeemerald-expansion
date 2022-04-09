@@ -79,7 +79,7 @@ STANDARD_CORRECTIONS = {
         "Zarude-Dada",
         # moves
         "Will-O-Wisp",
-        "U-Turn",
+        "U-turn",
         "Double-Edge",
         "Self-Destruct",
         "Soft-Boiled",
@@ -100,7 +100,6 @@ STANDARD_CORRECTIONS = {
 }
 
 WORD_CORRECTIONS = {
-    "Ancient Power": "Ancientpower",
     "Dragons Maw": "Dragon's Maw",
     "Aegislash": "Aegislash-Blade",
     "Oricorio Pau": "Oricorio-Pa'u",

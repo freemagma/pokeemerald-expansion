@@ -8150,6 +8150,9 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     switch (ability)
     {
     case ABILITY_HEATPROOF:
+        if (moveType == TYPE_FIRE)
+            MulModifier(&modifier, UQ_4_12(0.5));
+        break;
     case ABILITY_DRY_SKIN:
         if (moveType == TYPE_FIRE)
             MulModifier(&modifier, UQ_4_12(1.25));

@@ -6,13 +6,13 @@ _Evolves_: into Wartortle at level 16
 
  1. Tackle
  5. Water Gun
-12. Bite
+10. Bite
 16. Water Pulse
 20. Rapid Spin
-22. Protect
-28. Aqua Tail
-31. Ice Punch
-34. Skull Bash
+21. Protect
+24. Aqua Tail
+28. Ice Punch
+33. Skull Bash
 37. Body Slam
 41. Muddy Water
 45. Dragon Tail
@@ -28,13 +28,13 @@ _Evolves_: into Blastoise at level 36
  1. Zen Headbutt
  1. Tackle
  5. Water Gun
-12. Bite
+10. Bite
 16. Water Pulse
 20. Rapid Spin
-22. Protect
-28. Aqua Tail
-31. Ice Punch
-34. Skull Bash
+21. Protect
+24. Aqua Tail
+28. Ice Punch
+33. Skull Bash
 37. Body Slam
 41. Muddy Water
 45. Dragon Tail
@@ -51,13 +51,13 @@ _Abilities_: Torrent, Shell Armor, Rain Dish
  1. Zen Headbutt
  1. Tackle
  5. Water Gun
-12. Bite
+10. Bite
 16. Water Pulse
 20. Rapid Spin
-22. Protect
-28. Aqua Tail
-31. Ice Punch
-34. Skull Bash
+21. Protect
+24. Aqua Tail
+28. Ice Punch
+33. Skull Bash
 37. Body Slam
 41. Muddy Water
 45. Dragon Tail
@@ -364,7 +364,7 @@ _Evolves_: into Tangrowth at level 35
 27. Knock Off
 30. Stun Spore
 36. Giga Drain
-38. Ancientpower
+38. Ancient Power
 41. Slam
 46. Wring Out
 50. Power Whip
@@ -445,7 +445,7 @@ _Evolves_: into Kabutops at level 34
 18. Smack Down
 25. Aqua Jet
 36. Mega Drain
-54. Ancientpower
+54. Ancient Power
 59. Wring Out
 63. Rock Slide
 
@@ -465,7 +465,7 @@ _Abilities_: Swift Swim, Battle Armor, Weak Armor
 18. Smack Down
 25. Aqua Jet
 36. Mega Drain
-54. Ancientpower
+54. Ancient Power
 59. Wring Out
 63. Rock Slide
 72. Night Slash
@@ -496,7 +496,7 @@ _Abilities_: Iron Fist, Technician
 
  0. Mach Punch
  1. Mach Punch
- 1. U-Turn
+ 1. U-turn
  1. Bullet Punch
  1. Tackle
  1. Gust
@@ -522,7 +522,7 @@ _Evolves_: into Togetic at level 12
  7. Fairy Wind
 10. Swift
 14. Follow Me
-17. Ancientpower
+17. Ancient Power
 24. Tri Attack
 30. Double-Edge
 35. Dazzling Gleam
@@ -543,7 +543,7 @@ _Evolves_: into Togekiss via Shiny Stone
  7. Fairy Wind
 10. Swift
 14. Follow Me
-17. Ancientpower
+17. Ancient Power
 24. Tri Attack
 30. Fly
 35. Dazzling Gleam
@@ -558,11 +558,11 @@ _Evolves_: into Azumarill at level 18
  1. Aqua Jet
  1. Tackle
  1. Water Gun
- 7. Bubble
-10. Rollout
-13. Bubble Beam
+ 7. Rollout
+10. Bubble Beam
+13. Covet
 20. Aqua Tail
-25. Play Rough
+26. Play Rough
 31. Aqua Ring
 35. Aqua Jet
 39. Double-Edge
@@ -579,11 +579,11 @@ _Abilities_: Huge Power
  1. Aqua Jet
  1. Tackle
  1. Water Gun
- 7. Bubble
-10. Rollout
-13. Bubble Beam
+ 7. Rollout
+10. Bubble Beam
+13. Covet
 20. Aqua Tail
-25. Play Rough
+26. Play Rough
 31. Aqua Ring
 35. Aqua Jet
 39. Double-Edge
@@ -749,12 +749,11 @@ _Evolves_: into Marill at level 12
  1. Splash
  1. Tackle
  1. Water Gun
- 1. Water Gun
- 7. Bubble
-10. Rollout
-13. Bubble Beam
+ 7. Rollout
+10. Bubble Beam
+13. Covet
 20. Aqua Tail
-25. Play Rough
+26. Play Rough
 31. Aqua Ring
 35. Aqua Jet
 39. Double-Edge
@@ -985,35 +984,41 @@ _Evolves_: into Drifblim at level 28
 
  1. Constrict
  1. Astonish
- 8. Gust
-13. Payback
+ 6. Gust
+10. Payback
+16. Air Cutter
 20. Ominous Wind
-26. Baton Pass
-31. Air Slash
-40. Shadow Ball
-48. Acrobatics
+24. Baton Pass
+30. Air Slash
+34. Shadow Ball
+39. Extrasensory
+45. Acrobatics
+48. Mystical Fire
 51. Amnesia
 59. Explosion
-67. Strength Sap
+64. Strength Sap
 
 ## Drifblim
 _Type_: Ghost/Flying
 _Stats_: 150/80/44/90/54/80
 _Abilities_: Flare Boost, Unburden
 
- 1. Extrasensory
+ 1. Charge Beam
  1. Constrict
  1. Astonish
- 8. Gust
-13. Payback
+ 6. Gust
+10. Payback
+16. Air Cutter
 20. Ominous Wind
-26. Baton Pass
-31. Air Slash
-40. Shadow Ball
-48. Acrobatics
+24. Baton Pass
+30. Air Slash
+34. Shadow Ball
+39. Extrasensory
+45. Acrobatics
+48. Mystical Fire
 51. Amnesia
 59. Explosion
-67. Strength Sap
+64. Strength Sap
 
 ## Glameow
 _Type_: Normal
@@ -1052,41 +1057,46 @@ _Abilities_: Thick Fat, Defiant
 
 ## Bronzor
 _Type_: Steel/Psychic
-_Stats_: 57/24/86/24/86/23
+_Stats_: 57/28/86/28/86/15 (0/+4/0/+4/0/-8)
 _Abilities_: Levitate, Heatproof, Heavy Metal
 _Evolves_: into Bronzong at level 33
 
  1. Tackle
  1. Confusion
- 9. Imprison
-11. Payback
-15. Psywave
-22. Gyro Ball
+ 9. Payback
+11. Gyro Ball
+15. Stealth Rock
+19. Bulldoze
+22. Zen Headbutt
+26. Shadow Ball
 28. Future Sight
-31. Zen Headbutt
-36. Heal Block
+31. Charge Beam
+36. Recycle
 42. Heavy Slam
 
 ## Bronzong
 _Type_: Steel/Psychic
-_Stats_: 67/89/116/79/116/33
+_Stats_: 67/89/116/89/116/23 (0/0/0/+10/0/-10)
 _Abilities_: Levitate, Heatproof, Heavy Metal
 
  0. Block
  1. Block
  1. Rock Tomb
+ 1. Signal Beam
  1. Bulldoze
  1. Tackle
  1. Confusion
- 9. Imprison
-11. Payback
-15. Psywave
-22. Gyro Ball
+ 9. Payback
+11. Psywave
+15. Gyro Ball
+19. Stealth Rock
+22. Zen Headbutt
+26. Shadow Ball
 28. Future Sight
-31. Zen Headbutt
-36. Heal Block
+31. Charge Beam
+36. Recycle
 42. Heavy Slam
-60. Double Iron Bash
+53. Double Iron Bash
 
 ## Mime Jr.
 _Type_: Psychic/Fairy
@@ -1167,7 +1177,7 @@ _Abilities_: Chlorophyll, Regenerator
 27. Knock Off
 30. Stun Spore
 36. Giga Drain
-38. Ancientpower
+38. Ancient Power
 41. Slam
 46. Wring Out
 50. Power Whip
@@ -1188,7 +1198,7 @@ _Abilities_: Serene Grace, None, Super Luck
  7. Fairy Wind
 10. Swift
 14. Follow Me
-17. Ancientpower
+17. Ancient Power
 24. Tri Attack
 30. Fly
 35. Dazzling Gleam
@@ -1200,8 +1210,8 @@ _Type_: Ice/Ground
 _Stats_: 110/130/80/70/60/80
 _Abilities_: Oblivious, Snow Cloak, Thick Fat
 
- 0. Ancientpower
- 1. Ancientpower
+ 0. Ancient Power
+ 1. Ancient Power
  1. Stone Edge
  1. Iron Head
  1. Tackle
@@ -1513,14 +1523,14 @@ _Abilities_: Cheek Pouch
  1. Nuzzle
  7. Thunder Shock
 11. Charge
-17. Parabolic Charge
+17. Fairy Wind
 21. Dig
 25. Volt Switch
 29. Charm
 33. Dazzling Gleam
 37. Charge Beam
-40. U-Turn
-45. Thunder
+40. U-turn
+45. Parabolic Charge
 50. Super Fang
 53. Discharge
 59. Recycle
@@ -1561,7 +1571,7 @@ _Abilities_: Shield Dust, Sweet Veil
 ## Wooloo
 _Type_: Normal
 _Stats_: 42/40/55/40/45/48
-_Abilities_: Fluffy, Run Away, Bulletproof
+_Abilities_: Fluffy, Bulletproof
 _Evolves_: into Dubwool at level 24
 
  1. Tackle
@@ -1570,10 +1580,10 @@ _Evolves_: into Dubwool at level 24
  6. Horn Attack
 10. Double Kick
 13. Headbutt
-20. Take Down
+20. Zen Headbutt
 24. Body Press
 29. Double-Edge
-33. Retaliate
+33. Wild Charge
 39. Mega Kick
 45. Cotton Guard
 
@@ -1740,13 +1750,13 @@ _Abilities_: Torrent, Shell Armor, Rain Dish
  1. Zen Headbutt
  1. Tackle
  5. Water Gun
-12. Bite
+10. Bite
 16. Water Pulse
 20. Rapid Spin
-22. Protect
-28. Aqua Tail
-31. Ice Punch
-34. Skull Bash
+21. Protect
+24. Aqua Tail
+28. Ice Punch
+33. Skull Bash
 37. Body Slam
 41. Muddy Water
 45. Dragon Tail

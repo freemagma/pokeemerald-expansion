@@ -123,7 +123,7 @@ Ability: Overgrow
 - Poison Powder
 - Synthesis
 - Magical Leaf
-- Ancientpower
+- Ancient Power
 
 Cooltrainer Everett (Gligar) @ None
 Level: 98
@@ -133,7 +133,7 @@ Ability: Sand Veil
 - Rock Tomb
 - Wing Attack
 
-Leader Magnolia (Zweilous) @ None
+Boss Magnolia (Zweilous) @ None
 Level: 98
 Jolly Nature
 Ability: Hustle
@@ -141,7 +141,7 @@ Ability: Hustle
 - Dragon Tail
 - Crunch
 
-Leader Magnolia (Lombre) @ None
+Boss Magnolia (Lombre) @ None
 Level: 99
 Mild Nature
 Ability: Own Tempo
@@ -149,7 +149,7 @@ Ability: Own Tempo
 - Surf
 - Energy Ball
 
-Leader Magnolia (Salazzle) @ Sitrus Berry
+Boss Magnolia (Salazzle) @ Sitrus Berry
 Level: 100
 Quirky Nature
 Ability: Corrosion
@@ -158,7 +158,7 @@ Ability: Corrosion
 - Venoshock
 
 Bird Keeper Edwin (Taillow) @ None
-Level: 97
+Level: 98
 Serious Nature
 Ability: Guts
 - Aerial Ace
@@ -197,10 +197,10 @@ Ability: Shields Down
 
 Tuber Francesco (Torkoal) @ None
 Level: 98
-Quiet Nature
+Careful Nature
 Ability: White Smoke
 - Flame Charge
-- Iron Head
+- Body Press
 
 Battle Girl Amy (Aron) @ None
 Level: 98
@@ -215,12 +215,12 @@ Ability: Vital Spirit
 - Retaliate
 
 Pokémaniac Richard (Doduo) @ None
-Level: 98
-Adamant Nature
+Level: 97
+Lax Nature
 Ability: Run Away
 - Wing Attack
 - Double Slap
-- Assurance
+- Pursuit
 
 Pokémaniac Richard (Pikachu) @ Expert Belt
 Level: 98
@@ -239,12 +239,12 @@ Ability: Water Compaction
 - Bulldoze
 
 Parasol Lady Pat (Golbat) @ Lum Berry
-Level: 98
+Level: 97
 Sassy Nature
 Ability: Inner Focus
 - Poison Fang
 - Gust
-- Mega Drain
+- Absorb
 
 Parasol Lady Pat (Sneasel) @ Choice Band
 Level: 98
@@ -276,7 +276,7 @@ Ability: Sturdy
 - Bulldoze
 
 Bug Catcher Claude (Chansey) @ None
-Level: 98
+Level: 97
 Serious Nature
 Ability: Natural Cure
 - Seismic Toss
@@ -307,42 +307,41 @@ Battle Girl Donna (Yanma) @ None
 Level: 97
 Serious Nature
 Ability: Speed Boost
-- U-Turn
+- U-turn
 
-Triathlete Julie (Morelull) @ Sitrus Berry
-Level: 99
+Triathlete Julie (Morelull) @ None
+Level: 97
 Modest Nature
-Ability: Effect Spore
+Ability: Illuminate
 - Spore
-- Giga Drain
-- Strength Sap
-- Dazzling Gleam
+- Mega Drain
+- Draining Kiss
 
 Triathlete Julie (Magcargo) @ None
-Level: 98
+Level: 97
 Quiet Nature
 Ability: Flame Body
 - Will-O-Wisp
-- Ancientpower
+- Ancient Power
 
 Triathlete Julie (Electabuzz) @ None
-Level: 99
-Timid Nature
+Level: 98
+Sassy Nature
 Ability: Static
 - Thunder Wave
 - Thunder Shock
 - Swift
 
 Triathlete Julie (Haunter) @ None
-Level: 99
+Level: 98
 Gentle Nature
 Ability: Levitate
 - Hex
-- Dark Pulse
+- Energy Ball
 - Mean Look
 
 Ninja Boy Ike (Vulpix) @ Heat Rock
-Level: 99
+Level: 98
 Rash Nature
 Ability: Drought
 - Ember
@@ -350,23 +349,21 @@ Ability: Drought
 - Quick Attack
 
 Ninja Boy Ike (Sunflora) @ None
-Level: 99
+Level: 98
 Serious Nature
 Ability: Chlorophyll
 - Solar Beam
 - Weather Ball
-- Sunny Day
 
 Ninja Boy Ike (Charmeleon) @ None
-Level: 99
-Timid Nature
+Level: 97
+Modest Nature
 Ability: Solar Power
-- Flamethrower
+- Ember
 - Sunny Day
-- Dragon Breath
 
 Aroma Lady Melanie (Whismur) @ Chesto Berry
-Level: 99
+Level: 98
 Serious Nature
 Ability: Rattled
 - Echoed Voice
@@ -375,61 +372,58 @@ Ability: Rattled
 - Sleep Talk
 
 Aroma Lady Melanie (Loudred) @ None
-Level: 99
+Level: 98
 Timid Nature
-Ability: Scrappy
+Ability: Soundproof
 - Uproar
 
 Aroma Lady Melanie (Exploud) @ None
-Level: 99
-Adamant Nature
+Level: 98
+Jolly Nature
 Ability: Soundproof
-- Fire Fang
-- Thunder Fang
 - Ice Fang
+- Thunder Fang
 
 PKMN Breeder Herb (Mareanie) @ Eviolite
-Level: 99
+Level: 98
 Docile Nature
 Ability: Regenerator
-- Scald
+- Brine
 - Baneful Bunker
-- Sludge Bomb
+- Sludge
 
 PKMN Breeder Herb (Raboot) @ None
-Level: 99
+Level: 98
 Jolly Nature
 Ability: Libero
 - Double Kick
 - Headbutt
-- U-Turn
 - Flame Wheel
 
 Dragon Tamer Reginald (Tyrunt) @ None
-Level: 99
+Level: 98
 Serious Nature
 Ability: None
 - Rock Slide
 - Dragon Tail
 
 Dragon Tamer Reginald (Drakloak) @ None
-Level: 99
+Level: 98
 Jolly Nature
 Ability: Clear Body
 - Shadow Punch
 - Dragon Dance
 - Bite
-- Dragon Tail
 
 Dragon Tamer Reginald (Pawniard) @ None
-Level: 99
+Level: 98
 Jolly Nature
 Ability: Defiant
 - Sucker Punch
-- Iron Head
+- Smart Strike
 
 Gentleman Horatio (Solrock) @ Lum Berry
-Level: 99
+Level: 98
 Sassy Nature
 Ability: Levitate
 - Flare Blitz
@@ -440,59 +434,58 @@ Gentleman Horatio (Lunatone) @ None
 Level: 99
 Hasty Nature
 Ability: Levitate
+- Rock Tomb
 - Confusion
 - Moonlight
-- Rock Tomb
 
 Gentleman Horatio (Grimer-Alola) @ None
-Level: 100
+Level: 99
 Relaxed Nature
 Ability: Poison Touch
 - Knock Off
 - Sludge Bomb
 - Dig
-- Screech
 
 Lass Glenda (Riolu) @ None
-Level: 100
+Level: 99
 Jolly Nature
 Ability: Prankster
 - Low Sweep
 - Swords Dance
 - Quick Attack
 
-Lass Glenda (Inkay) @ Eviolite
-Level: 100
+Lass Glenda (Inkay) @ Scope Lens
+Level: 99
 Impish Nature
 Ability: Contrary
 - Night Slash
 - Psycho Cut
 
 Lass Glenda (Steenee) @ Sitrus Berry
-Level: 99
+Level: 98
 Serious Nature
 Ability: Leaf Guard
 - Ice Punch
 - Razor Leaf
 - Draining Kiss
 
-Lass Glenda (Snubbull) @ Choice Band
-Level: 100
-Adamant Nature
+Lass Glenda (Snubbull) @ None
+Level: 99
+Lonely Nature
 Ability: Intimidate
 - Play Rough
 
 Cooltrainer Kendal (Yanmega) @ None
-Level: 100
+Level: 99
 Serious Nature
 Ability: Speed Boost
 - Protect
 - Baton Pass
-- Ancientpower
+- Ancient Power
 - Gust
 
 Cooltrainer Kendal (Vigoroth) @ Lum Berry
-Level: 100
+Level: 99
 Hasty Nature
 Ability: Vital Spirit
 - Slack Off
@@ -500,22 +493,76 @@ Ability: Vital Spirit
 - Night Slash
 
 Cooltrainer Kendal (Thwackey) @ Grassy Seed
-Level: 100
-Careful Nature
+Level: 98
+Adamant Nature
 Ability: Grassy Surge
 - Grassy Glide
 - Fake Out
 - Slam
+- Knock Off
 
-Aqua Admin Adam (Aron) @ None
+Boss Adam (Whimsicott) @ Focus Sash
+Level: 99
+Timid Nature
+Ability: Prankster
+- Tailwind
+- Moonblast
+- Energy Ball
+- Toxic
+
+Boss Adam (Kricketune) @ None
+Level: 99
+Docile Nature
+Ability: Technician
+- Bug Bite
+- Aerial Ace
+- Needle Arm
+
+Boss Adam (Cranidos) @ Sitrus Berry
+Level: 99
+Jolly Nature
+Ability: Sheer Force
+- Headbutt
+- Rock Smash
+- Rock Slide
+
+Boss Adam (Vaporeon) @ Mystic Water
 Level: 100
-Serious Nature
-Ability: Rock Head
+Bold Nature
+Ability: Water Absorb
+- Scald
+- Aqua Ring
+- Ice Beam
 
+Boss Adam (Mantine) @ Focus Sash
+Level: 99
+Timid Nature
+Ability: Water Absorb
+- Tailwind
+- Hydro Pump
+- Air Slash
+- Toxic
 
-Aqua Admin Adam (Aron) @ None
+Boss Adam (Kricketune) @ None
+Level: 99
+Docile Nature
+Ability: Technician
+- Bug Bite
+- Aerial Ace
+- Needle Arm
+
+Boss Adam (Cranidos) @ Sitrus Berry
+Level: 99
+Jolly Nature
+Ability: Sheer Force
+- Headbutt
+- Rock Smash
+- Rock Slide
+
+Boss Adam (Sylveon) @ Leftovers
 Level: 100
-Serious Nature
-Ability: Rock Head
-
+Bold Nature
+Ability: Pixilate
+- Hyper Voice
+- Shadow Ball
 

@@ -147,7 +147,7 @@
 ## Cross Chop
 100 Accuracy (+20%)
 
-## Ancientpower
+## Ancient Power
 70 Power (+10)
 
 ## Future Sight
@@ -307,6 +307,9 @@ Rock type
 
 ## Electroweb
 100 Accuracy (+5%)
+
+## Wild Charge
+120 Power (+30)
 
 ## Drill Run
 100 Accuracy (+5%)

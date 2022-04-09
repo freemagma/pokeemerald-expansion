@@ -12036,10 +12036,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_BRONZOR] =
     {
         .baseHP        = 57,
-        .baseAttack    = 24,
+        .baseAttack    = 28,
         .baseDefense   = 86,
-        .baseSpeed     = 23,
-        .baseSpAttack  = 24,
+        .baseSpeed     = 15,
+        .baseSpAttack  = 28,
         .baseSpDefense = 86,
         .type1 = TYPE_STEEL,
         .type2 = TYPE_PSYCHIC,
@@ -12066,8 +12066,8 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 67,
         .baseAttack    = 89,
         .baseDefense   = 116,
-        .baseSpeed     = 33,
-        .baseSpAttack  = 79,
+        .baseSpeed     = 23,
+        .baseSpAttack  = 89,
         .baseSpDefense = 116,
         .type1 = TYPE_STEEL,
         .type2 = TYPE_PSYCHIC,
@@ -23138,7 +23138,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLUFFY, ABILITY_RUN_AWAY, ABILITY_BULLETPROOF},
+            .abilities = {ABILITY_FLUFFY, ABILITY_BULLETPROOF, ABILITY_NONE},
         #else
             .abilities = {ABILITY_NONE, ABILITY_RUN_AWAY},
         #endif

@@ -48,11 +48,11 @@
 
 ## Cooltrainer Everett
 + *Bayleef* (-2) @ Sitrus Berry: [Overgrow, Naive]
-  - Poison Powder, Synthesis, Magical Leaf, Ancientpower
+  - Poison Powder, Synthesis, Magical Leaf, Ancient Power
 + *Gligar* (-2) @ None: [Sand Veil, Serious]
   - Bulldoze, Rock Tomb, Wing Attack
 
-## Leader Magnolia
+## Boss Magnolia
 + *Zweilous* (-2) @ None: [Hustle, Jolly]
   - Hone Claws, Dragon Tail, Crunch
 + *Lombre* (-1) @ None: [Own Tempo, Mild]
@@ -61,7 +61,7 @@
   - Flamethrower, Toxic, Venoshock
 
 ## Bird Keeper Edwin
-+ *Taillow* (-3) @ None: [Guts, Serious]
++ *Taillow* (-2) @ None: [Guts, Serious]
   - Aerial Ace, Tackle
 + *Mudkip* (-2) @ None: [Torrent, Jolly]
   - Aqua Tail, Bulldoze, Rock Throw
@@ -77,8 +77,8 @@
   - Rock Throw, Swift
 
 ## Tuber Francesco
-+ *Torkoal* (-2) @ None: [White Smoke, Quiet]
-  - Flame Charge, Iron Head
++ *Torkoal* (-2) @ None: [White Smoke, Careful]
+  - Flame Charge, Body Press
 
 ## Battle Girl Amy
 + *Aron* (-2) @ None: [Rock Head, Serious]
@@ -87,16 +87,16 @@
   - Retaliate
 
 ## Pokémaniac Richard
-+ *Doduo* (-2) @ None: [Run Away, Adamant]
-  - Wing Attack, Double Slap, Assurance
++ *Doduo* (-3) @ None: [Run Away, Lax]
+  - Wing Attack, Double Slap, Pursuit
 + *Pikachu* (-2) @ Expert Belt: [Static, Modest]
   - Thunderbolt, Surf, Iron Tail
 + *Palossand* (-3) @ None: [Water Compaction, Lax]
   - Mega Drain, Hex, Bulldoze
 
 ## Parasol Lady Pat
-+ *Golbat* (-2) @ Lum Berry: [Inner Focus, Sassy]
-  - Poison Fang, Gust, Mega Drain
++ *Golbat* (-3) @ Lum Berry: [Inner Focus, Sassy]
+  - Poison Fang, Gust, Absorb
 + *Sneasel* (-2) @ Choice Band: [Inner Focus, Serious]
   - Ice Shard, Pursuit
 
@@ -109,7 +109,7 @@
 ## Bug Catcher Claude
 + *Onix* (-2) @ Soft Sand: [Sturdy, Adamant]
   - Stealth Rock, Smack Down, Bulldoze
-+ *Chansey* (-2) @ None: [Natural Cure, Serious]
++ *Chansey* (-3) @ None: [Natural Cure, Serious]
   - Seismic Toss, Thunder Wave, Soft-Boiled
 + *Whirlipede* (-2) @ None: [Speed Boost, Jolly]
   - Iron Defense, Poison Sting, Bug Bite
@@ -120,79 +120,91 @@
 + *Voltorb* (-2) @ None: [Static, Modest]
   - Volt Switch
 + *Yanma* (-3) @ None: [Speed Boost, Serious]
-  - U-Turn
+  - U-turn
 
 ## Triathlete Julie
-+ *Morelull* (-1) @ Sitrus Berry: [Effect Spore, Modest]
-  - Spore, Giga Drain, Strength Sap, Dazzling Gleam
-+ *Magcargo* (-2) @ None: [Flame Body, Quiet]
-  - Will-O-Wisp, Ancientpower
-+ *Electabuzz* (-1) @ None: [Static, Timid]
++ *Morelull* (-3) @ None: [Illuminate, Modest]
+  - Spore, Mega Drain, Draining Kiss
++ *Magcargo* (-3) @ None: [Flame Body, Quiet]
+  - Will-O-Wisp, Ancient Power
++ *Electabuzz* (-2) @ None: [Static, Sassy]
   - Thunder Wave, Thunder Shock, Swift
-+ *Haunter* (-1) @ None: [Levitate, Gentle]
-  - Hex, Dark Pulse, Mean Look
++ *Haunter* (-2) @ None: [Levitate, Gentle]
+  - Hex, Energy Ball, Mean Look
 
 ## Ninja Boy Ike
-+ *Vulpix* (-1) @ Heat Rock: [Drought, Rash]
++ *Vulpix* (-2) @ Heat Rock: [Drought, Rash]
   - Ember, Sunny Day, Quick Attack
-+ *Sunflora* (-1) @ None: [Chlorophyll, Serious]
-  - Solar Beam, Weather Ball, Sunny Day
-+ *Charmeleon* (-1) @ None: [Solar Power, Timid]
-  - Flamethrower, Sunny Day, Dragon Breath
++ *Sunflora* (-2) @ None: [Chlorophyll, Serious]
+  - Solar Beam, Weather Ball
++ *Charmeleon* (-3) @ None: [Solar Power, Modest]
+  - Ember, Sunny Day
 
 ## Aroma Lady Melanie
-+ *Whismur* (-1) @ Chesto Berry: [Rattled, Serious]
++ *Whismur* (-2) @ Chesto Berry: [Rattled, Serious]
   - Echoed Voice, Astonish, Rest, Sleep Talk
-+ *Loudred* (-1) @ None: [Scrappy, Timid]
++ *Loudred* (-2) @ None: [Soundproof, Timid]
   - Uproar
-+ *Exploud* (-1) @ None: [Soundproof, Adamant]
-  - Fire Fang, Thunder Fang, Ice Fang
++ *Exploud* (-2) @ None: [Soundproof, Jolly]
+  - Ice Fang, Thunder Fang
 
 ## PKMN Breeder Herb
-+ *Mareanie* (-1) @ Eviolite: [Regenerator, Docile]
-  - Scald, Baneful Bunker, Sludge Bomb
-+ *Raboot* (-1) @ None: [Libero, Jolly]
-  - Double Kick, Headbutt, U-Turn, Flame Wheel
++ *Mareanie* (-2) @ Eviolite: [Regenerator, Docile]
+  - Brine, Baneful Bunker, Sludge
++ *Raboot* (-2) @ None: [Libero, Jolly]
+  - Double Kick, Headbutt, Flame Wheel
 
 ## Dragon Tamer Reginald
-+ *Tyrunt* (-1) @ None: [None, Serious]
++ *Tyrunt* (-2) @ None: [None, Serious]
   - Rock Slide, Dragon Tail
-+ *Drakloak* (-1) @ None: [Clear Body, Jolly]
-  - Shadow Punch, Dragon Dance, Bite, Dragon Tail
-+ *Pawniard* (-1) @ None: [Defiant, Jolly]
-  - Sucker Punch, Iron Head
++ *Drakloak* (-2) @ None: [Clear Body, Jolly]
+  - Shadow Punch, Dragon Dance, Bite
++ *Pawniard* (-2) @ None: [Defiant, Jolly]
+  - Sucker Punch, Smart Strike
 
 ## Gentleman Horatio
-+ *Solrock* (-1) @ Lum Berry: [Levitate, Sassy]
++ *Solrock* (-2) @ Lum Berry: [Levitate, Sassy]
   - Flare Blitz, Confusion, Rock Tomb
 + *Lunatone* (-1) @ None: [Levitate, Hasty]
-  - Confusion, Moonlight, Rock Tomb
-+ *Grimer-Alola* (-0) @ None: [Poison Touch, Relaxed]
-  - Knock Off, Sludge Bomb, Dig, Screech
+  - Rock Tomb, Confusion, Moonlight
++ *Grimer-Alola* (-1) @ None: [Poison Touch, Relaxed]
+  - Knock Off, Sludge Bomb, Dig
 
 ## Lass Glenda
-+ *Riolu* (-0) @ None: [Prankster, Jolly]
++ *Riolu* (-1) @ None: [Prankster, Jolly]
   - Low Sweep, Swords Dance, Quick Attack
-+ *Inkay* (-0) @ Eviolite: [Contrary, Impish]
++ *Inkay* (-1) @ Scope Lens: [Contrary, Impish]
   - Night Slash, Psycho Cut
-+ *Steenee* (-1) @ Sitrus Berry: [Leaf Guard, Serious]
++ *Steenee* (-2) @ Sitrus Berry: [Leaf Guard, Serious]
   - Ice Punch, Razor Leaf, Draining Kiss
-+ *Snubbull* (-0) @ Choice Band: [Intimidate, Adamant]
++ *Snubbull* (-1) @ None: [Intimidate, Lonely]
   - Play Rough
 
 ## Cooltrainer Kendal
-+ *Yanmega* (-0) @ None: [Speed Boost, Serious]
-  - Protect, Baton Pass, Ancientpower, Gust
-+ *Vigoroth* (-0) @ Lum Berry: [Vital Spirit, Hasty]
++ *Yanmega* (-1) @ None: [Speed Boost, Serious]
+  - Protect, Baton Pass, Ancient Power, Gust
++ *Vigoroth* (-1) @ Lum Berry: [Vital Spirit, Hasty]
   - Slack Off, Slash, Night Slash
-+ *Thwackey* (-0) @ Grassy Seed: [Grassy Surge, Careful]
-  - Grassy Glide, Fake Out, Slam
++ *Thwackey* (-2) @ Grassy Seed: [Grassy Surge, Adamant]
+  - Grassy Glide, Fake Out, Slam, Knock Off
 
-## Aqua Admin Adam
-+ *Aron* (-0) @ None: [Rock Head, Serious]
-  - 
+## Boss Adam
++ *Whimsicott* (-1) @ Focus Sash: [Prankster, Timid]
+  - Tailwind, Moonblast, Energy Ball, Toxic
++ *Kricketune* (-1) @ None: [Technician, Docile]
+  - Bug Bite, Aerial Ace, Needle Arm
++ *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
+  - Headbutt, Rock Smash, Rock Slide
++ *Vaporeon* (-0) @ Mystic Water: [Water Absorb, Bold]
+  - Scald, Aqua Ring, Ice Beam
 
-## Aqua Admin Adam
-+ *Aron* (-0) @ None: [Rock Head, Serious]
-  - 
+## Boss Adam
++ *Mantine* (-1) @ Focus Sash: [Water Absorb, Timid]
+  - Tailwind, Hydro Pump, Air Slash, Toxic
++ *Kricketune* (-1) @ None: [Technician, Docile]
+  - Bug Bite, Aerial Ace, Needle Arm
++ *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
+  - Headbutt, Rock Smash, Rock Slide
++ *Sylveon* (-0) @ Leftovers: [Pixilate, Bold]
+  - Hyper Voice, Shadow Ball
 
