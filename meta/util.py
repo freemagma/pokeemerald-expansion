@@ -107,6 +107,8 @@ WORD_CORRECTIONS = {
     "Calyrex Shadow Rider": "Calyrex-Shadow",
     "Ideedee Female": "Indeedee-F",
     "Sirfetchd": "Sirfetch\u2019d",
+    "Farfetchd": "Farfetch\u2019d",
+    "Farfetchd Galarian": "Farfetch\u2019d-Galar",
     "Urshifu Rapid Stride Style": "Urshifu-Rapid-Strike",
     "Zacian Crowned Sword": "Zacian-Crowned",
     "Zamazenta Crowned Shield": "Zamazenta-Crowned",

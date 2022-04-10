@@ -4007,11 +4007,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_STOCKPILE] =
     {
-        #if B_UPDATED_MOVE_DATA >= GEN_4
-            .pp = 20,
-        #else
-            .pp = 10,
-        #endif
+        .pp = 3,
         .effect = EFFECT_STOCKPILE,
         .power = 0,
         .type = TYPE_NORMAL,

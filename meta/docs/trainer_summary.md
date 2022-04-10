@@ -81,7 +81,7 @@
   - Flame Charge, Body Press
 
 ## Battle Girl Amy
-+ *Aron* (-2) @ None: [Rock Head, Serious]
++ *Aron* (-3) @ None: [Rock Head, Serious]
   - Metal Claw
 + *Lillipup* (-2) @ Choice Scarf: [Vital Spirit, Serious]
   - Retaliate
@@ -95,9 +95,9 @@
   - Mega Drain, Hex, Bulldoze
 
 ## Parasol Lady Pat
-+ *Golbat* (-3) @ Lum Berry: [Inner Focus, Sassy]
++ *Golbat* (-2) @ None: [Inner Focus, Sassy]
   - Poison Fang, Gust, Absorb
-+ *Sneasel* (-2) @ Choice Band: [Inner Focus, Serious]
++ *Sneasel* (-3) @ Choice Band: [Inner Focus, Serious]
   - Ice Shard, Pursuit
 
 ## Ruin Maniac Cory
@@ -133,7 +133,7 @@
   - Hex, Energy Ball, Mean Look
 
 ## Ninja Boy Ike
-+ *Vulpix* (-2) @ Heat Rock: [Drought, Rash]
++ *Vulpix* (-2) @ Charcoal: [Drought, Rash]
   - Ember, Sunny Day, Quick Attack
 + *Sunflora* (-2) @ None: [Chlorophyll, Serious]
   - Solar Beam, Weather Ball
@@ -159,8 +159,8 @@
   - Rock Slide, Dragon Tail
 + *Drakloak* (-2) @ None: [Clear Body, Jolly]
   - Shadow Punch, Dragon Dance, Bite
-+ *Pawniard* (-2) @ None: [Defiant, Jolly]
-  - Sucker Punch, Smart Strike
++ *Pawniard* (-3) @ None: [Defiant, Sassy]
+  - Sucker Punch, Bullet Punch
 
 ## Gentleman Horatio
 + *Solrock* (-2) @ Lum Berry: [Levitate, Sassy]
@@ -189,22 +189,22 @@
   - Grassy Glide, Fake Out, Slam, Knock Off
 
 ## Boss Adam
-+ *Whimsicott* (-1) @ Focus Sash: [Prankster, Timid]
-  - Tailwind, Moonblast, Energy Ball, Toxic
-+ *Kricketune* (-1) @ None: [Technician, Docile]
-  - Bug Bite, Aerial Ace, Needle Arm
++ *Vileplume* (-2) @ Lum Berry: [Chlorophyll, Timid]
+  - Acid, Magical Leaf, Synthesis
++ *Farfetch’d-Galar* (-1) @ None: [Steadfast, Docile]
+  - Revenge, Brutal Swing, Slam, Agility
 + *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
-  - Headbutt, Rock Smash, Rock Slide
+  - Headbutt, Rock Tomb, Curse
 + *Vaporeon* (-0) @ Mystic Water: [Water Absorb, Bold]
-  - Scald, Aqua Ring, Ice Beam
+  - Water Pulse, Aurora Beam, Attract, Rain Dance
 
 ## Boss Adam
-+ *Mantine* (-1) @ Focus Sash: [Water Absorb, Timid]
-  - Tailwind, Hydro Pump, Air Slash, Toxic
-+ *Kricketune* (-1) @ None: [Technician, Docile]
-  - Bug Bite, Aerial Ace, Needle Arm
++ *Huntail* (-2) @ Lum Berry: [None, Jolly]
+  - Ice Fang, Flip Turn, Bite
++ *Farfetch’d-Galar* (-1) @ None: [Steadfast, Docile]
+  - Revenge, Brutal Swing, Slam, Agility
 + *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
-  - Headbutt, Rock Smash, Rock Slide
-+ *Sylveon* (-0) @ Leftovers: [Pixilate, Bold]
-  - Hyper Voice, Shadow Ball
+  - Headbutt, Rock Tomb, Curse
++ *Leafeon* (-0) @ Miracle Seed: [Chlorophyll, Careful]
+  - Razor Leaf, Aerial Ace, Dig, Sunny Day
 

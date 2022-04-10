@@ -203,7 +203,7 @@ Ability: White Smoke
 - Body Press
 
 Battle Girl Amy (Aron) @ None
-Level: 98
+Level: 97
 Serious Nature
 Ability: Rock Head
 - Metal Claw
@@ -238,8 +238,8 @@ Ability: Water Compaction
 - Hex
 - Bulldoze
 
-Parasol Lady Pat (Golbat) @ Lum Berry
-Level: 97
+Parasol Lady Pat (Golbat) @ None
+Level: 98
 Sassy Nature
 Ability: Inner Focus
 - Poison Fang
@@ -247,7 +247,7 @@ Ability: Inner Focus
 - Absorb
 
 Parasol Lady Pat (Sneasel) @ Choice Band
-Level: 98
+Level: 97
 Serious Nature
 Ability: Inner Focus
 - Ice Shard
@@ -340,7 +340,7 @@ Ability: Levitate
 - Energy Ball
 - Mean Look
 
-Ninja Boy Ike (Vulpix) @ Heat Rock
+Ninja Boy Ike (Vulpix) @ Charcoal
 Level: 98
 Rash Nature
 Ability: Drought
@@ -416,11 +416,11 @@ Ability: Clear Body
 - Bite
 
 Dragon Tamer Reginald (Pawniard) @ None
-Level: 98
-Jolly Nature
+Level: 97
+Sassy Nature
 Ability: Defiant
 - Sucker Punch
-- Smart Strike
+- Bullet Punch
 
 Gentleman Horatio (Solrock) @ Lum Berry
 Level: 98
@@ -501,68 +501,71 @@ Ability: Grassy Surge
 - Slam
 - Knock Off
 
-Boss Adam (Whimsicott) @ Focus Sash
-Level: 99
+Boss Adam (Vileplume) @ Lum Berry
+Level: 98
 Timid Nature
-Ability: Prankster
-- Tailwind
-- Moonblast
-- Energy Ball
-- Toxic
+Ability: Chlorophyll
+- Acid
+- Magical Leaf
+- Synthesis
 
-Boss Adam (Kricketune) @ None
+Boss Adam (Farfetch’d-Galar) @ None
 Level: 99
 Docile Nature
-Ability: Technician
-- Bug Bite
-- Aerial Ace
-- Needle Arm
+Ability: Steadfast
+- Revenge
+- Brutal Swing
+- Slam
+- Agility
 
 Boss Adam (Cranidos) @ Sitrus Berry
 Level: 99
 Jolly Nature
 Ability: Sheer Force
 - Headbutt
-- Rock Smash
-- Rock Slide
+- Rock Tomb
+- Curse
 
 Boss Adam (Vaporeon) @ Mystic Water
 Level: 100
 Bold Nature
 Ability: Water Absorb
-- Scald
-- Aqua Ring
-- Ice Beam
+- Water Pulse
+- Aurora Beam
+- Attract
+- Rain Dance
 
-Boss Adam (Mantine) @ Focus Sash
-Level: 99
-Timid Nature
-Ability: Water Absorb
-- Tailwind
-- Hydro Pump
-- Air Slash
-- Toxic
+Boss Adam (Huntail) @ Lum Berry
+Level: 98
+Jolly Nature
+Ability: None
+- Ice Fang
+- Flip Turn
+- Bite
 
-Boss Adam (Kricketune) @ None
+Boss Adam (Farfetch’d-Galar) @ None
 Level: 99
 Docile Nature
-Ability: Technician
-- Bug Bite
-- Aerial Ace
-- Needle Arm
+Ability: Steadfast
+- Revenge
+- Brutal Swing
+- Slam
+- Agility
 
 Boss Adam (Cranidos) @ Sitrus Berry
 Level: 99
 Jolly Nature
 Ability: Sheer Force
 - Headbutt
-- Rock Smash
-- Rock Slide
+- Rock Tomb
+- Curse
 
-Boss Adam (Sylveon) @ Leftovers
+Boss Adam (Leafeon) @ Miracle Seed
 Level: 100
-Bold Nature
-Ability: Pixilate
-- Hyper Voice
-- Shadow Ball
+Careful Nature
+Ability: Chlorophyll
+- Razor Leaf
+- Aerial Ace
+- Dig
+- Sunny Day
 

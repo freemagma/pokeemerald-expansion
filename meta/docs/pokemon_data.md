@@ -10,7 +10,7 @@ _Evolves_: into Wartortle at level 16
 16. Water Pulse
 20. Rapid Spin
 21. Protect
-24. Aqua Tail
+23. Aqua Tail
 28. Ice Punch
 33. Skull Bash
 37. Body Slam
@@ -24,6 +24,7 @@ _Stats_: 59/63/80/65/80/58
 _Abilities_: Torrent, Shell Armor, Rain Dish
 _Evolves_: into Blastoise at level 36
 
+ 0. Fake Out
  1. Fake Out
  1. Zen Headbutt
  1. Tackle
@@ -32,7 +33,7 @@ _Evolves_: into Blastoise at level 36
 16. Water Pulse
 20. Rapid Spin
 21. Protect
-24. Aqua Tail
+23. Aqua Tail
 28. Ice Punch
 33. Skull Bash
 37. Body Slam
@@ -55,7 +56,7 @@ _Abilities_: Torrent, Shell Armor, Rain Dish
 16. Water Pulse
 20. Rapid Spin
 21. Protect
-24. Aqua Tail
+23. Aqua Tail
 28. Ice Punch
 33. Skull Bash
 37. Body Slam
@@ -144,7 +145,7 @@ _Abilities_: Sand Force, Arena Trap, Sand Veil
 
 ## Bellsprout
 _Type_: Grass/Poison
-_Stats_: 50/75/35/70/30/40
+_Stats_: 50/90/35/70/30/40 (0/+15/0/0/0/0)
 _Abilities_: Chlorophyll, None, Gluttony
 _Evolves_: into Weepinbell at level 21
 
@@ -153,7 +154,7 @@ _Evolves_: into Weepinbell at level 21
 10. Acid
 15. Razor Leaf
 19. Ingrain
-24. Knock Off
+23. Knock Off
 26. Poison Jab
 30. Slam
 34. Leaf Blade
@@ -164,7 +165,7 @@ _Evolves_: into Weepinbell at level 21
 
 ## Weepinbell
 _Type_: Grass/Poison
-_Stats_: 65/90/50/85/45/55
+_Stats_: 65/105/50/85/45/55 (0/+15/0/0/0/0)
 _Abilities_: Chlorophyll, None, Gluttony
 _Evolves_: into Victreebel via Leaf Stone
 
@@ -175,7 +176,7 @@ _Evolves_: into Victreebel via Leaf Stone
 10. Acid
 15. Razor Leaf
 19. Ingrain
-24. Knock Off
+23. Knock Off
 26. Poison Jab
 30. Slam
 34. Leaf Blade
@@ -186,7 +187,7 @@ _Evolves_: into Victreebel via Leaf Stone
 
 ## Victreebel
 _Type_: Grass/Poison
-_Stats_: 80/105/65/100/70/70
+_Stats_: 80/120/65/100/70/70 (0/+15/0/0/0/0)
 _Abilities_: Chlorophyll, None, Gluttony
 
  1. Gunk Shot
@@ -196,7 +197,7 @@ _Abilities_: Chlorophyll, None, Gluttony
 10. Acid
 15. Razor Leaf
 19. Ingrain
-24. Knock Off
+23. Knock Off
 26. Poison Jab
 30. Slam
 34. Leaf Blade
@@ -478,15 +479,15 @@ _Evolves_: into Ledian at level 14
 
  1. Tackle
  1. Gust
- 6. Struggle Bug
- 9. Swift
+ 7. Struggle Bug
+10. Comet Punch
 16. Silver Wind
-20. Comet Punch
+20. Bug Bite
 23. Aerial Ace
-25. Bug Bite
-31. Sky Uppercut
-35. Lunge
-39. Dual Wingbeat
+29. Lunge
+33. Sky Uppercut
+38. First Impression
+42. Dual Wingbeat
 48. Encore
 
 ## Ledian
@@ -500,15 +501,15 @@ _Abilities_: Iron Fist, Technician
  1. Bullet Punch
  1. Tackle
  1. Gust
- 6. Struggle Bug
- 9. Swift
+ 7. Struggle Bug
+10. Comet Punch
 16. Silver Wind
-20. Comet Punch
+20. Bug Bite
 23. Aerial Ace
-25. Bug Bite
-31. Sky Uppercut
-35. Lunge
-39. Dual Wingbeat
+29. Lunge
+33. Sky Uppercut
+38. First Impression
+42. Dual Wingbeat
 48. Encore
 
 ## Togepi
@@ -1125,12 +1126,12 @@ _Stats_: 48/61/40/61/40/50
 _Abilities_: Dry Skin, None, Poison Touch
 _Evolves_: into Toxicroak at level 37
 
- 1. Pursuit
+ 1. Karate Chop
  1. Poison Sting
- 7. Karate Chop
-10. Feint Attack
-14. Revenge
-18. Sucker Punch
+ 8. Feint Attack
+13. Revenge
+18. Venoshock
+20. Sucker Punch
 23. Low Sweep
 28. Cross Poison
 32. Cross Chop
@@ -1145,13 +1146,12 @@ _Abilities_: Dry Skin, None, Poison Touch
 
  1. Close Combat
  1. Bullet Punch
- 1. Fake Out
- 1. Astonish
+ 1. Karate Chop
  1. Poison Sting
- 7. Pursuit
-10. Feint Attack
-14. Revenge
-18. Sucker Punch
+ 8. Feint Attack
+13. Revenge
+18. Venoshock
+20. Sucker Punch
 23. Low Sweep
 28. Cross Poison
 32. Cross Chop
@@ -1292,38 +1292,39 @@ _Abilities_: Synchronize, Telepathy
 
 ## Trubbish
 _Type_: Poison
-_Stats_: 50/50/62/40/62/65
+_Stats_: 90/50/62/40/62/65 (+40/0/0/0/0/0)
 _Abilities_: Stench, Sticky Hold, Aftermath
 _Evolves_: into Garbodor at level 27
 
- 1. Pound
+ 1. Metal Claw
  1. Acid Spray
  5. Recycle
 11. Stomp
-18. Clear Smog
+18. Stockpile
+18. Swallow
 23. Retaliate
 29. Cross Poison
-33. Pain Split
+33. Drain Punch
 36. Body Slam
 40. Gunk Shot
 46. Toxic
 
 ## Garbodor
 _Type_: Poison
-_Stats_: 80/95/82/60/82/75
+_Stats_: 120/95/82/60/82/75 (+40/0/0/0/0/0)
 _Abilities_: Stench, Weak Armor, Aftermath
 
- 1. Metal Claw
  1. Seed Bomb
  1. Stomping Tantrum
- 1. Pound
+ 1. Metal Claw
  1. Acid Spray
  5. Recycle
 11. Stomp
-18. Clear Smog
+18. Stockpile
+18. Swallow
 23. Retaliate
 29. Cross Poison
-33. Pain Split
+33. Drain Punch
 36. Body Slam
 40. Gunk Shot
 46. Toxic
@@ -1437,7 +1438,7 @@ _Abilities_: Iron Fist, Mold Breaker, Scrappy
 _Type_: Fairy
 _Stats_: 78/52/60/63/65/23
 _Abilities_: Healer, None, Aroma Veil
-_Evolves_: into Aromatisse at level 25
+_Evolves_: into Aromatisse at level 26
 
  1. Echoed Voice
  1. Fairy Wind
@@ -1754,7 +1755,7 @@ _Abilities_: Torrent, Shell Armor, Rain Dish
 16. Water Pulse
 20. Rapid Spin
 21. Protect
-24. Aqua Tail
+23. Aqua Tail
 28. Ice Punch
 33. Skull Bash
 37. Body Slam

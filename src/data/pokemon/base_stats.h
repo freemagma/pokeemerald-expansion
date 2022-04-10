@@ -1911,7 +1911,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_BELLSPROUT] =
     {
         .baseHP        = 50,
-        .baseAttack    = 75,
+        .baseAttack    = 90,
         .baseDefense   = 35,
         .baseSpeed     = 40,
         .baseSpAttack  = 70,
@@ -1939,7 +1939,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_WEEPINBELL] =
     {
         .baseHP        = 65,
-        .baseAttack    = 90,
+        .baseAttack    = 105,
         .baseDefense   = 50,
         .baseSpeed     = 55,
         .baseSpAttack  = 85,
@@ -1967,15 +1967,11 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_VICTREEBEL] =
     {
         .baseHP        = 80,
-        .baseAttack    = 105,
+        .baseAttack    = 120,
         .baseDefense   = 65,
         .baseSpeed     = 70,
         .baseSpAttack  = 100,
-        #if P_UPDATED_STATS >= GEN_6
-            .baseSpDefense = 70,
-        #else
-            .baseSpDefense = 60,
-        #endif
+        .baseSpDefense = 70,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_POISON,
         .catchRate = 45,
@@ -15759,7 +15755,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_TRUBBISH] =
     {
-        .baseHP        = 50,
+        .baseHP        = 90,
         .baseAttack    = 50,
         .baseDefense   = 62,
         .baseSpeed     = 65,
@@ -15787,7 +15783,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_GARBODOR] =
     {
-        .baseHP        = 80,
+        .baseHP        = 120,
         .baseAttack    = 95,
         .baseDefense   = 82,
         .baseSpeed     = 75,
