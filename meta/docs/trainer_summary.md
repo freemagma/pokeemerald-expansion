@@ -89,8 +89,8 @@
 ## Pokémaniac Richard
 + *Doduo* (-3) @ None: [Run Away, Lax]
   - Wing Attack, Double Slap, Pursuit
-+ *Pikachu* (-2) @ Expert Belt: [Static, Modest]
-  - Thunderbolt, Surf, Iron Tail
++ *Pikachu* (-2) @ Expert Belt: [Static, Timid]
+  - Shock Wave, Surf, Iron Tail
 + *Palossand* (-3) @ None: [Water Compaction, Lax]
   - Mega Drain, Hex, Bulldoze
 

@@ -1,2 +1,3 @@
 data/*
-calc/*
+calc/*.ts
+calc/*.js

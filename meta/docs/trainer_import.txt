@@ -224,9 +224,9 @@ Ability: Run Away
 
 Pokémaniac Richard (Pikachu) @ Expert Belt
 Level: 98
-Modest Nature
+Timid Nature
 Ability: Static
-- Thunderbolt
+- Shock Wave
 - Surf
 - Iron Tail
 

@@ -315,8 +315,8 @@ static const struct TrainerMon sParty_Ed_Richard[] = {
     .lvl = 10,
     .species = SPECIES_PIKACHU,
     .heldItem = ITEM_EXPERT_BELT,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_IRON_TAIL, MOVE_NONE},
-    .nature = NATURE_MODEST,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_SURF, MOVE_IRON_TAIL, MOVE_NONE},
+    .nature = NATURE_TIMID,
     .ability = ABILITY_SLOT_1,
     },
     {
