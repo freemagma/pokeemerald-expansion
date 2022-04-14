@@ -4640,6 +4640,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/DungeonEden_Act1_EliteBattle1_Fork/border.bin",
       "blockdata_filepath": "data/layouts/DungeonEden_Act1_EliteBattle1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_ENTRANCE",
+      "name": "DungeonEden_Act2_Entrance_Layout",
+      "width": 17,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Entrance/map.bin"
     }
   ]
 }
