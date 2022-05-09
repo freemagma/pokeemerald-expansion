@@ -2,7 +2,7 @@ const LEVEL = 5
 
 mapscripts DungeonEden_Act1_Entrance_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        callnative(DungeonEden_GenerateRoute)
+        // callnative(DungeonEden_Act1_GenerateRoute)
         additem(ITEM_MAX_POTION, 6)
         additem(ITEM_RARE_CANDY, 8)
         additem(ITEM_FULL_HEAL, 2)
@@ -22,7 +22,7 @@ script Eden_StarterBall {
     msgbox(format("Will you take Applin?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
         bufferspeciesname(STR_VAR_1, SPECIES_APPLIN)
-        givemon(SPECIES_APPLIN, LEVEL, ITEM_NONE)
+        givemon(SPECIES_APPLIN, 100, ITEM_NONE)
         removeobject(BALL_1_ID)
         msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {

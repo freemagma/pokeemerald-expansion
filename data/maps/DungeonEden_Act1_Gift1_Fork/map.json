@@ -10,7 +10,7 @@
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Eden_A1_Gift1_GiftBall1",
+      "script": "Common_GiftBall1",
       "flag": "FLAG_TEMP_1"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Eden_A1_Gift1_GiftBall2",
+      "script": "Common_GiftBall2",
       "flag": "FLAG_TEMP_2"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Eden_A1_Gift1_GiftBall3",
+      "script": "Common_GiftBall3",
       "flag": "FLAG_TEMP_3"
     }
   ],

@@ -1,0 +1,37 @@
+mapscripts DungeonEden_Act2_Shop1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        genrandomshop(1)
+        setvar(VAR_TEMP_0, 0)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpTwo)
+            waitmovement(0)
+            msgbox(format("The snow and ice are much too cold to stand on!"))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+script Eden_A2_Shop1_FixedMerchant {
+    lock
+    faceplayer
+    message(format("Welcome to my humble store. I hope my wares can be of use."))
+    waitmessage
+    fixedshop(0)
+    msgbox(format("Just let me know if you need anything else."))
+    release
+}
+
+script Eden_A2_Shop1_RandomMerchant {
+    lock
+    faceplayer
+    message(format("Let me know if one of my knick-knacks catches your eye."))
+    waitmessage
+    randomshop()
+    msgbox(format("I'll be here if you decide you want something more."))
+    release
+}
+

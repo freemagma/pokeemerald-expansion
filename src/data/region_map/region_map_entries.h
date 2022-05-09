@@ -3,14 +3,15 @@
 
 static const u8 sMapName_Lobby[] = _("LOBBY");
 static const u8 sMapName_DungeonTutorial[] = _("DIGLET DUNGEON");
+static const u8 sMapName_DungeonEden[] = _("GARDEN OF EDEN");
 
 static const u8 sMapName_None[] = _("UNDEFINED NAME");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LOBBY]            = { 4, 11, 1, 1, sMapName_Lobby},
     [MAPSEC_DUNGEON_TUTORIAL]                = { 4,  9, 1, 1, sMapName_DungeonTutorial},
+    [MAPSEC_DUNGEON_EDEN]                = { 4,  9, 1, 1, sMapName_DungeonEden},
 
-    [MAPSEC_DEWFORD_TOWN]               = { 2, 14, 1, 1, sMapName_None},
     [MAPSEC_LAVARIDGE_TOWN]             = { 5,  3, 1, 1, sMapName_None},
     [MAPSEC_FALLARBOR_TOWN]             = { 3,  0, 1, 1, sMapName_None},
     [MAPSEC_VERDANTURF_TOWN]            = { 4,  6, 1, 1, sMapName_None},

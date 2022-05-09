@@ -87,6 +87,16 @@ static u16 ForkMap(u16 map) {
             return DEDA1(GIFT1_FORK);
         case DEDA1(ELITE_BATTLE1):
             return DEDA1(ELITE_BATTLE1_FORK);
+        case DEDA2(ENCOUNTER1):
+            return DEDA2(ENCOUNTER1_FORK);
+        case DEDA2(BATTLE1):
+            return DEDA2(BATTLE1_FORK);
+        case DEDA2(SHOP1):
+            return DEDA2(SHOP1_FORK);
+        case DEDA2(GIFT1):
+            return DEDA2(GIFT1_FORK);
+        case DEDA2(ELITE_BATTLE1):
+            return DEDA2(ELITE_BATTLE1_FORK);
         default:
             return MAP_NONE;
     }
@@ -126,7 +136,7 @@ void DungeonTutorial_GenerateRoute(void)
     ForkMapsInRoute();
 }
 
-void DungeonEden_GenerateRoute(void) {
+void DungeonEden_Act1_GenerateRoute(void) {
     const struct RouteOption battle = {.map = DEDA1(BATTLE1), .string = gText_BattleRoom};
     const struct RouteOption eliteBattle = {.map = DEDA1(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
     const struct RouteOption boss = {.map = DEDA1(BOSS), .string = NULL};
@@ -142,6 +152,75 @@ void DungeonEden_GenerateRoute(void) {
     ClearRoute();
 
     G_ROUTE[i++][0] = gift;
+    G_ROUTE[i++][0] = encounter;
+
+    groupedFloors = 3;
+    specialFloor = 1 + Random() % (groupedFloors - 1);
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            G_ROUTE[i][0] = encounter;
+            G_ROUTE[i][1] = battle;
+            G_ROUTE[i][1].param = 0;
+        } else {
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 0;
+        }
+    }
+
+    G_ROUTE[i++][0] = shop;
+
+    groupedFloors = 3;
+    specialFloor = Random() % groupedFloors;
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            G_ROUTE[i][0] = encounter;
+            G_ROUTE[i][1] = battle;
+            G_ROUTE[i][1].param = 1;
+        } else {
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 1;
+        }
+    }
+
+    G_ROUTE[i][0] = encounter;
+    G_ROUTE[i++][1] = eliteBattle;
+
+    G_ROUTE[i++][0] = shop;
+
+    groupedFloors = 4;
+    specialFloor = Random() % groupedFloors;
+    for (j = 0; j < groupedFloors; j++, i++) {
+        if (j == specialFloor) {
+            G_ROUTE[i][0] = eliteBattle;
+        } else {
+            G_ROUTE[i][0] = battle;
+            G_ROUTE[i][0].param = 2;
+        }
+    }
+
+    G_ROUTE[i++][0] = shop;
+    G_ROUTE[i++][0] = boss;
+
+    ForkMapsInRoute();
+}
+
+void DungeonEden_Act2_GenerateRoute(void) {
+    const struct RouteOption battle = {.map = DEDA2(BATTLE1), .string = gText_BattleRoom};
+    const struct RouteOption eliteBattle = {.map = DEDA2(ELITE_BATTLE1), .string = gText_EliteBattleRoom};
+    const struct RouteOption boss = {.map = DEDA2(BOSS), .string = NULL};
+    const struct RouteOption gift = {.map = DEDA2(GIFT1), .string = gText_GiftRoom};
+    const struct RouteOption encounter = {.map = DEDA2(ENCOUNTER1), .string = gText_EncounterRoom};
+    const struct RouteOption shop = {.map = DEDA2(SHOP1), .string = gText_ShopRoom};
+
+    u16 i = 0;
+    u16 j = 0;
+    u16 groupedFloors;
+    u16 specialFloor;
+
+    ClearRoute();
+
+    G_ROUTE[i++][0] = gift;
+    G_ROUTE[i++][0] = boss;
     G_ROUTE[i++][0] = encounter;
 
     groupedFloors = 3;

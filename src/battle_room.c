@@ -109,7 +109,8 @@ void DungeonTutorial_GenerateBossBattle(void) {
     VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
 }
 
-void DungeonEden_GenerateBattle(void) {
+// Eden A1
+void DungeonEden_Act1_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
             GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 2);
@@ -124,11 +125,36 @@ void DungeonEden_GenerateBattle(void) {
     }
 }
 
-void DungeonEden_GenerateEliteBattle(void) {
+void DungeonEden_Act1_GenerateEliteBattle(void) {
     GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 1);
 }
 
-void DungeonEden_GenerateBossBattle(void) {
+void DungeonEden_Act1_GenerateBossBattle(void) {
+    GenerateBattle(TRAINER_ED_ADAM_1, TRAINER_ED_ADAM_2, 1000, 0);
+    VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
+}
+
+// Eden A2
+void DungeonEden_Act2_GenerateBattle(void) {
+    switch (GetRouteParam()) {
+        case 0:
+            GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 2);
+            break;
+        case 1:
+            GenerateBattle(TRAINER_ED_RICHARD, TRAINER_ED_DONNA, 400, 2);
+            break;
+        case 2:
+        default:
+            GenerateBattle(TRAINER_ED_JULIE, TRAINER_ED_REGINALD, 400, 2);
+            break;
+    }
+}
+
+void DungeonEden_Act2_GenerateEliteBattle(void) {
+    GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 1);
+}
+
+void DungeonEden_Act2_GenerateBossBattle(void) {
     GenerateBattle(TRAINER_ED_ADAM_1, TRAINER_ED_ADAM_2, 1000, 0);
     VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
 }

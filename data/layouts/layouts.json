@@ -4644,12 +4644,132 @@
     {
       "id": "LAYOUT_DUNGEON_EDEN_ACT2_ENTRANCE",
       "name": "DungeonEden_Act2_Entrance_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_GIFT1",
+      "name": "DungeonEden_Act2_Gift1_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Gift1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Gift1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_ENCOUNTER1",
+      "name": "DungeonEden_Act2_Encounter1_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Encounter1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Encounter1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_BATTLE1",
+      "name": "DungeonEden_Act2_Battle1_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Battle1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Battle1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_SHOP1",
+      "name": "DungeonEden_Act2_Shop1_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Shop1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Shop1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_ELITE_BATTLE1",
+      "name": "DungeonEden_Act2_EliteBattle1_Layout",
+      "width": 15,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_EliteBattle1/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_EliteBattle1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_BOSS",
+      "name": "DungeonEden_Act2_Boss_Layout",
+      "width": 15,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Boss/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Boss/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_GIFT1_FORK",
+      "name": "DungeonEden_Act2_Gift1_Fork_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Gift1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Gift1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_ENCOUNTER1_FORK",
+      "name": "DungeonEden_Act2_Encounter1_Fork_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Encounter1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Encounter1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_SHOP1_FORK",
+      "name": "DungeonEden_Act2_Shop1_Fork_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Shop1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Shop1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_BATTLE1_FORK",
+      "name": "DungeonEden_Act2_Battle1_Fork_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_Battle1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Battle1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_ELITE_BATTLE1_FORK",
+      "name": "DungeonEden_Act2_EliteBattle1_Fork_Layout",
+      "width": 15,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DungeonEden_Act2_EliteBattle1_Fork/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_EliteBattle1_Fork/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUNGEON_EDEN_ACT2_TRANSITION",
+      "name": "DungeonEden_Act2_Transition_Layout",
       "width": 17,
       "height": 23,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/DungeonEden_Act2_Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Entrance/map.bin"
+      "border_filepath": "data/layouts/DungeonEden_Act2_Transition/border.bin",
+      "blockdata_filepath": "data/layouts/DungeonEden_Act2_Transition/map.bin"
     }
   ]
 }

@@ -732,6 +732,7 @@
 #define METATILE_SootopolisGym_Ice_Broken   0x206
 #define METATILE_SootopolisGym_Ice_Cracked  0x20E
 #define METATILE_SootopolisGym_Stairs       0x207
+#define METATILE_SootopolisGym_TallGrass    0x263
 
 // gTileset_Sootopolis
 #define METATILE_Sootopolis_Door             0x21E

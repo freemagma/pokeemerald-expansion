@@ -6,7 +6,7 @@ DungeonEden_Act1_Gift1_Fork_MapScripts::
 DungeonEden_Act1_Gift1_Fork_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
 	setvar VAR_TEMP_A, 0
-	callnative DungeonEden_GetGiftMon
+	callnative DungeonEden_Act1_GetGiftMon
 	return
 
 DungeonEden_Act1_Gift1_Fork_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

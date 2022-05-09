@@ -1,0 +1,20 @@
+const VAR_TRAINER = VAR_TEMP_A
+
+mapscripts DungeonEden_Act2_Battle1_Fork_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        callnative(DungeonEden_Act2_GenerateBattle)
+        copyvar(VAR_TRAINER, VAR_0x8000)
+        setflag(FLAG_DISABLE_BAG)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpTwo)
+            waitmovement(0)
+            msgbox(format("The snow and ice are much too cold to stand on!"))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}

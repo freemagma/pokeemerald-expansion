@@ -1,0 +1,16 @@
+mapscripts DungeonEden_Act2_Shop1_Fork_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        genrandomshop(1)
+        setvar(VAR_TEMP_0, 0)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpTwo)
+            waitmovement(0)
+            msgbox(format("The snow and ice are much too cold to stand on!"))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}

@@ -12,7 +12,7 @@ mapscripts DungeonEden_Act1_Gift1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_GIFT_TAKEN, 0)
-        callnative(DungeonEden_GetGiftMon)
+        callnative(DungeonEden_Act1_GetGiftMon)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {
@@ -26,73 +26,4 @@ mapscripts DungeonEden_Act1_Gift1_MapScripts {
             release
         }
     ]
-}
-
-script Eden_A1_Gift1_GiftBall1 {
-    showmonpic(VAR_SPEC_1, 10, 3)
-    if (var(VAR_GIFT_TAKEN) == 1) {
-       msgbox(format("It would be greedy to take another Pokémon."))
-    } else {
-        bufferspeciesname(STR_VAR_1, VAR_SPEC_1)
-        msgbox(format("Will you take {STR_VAR_1}?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == 1) {
-           givemon(VAR_SPEC_1, LEVEL, ITEM_NONE)
-           removeobject(BALL_1_ID)
-           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
-           if (var(VAR_RESULT) == 1) {
-              call(Common_EventScript_GetGiftMonPartySlot)
-              call(Common_EventScript_NameReceivedPartyMon)
-           }
-           setvar(VAR_GIFT_TAKEN, 1)
-        }
-    }
-    hidemonpic
-    releaseall
-    end
-}
-
-script Eden_A1_Gift1_GiftBall2 {
-    showmonpic(VAR_SPEC_2, 10, 3)
-    if (var(VAR_GIFT_TAKEN) == 1) {
-       msgbox(format("It would be greedy to take another Pokémon."))
-    } else {
-        bufferspeciesname(STR_VAR_1, VAR_SPEC_2)
-        msgbox(format("Will you take {STR_VAR_1}?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == 1) {
-           givemon(VAR_SPEC_2, LEVEL, ITEM_NONE)
-           removeobject(BALL_2_ID)
-           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
-           if (var(VAR_RESULT) == 1) {
-              call(Common_EventScript_GetGiftMonPartySlot)
-              call(Common_EventScript_NameReceivedPartyMon)
-           }
-           setvar(VAR_GIFT_TAKEN, 1)
-        }
-    }
-    hidemonpic
-    releaseall
-    end
-}
-
-script Eden_A1_Gift1_GiftBall3 {
-    showmonpic(VAR_SPEC_3, 10, 3)
-    if (var(VAR_GIFT_TAKEN) == 1) {
-       msgbox(format("It would be greedy to take another Pokémon."))
-    } else {
-        bufferspeciesname(STR_VAR_1, VAR_SPEC_3)
-        msgbox(format("Will you take {STR_VAR_1}?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == 1) {
-           givemon(VAR_SPEC_3, LEVEL, ITEM_NONE)
-           removeobject(BALL_3_ID)
-           msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
-           if (var(VAR_RESULT) == 1) {
-              call(Common_EventScript_GetGiftMonPartySlot)
-              call(Common_EventScript_NameReceivedPartyMon)
-           }
-           setvar(VAR_GIFT_TAKEN, 1)
-        }
-    }
-    hidemonpic
-    releaseall
-    end
 }

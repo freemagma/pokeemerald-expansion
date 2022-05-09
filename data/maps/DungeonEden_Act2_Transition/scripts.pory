@@ -1,0 +1,49 @@
+mapscripts DungeonEden_Act2_Transition_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpOne)
+            waitmovement(0)
+            msgbox(format("The forest is too thick to turn back."))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}
+
+const VAR_GIFT_TAKEN = VAR_TEMP_A
+const BALL_1_ID = 1 
+const BALL_2_ID = 2
+
+script Eden_A2_Dawn_Stone {
+    if (var(VAR_GIFT_TAKEN) == 1) {
+        msgbox(format("It would be greedy to take another item."))
+    } else {
+        msgbox(format("Will you take the Dawn Stone?\pYou can use it to evolve
+        your Applin into Flapple."), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == 1) {
+            finditem(ITEM_DAWN_STONE)
+            setvar(VAR_GIFT_TAKEN, 1)
+        }
+    }
+    releaseall
+    end
+}
+
+script Eden_A2_Dusk_Stone {
+    if (var(VAR_GIFT_TAKEN) == 1) {
+        msgbox(format("It would be greedy to take another item."))
+    } else {
+        msgbox(format("Will you take the Dusk Stone?\pYou can use it to evolve
+        your Applin into Appletun."), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == 1) {
+            finditem(ITEM_DUSK_STONE)
+            setvar(VAR_GIFT_TAKEN, 1)
+        }
+    }
+    releaseall
+    end
+}

@@ -40,8 +40,8 @@
       "x": 8,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DUNGEON_EDEN_ACT1_ENTRANCE",
-      "dest_warp_id": 1
+      "dest_map": "MAP_DUNGEON_EDEN_ACT2_TRANSITION",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

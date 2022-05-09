@@ -74,6 +74,10 @@ const static u16 sDEdenA1_GiftMons[] = {
     SPECIES_TOGEPI, SPECIES_MILCERY
 };
 
-void DungeonEden_GetGiftMon(void) {
+void DungeonEden_Act1_GetGiftMon(void) {
+    GetGiftMon(sDEdenA1_GiftMons, ARRAY_COUNT(sDEdenA1_GiftMons));
+}
+
+void DungeonEden_Act2_GetGiftMon(void) {
     GetGiftMon(sDEdenA1_GiftMons, ARRAY_COUNT(sDEdenA1_GiftMons));
 }

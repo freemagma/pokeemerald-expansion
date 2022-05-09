@@ -13,6 +13,8 @@
 #include "trainer_hill.h"
 #include "util.h"
 #include "battle_pyramid.h"
+#include "metatile_behavior.h"
+#include "fieldmap.h"
 #include "constants/battle_setup.h"
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
@@ -250,6 +252,15 @@ static u8 CheckTrainer(u8 objectEventId)
     const u8 *scriptPtr;
     u8 numTrainers = 1;
     u8 approachDistance;
+
+    s16 x, y;
+    bool8 forcedMove;
+
+    PlayerGetDestCoords(&x, &y);
+    forcedMove = MetatileBehavior_IsForcedMovementTile(MapGridGetMetatileBehaviorAt(x, y));
+    if (forcedMove) {
+        return 0;
+    }
 
     if (InTrainerHill() == TRUE)
         scriptPtr = GetTrainerHillTrainerScript();

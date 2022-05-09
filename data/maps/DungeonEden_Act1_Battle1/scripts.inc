@@ -5,7 +5,7 @@ DungeonEden_Act1_Battle1_MapScripts::
 
 DungeonEden_Act1_Battle1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
-	callnative DungeonEden_GenerateBattle
+	callnative DungeonEden_Act1_GenerateBattle
 	copyvar VAR_TEMP_A, VAR_0x8000
 	setflag FLAG_DISABLE_BAG
 	return

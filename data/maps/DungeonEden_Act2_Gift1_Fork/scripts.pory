@@ -1,0 +1,27 @@
+const BALL_1_ID = 1
+const BALL_2_ID = 2
+const BALL_3_ID = 3
+
+const VAR_GIFT_TAKEN = VAR_TEMP_A
+const VAR_SPEC_1 = VAR_0x8001
+const VAR_SPEC_2 = VAR_0x8002
+const VAR_SPEC_3 = VAR_0x8003
+const LEVEL = 0
+
+mapscripts DungeonEden_Act2_Gift1_Fork_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setvar(VAR_TEMP_0, 0)
+        setvar(VAR_GIFT_TAKEN, 0)
+        callnative(DungeonEden_Act2_GetGiftMon)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0 {
+            lock
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_UpTwo)
+            waitmovement(0)
+            msgbox(format("The snow and ice are much too cold to stand on!"))
+            setvar(VAR_TEMP_0, 1)
+            release
+        }
+    ]
+}

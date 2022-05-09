@@ -33,6 +33,18 @@
     "DungeonEden_Act1_Battle1_Fork",
     "DungeonEden_Act1_Shop1_Fork",
     "DungeonEden_Act1_EliteBattle1_Fork",
-    "DungeonEden_Act2_Entrance"
+    "DungeonEden_Act2_Entrance",
+    "DungeonEden_Act2_Gift1",
+    "DungeonEden_Act2_Encounter1",
+    "DungeonEden_Act2_Battle1",
+    "DungeonEden_Act2_Shop1",
+    "DungeonEden_Act2_EliteBattle1",
+    "DungeonEden_Act2_Boss",
+    "DungeonEden_Act2_Gift1_Fork",
+    "DungeonEden_Act2_Encounter1_Fork",
+    "DungeonEden_Act2_Shop1_Fork",
+    "DungeonEden_Act2_Battle1_Fork",
+    "DungeonEden_Act2_EliteBattle1_Fork",
+    "DungeonEden_Act2_Transition"
   ]
 }

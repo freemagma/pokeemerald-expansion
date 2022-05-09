@@ -3,6 +3,7 @@
 
 #define DTUA1(mapend) (MAP_DUNGEON_TUTORIAL_ACT1_##mapend)
 #define DEDA1(mapend) (MAP_DUNGEON_EDEN_ACT1_##mapend)
+#define DEDA2(mapend) (MAP_DUNGEON_EDEN_ACT2_##mapend)
 
 void DungeonTutorial_GenerateRoute(void);
 bool8 IsRoutedWarp(u8);

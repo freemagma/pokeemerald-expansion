@@ -12,7 +12,7 @@ mapscripts DungeonEden_Act1_Gift1_Fork_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_GIFT_TAKEN, 0)
-        callnative(DungeonEden_GetGiftMon)
+        callnative(DungeonEden_Act1_GetGiftMon)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0 {
