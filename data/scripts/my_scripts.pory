@@ -98,3 +98,49 @@ script Common_GiftBall3 {
     releaseall
     end
 }
+
+script Common_MoveRelearner {
+    lock
+    faceplayer
+    msgbox(format("I'm the Move Relearner! I can teach a move to a 
+        Pokémon for a Heart Scale."))
+    checkitem(ITEM_HEART_SCALE)
+    if (var(VAR_RESULT) == TRUE) {
+        msgbox(format("Looks like you have a Heart Scale! Would you like me to teach
+            a move?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            while { 
+                msgbox(format("Which Pokémon needs tutoring?"))
+                special(ChooseMonForMoveRelearner)
+                waitstate
+                if (var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+                    break
+                }
+                special(IsSelectedMonEgg)
+                if (var(VAR_RESULT) == TRUE || var(VAR_0x8005) == 0) {
+                    msgbox(format("Unfortunately, I cannot teach that Pokémon any moves."))
+                    continue
+                }
+                msgbox(format("Which move should I teach?"))
+                special(TeachMoveRelearnerMove)
+                waitstate
+                if (var(VAR_0x8004) == 0) {
+                    continue
+                }
+                msgbox(format("{PLAYER} handed over one Heart Scale in exchange"))
+                removeitem(ITEM_HEART_SCALE)
+                break
+            }
+        }
+    }
+    msgbox(format("If your Pokémon need to learn a move, come back
+        with a Heart Scale."))
+    release
+    end
+}
+
+script Common_GiveHeartScale {
+    giveitem(ITEM_HEART_SCALE)
+    setflag(FLAG_TEMP_A)
+    end
+}

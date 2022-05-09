@@ -25,9 +25,15 @@ DungeonEden_Act2_EliteBattle1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
 
 
 Eden_A2_EliteBattle1_Trainer::
-	trainerbattle_single VAR_TEMP_A, Eden_A2_EliteBattle1_Trainer_Text_0, Eden_A2_EliteBattle1_Trainer_Text_1
+	trainerbattle_single VAR_TEMP_A, Eden_A2_EliteBattle1_Trainer_Text_0, Eden_A2_EliteBattle1_Trainer_Text_1, Common_GiveHeartScale
+	goto_if_unset FLAG_TEMP_A, Eden_A2_EliteBattle1_Trainer_2
+Eden_A2_EliteBattle1_Trainer_1:
 	msgbox Eden_A2_EliteBattle1_Trainer_Text_2, MSGBOX_AUTOCLOSE
 	return
+
+Eden_A2_EliteBattle1_Trainer_2:
+	call Common_GiveHeartScale
+	goto Eden_A2_EliteBattle1_Trainer_1
 
 
 DungeonEden_Act2_EliteBattle1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_0:

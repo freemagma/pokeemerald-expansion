@@ -24,6 +24,10 @@ mapscripts DungeonEden_Act1_EliteBattle1_MapScripts {
 script Eden_A1_EliteBattle1_Trainer {
     trainerbattle_single(VAR_TRAINER,
         format("Nobody's gotten past me yet, and you won't be the first."),
-        format("How the hell are you so strong?"))
+        format("How the hell are you so strong?"),
+        Common_GiveHeartScale)
+    if (!flag(FLAG_TEMP_A)) {
+        call(Common_GiveHeartScale)
+    }
     msgbox("...", MSGBOX_AUTOCLOSE)
 }

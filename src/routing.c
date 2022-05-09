@@ -220,8 +220,9 @@ void DungeonEden_Act2_GenerateRoute(void) {
     ClearRoute();
 
     G_ROUTE[i++][0] = gift;
-    G_ROUTE[i++][0] = boss;
     G_ROUTE[i++][0] = encounter;
+    G_ROUTE[i++][0] = eliteBattle;
+    G_ROUTE[i++][0] = shop;
 
     groupedFloors = 3;
     specialFloor = 1 + Random() % (groupedFloors - 1);

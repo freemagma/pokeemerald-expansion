@@ -24,6 +24,10 @@ mapscripts DungeonEden_Act1_Boss_MapScripts {
 script Eden_A1_Boss_Trainer {
     trainerbattle_single(VAR_TRAINER,
         format("..."),
-        format("Hmph."))
+        format("Hmph."),
+        Common_GiveHeartScale)
+    if (!flag(FLAG_TEMP_A)) {
+        call(Common_GiveHeartScale)
+    }
     msgbox("You may pass.", MSGBOX_AUTOCLOSE)
 }
