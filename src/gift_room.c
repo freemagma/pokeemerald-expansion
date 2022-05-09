@@ -78,6 +78,12 @@ void DungeonEden_Act1_GetGiftMon(void) {
     GetGiftMon(sDEdenA1_GiftMons, ARRAY_COUNT(sDEdenA1_GiftMons));
 }
 
+const static u16 sDEdenA2_GiftMons[] = {
+    SPECIES_DUNSPARCE, SPECIES_KANGASKHAN,
+    SPECIES_VIGOROTH, SPECIES_KECLEON,
+    SPECIES_PORYGON, SPECIES_DELCATTY
+};
+
 void DungeonEden_Act2_GetGiftMon(void) {
-    GetGiftMon(sDEdenA1_GiftMons, ARRAY_COUNT(sDEdenA1_GiftMons));
+    GetGiftMon(sDEdenA2_GiftMons, ARRAY_COUNT(sDEdenA2_GiftMons));
 }
