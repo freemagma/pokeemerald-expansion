@@ -157,7 +157,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Tu_Magnolia},
     },
 
-    // DEden A1 O1
+    // Eden A1 O1
     [TRAINER_ED_EDWIN] =
     {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
@@ -223,7 +223,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Ed_Amy},
     },
 
-    // Eden A1 O1
+    // Eden A1 O2
     [TRAINER_ED_RICHARD] =
     {
         .trainerClass = TRAINER_CLASS_POKEMANIAC,
@@ -289,6 +289,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Ed_Donna},
     },
 
+    // Eden A1 O3
     [TRAINER_ED_JULIE] =
     {
         .trainerClass = TRAINER_CLASS_TRIATHLETE,
@@ -420,8 +421,9 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_Ed_Adam2),
         .party = {.TrainerMon = sParty_Ed_Adam2},
     },
-    //
-    [TRAINER_SHELLY_WEATHER_INSTITUTE] =
+
+    // Eden A2 O1
+    [TRAINER_ED_SHANE] =
     {
         .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
@@ -434,7 +436,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_ShellyWeatherInstitute},
     },
 
-    [TRAINER_SHELLY_SEAFLOOR_CAVERN] =
+    [TRAINER_ED_FLORENCE] =
     {
         .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
@@ -447,7 +449,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_ShellySeafloorCavern},
     },
 
-    [TRAINER_ARCHIE] =
+    [TRAINER_ED_TEDDY] =
     {
         .trainerClass = TRAINER_CLASS_AQUA_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
@@ -460,7 +462,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Archie},
     },
 
-    [TRAINER_LEAH] =
+    [TRAINER_ED_SAM] =
     {
         .trainerClass = TRAINER_CLASS_HEX_MANIAC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
@@ -473,7 +475,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Leah},
     },
 
-    [TRAINER_DAISY] =
+    [TRAINER_ED_PIERCE] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -485,8 +487,9 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_Daisy),
         .party = {.TrainerMon = sParty_Daisy},
     },
-
-    [TRAINER_ROSE_1] =
+    
+    // Eden A2 O2
+    [TRAINER_ED_SUMMER] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -499,7 +502,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rose1},
     },
 
-    [TRAINER_FELIX] =
+    [TRAINER_ED_LUKE] =
     {
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
@@ -512,7 +515,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Felix},
     },
 
-    [TRAINER_VIOLET] =
+    [TRAINER_ED_YASMIN] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -525,7 +528,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Violet},
     },
 
-    [TRAINER_ROSE_2] =
+    [TRAINER_ED_ARTHUR] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -538,7 +541,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rose2},
     },
 
-    [TRAINER_ROSE_3] =
+    [TRAINER_ED_PAIGE] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -551,7 +554,8 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rose3},
     },
 
-    [TRAINER_ROSE_4] =
+    // Eden A2 O3
+    [TRAINER_ED_KEVIN] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -564,7 +568,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rose4},
     },
 
-    [TRAINER_ROSE_5] =
+    [TRAINER_ED_RAE] =
     {
         .trainerClass = TRAINER_CLASS_AROMA_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -577,7 +581,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Rose5},
     },
 
-    [TRAINER_DUSTY_1] =
+    [TRAINER_ED_GAVIN] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -590,7 +594,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dusty1},
     },
 
-    [TRAINER_CHIP] =
+    [TRAINER_ED_CAMILLE] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -603,7 +607,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Chip},
     },
 
-    [TRAINER_FOSTER] =
+    [TRAINER_ED_NEIL] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -616,7 +620,8 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Foster},
     },
 
-    [TRAINER_DUSTY_2] =
+    // Eden A2 Elites
+    [TRAINER_ED_VALENCIA] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -629,7 +634,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dusty2},
     },
 
-    [TRAINER_DUSTY_3] =
+    [TRAINER_ED_MAXIMILIAN] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -642,7 +647,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dusty3},
     },
 
-    [TRAINER_DUSTY_4] =
+    [TRAINER_ED_BARNABUS] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -655,7 +660,8 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dusty4},
     },
 
-    [TRAINER_DUSTY_5] =
+    // Eden A2 Boss
+    [TRAINER_ED_EVE_1] =
     {
         .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -668,7 +674,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Dusty5},
     },
 
-    [TRAINER_GABBY_AND_TY_1] =
+    [TRAINER_ED_EVE_2] =
     {
         .trainerClass = TRAINER_CLASS_INTERVIEWER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTERVIEWER,
@@ -681,6 +687,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_GabbyAndTy1},
     },
 
+    // 
     [TRAINER_GABBY_AND_TY_2] =
     {
         .trainerClass = TRAINER_CLASS_INTERVIEWER,

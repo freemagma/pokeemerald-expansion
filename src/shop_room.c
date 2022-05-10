@@ -67,6 +67,24 @@ static const struct ItemPrice sDEdenA1ItemPool[] = {
 {0}
 };
 
+static const struct ItemPrice sDEdenA2ItemPool[] = {
+{.itemId = ITEM_PROTEIN, .price = 100},
+{.itemId = ITEM_CALCIUM, .price = 100},
+{.itemId = ITEM_CARBOS, .price = 100},
+{.itemId = ITEM_ZINC, .price = 100},
+{.itemId = ITEM_HP_UP, .price = 100},
+{.itemId = ITEM_IRON, .price = 100},
+{.itemId = ITEM_LEFTOVERS, .price = 600},
+{.itemId = ITEM_FOCUS_SASH, .price = 500},
+{.itemId = ITEM_MIRACLE_SEED, .price = 200},
+{.itemId = ITEM_MYSTIC_WATER, .price = 200},
+{.itemId = ITEM_CHARCOAL, .price = 200},
+{.itemId = ITEM_QUICK_CLAW, .price = 200},
+{.itemId = ITEM_DUSK_STONE, .price = 800},
+{.itemId = ITEM_HEART_SCALE, .price = 500},
+{.itemId = ITEM_SALAC_BERRY, .price = 300},
+{0}
+};
 
 EWRAM_DATA static u16 sPermutation[MAX_SHOP_SIZE] = {0};
 #define PX(arr, ix) (arr[sPermutation[ix]])
@@ -115,8 +133,10 @@ void GenerateRandomShop(u8 itempoolnum) {
             PopulateRandomShopItems(sDTutorialA1ItemPool, DEFAULT_SHOP_SIZE);
             break;
         case 1:
-        default:
             PopulateRandomShopItems(sDEdenA1ItemPool, DEFAULT_SHOP_SIZE);
+        case 2:
+        default:
+            PopulateRandomShopItems(sDEdenA2ItemPool, DEFAULT_SHOP_SIZE);
             break;
     }
 }

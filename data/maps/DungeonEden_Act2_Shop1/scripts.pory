@@ -1,6 +1,6 @@
 mapscripts DungeonEden_Act2_Shop1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        genrandomshop(1)
+        genrandomshop(2)
         setvar(VAR_TEMP_0, 0)
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
