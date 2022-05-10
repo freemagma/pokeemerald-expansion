@@ -47,7 +47,14 @@ static u16 GetGfxIdFromTrainerId(u16 trainerId) {
     switch (trainerId) {
         case TRAINER_TU_MAGNOLIA:
            return OBJ_EVENT_GFX_FLANNERY;
+        case TRAINER_ED_ADAM_1:
+        case TRAINER_ED_ADAM_2:
+           return OBJ_EVENT_GFX_AQUA_MEMBER_M;
+        case TRAINER_ED_EVE_1:
+        case TRAINER_ED_EVE_2:
+           return OBJ_EVENT_GFX_AQUA_MEMBER_F;
         default:
+           break;
     }
 
     if (isFemale) {
@@ -138,23 +145,23 @@ void DungeonEden_Act1_GenerateBossBattle(void) {
 void DungeonEden_Act2_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(TRAINER_ED_EDWIN, TRAINER_ED_AMY, 300, 2);
+            GenerateBattle(TRAINER_ED_SHANE, TRAINER_ED_PIERCE, 300, 3);
             break;
         case 1:
-            GenerateBattle(TRAINER_ED_RICHARD, TRAINER_ED_DONNA, 400, 2);
+            GenerateBattle(TRAINER_ED_SUMMER, TRAINER_ED_PAIGE, 400, 3);
             break;
         case 2:
         default:
-            GenerateBattle(TRAINER_ED_JULIE, TRAINER_ED_REGINALD, 400, 2);
+            GenerateBattle(TRAINER_ED_KEVIN, TRAINER_ED_NEIL, 400, 3);
             break;
     }
 }
 
 void DungeonEden_Act2_GenerateEliteBattle(void) {
-    GenerateBattle(TRAINER_ED_HORACIO, TRAINER_ED_KENDAL, 700, 1);
+    GenerateBattle(TRAINER_ED_VALENCIA, TRAINER_ED_BARNABUS, 700, 1);
 }
 
 void DungeonEden_Act2_GenerateBossBattle(void) {
-    GenerateBattle(TRAINER_ED_ADAM_1, TRAINER_ED_ADAM_2, 1000, 0);
+    GenerateBattle(TRAINER_ED_EVE_1, TRAINER_ED_EVE_2, 1000, 0);
     VarSet(VAR_EXP_MULTIPLIER_NUMERATOR, 0);
 }

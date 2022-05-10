@@ -6,6 +6,9 @@ DungeonEden_Act2_Entrance_MapScripts::
 DungeonEden_Act2_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_TEMP_0, 0
 	callnative DungeonEden_Act2_GenerateRoute
+	setvar VAR_EXP_MULTIPLIER_NUMERATOR, 5
+	setvar VAR_EXP_MULTIPLIER_DENOMINATOR, 3
+	setvar VAR_GIFT_LEVEL_DIFF, 0
 	return
 
 DungeonEden_Act2_Entrance_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
