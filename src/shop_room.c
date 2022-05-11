@@ -134,6 +134,7 @@ void GenerateRandomShop(u8 itempoolnum) {
             break;
         case 1:
             PopulateRandomShopItems(sDEdenA1ItemPool, DEFAULT_SHOP_SIZE);
+            break;
         case 2:
         default:
             PopulateRandomShopItems(sDEdenA2ItemPool, DEFAULT_SHOP_SIZE);

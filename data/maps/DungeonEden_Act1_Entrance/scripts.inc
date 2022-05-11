@@ -3,6 +3,7 @@ DungeonEden_Act1_Entrance_MapScripts::
 	.byte 0
 
 DungeonEden_Act1_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	callnative DungeonEden_Act1_GenerateRoute
 	additem ITEM_MAX_POTION, 6
 	additem ITEM_RARE_CANDY, 8
 	additem ITEM_FULL_HEAL, 2
@@ -27,7 +28,7 @@ Eden_StarterBall_1:
 
 Eden_StarterBall_2:
 	bufferspeciesname STR_VAR_1, SPECIES_APPLIN
-	givemon SPECIES_APPLIN, 100, ITEM_NONE
+	givemon SPECIES_APPLIN, 5, ITEM_NONE
 	removeobject 1
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 1

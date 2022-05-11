@@ -161,6 +161,7 @@
 100 Accuracy (+10%)
 
 ## Crush Claw
+90 Power (+15)
 100 Accuracy (+5%)
 
 ## Blast Burn

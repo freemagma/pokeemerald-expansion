@@ -509,7 +509,7 @@ Ability: Chlorophyll
 - Magical Leaf
 - Synthesis
 
-Boss Adam (Farfetch’d-Galar) @ None
+Boss Adam (Farfetch’d-Galar) @ Sitrus Berry
 Level: 99
 Docile Nature
 Ability: Steadfast
@@ -518,7 +518,7 @@ Ability: Steadfast
 - Slam
 - Agility
 
-Boss Adam (Cranidos) @ Sitrus Berry
+Boss Adam (Cranidos) @ None
 Level: 99
 Jolly Nature
 Ability: Sheer Force
@@ -531,7 +531,7 @@ Level: 100
 Bold Nature
 Ability: Water Absorb
 - Water Pulse
-- Aurora Beam
+- Icy Wind
 - Attract
 - Rain Dance
 
@@ -543,7 +543,7 @@ Ability: None
 - Flip Turn
 - Bite
 
-Boss Adam (Farfetch’d-Galar) @ None
+Boss Adam (Farfetch’d-Galar) @ Sitrus Berry
 Level: 99
 Docile Nature
 Ability: Steadfast
@@ -552,7 +552,7 @@ Ability: Steadfast
 - Slam
 - Agility
 
-Boss Adam (Cranidos) @ Sitrus Berry
+Boss Adam (Cranidos) @ None
 Level: 99
 Jolly Nature
 Ability: Sheer Force
@@ -568,4 +568,223 @@ Ability: Chlorophyll
 - Aerial Ace
 - Dig
 - Sunny Day
+
+Bug Maniac Shane (Gurdurr) @ Eject Button
+Level: 97
+Adamant Nature
+Ability: Guts
+- Rock Tomb
+- Drain Punch
+- Mach Punch
+- Mega Punch
+
+Bug Maniac Shane (Kadabra) @ None
+Level: 96
+Calm Nature
+Ability: Synchronize
+- Psybeam
+- Fairy Wind
+- Kinesis
+- Energy Ball
+
+Bug Maniac Shane (Arbok) @ Lum Berry
+Level: 97
+Docile Nature
+Ability: Intimidate
+- Fire Fang
+- Sludge Bomb
+- Crunch
+- Glare
+
+Lady Florence (Bulbasaur) @ Sitrus Berry
+Level: 97
+Modest Nature
+Ability: Overgrow
+- Mega Drain
+- Sludge Bomb
+- Leech Seed
+- Synthesis
+
+Lady Florence (Krokorok) @ None
+Level: 96
+Jolly Nature
+Ability: Moxie
+- Bulldoze
+- Bite
+- Foul Play
+- Thrash
+
+Lady Florence (Spinda) @ None
+Level: 96
+Hardy Nature
+Ability: Contrary
+- Psybeam
+- Mega Kick
+- Hypnosis
+
+Lady Florence (Dodrio) @ Silk Scarf
+Level: 95
+Hasty Nature
+Ability: Early Bird
+- Drill Peck
+- Drill Run
+- Lunge
+- Quick Attack
+
+Triathlete Teddy (Mienfoo) @ None
+Level: 97
+Quirky Nature
+Ability: Regenerator
+- Fake Out
+- Knock Off
+- Force Palm
+- U-turn
+
+Triathlete Teddy (Magnemite) @ Air Balloon
+Level: 97
+Timid Nature
+Ability: Magnet Pull
+- Thunder Shock
+- Magnet Bomb
+- Thunder Wave
+
+Triathlete Teddy (Growlithe) @ Sitrus Berry
+Level: 97
+Serious Nature
+Ability: Intimidate
+- Bite
+- Flamethrower
+- Morning Sun
+- Double Kick
+
+Hex Maniac Sam (Ponyta-Galar) @ None
+Level: 97
+Timid Nature
+Ability: Pastel Veil
+- Confusion
+- Dazzling Gleam
+- Stomp
+
+Hex Maniac Sam (Aggron) @ Choice Scarf
+Level: 95
+Naive Nature
+Ability: Rock Head
+- Rock Slide
+- Earthquake
+
+Black Belt Pierce (Runerigus) @ None
+Level: 97
+Impish Nature
+Ability: Wandering Spirit
+- Curse
+- Shadow Claw
+- Sand Tomb
+
+Black Belt Pierce (Masquerain) @ None
+Level: 96
+Relaxed Nature
+Ability: Intimidate
+- Bubble Beam
+- Air Cutter
+- Mud Shot
+- Struggle Bug
+
+Black Belt Pierce (Grotle) @ None
+Level: 97
+Impish Nature
+Ability: Shell Armor
+- Razor Leaf
+- Bite
+- Withdraw
+- Body Slam
+
+Aroma Lady Summer (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Cooltrainer Luke (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+PKMN Breeder Yasmin (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Sailor Arthur (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Parasol Lady Paige (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Hiker Kevin (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Beauty Rae (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Ninja Boy Gavin (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Expert Camille (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Collector Neil (Eevee) @ None
+Level: 97
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Psychic Valencia (Eevee) @ None
+Level: 99
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Rich Boy Maximilian (Eevee) @ None
+Level: 99
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Pokémaniac Barnabus (Eevee) @ None
+Level: 99
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Boss Eve (Eevee) @ None
+Level: 100
+Adamant Nature
+Ability: Run Away
+- Tackle
+
+Boss Eve (Eevee) @ None
+Level: 100
+Adamant Nature
+Ability: Run Away
+- Tackle
 

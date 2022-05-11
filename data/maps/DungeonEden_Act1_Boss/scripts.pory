@@ -3,7 +3,7 @@ const VAR_TRAINER = VAR_TEMP_A
 mapscripts DungeonEden_Act1_Boss_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_TEMP_0, 0)
-        callnative(DungeonEden_Act2_GenerateBossBattle)
+        callnative(DungeonEden_Act1_GenerateBossBattle)
         copyvar(VAR_TRAINER, VAR_0x8000)
         setflag(FLAG_DISABLE_BAG)
     }

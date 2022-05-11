@@ -191,20 +191,120 @@
 ## Boss Adam
 + *Vileplume* (-2) @ Lum Berry: [Chlorophyll, Timid]
   - Acid, Magical Leaf, Synthesis
-+ *Farfetch’d-Galar* (-1) @ None: [Steadfast, Docile]
++ *Farfetch’d-Galar* (-1) @ Sitrus Berry: [Steadfast, Docile]
   - Revenge, Brutal Swing, Slam, Agility
-+ *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
++ *Cranidos* (-1) @ None: [Sheer Force, Jolly]
   - Headbutt, Rock Tomb, Curse
 + *Vaporeon* (-0) @ Mystic Water: [Water Absorb, Bold]
-  - Water Pulse, Aurora Beam, Attract, Rain Dance
+  - Water Pulse, Icy Wind, Attract, Rain Dance
 
 ## Boss Adam
 + *Huntail* (-2) @ Lum Berry: [None, Jolly]
   - Ice Fang, Flip Turn, Bite
-+ *Farfetch’d-Galar* (-1) @ None: [Steadfast, Docile]
++ *Farfetch’d-Galar* (-1) @ Sitrus Berry: [Steadfast, Docile]
   - Revenge, Brutal Swing, Slam, Agility
-+ *Cranidos* (-1) @ Sitrus Berry: [Sheer Force, Jolly]
++ *Cranidos* (-1) @ None: [Sheer Force, Jolly]
   - Headbutt, Rock Tomb, Curse
 + *Leafeon* (-0) @ Miracle Seed: [Chlorophyll, Careful]
   - Razor Leaf, Aerial Ace, Dig, Sunny Day
+
+## Bug Maniac Shane
++ *Gurdurr* (-3) @ Eject Button: [Guts, Adamant]
+  - Rock Tomb, Drain Punch, Mach Punch, Mega Punch
++ *Kadabra* (-4) @ None: [Synchronize, Calm]
+  - Psybeam, Fairy Wind, Kinesis, Energy Ball
++ *Arbok* (-3) @ Lum Berry: [Intimidate, Docile]
+  - Fire Fang, Sludge Bomb, Crunch, Glare
+
+## Lady Florence
++ *Bulbasaur* (-3) @ Sitrus Berry: [Overgrow, Modest]
+  - Mega Drain, Sludge Bomb, Leech Seed, Synthesis
++ *Krokorok* (-4) @ None: [Moxie, Jolly]
+  - Bulldoze, Bite, Foul Play, Thrash
++ *Spinda* (-4) @ None: [Contrary, Hardy]
+  - Psybeam, Mega Kick, Hypnosis
++ *Dodrio* (-5) @ Silk Scarf: [Early Bird, Hasty]
+  - Drill Peck, Drill Run, Lunge, Quick Attack
+
+## Triathlete Teddy
++ *Mienfoo* (-3) @ None: [Regenerator, Quirky]
+  - Fake Out, Knock Off, Force Palm, U-turn
++ *Magnemite* (-3) @ Air Balloon: [Magnet Pull, Timid]
+  - Thunder Shock, Magnet Bomb, Thunder Wave
++ *Growlithe* (-3) @ Sitrus Berry: [Intimidate, Serious]
+  - Bite, Flamethrower, Morning Sun, Double Kick
+
+## Hex Maniac Sam
++ *Ponyta-Galar* (-3) @ None: [Pastel Veil, Timid]
+  - Confusion, Dazzling Gleam, Stomp
++ *Aggron* (-5) @ Choice Scarf: [Rock Head, Naive]
+  - Rock Slide, Earthquake
+
+## Black Belt Pierce
++ *Runerigus* (-3) @ None: [Wandering Spirit, Impish]
+  - Curse, Shadow Claw, Sand Tomb
++ *Masquerain* (-4) @ None: [Intimidate, Relaxed]
+  - Bubble Beam, Air Cutter, Mud Shot, Struggle Bug
++ *Grotle* (-3) @ None: [Shell Armor, Impish]
+  - Razor Leaf, Bite, Withdraw, Body Slam
+
+## Aroma Lady Summer
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Cooltrainer Luke
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## PKMN Breeder Yasmin
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Sailor Arthur
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Parasol Lady Paige
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Hiker Kevin
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Beauty Rae
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Ninja Boy Gavin
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Expert Camille
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Collector Neil
++ *Eevee* (-3) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Psychic Valencia
++ *Eevee* (-1) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Rich Boy Maximilian
++ *Eevee* (-1) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Pokémaniac Barnabus
++ *Eevee* (-1) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Boss Eve
++ *Eevee* (-0) @ None: [Run Away, Adamant]
+  - Tackle
+
+## Boss Eve
++ *Eevee* (-0) @ None: [Run Away, Adamant]
+  - Tackle
 

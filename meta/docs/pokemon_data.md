@@ -224,6 +224,27 @@ _Evolves_: into Graveler at level 25
 44. Double-Edge
 48. Stone Edge
 
+**Geodude-Alola**
+_Type_: Rock/Electric
+_Stats_: 40/80/100/30/30/20
+_Abilities_: Rock Head, Galvanize
+_Evolves_: into Graveler-Alola at level 25
+
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
 
 ## Graveler
 _Type_: Rock/Ground
@@ -245,6 +266,27 @@ _Evolves_: into Golem at level 42
 44. Double-Edge
 48. Stone Edge
 
+**Graveler-Alola**
+_Type_: Rock/Electric
+_Stats_: 55/95/115/45/45/35
+_Abilities_: Rock Head, Galvanize
+_Evolves_: into Golem-Alola at level 38
+
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
 
 ## Golem
 _Type_: Rock/Ground
@@ -268,6 +310,28 @@ _Abilities_: Rock Head, Sturdy, Sand Veil
 54. Heavy Slam
 60. Head Smash
 
+**Golem-Alola**
+_Type_: Rock/Electric
+_Stats_: 80/120/130/55/65/45
+_Abilities_: Rock Head, Galvanize
+
+ 1. Heavy Slam
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
+60. Heavy Slam
 
 ## Ponyta
 _Type_: Fire
@@ -370,6 +434,26 @@ _Evolves_: into Tangrowth at level 35
 46. Wring Out
 50. Power Whip
 
+## Kangaskhan
+_Type_: Normal
+_Stats_: 105/95/80/40/80/90
+_Abilities_: Inner Focus, Scrappy
+
+ 1. Pound
+ 5. Bite
+10. Comet Punch
+19. Fake Out
+22. Stomp
+25. Double Hit
+31. Crunch
+34. Mega Punch
+37. Sucker Punch
+43. Hammer Arm
+46. Outrage
+49. Crush Claw
+50. Power-Up Punch
+
+
 ## Staryu
 _Type_: Water
 _Stats_: 30/45/55/70/55/85
@@ -432,6 +516,48 @@ _Abilities_: Soundproof, Filter, Technician
 48. Light Screen
 48. Reflect
 
+
+## Jynx
+_Type_: Ice/Psychic
+_Stats_: 65/50/35/115/95/95
+_Abilities_: Unaware, Own Tempo
+
+ 1. Ice Beam
+ 1. Lick
+ 1. Powder Snow
+ 5. Round
+ 8. Sweet Kiss
+12. Double Slap
+15. Confusion
+18. Aurora Beam
+21. Draining Kiss
+25. Attract
+34. Psychic
+40. Lovely Kiss
+46. Mean Look
+55. Ice Beam
+58. Blizzard
+
+## Porygon
+_Type_: Normal
+_Stats_: 65/60/70/85/75/40
+_Abilities_: Trace, Download, Analytic
+_Evolves_: into Porygon2 at level 35
+
+ 1. Tackle
+ 1. Conversion
+ 1. Conversion 2
+ 8. Thunder Shock
+15. Swift
+19. Psybeam
+24. Recover
+27. Signal Beam
+31. Agility
+35. Tri Attack
+40. Discharge
+45. Hyper Beam
+53. Synchronoise
+65. Fleur Cannon
 
 ## Kabuto
 _Type_: Rock/Water
@@ -593,6 +719,48 @@ _Abilities_: Huge Power
 55. Body Slam
 61. Iron Tail
 
+## Dunsparce
+_Type_: Normal
+_Stats_: 100/70/70/65/65/100 (0/0/0/0/0/+55)
+_Abilities_: Serene Grace
+
+ 1. Rage
+ 3. Rollout
+ 8. Pursuit
+13. Mud-Slap
+18. Ancient Power
+21. Body Slam
+23. Drill Run
+26. Roost
+28. Take Down
+33. Dig
+36. Glare
+38. Double-Edge
+41. Endeavor
+43. Air Slash
+46. Dragon Rush
+48. Endure
+51. Flail
+60. Coil
+
+## Qwilfish
+_Type_: Water/Poison
+_Stats_: 65/95/85/55/55/85
+_Abilities_: Intimidate, Swift Swim
+
+ 1. Water Gun
+ 1. Spikes
+ 1. Poison Sting
+13. Pin Missile
+15. Headbutt
+20. Poison Tail
+26. Flip Turn
+29. Revenge
+33. Poison Jab
+40. Aqua Tail
+47. Fell Stinger
+55. Gunk Shot
+
 ## Swinub
 _Type_: Ice/Ground
 _Stats_: 50/50/50/50/50/50 (0/0/+10/+20/+20/0)
@@ -631,6 +799,111 @@ _Evolves_: into Mamoswine at level 45
 35. High Horsepower
 40. Body Slam
 48. Blizzard
+
+## Porygon2
+_Type_: Normal
+_Stats_: 85/80/90/105/95/60
+_Abilities_: Trace, Download, Analytic
+_Evolves_: into Porygon-Z at level 45
+
+ 0. Conversion
+ 0. Conversion 2
+ 1. Tackle
+ 1. Conversion
+ 1. Conversion 2
+ 8. Thunder Shock
+15. Swift
+19. Psybeam
+24. Recover
+27. Signal Beam
+31. Agility
+35. Tri Attack
+40. Discharge
+45. Hyper Beam
+53. Synchronoise
+65. Fleur Cannon
+
+## Smoochum
+_Type_: Ice/Psychic
+_Stats_: 45/30/15/85/65/65
+_Abilities_: Unaware, Own Tempo
+_Evolves_: into Jynx at level 30
+
+ 1. Lick
+ 1. Powder Snow
+ 5. Round
+ 8. Sweet Kiss
+12. Double Slap
+15. Confusion
+18. Aurora Beam
+21. Draining Kiss
+25. Attract
+34. Psychic
+40. Lovely Kiss
+46. Mean Look
+55. Ice Beam
+58. Blizzard
+
+## Mudkip
+_Type_: Water
+_Stats_: 50/70/50/50/50/40
+_Abilities_: Torrent, Swift Swim
+_Evolves_: into Marshtomp at level 16
+
+ 1. Tackle
+ 4. Water Gun
+ 9. Mud-Slap
+15. Bide
+25. Bubble Beam
+30. Rock Slide
+32. Protect
+38. Muddy Water
+42. Take Down
+52. Endeavor
+
+## Marshtomp
+_Type_: Water/Ground
+_Stats_: 70/85/70/60/70/50
+_Abilities_: Torrent, Swift Swim
+_Evolves_: into Swampert at level 36
+
+ 0. Mud Shot
+ 1. Mud Shot
+ 1. Ice Punch
+ 1. Tackle
+ 4. Water Gun
+ 9. Mud-Slap
+15. Bide
+22. Mud Bomb
+25. Bubble Beam
+30. Rock Slide
+32. Protect
+38. Muddy Water
+42. Take Down
+48. Earthquake
+52. Endeavor
+
+## Swampert
+_Type_: Water/Ground
+_Stats_: 100/110/90/85/90/60
+_Abilities_: Torrent, Swift Swim
+
+ 1. Mud Shot
+ 1. Ice Punch
+ 1. Tackle
+ 4. Water Gun
+ 9. Mud-Slap
+15. Bide
+22. Mud Bomb
+25. Bubble Beam
+30. Rock Slide
+32. Protect
+38. Muddy Water
+42. Take Down
+48. Earthquake
+52. Endeavor
+61. Hammer Arm
+
 
 ## Ralts
 _Type_: Psychic/Fairy
@@ -696,6 +969,70 @@ _Abilities_: Synchronize, Trace, Telepathy
 57. Shadow Sneak
 62. Moonblast
 
+
+## Slakoth
+_Type_: Normal
+_Stats_: 60/60/60/35/35/30
+_Abilities_: Truant
+_Evolves_: into Vigoroth at level 18
+
+ 1. Scratch
+ 1. Yawn
+ 6. Encore
+ 9. Slack Off
+14. Feint Attack
+16. Fury Swipes
+25. Chip Away
+29. Shadow Punch
+33. Counter
+39. Flail
+46. Play Rough
+53. Crush Claw
+61. Hammer Arm
+
+## Vigoroth
+_Type_: Normal
+_Stats_: 80/80/80/55/55/90
+_Abilities_: Vital Spirit
+_Evolves_: into Slaking at level 36
+
+ 1. Reversal
+ 1. Endure
+ 1. Scratch
+ 1. Yawn
+ 6. Encore
+ 9. Slack Off
+14. Feint Attack
+16. Fury Swipes
+25. Chip Away
+29. Shadow Punch
+33. Counter
+39. Flail
+46. Play Rough
+53. Crush Claw
+61. Hammer Arm
+
+## Slaking
+_Type_: Normal
+_Stats_: 150/160/100/95/65/100
+_Abilities_: Truant
+
+ 1. Crush Claw
+ 1. Reversal
+ 1. Endure
+ 1. Scratch
+ 1. Yawn
+ 6. Encore
+ 9. Slack Off
+14. Feint Attack
+16. Fury Swipes
+25. Chip Away
+29. Shadow Punch
+33. Counter
+39. Flail
+46. Play Rough
+53. Crush Claw
+61. Hammer Arm
 
 ## Makuhita
 _Type_: Fighting
@@ -779,6 +1116,47 @@ _Evolves_: into Probopass at level 31
 43. Lock-On
 43. Zap Cannon
 48. Body Press
+
+## Skitty
+_Type_: Normal
+_Stats_: 50/45/45/35/35/50
+_Abilities_: Normalize
+_Evolves_: into Delcatty via Moon Stone
+
+ 1. Tackle
+ 1. Attract
+ 8. Fake Out
+10. Payback
+16. Covet
+20. Play Rough
+22. Charm
+27. Double-Edge
+32. Diamond Storm
+37. Poltergeist
+40. Captivate
+43. Head Smash
+51. Bolt Strike
+60. V-create
+
+## Delcatty
+_Type_: Normal
+_Stats_: 70/65/65/55/55/90
+_Abilities_: Normalize
+
+ 1. Tackle
+ 1. Attract
+ 8. Fake Out
+10. Payback
+16. Covet
+20. Play Rough
+22. Charm
+27. Double-Edge
+32. Diamond Storm
+37. Poltergeist
+40. Captivate
+43. Head Smash
+51. Bolt Strike
+60. V-create
 
 ## Aron
 _Type_: Steel/Rock
@@ -886,6 +1264,112 @@ _Abilities_: Intimidate, Lightning Rod
 50. Thunder
 55. Overheat
 
+
+## Numel
+_Type_: Fire/Ground
+_Stats_: 60/60/40/65/45/35
+_Abilities_: Own Tempo
+_Evolves_: into Camerupt at level 33
+
+ 1. Tackle
+ 5. Ember
+12. Magnitude
+15. Flame Burst
+19. Amnesia
+22. Lava Plume
+26. Earth Power
+31. Take Down
+36. Yawn
+40. Earthquake
+44. Flamethrower
+51. Eruption
+58. Double-Edge
+60. Rock Polish
+
+## Camerupt
+_Type_: Fire/Ground
+_Stats_: 70/100/70/105/75/40
+_Abilities_: Solid Rock
+
+ 0. Rock Slide
+ 1. Rock Slide
+ 1. Eruption
+ 1. Tackle
+ 5. Ember
+12. Magnitude
+15. Flame Burst
+19. Amnesia
+22. Lava Plume
+26. Earth Power
+31. Take Down
+36. Yawn
+40. Earthquake
+44. Flamethrower
+51. Eruption
+58. Double-Edge
+60. Rock Polish
+
+
+## Lileep
+_Type_: Rock/Grass
+_Stats_: 66/41/77/61/87/23
+_Abilities_: Suction Cups
+_Evolves_: into Cradily at level 40
+
+ 1. Absorb
+ 1. Acid
+ 8. Ingrain
+11. Rock Tomb
+13. Confuse Ray
+19. Ancient Power
+22. Brine
+26. Giga Drain
+31. Gastro Acid
+36. Leech Seed
+42. Rock Slide
+46. Energy Ball
+50. Sludge Bomb
+60. Earth Power
+
+## Cradily
+_Type_: Rock/Grass
+_Stats_: 86/81/97/81/107/43
+_Abilities_: Suction Cups
+
+ 1. Recover
+ 1. Absorb
+ 1. Acid
+ 8. Ingrain
+11. Rock Tomb
+13. Confuse Ray
+19. Ancient Power
+22. Brine
+26. Giga Drain
+31. Gastro Acid
+36. Leech Seed
+42. Rock Slide
+46. Energy Ball
+50. Sludge Bomb
+60. Earth Power
+
+## Kecleon
+_Type_: Normal
+_Stats_: 60/90/70/60/120/40
+_Abilities_: Protean
+
+ 1. Quick Attack
+ 1. Fury Swipes
+10. Shadow Sneak
+15. Feint Attack
+20. Fake Out
+25. Slash
+30. Shadow Claw
+40. Fire Punch
+40. Ice Punch
+40. Thunder Punch
+50. Drain Punch
+55. Recover
+60. Double-Edge
 
 ## Shuppet
 _Type_: Ghost
@@ -1120,6 +1604,48 @@ _Evolves_: into Mr. Mime while knowing Mimic
 48. Light Screen
 48. Reflect
 
+## Skorupi
+_Type_: Poison/Bug
+_Stats_: 40/50/90/30/55/65
+_Abilities_: Battle Armor
+_Evolves_: into Drapion at level 40
+
+ 1. Bite
+ 1. Poison Sting
+ 5. Pursuit
+ 9. Pin Missile
+16. Knock Off
+20. Bug Bite
+23. Poison Fang
+27. Venoshock
+38. Night Slash
+41. Scary Face
+45. Crunch
+47. Fell Stinger
+49. Cross Poison
+
+## Drapion
+_Type_: Poison/Dark
+_Stats_: 70/90/110/60/75/95
+_Abilities_: Battle Armor
+
+ 1. Thunder Fang
+ 1. Ice Fang
+ 1. Fire Fang
+ 1. Bite
+ 1. Poison Sting
+ 5. Pursuit
+ 9. Pin Missile
+16. Knock Off
+20. Bug Bite
+23. Poison Fang
+27. Venoshock
+38. Night Slash
+41. Scary Face
+45. Crunch
+47. Fell Stinger
+50. Cross Poison
+
 ## Croagunk
 _Type_: Poison/Fighting
 _Stats_: 48/61/40/61/40/50
@@ -1227,6 +1753,28 @@ _Abilities_: Oblivious, Snow Cloak, Thick Fat
 40. Body Slam
 48. Blizzard
 
+## Porygon-Z
+_Type_: Normal
+_Stats_: 85/80/70/135/75/90
+_Abilities_: Adapt, Download, Analytic
+
+ 0. Conversion
+ 0. Conversion 2
+ 1. Tackle
+ 1. Conversion
+ 1. Conversion 2
+ 8. Thunder Shock
+15. Swift
+19. Psybeam
+24. Recover
+27. Signal Beam
+31. Agility
+35. Tri Attack
+40. Discharge
+45. Hyper Beam
+53. Synchronoise
+65. Fleur Cannon
+
 ## Probopass
 _Type_: Rock/Steel
 _Stats_: 60/55/145/75/150/40
@@ -1330,6 +1878,113 @@ _Abilities_: Stench, Weak Armor, Aftermath
 46. Toxic
 50. Seed Bomb
 59. Explosion
+
+## Litwick
+_Type_: Ghost/Fire
+_Stats_: 50/30/55/65/55/20
+_Abilities_: Flash Fire, Flame Body, Infiltrator
+_Evolves_: into Lampent at level 25
+
+ 1. Ember
+ 1. Astonish
+ 5. Smog
+ 7. Fire Spin
+10. Confuse Ray
+13. Night Shade
+16. Imprison
+20. Flame Burst
+24. Hex
+28. Pain Split
+33. Taunt
+38. Mystical Fire
+53. Shadow Ball
+59. Will-O-Wisp
+66. Overheat
+
+## Lampent
+_Type_: Ghost/Fire
+_Stats_: 60/40/60/95/60/55
+_Abilities_: Flash Fire, Flame Body, Infiltrator
+_Evolves_: into Chandelure via Dusk Stone
+
+ 1. Heat Wave
+ 1. Dark Pulse
+ 1. Ember
+ 1. Astonish
+ 5. Smog
+ 7. Fire Spin
+10. Confuse Ray
+13. Night Shade
+16. Imprison
+20. Flame Burst
+24. Hex
+28. Pain Split
+33. Taunt
+38. Mystical Fire
+53. Shadow Ball
+59. Will-O-Wisp
+66. Overheat
+
+## Chandelure
+_Type_: Ghost/Fire
+_Stats_: 60/55/90/145/90/80
+_Abilities_: Flash Fire, Flame Body, Infiltrator
+
+ 1. Heat Wave
+ 1. Dark Pulse
+ 1. Ember
+ 1. Astonish
+ 5. Smog
+ 7. Fire Spin
+10. Confuse Ray
+13. Night Shade
+16. Imprison
+20. Flame Burst
+24. Hex
+28. Pain Split
+33. Taunt
+38. Mystical Fire
+53. Shadow Ball
+59. Will-O-Wisp
+66. Overheat
+
+## Rufflet
+_Type_: Normal/Flying
+_Stats_: 70/83/50/37/50/60
+_Abilities_: Hustle, Sheer Force
+_Evolves_: into Braviary at level 54
+
+ 1. Peck
+ 5. Fury Attack
+10. Wing Attack
+17. Slash
+20. Aerial Ace
+22. Scary Face
+25. U-turn
+28. Crush Claw
+34. Brave Bird
+40. Dual Wingbeat
+50. Thrash
+
+## Braviary
+_Type_: Normal/Flying
+_Stats_: 100/123/75/57/75/80
+_Abilities_: Defiant, Sheer Force
+
+ 0. Superpower
+ 1. Superpower
+ 1. Peck
+ 5. Fury Attack
+10. Wing Attack
+17. Slash
+20. Aerial Ace
+22. Scary Face
+25. U-turn
+28. Crush Claw
+34. Brave Bird
+40. Dual Wingbeat
+50. Thrash
+61. Flying Press
 
 ## Fletchling
 _Type_: Normal/Flying
@@ -1536,6 +2191,74 @@ _Abilities_: Cheek Pouch
 53. Discharge
 59. Recycle
 
+## Rowlet
+_Type_: Grass/Flying
+_Stats_: 68/55/55/50/50/42
+_Abilities_: Overgrow, Long Reach
+_Evolves_: into Dartrix at level 17
+
+ 1. Tackle
+ 1. Leafage
+ 8. Peck
+11. Astonish
+14. Razor Leaf
+16. Ominous Wind
+19. Foresight
+24. Pluck
+28. Synthesis
+33. Fury Attack
+37. Sucker Punch
+42. Leaf Blade
+46. Feather Dance
+51. Brave Bird
+
+## Dartrix
+_Type_: Grass/Flying
+_Stats_: 78/75/75/70/70/52
+_Abilities_: Overgrow, Long Reach
+_Evolves_: into Decidueye at level 34
+
+ 1. Tackle
+ 1. Leafage
+ 8. Peck
+11. Astonish
+14. Razor Leaf
+16. Ominous Wind
+19. Foresight
+24. Pluck
+28. Synthesis
+33. Fury Attack
+37. Sucker Punch
+42. Leaf Blade
+46. Feather Dance
+51. Brave Bird
+
+## Decidueye
+_Type_: Grass/Ghost
+_Stats_: 78/107/75/100/100/70
+_Abilities_: Overgrow, Long Reach
+
+ 0. Spirit Shackle
+ 1. Spirit Shackle
+ 1. Phantom Force
+ 1. U-turn
+ 1. Tackle
+ 1. Leafage
+ 8. Peck
+11. Astonish
+14. Razor Leaf
+16. Ominous Wind
+19. Foresight
+24. Pluck
+28. Synthesis
+33. Fury Attack
+37. Sucker Punch
+42. Leaf Blade
+46. Feather Dance
+51. Brave Bird
+55. Shadow Sneak
+60. Poltergeist
+
 ## Cutiefly
 _Type_: Bug/Fairy
 _Stats_: 40/45/40/55/40/84
@@ -1665,7 +2388,7 @@ _Evolves_:
 
 ## Flapple
 _Type_: Grass/Dragon
-_Stats_: 70/110/80/70/80/100 (0/0/0/-25/+20/+30)
+_Stats_: 70/110/80/95/60/70
 _Abilities_: Skill Link
 
  0. Wing Attack
@@ -1686,7 +2409,7 @@ _Abilities_: Skill Link
 
 ## Appletun
 _Type_: Grass/Dragon
-_Stats_: 110/80/100/80/100/40 (0/-5/+20/-20/+20/+10)
+_Stats_: 110/85/80/100/80/30
 _Abilities_: Regenerator
 
  0. Stomp
@@ -1740,6 +2463,84 @@ _Abilities_: Sweet Veil, None, Aroma Veil
 43. Mystical Fire
 
 
+## Snom
+_Type_: Ice/Bug
+_Stats_: 30/25/35/45/30/20
+_Abilities_: Ice Scales
+_Evolves_: into Frosmoth at level 20
+
+ 1. Powder Snow
+ 1. Struggle Bug
+ 4. Stun Spore
+ 8. Infestation
+15. Icy Wind
+21. Feather Dance
+24. Aurora Beam
+28. Hail
+31. Bug Buzz
+36. Ice Beam
+40. Blizzard
+70. Quiver Dance
+
+## Frosmoth
+_Type_: Ice/Bug
+_Stats_: 70/65/60/125/90/65
+_Abilities_: Ice Scales
+
+ 1. Aurora Veil
+ 1. Powder Snow
+ 1. Struggle Bug
+ 4. Stun Spore
+ 8. Infestation
+15. Icy Wind
+21. Feather Dance
+24. Aurora Beam
+28. Hail
+31. Bug Buzz
+36. Ice Beam
+40. Blizzard
+48. Air Slash
+70. Quiver Dance
+
+## Cufant
+_Type_: Steel
+_Stats_: 72/80/49/40/49/40
+_Abilities_: Sheer Force, None, Heavy Metal
+_Evolves_: into Copperajah at level 34
+
+ 1. Tackle
+ 5. Rollout
+10. Rock Smash
+15. Bulldoze
+20. Stomp
+25. Defense Curl
+30. Dig
+36. Strength
+42. Iron Head
+47. Play Rough
+53. High Horsepower
+60. Superpower
+
+## Copperajah
+_Type_: Steel
+_Stats_: 122/130/69/80/69/30
+_Abilities_: Sheer Force, None, Heavy Metal
+
+ 0. Heavy Slam
+ 1. Heavy Slam
+ 1. Tackle
+ 5. Rollout
+10. Rock Smash
+15. Bulldoze
+20. Stomp
+25. Defense Curl
+30. Dig
+36. Strength
+42. Iron Head
+47. Play Rough
+53. High Horsepower
+60. Superpower
+
 ## Blastoise
 _Type_: Water
 _Stats_: 79/83/100/85/105/78
@@ -1762,6 +2563,48 @@ _Abilities_: Torrent, Shell Armor, Rain Dish
 41. Muddy Water
 45. Dragon Tail
 50. Hydro Pump
+
+
+## Kangaskhan
+_Type_: Normal
+_Stats_: 105/95/80/40/80/90
+_Abilities_: Inner Focus, Scrappy
+
+ 1. Pound
+ 5. Bite
+10. Comet Punch
+19. Fake Out
+22. Stomp
+25. Double Hit
+31. Crunch
+34. Mega Punch
+37. Sucker Punch
+43. Hammer Arm
+46. Outrage
+49. Crush Claw
+50. Power-Up Punch
+
+
+## Swampert
+_Type_: Water/Ground
+_Stats_: 100/110/90/85/90/60
+_Abilities_: Torrent, Swift Swim
+
+ 1. Mud Shot
+ 1. Ice Punch
+ 1. Tackle
+ 4. Water Gun
+ 9. Mud-Slap
+15. Bide
+22. Mud Bomb
+25. Bubble Beam
+30. Rock Slide
+32. Protect
+38. Muddy Water
+42. Take Down
+48. Earthquake
+52. Endeavor
+61. Hammer Arm
 
 
 ## Gardevoir
@@ -1827,6 +2670,30 @@ _Abilities_: Intimidate, Lightning Rod
 43. Thunderbolt
 50. Thunder
 55. Overheat
+
+
+## Camerupt
+_Type_: Fire/Ground
+_Stats_: 70/100/70/105/75/40
+_Abilities_: Solid Rock
+
+ 0. Rock Slide
+ 1. Rock Slide
+ 1. Eruption
+ 1. Tackle
+ 5. Ember
+12. Magnitude
+15. Flame Burst
+19. Amnesia
+22. Lava Plume
+26. Earth Power
+31. Take Down
+36. Yawn
+40. Earthquake
+44. Flamethrower
+51. Eruption
+58. Double-Edge
+60. Rock Polish
 
 
 ## Banette
@@ -1946,6 +2813,27 @@ _Evolves_: into Graveler at level 25
 44. Double-Edge
 48. Stone Edge
 
+**Geodude-Alola**
+_Type_: Rock/Electric
+_Stats_: 40/80/100/30/30/20
+_Abilities_: Rock Head, Galvanize
+_Evolves_: into Graveler-Alola at level 25
+
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
 
 ## Graveler
 _Type_: Rock/Ground
@@ -1967,6 +2855,27 @@ _Evolves_: into Golem at level 42
 44. Double-Edge
 48. Stone Edge
 
+**Graveler-Alola**
+_Type_: Rock/Electric
+_Stats_: 55/95/115/45/45/35
+_Abilities_: Rock Head, Galvanize
+_Evolves_: into Golem-Alola at level 38
+
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
 
 ## Golem
 _Type_: Rock/Ground
@@ -1990,6 +2899,28 @@ _Abilities_: Rock Head, Sturdy, Sand Veil
 54. Heavy Slam
 60. Head Smash
 
+**Golem-Alola**
+_Type_: Rock/Electric
+_Stats_: 80/120/130/55/65/45
+_Abilities_: Rock Head, Galvanize
+
+ 1. Heavy Slam
+ 1. Defense Curl
+ 1. Tackle
+10. Rollout
+12. Spark
+16. Rock Throw
+18. Smack Down
+22. Thunder Punch
+24. Headbutt
+30. Stealth Rock
+34. Rock Blast
+40. Wild Charge
+44. Explosion
+48. Double-Edge
+52. Stone Edge
+55. Crush Claw
+60. Heavy Slam
 
 ## Grimer
 _Type_: Poison
