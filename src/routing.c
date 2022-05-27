@@ -198,6 +198,7 @@ void DungeonEden_Act1_GenerateRoute(void) {
         }
     }
 
+    G_ROUTE[i++][0] = encounter;
     G_ROUTE[i++][0] = shop;
     G_ROUTE[i++][0] = boss;
 
@@ -221,14 +222,13 @@ void DungeonEden_Act2_GenerateRoute(void) {
 
     G_ROUTE[i++][0] = gift;
     G_ROUTE[i++][0] = encounter;
+    G_ROUTE[i++][0] = shop;
 
-    groupedFloors = 3;
+    groupedFloors = 4;
     specialFloor = 1 + Random() % (groupedFloors - 1);
     for (j = 0; j < groupedFloors; j++, i++) {
         if (j == specialFloor) {
             G_ROUTE[i][0] = encounter;
-            G_ROUTE[i][1] = battle;
-            G_ROUTE[i][1].param = 0;
         } else {
             G_ROUTE[i][0] = battle;
             G_ROUTE[i][0].param = 0;

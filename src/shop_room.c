@@ -61,7 +61,6 @@ static const struct ItemPrice sDEdenA1ItemPool[] = {
 {.itemId = ITEM_MYSTIC_WATER, .price = 200},
 {.itemId = ITEM_CHARCOAL, .price = 200},
 {.itemId = ITEM_QUICK_CLAW, .price = 200},
-{.itemId = ITEM_SHINY_STONE, .price = 800},
 {.itemId = ITEM_LEAF_STONE, .price = 800},
 {.itemId = ITEM_SUN_STONE, .price = 800},
 {0}
@@ -79,10 +78,9 @@ static const struct ItemPrice sDEdenA2ItemPool[] = {
 {.itemId = ITEM_MIRACLE_SEED, .price = 200},
 {.itemId = ITEM_MYSTIC_WATER, .price = 200},
 {.itemId = ITEM_CHARCOAL, .price = 200},
-{.itemId = ITEM_QUICK_CLAW, .price = 200},
-{.itemId = ITEM_DUSK_STONE, .price = 800},
-{.itemId = ITEM_HEART_SCALE, .price = 500},
 {.itemId = ITEM_SALAC_BERRY, .price = 300},
+{.itemId = ITEM_DUSK_STONE, .price = 800},
+{.itemId = ITEM_SHINY_STONE, .price = 800},
 {0}
 };
 

@@ -5,7 +5,7 @@ DungeonEden_Act1_Entrance_MapScripts::
 DungeonEden_Act1_Entrance_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	callnative DungeonEden_Act1_GenerateRoute
 	additem ITEM_MAX_POTION, 6
-	additem ITEM_RARE_CANDY, 8
+	additem ITEM_RARE_CANDY, 99
 	additem ITEM_FULL_HEAL, 2
 	additem ITEM_POKE_BALL, 20
 	addmoney 500

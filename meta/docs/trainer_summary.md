@@ -129,7 +129,7 @@
   - Will-O-Wisp, Ancient Power
 + *Electabuzz* (-2) @ None: [Static, Sassy]
   - Thunder Wave, Thunder Shock, Swift
-+ *Haunter* (-2) @ None: [Levitate, Gentle]
++ *Gastly* (-2) @ None: [Levitate, Gentle]
   - Hex, Energy Ball, Mean Look
 
 ## Ninja Boy Ike
@@ -209,83 +209,83 @@
   - Razor Leaf, Aerial Ace, Dig, Sunny Day
 
 ## Bug Maniac Shane
-+ *Gurdurr* (-3) @ Eject Button: [Guts, Adamant]
++ *Gurdurr* (-2) @ Eject Button: [Guts, Adamant]
   - Rock Tomb, Drain Punch, Mach Punch, Mega Punch
-+ *Kadabra* (-4) @ None: [Synchronize, Calm]
++ *Kadabra* (-2) @ None: [Synchronize, Calm]
   - Psybeam, Fairy Wind, Kinesis, Energy Ball
-+ *Arbok* (-3) @ Lum Berry: [Intimidate, Docile]
++ *Arbok* (-2) @ Lum Berry: [Intimidate, Docile]
   - Fire Fang, Sludge Bomb, Crunch, Glare
 
 ## Lady Florence
-+ *Bulbasaur* (-3) @ Sitrus Berry: [Overgrow, Modest]
++ *Ivysaur* (-2) @ Sitrus Berry: [Overgrow, Modest]
   - Mega Drain, Sludge Bomb, Leech Seed, Synthesis
-+ *Krokorok* (-4) @ None: [Moxie, Jolly]
++ *Krokorok* (-3) @ None: [Moxie, Jolly]
   - Bulldoze, Bite, Foul Play, Thrash
-+ *Spinda* (-4) @ None: [Contrary, Hardy]
++ *Spinda* (-3) @ None: [Contrary, Hardy]
   - Psybeam, Mega Kick, Hypnosis
-+ *Dodrio* (-5) @ Silk Scarf: [Early Bird, Hasty]
++ *Dodrio* (-3) @ Silk Scarf: [Early Bird, Hasty]
   - Drill Peck, Drill Run, Lunge, Quick Attack
 
 ## Triathlete Teddy
-+ *Mienfoo* (-3) @ None: [Regenerator, Quirky]
++ *Mienfoo* (-2) @ Eviolite: [Regenerator, Quirky]
   - Fake Out, Knock Off, Force Palm, U-turn
-+ *Magnemite* (-3) @ Air Balloon: [Magnet Pull, Timid]
++ *Magneton* (-2) @ Air Balloon: [Magnet Pull, Timid]
   - Thunder Shock, Magnet Bomb, Thunder Wave
-+ *Growlithe* (-3) @ Sitrus Berry: [Intimidate, Serious]
++ *Growlithe* (-2) @ Sitrus Berry: [Intimidate, Serious]
   - Bite, Flamethrower, Morning Sun, Double Kick
 
 ## Hex Maniac Sam
-+ *Ponyta-Galar* (-3) @ None: [Pastel Veil, Timid]
++ *Ponyta-Galar* (-2) @ Sitrus Berry: [Pastel Veil, Timid]
   - Confusion, Dazzling Gleam, Stomp
-+ *Aggron* (-5) @ Choice Scarf: [Rock Head, Naive]
++ *Aggron* (-2) @ Choice Scarf: [Rock Head, Naive]
   - Rock Slide, Earthquake
 
 ## Black Belt Pierce
-+ *Runerigus* (-3) @ None: [Wandering Spirit, Impish]
-  - Curse, Shadow Claw, Sand Tomb
-+ *Masquerain* (-4) @ None: [Intimidate, Relaxed]
++ *Runerigus* (-2) @ Quick Claw: [Wandering Spirit, Impish]
+  - Amnesia, Shadow Claw, Sand Tomb
++ *Masquerain* (-3) @ Sitrus Berry: [Intimidate, Relaxed]
   - Bubble Beam, Air Cutter, Mud Shot, Struggle Bug
-+ *Grotle* (-3) @ None: [Shell Armor, Impish]
-  - Razor Leaf, Bite, Withdraw, Body Slam
++ *Grotle* (-2) @ None: [Shell Armor, Impish]
+  - Razor Leaf, Bite, Bulldoze, Body Slam
 
 ## Aroma Lady Summer
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Cooltrainer Luke
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## PKMN Breeder Yasmin
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Sailor Arthur
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Parasol Lady Paige
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Hiker Kevin
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Beauty Rae
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Ninja Boy Gavin
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Expert Camille
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Collector Neil
-+ *Eevee* (-3) @ None: [Run Away, Adamant]
++ *Eevee* (-2) @ None: [Run Away, Adamant]
   - Tackle
 
 ## Psychic Valencia

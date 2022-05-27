@@ -1312,7 +1312,7 @@ _Abilities_: Solid Rock
 
 ## Lileep
 _Type_: Rock/Grass
-_Stats_: 66/41/77/61/87/23
+_Stats_: 66/61/77/66/87/23 (0/+20/0/+5/0/0)
 _Abilities_: Suction Cups
 _Evolves_: into Cradily at level 40
 
@@ -1606,7 +1606,7 @@ _Evolves_: into Mr. Mime while knowing Mimic
 
 ## Skorupi
 _Type_: Poison/Bug
-_Stats_: 40/50/90/30/55/65
+_Stats_: 45/70/90/40/60/65 (+5/+20/0/+10/+5/0)
 _Abilities_: Battle Armor
 _Evolves_: into Drapion at level 40
 
@@ -1648,7 +1648,7 @@ _Abilities_: Battle Armor
 
 ## Croagunk
 _Type_: Poison/Fighting
-_Stats_: 48/61/40/61/40/50
+_Stats_: 58/81/50/61/50/60 (+10/+20/+10/0/+10/+10)
 _Abilities_: Dry Skin, None, Poison Touch
 _Evolves_: into Toxicroak at level 37
 

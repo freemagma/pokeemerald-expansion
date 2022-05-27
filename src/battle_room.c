@@ -145,14 +145,14 @@ void DungeonEden_Act1_GenerateBossBattle(void) {
 void DungeonEden_Act2_GenerateBattle(void) {
     switch (GetRouteParam()) {
         case 0:
-            GenerateBattle(TRAINER_ED_SHANE, TRAINER_ED_PIERCE, 300, 3);
+            GenerateBattle(TRAINER_ED_SHANE, TRAINER_ED_PIERCE, 300, 2);
             break;
         case 1:
-            GenerateBattle(TRAINER_ED_SUMMER, TRAINER_ED_PAIGE, 400, 3);
+            GenerateBattle(TRAINER_ED_SUMMER, TRAINER_ED_PAIGE, 400, 2);
             break;
         case 2:
         default:
-            GenerateBattle(TRAINER_ED_KEVIN, TRAINER_ED_NEIL, 400, 3);
+            GenerateBattle(TRAINER_ED_KEVIN, TRAINER_ED_NEIL, 400, 2);
             break;
     }
 }

@@ -332,7 +332,7 @@ Ability: Static
 - Thunder Shock
 - Swift
 
-Triathlete Julie (Haunter) @ None
+Triathlete Julie (Gastly) @ None
 Level: 98
 Gentle Nature
 Ability: Levitate
@@ -570,7 +570,7 @@ Ability: Chlorophyll
 - Sunny Day
 
 Bug Maniac Shane (Gurdurr) @ Eject Button
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Guts
 - Rock Tomb
@@ -579,7 +579,7 @@ Ability: Guts
 - Mega Punch
 
 Bug Maniac Shane (Kadabra) @ None
-Level: 96
+Level: 98
 Calm Nature
 Ability: Synchronize
 - Psybeam
@@ -588,7 +588,7 @@ Ability: Synchronize
 - Energy Ball
 
 Bug Maniac Shane (Arbok) @ Lum Berry
-Level: 97
+Level: 98
 Docile Nature
 Ability: Intimidate
 - Fire Fang
@@ -596,8 +596,8 @@ Ability: Intimidate
 - Crunch
 - Glare
 
-Lady Florence (Bulbasaur) @ Sitrus Berry
-Level: 97
+Lady Florence (Ivysaur) @ Sitrus Berry
+Level: 98
 Modest Nature
 Ability: Overgrow
 - Mega Drain
@@ -606,7 +606,7 @@ Ability: Overgrow
 - Synthesis
 
 Lady Florence (Krokorok) @ None
-Level: 96
+Level: 97
 Jolly Nature
 Ability: Moxie
 - Bulldoze
@@ -615,7 +615,7 @@ Ability: Moxie
 - Thrash
 
 Lady Florence (Spinda) @ None
-Level: 96
+Level: 97
 Hardy Nature
 Ability: Contrary
 - Psybeam
@@ -623,7 +623,7 @@ Ability: Contrary
 - Hypnosis
 
 Lady Florence (Dodrio) @ Silk Scarf
-Level: 95
+Level: 97
 Hasty Nature
 Ability: Early Bird
 - Drill Peck
@@ -631,8 +631,8 @@ Ability: Early Bird
 - Lunge
 - Quick Attack
 
-Triathlete Teddy (Mienfoo) @ None
-Level: 97
+Triathlete Teddy (Mienfoo) @ Eviolite
+Level: 98
 Quirky Nature
 Ability: Regenerator
 - Fake Out
@@ -640,8 +640,8 @@ Ability: Regenerator
 - Force Palm
 - U-turn
 
-Triathlete Teddy (Magnemite) @ Air Balloon
-Level: 97
+Triathlete Teddy (Magneton) @ Air Balloon
+Level: 98
 Timid Nature
 Ability: Magnet Pull
 - Thunder Shock
@@ -649,7 +649,7 @@ Ability: Magnet Pull
 - Thunder Wave
 
 Triathlete Teddy (Growlithe) @ Sitrus Berry
-Level: 97
+Level: 98
 Serious Nature
 Ability: Intimidate
 - Bite
@@ -657,8 +657,8 @@ Ability: Intimidate
 - Morning Sun
 - Double Kick
 
-Hex Maniac Sam (Ponyta-Galar) @ None
-Level: 97
+Hex Maniac Sam (Ponyta-Galar) @ Sitrus Berry
+Level: 98
 Timid Nature
 Ability: Pastel Veil
 - Confusion
@@ -666,22 +666,22 @@ Ability: Pastel Veil
 - Stomp
 
 Hex Maniac Sam (Aggron) @ Choice Scarf
-Level: 95
+Level: 98
 Naive Nature
 Ability: Rock Head
 - Rock Slide
 - Earthquake
 
-Black Belt Pierce (Runerigus) @ None
-Level: 97
+Black Belt Pierce (Runerigus) @ Quick Claw
+Level: 98
 Impish Nature
 Ability: Wandering Spirit
-- Curse
+- Amnesia
 - Shadow Claw
 - Sand Tomb
 
-Black Belt Pierce (Masquerain) @ None
-Level: 96
+Black Belt Pierce (Masquerain) @ Sitrus Berry
+Level: 97
 Relaxed Nature
 Ability: Intimidate
 - Bubble Beam
@@ -690,70 +690,70 @@ Ability: Intimidate
 - Struggle Bug
 
 Black Belt Pierce (Grotle) @ None
-Level: 97
+Level: 98
 Impish Nature
 Ability: Shell Armor
 - Razor Leaf
 - Bite
-- Withdraw
+- Bulldoze
 - Body Slam
 
 Aroma Lady Summer (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Cooltrainer Luke (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 PKMN Breeder Yasmin (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Sailor Arthur (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Parasol Lady Paige (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Hiker Kevin (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Beauty Rae (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Ninja Boy Gavin (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Expert Camille (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle
 
 Collector Neil (Eevee) @ None
-Level: 97
+Level: 98
 Adamant Nature
 Ability: Run Away
 - Tackle

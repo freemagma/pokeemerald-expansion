@@ -9510,10 +9510,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_LILEEP] =
     {
         .baseHP        = 66,
-        .baseAttack    = 41,
+        .baseAttack    = 61,
         .baseDefense   = 77,
         .baseSpeed     = 23,
-        .baseSpAttack  = 61,
+        .baseSpAttack  = 66,
         .baseSpDefense = 87,
         .type1 = TYPE_ROCK,
         .type2 = TYPE_GRASS,
@@ -12399,12 +12399,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_SKORUPI] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 50,
+        .baseHP        = 45,
+        .baseAttack    = 70,
         .baseDefense   = 90,
         .baseSpeed     = 65,
-        .baseSpAttack  = 30,
-        .baseSpDefense = 55,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 60,
         .type1 = TYPE_POISON,
         .type2 = TYPE_BUG,
         .catchRate = 120,
@@ -12447,12 +12447,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_CROAGUNK] =
     {
-        .baseHP        = 48,
-        .baseAttack    = 61,
-        .baseDefense   = 40,
-        .baseSpeed     = 50,
+        .baseHP        = 58,
+        .baseAttack    = 81,
+        .baseDefense   = 50,
+        .baseSpeed     = 60,
         .baseSpAttack  = 61,
-        .baseSpDefense = 40,
+        .baseSpDefense = 50,
         .type1 = TYPE_POISON,
         .type2 = TYPE_FIGHTING,
         .catchRate = 140,
@@ -23029,11 +23029,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLUFFY, ABILITY_BULLETPROOF, ABILITY_NONE},
-        #else
-            .abilities = {ABILITY_NONE, ABILITY_RUN_AWAY},
-        #endif
+        .abilities = {ABILITY_FLUFFY, ABILITY_NONE},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
@@ -23057,11 +23053,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLUFFY, ABILITY_STEADFAST, ABILITY_BULLETPROOF},
-        #else
-            .abilities = {ABILITY_NONE, ABILITY_NONE},
-        #endif
+        .abilities = {ABILITY_FLUFFY, ABILITY_NONE},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
