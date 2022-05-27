@@ -569,10 +569,10 @@ Ability: Chlorophyll
 - Dig
 - Sunny Day
 
-Bug Maniac Shane (Gurdurr) @ Eject Button
+Bug Maniac Shane (Hariyama) @ Eject Button
 Level: 98
 Adamant Nature
-Ability: Guts
+Ability: Thick Fat
 - Rock Tomb
 - Drain Punch
 - Mach Punch
@@ -606,7 +606,7 @@ Ability: Overgrow
 - Synthesis
 
 Lady Florence (Krokorok) @ None
-Level: 97
+Level: 98
 Jolly Nature
 Ability: Moxie
 - Bulldoze
@@ -615,7 +615,7 @@ Ability: Moxie
 - Thrash
 
 Lady Florence (Spinda) @ None
-Level: 97
+Level: 98
 Hardy Nature
 Ability: Contrary
 - Psybeam
@@ -623,7 +623,7 @@ Ability: Contrary
 - Hypnosis
 
 Lady Florence (Dodrio) @ Silk Scarf
-Level: 97
+Level: 98
 Hasty Nature
 Ability: Early Bird
 - Drill Peck

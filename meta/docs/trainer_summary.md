@@ -209,7 +209,7 @@
   - Razor Leaf, Aerial Ace, Dig, Sunny Day
 
 ## Bug Maniac Shane
-+ *Gurdurr* (-2) @ Eject Button: [Guts, Adamant]
++ *Hariyama* (-2) @ Eject Button: [Thick Fat, Adamant]
   - Rock Tomb, Drain Punch, Mach Punch, Mega Punch
 + *Kadabra* (-2) @ None: [Synchronize, Calm]
   - Psybeam, Fairy Wind, Kinesis, Energy Ball
@@ -219,11 +219,11 @@
 ## Lady Florence
 + *Ivysaur* (-2) @ Sitrus Berry: [Overgrow, Modest]
   - Mega Drain, Sludge Bomb, Leech Seed, Synthesis
-+ *Krokorok* (-3) @ None: [Moxie, Jolly]
++ *Krokorok* (-2) @ None: [Moxie, Jolly]
   - Bulldoze, Bite, Foul Play, Thrash
-+ *Spinda* (-3) @ None: [Contrary, Hardy]
++ *Spinda* (-2) @ None: [Contrary, Hardy]
   - Psybeam, Mega Kick, Hypnosis
-+ *Dodrio* (-3) @ Silk Scarf: [Early Bird, Hasty]
++ *Dodrio* (-2) @ Silk Scarf: [Early Bird, Hasty]
   - Drill Peck, Drill Run, Lunge, Quick Attack
 
 ## Triathlete Teddy

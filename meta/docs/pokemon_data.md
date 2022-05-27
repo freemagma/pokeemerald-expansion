@@ -147,7 +147,7 @@ _Abilities_: Sand Force, Arena Trap, Sand Veil
 _Type_: Grass/Poison
 _Stats_: 50/90/35/70/30/40 (0/+15/0/0/0/0)
 _Abilities_: Chlorophyll, None, Gluttony
-_Evolves_: into Weepinbell at level 21
+_Evolves_: into Weepinbell at level 16
 
  1. Vine Whip
  1. Wrap
@@ -2295,7 +2295,7 @@ _Abilities_: Shield Dust, Sweet Veil
 ## Wooloo
 _Type_: Normal
 _Stats_: 42/40/55/40/45/48
-_Abilities_: Fluffy, Bulletproof
+_Abilities_: Fluffy
 _Evolves_: into Dubwool at level 24
 
  1. Tackle
@@ -2314,7 +2314,7 @@ _Evolves_: into Dubwool at level 24
 ## Dubwool
 _Type_: Normal
 _Stats_: 72/80/100/60/90/88
-_Abilities_: Fluffy, Steadfast, Bulletproof
+_Abilities_: Fluffy
 
  1. Wild Charge
  1. Bounce
