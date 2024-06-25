@@ -1,0 +1,5 @@
+data/*
+calc/*.ts
+calc/*.js
+*.ipynb
+*.notebook.py
