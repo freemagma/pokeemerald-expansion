@@ -40,5 +40,9 @@ prefabs.json
 *.sym
 *.js
 src/data/map_group_count.h
+<<<<<<< HEAD
 .direnv/
 .venv/
+=======
+tools/trainerproc/trainerproc
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
